@@ -7,4 +7,5 @@ Description: Custom theme design for Scottsdale Bible
 Version: 0.1
 */
 
-@import url("/css/theme.min.css");
+@import url("./css/theme.min.css");
+@import url("./css/print.min.css") print;
