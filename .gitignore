@@ -1,0 +1,15 @@
+vendor/
+*.DS_Store
+web.config
+*.old
+public/wp-content/plugins/*
+!public/wp-content/plugins/index.php
+public/wp-content/uploads/*
+!.gitkeep
+/public/wp-content/backupwordpress*
+scripts/snapshots/*
+scripts/.config.*
+!scripts/.config.env
+/wp-config.*
+!wp-config.php
+error_log
