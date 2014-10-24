@@ -37,6 +37,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <?php wp_head(); ?>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/foundation.min.css" />
     <link type="text/css" rel="stylesheet"  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
@@ -50,10 +51,8 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <script src="<?php echo get_template_directory_uri()."/js/jquery.remodal.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.up-down-slider.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/theme.min.js"; ?>" type="text/javascript"></script>
-    <?php /*
-    <script type="text/javascript" src="//use.typekit.net/paf7uov.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    */ ?>
+    <script src="//use.typekit.net/awe4auy.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>
 
@@ -61,6 +60,98 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 
 <header>
     <div class="row">
-
+        <div class="medium-5 large-3 columns">
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo.png" alt="" title="" /></a>
+        </div>
+        <div class="medium-7 large-9 columns">
+            <ul class="inline-list">
+                <li>
+                    <i class="fa fa-lock"></i><a href="#">Sign In</a>
+                </li>
+                <li>
+                    <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
+                </li>
+                <li>
+                    <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="row">
+            <div class="small-2 columns">
+                <a href="#">Visit</a>
+            </div>
+            <div class="small-2 columns">
+                <a href="#">Connect</a>
+                <nav>
+                    <ul class="inline-list">
+                        <li>
+                            <h5>Connect with us!</h5>
+                            <p>
+                                Ipsum leo dis in adipiscing nibh fringilla potenti at quam consec tetur feugiat ipsum litora primis est porttitor enim
+                                eleifend non a mus scelerisque pulvinar dapibus. Potenti at quam consec teturfeu giat ipsum litora primis est
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Small Groups</h5>
+                            <ul class="no-bullet">
+                                <li><a href="#">Find a Group</a></li>
+                                <li><a href="#">Start a Group</a></li>
+                                <li><a href="#">My Support Group</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Next Steps</h5>
+                            <ul class="no-bullet">
+                                <li><a href="#">Starting Point</a></li>
+                                <li><a href="#">Launch</a></li>
+                                <li><a href="#">Baptism</a></li>
+                                <li><a href="#">Membership</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Ministries</h5>
+                            <ul class="no-bullet large-block-grid-3">
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Married</a></li>
+                                <li><a href="#">High School</a></li>
+                                <li><a href="#">Senior Adults</a></li>
+                                <li><a href="#">Family</a></li>
+                                <li><a href="#">Jr. High 7/8</a></li>
+                                <li><a href="#">Grades 5/6</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Calendar</h5>
+                            <ul class="no-bullet">
+                                <li><a href="#">Somethin on Catalog</a></li>
+                                <li><a href="#">Registrations</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div>
+                        <i class="fa fa-angle-up"></i>
+                    </div>
+                </nav>
+            </div>
+            <div class="small-2 columns">
+                <a href="#">Serve</a>
+            </div>
+            <div class="small-2 columns">
+                <a href="#">Watch</a>
+            </div>
+            <div class="small-2 columns">
+                <a href="#">Care</a>
+            </div>
+            <div class="small-2 columns">
+                <a href="#">Give</a>
+            </div>
+        </section>
     </div>
 </header>
