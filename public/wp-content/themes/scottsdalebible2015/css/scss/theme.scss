@@ -17,7 +17,6 @@ html, body
 
 body
 {
-    div { border: 0px solid red; }
 
     img
     {
@@ -67,12 +66,12 @@ body
 
     a
     {
-        /*color: #EC1E24;*/
+        color: #414042;
     }
 
     a:hover
     {
-        /*color: #78090c;*/
+        color: #be955b;
     }
     
     p
@@ -81,6 +80,34 @@ body
         font-size: 17px;
         font-weight: 400;
         line-height: 22px;
+    }
+    
+    ul
+    {
+        list-style: disc;
+    }
+    
+    .button
+    {
+        font-family: Oswald, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #be955b;
+        border-radius: 20px;
+        line-height: 1;
+    }
+    
+    .button:hover
+    {
+        background-color: #414042;
+        color: #be955b;
     }
     
     .upper
@@ -218,6 +245,11 @@ body
                         color: inherit;
                         padding-left: 5px;
                     }
+                    
+                    a:hover
+                    {
+                        color: #be955b;
+                    }
 
                 }
             }
@@ -265,7 +297,6 @@ body
                         padding-bottom: 10px;
                         margin: auto;
                         background-color: #ffffff;
-                        border: 1px solid red;
                         
                         h5
                         {
@@ -348,6 +379,7 @@ body
                     > nav
                     {
                         display: block;
+                        z-index: 9999;
                     }
                 
                     > a
@@ -364,11 +396,159 @@ body
 }
 
 /**
- * 3.0 Footer and Side Navigation Styles
+ * 3.0 Footer Styles
  * -----------------------------------------------------------------------------
  */
  
+body 
+{
+    > footer
+    {
+        background-image: url(../images/backgrounds/binding_dark.png);
+        background-repeat: repeat;
+        background-position: 0px 0px;
+        color: #ffffff;
+        
+        > .row:first-child
+        {
+            padding-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3b3b3c;
+        
+            > .columns:nth-child(2)
+            {
+                text-align: center;
+                line-height: 28px;
+                
+                > div:first-child
+                {
+                    padding-bottom: 6px;
+                }
+                
+                .button:hover
+                {
+                    background-color: #ffffff;
+                }
+            }
+            
+            a
+            {
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                font-weight: 800;
+                color: #ffffff;
+                
+                
+                > .fa
+                {
+                    line-height: inherit;
+                    vertical-align: middle;
+                    position: relative;
+                    top: -1px;
+                    margin-right: 5px;
+                }
+            }
+            
+            a:hover
+            {
+                color: #be955b;
+            }
+            
+            > .columns:last-child
+            {
+                text-align: right;
+                
+                > div:last-child
+                {
+                    a
+                    {
+                        margin-left: 15px;
+                        
+                        .fa
+                        {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        > .row:nth-child(2)
+        {
+            padding-top: 30px;
+            
+            > .columns
+            {
+                text-align: center;
+                
+                ul[class*="block-grid-"]
+                {
+                    display: inline-block;
+                    text-align: left;
+                    
+                    > li
+                    {
+                        width: 140px;
+                        
+                        > h4
+                        {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #ffffff;
+                            border-bottom: 1px solid #6d6e71;
+                            padding-bottom: 4px;
+                        }
+                        
+                        > ul
+                        {
+                            > li
+                            {
+                                line-height: 1.1;
+                                padding-bottom: 8px;
+                          
+                                > a
+                                {
+                                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #6d6e71;
+                                }
 
+                                > a:hover
+                                {
+                                    color: #be955b;
+                                }                       
+                            }
+                        }
+                    }
+                }                
+            }
+        }
+        
+        > section
+        {
+            background-color: #414042;
+            text-align: center;
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #939598;
+            line-height: 35px;
+            
+            > span
+            {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            
+            > span:first-child
+            {
+                border-right: 1px solid #939598;
+            }
+        }
+        
+    }
+}
 
 /**
  * 4.0 Common Page Styles
