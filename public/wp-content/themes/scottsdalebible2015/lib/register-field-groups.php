@@ -47,17 +47,17 @@ if(!function_exists("acf_field_def_google_map"))
 
 if(!function_exists("get_acf_common_field"))
 {
-    function get_acf_common_field($field = null)
+    function get_acf_common_field($field = null,$key_prefix = "")
     {
         $fields['image_slider'] = [
-            'key' => "field_".md5(THEME_PREFIX.'image_slider'),
+            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider'),
             'label' => 'Image Slider',
             'name' => 'image_slider',
             'type' => 'repeater',
             'required' => 1,
             'sub_fields' => [
                 [
-                    'key' => "field_".md5(THEME_PREFIX.'image_slider_slider_image'),
+                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image'),
                     'label' => 'Slider Image',
                     'name' => 'slider_image',
                     'prefix' => '',
@@ -70,7 +70,7 @@ if(!function_exists("get_acf_common_field"))
                     'library' => 'all'
                 ],
                 [
-                    'key' => "field_".md5(THEME_PREFIX.'image_slider_slider_image_link'),
+                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image_link'),
                     'label' => 'Slider Image LInk',
                     'name' => 'slider_image_link',
                     'prefix' => '',
@@ -87,13 +87,13 @@ if(!function_exists("get_acf_common_field"))
                     'disabled' => 0
                 ],
                 [
-                    'key' => "field_".md5(THEME_PREFIX.'image_slider_schedule'),
+                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule'),
                     'label' => 'Display Schedule<br />(Timezone: '.date("T").')<br />(Default: Always Active)',
                     'name' => 'schedule',
                     'type' => 'repeater',
                     'sub_fields' => [
                         [
-                            'key' => "field_".md5(THEME_PREFIX.'image_slider_schedule_days'),
+                            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_days'),
                             'label' => 'Days',
                             'name' => 'days',
                             'prefix' => '',
@@ -122,14 +122,14 @@ if(!function_exists("get_acf_common_field"))
                             'layout' => 'horizontal'
                         ],
                         [
-                            'key' => "field_".md5(THEME_PREFIX.'image_slider_schedule_times'),
+                            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times'),
                             'label' => 'Times',
                             'name' => 'times',
                             'type' => 'repeater',
                             'column_width' => '',
                             'sub_fields' => [
                                 [
-                                    'key' => "field_".md5(THEME_PREFIX.'image_slider_schedule_times_start'),
+                                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_start'),
                                     'label' => 'Start Time',
                                     'name' => 'start',
                                     'type' => 'date_time_picker',
@@ -143,7 +143,7 @@ if(!function_exists("get_acf_common_field"))
                                     'get_as_timestamp' => 'false',
                                 ],
                                 [
-                                    'key' => "field_".md5(THEME_PREFIX.'image_slider_schedule_times_end'),
+                                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_end'),
                                     'label' => 'End Time',
                                     'name' => 'end',
                                     'type' => 'date_time_picker',
@@ -189,7 +189,7 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_homepage'),
         'title' => 'Homepage',
         'fields' => [
-            get_acf_common_field('image_slider')
+            get_acf_common_field('image_slider','homepage')
         ],
         'location' => [
             [
@@ -229,8 +229,8 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_campuses'),
         'title' => 'Campuses',
         'fields' => [
-            get_acf_common_field('image_slider'),
-            acf_field_def_text("field_".md5(THEME_PREFIX."campus_service_times"),"Service Times (Welcome Text)","services_times",['placeholder'=>'SUNDAY SERVICES @ 9 & 10:45 AM']),
+            get_acf_common_field('image_slider','campuses'),
+            acf_field_def_text("field_".md5(THEME_PREFIX."campus_service_times"),"Service Times (Welcome Text)","service_times",['placeholder'=>'SUNDAY SERVICES @ 9 & 10:45 AM']),
             acf_field_def_google_map("field_".md5(THEME_PREFIX."campus_location"),"Map Location","map_location",[
                 'center_lat' => '33.4483771',
                 'center_lng' => '-112.0740373'

@@ -4,7 +4,8 @@ Template Name: Homepage
 */
 
 get_header();
-get_template_part("components/home/image-slider");
+get_template_part("components/sections/image-slider");
+get_template_part("components/sections/select-campus");
 ?>
 
 

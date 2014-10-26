@@ -248,7 +248,9 @@ if(!function_exists("f1_get_slider_images"))
                     continue;
                 }
             }
-           $image = $field[$subfield_name];
+           if(!($image = $field[$subfield_name])) {
+                continue;
+           }
            unset($field[$subfield_name]);
            $image = array_merge($image,$field);
            $images[] = (object) $image;
