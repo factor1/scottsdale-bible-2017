@@ -78,17 +78,25 @@ body
 
     a
     {
+        text-decoration: none;
         color: #414042;
     }
 
     a:hover
     {
         color: #be955b;
+        text-decoration: underline;
+    }
+    
+    strong
+    {
+        font-family: Kepler, "Times New Roman", serif;
+        font-weight: 800;
     }
     
     p
     {
-        font-family: Keplet, "Times New Roman", serif;
+        font-family: Kepler, "Times New Roman", serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22px;

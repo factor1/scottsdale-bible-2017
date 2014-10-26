@@ -203,108 +203,59 @@ if(!function_exists("f1_get_term_object_field"))
     }
 }
 
-if(!function_exists("f1_get_repeater_images"))
+if(!function_exists("f1_scheduled_to_display"))
 {
-    function f1_get_repeater_images($field_name,$image_sub_field,$size = [300,300],$scheduled_only = false)
+    function f1_scheduled_to_display(array $image)
     {
-        $images = [];
-        $schedules = null;
-        foreach(f1_get_repeater_subfields($field_name,$image_sub_field) as $id) {
-            if(is_array($image_sub_field)&&count($image_sub_field)>1) {
-                $image_id_field = $image_sub_field[0];
-                $row = $id;
-                $id = $row[$image_id_field];
-                unset($row[$image_id_field]);
-            } else {
-                $image_id_field = $image_sub_field;
-            }
-
-            if($scheduled_only===true) {
-                if(is_null($schedules)) {
-                    $schedules = f1_get_repeater_image_schedules($field_name,$image_id_field);
-                }
-                if(!f1_field_scheduled_to_display($id,$schedules)) {
-                    continue;
-                }
-            }
-
-            $post = get_post($id);
-            $img = wp_get_attachment_image_src($id,$size);
-            $image = new \stdClass;
-            $image->url = $img[0];
-            $image->width = $img[1];
-            $image->height = $img[2];
-            $image->title = $post->post_title;
-            if(isset($row)) {
-                foreach($row as $field => $v) {
-                    $image->$field = $v;
-                }
-            }
-            $images[] = $image;
-        }
-        return $images;
-    }
-}
-
-if(!function_exists("f1_get_repeater_image_schedules"))
-{
-    function f1_get_repeater_image_schedules($repeater_image_field,$image_id_field)
-    {
-        $schedules = [];
-        foreach(f1_get_repeater_subfields($repeater_image_field,[$image_id_field,'schedule']) as $n1 => $schedule) {
-            $image_id = $schedule[$image_id_field];
-            if(!isset($schedules[$image_id])) {
-                $schedules[$image_id] = [];
-            }
-            foreach(f1_get_repeater_subfields($repeater_image_field."_".$n1."_schedule",['days','time_periods']) as $n2 => $intervals) {
-                foreach($intervals['days'] as $day) {
-                    if(!isset($schedules[$image_id][$day])) {
-                        $schedules[$image_id][$day] = [];
-                    }
-                    foreach(f1_get_repeater_subfields($repeater_image_field."_".$n1."_schedule_".$n2."_time_periods",['start_time','end_time']) as $n3 => $time_period) {
-                        $schedules[$image_id][$day][] = $time_period;
-                    }
-                }
-            }
-        }
-        return $schedules;
-    }
-}
-
-if(!function_exists("f1_field_scheduled_to_display"))
-{
-    function f1_field_scheduled_to_display($post_id,$schedules)
-    {
-        if(!array_key_exists($post_id,$schedules)||!$schedules[$post_id]) {
+        if(!isset($image['schedule'])||!is_array($image['schedule'])) {
             return true;
         }
         $now = new DateTime("now",new DateTimeZone(THEME_TIMEZONE));
         $today = $now->format("l");
-        if(!array_key_exists($today,$schedules[$post_id])) {
-            return false;
-        }
-        if(!$schedules[$post_id][$today]) {
-            return true;
-        }
         $curtime = $now->getTimestamp();
-        foreach($schedules[$post_id][$today] as $period) {
-            $start_time = new DateTime($period['start_time'],new DateTimeZone(THEME_TIMEZONE));
-            $end_time = new DateTime($period['end_time'],new DateTimeZone(THEME_TIMEZONE));
-            if($start_time->getTimestamp()<=$curtime && $end_time->getTimestamp()>=$curtime) {
+        foreach($image['schedule'] as $schedule) {
+            if(isset($schedule['days'])&&is_array($schedule['days'])&&$schedule['days']) {
+                if(!in_array($today,$schedule['days'])) {
+                    continue;
+                }
+            }
+            if(!isset($schedule['times'])||!is_array($schedule['times'])||!$schedule['times']) {
                 return true;
+            }
+            foreach($schedule['times'] as $period) {
+                if(!is_array($period)||!isset($period['start'])||!isset($period['end'])) {
+                    continue;
+                }
+                $start_time = new DateTime($period['start'],new DateTimeZone(THEME_TIMEZONE));
+                $end_time = new DateTime($period['end'],new DateTimeZone(THEME_TIMEZONE));
+                if($start_time->getTimestamp()<=$curtime && $end_time->getTimestamp()>=$curtime) {
+                    return true;
+                }
             }
         }
         return false;
     }
 }
 
-
-
-
-
-
-
-
+if(!function_exists("f1_get_slider_images"))
+{
+    function f1_get_slider_images($field_name,$subfield_name,$scheduled_only = false)
+    {
+        $images = [];
+        foreach(get_field($field_name) as $field) {
+            if($scheduled_only===true) {
+                if(!f1_scheduled_to_display($field)) {
+                    continue;
+                }
+            }
+           $image = $field[$subfield_name];
+           unset($field[$subfield_name]);
+           $image = array_merge($image,$field);
+           $images[] = (object) $image;
+        }
+        return $images;
+    }
+}
 
 $theme_functions = [
     'f1_get_page_title',
@@ -319,7 +270,8 @@ $theme_functions = [
     'f1_get_post_term_object',
     'f1_get_term_object_field',
     'f1_get_all_posts',
-    'f1_get_first_post'
+    'f1_get_first_post',
+    'f1_get_slider_images'
 ];
 
 foreach($theme_functions as $func) {

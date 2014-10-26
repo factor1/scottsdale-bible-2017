@@ -1,7 +1,8 @@
 <?php
 
 define("THEME_PREFIX","sb_");
-define("THEME_TIMEZONE","America/New_York");
+define("THEME_TIMEZONE","America/Phoenix");
+date_default_timezone_set(THEME_TIMEZONE);
 
 require_once("lib/factor1/bootstrap.php");
 

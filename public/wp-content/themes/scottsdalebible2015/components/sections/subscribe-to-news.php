@@ -1,4 +1,4 @@
-<?php if(!isset($wp)) { exit; } ?>
+<?php if(!isset($wp)) { return; } ?>
 
 <section class="subscribe-to-news">
     <h1><i class="fa fa-newspaper-o"></i><span>Subscribe to our</span> weekly e-news</h1>
