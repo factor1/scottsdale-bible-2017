@@ -2,6 +2,12 @@
 
 define("THEME_PREFIX","sb_");
 define("THEME_TIMEZONE","America/Phoenix");
+
+if(!defined("THEME_TYPEKIT")) {
+    define("THEME_TYPEKIT","//use.typekit.net/awe4auy.js"); //Development Kit
+    //define("THEME_TYPEKIT","//use.typekit.net/aww5xwt.js"); //Production Kit
+}
+
 date_default_timezone_set(THEME_TIMEZONE);
 
 require_once("lib/factor1/bootstrap.php");

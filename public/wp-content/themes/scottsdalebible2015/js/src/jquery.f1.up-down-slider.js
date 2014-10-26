@@ -135,6 +135,7 @@
                 .css("box-sizing","border-box")
                 .css("height",ulHeight)
                 .css("margin","0px")
+                .css("overflow","hidden")
                 ;
 
         };
