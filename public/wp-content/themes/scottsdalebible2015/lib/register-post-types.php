@@ -8,8 +8,12 @@ if(!function_exists("f1_register_custom_post_types"))
     function f1_register_custom_post_types()
     {
 
-
-
+        /* Campuses */
+        $pt = new CustomPostType("Campus",[],THEME_PREFIX);
+        $pt
+            ->setPermalinks("/campuses/%postname%/")
+            ->register()
+            ;
 
         if(defined("FLUSH_REWRITE_RULES")&&FLUSH_REWRITE_RULES===true) {
             flush_rewrite_rules();

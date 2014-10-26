@@ -56,7 +56,7 @@ class CustomPostType {
         if(!is_string($s)||!$s) { return $s; }
         if(substr(strtolower($s),-2)==="ey") { return $s."s"; }
         if(substr(strtolower($s),-1)==="y") { return substr($s,0,-1)."ies"; }
-        if(substr(strtolower($s),-2)==="sh"||substr(strtolower($s),-2)==="ss") { return $s."es"; }
+        if(substr(strtolower($s),-2)==="sh"||substr(strtolower($s),-2)==="ss"||substr(strtolower($s),-2)==="us") { return $s."es"; }
         if(substr($s,-2)==="es") { return $s; }
         return $s."s";
     }

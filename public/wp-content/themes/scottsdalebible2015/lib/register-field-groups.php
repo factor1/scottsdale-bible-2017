@@ -1,5 +1,50 @@
 <?php
 
+if(!function_exists("acf_field_def_text"))
+{
+    function acf_field_def_text($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => 512,
+            'readonly' => 0,
+            'disabled' => 0
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_google_map"))
+{
+    function acf_field_def_google_map($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'google_map',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'center_lat' => '',
+            'center_lng' => '',
+            'zoom' => '11',
+            'height' => ''
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null)
@@ -134,6 +179,8 @@ if(!function_exists("get_acf_common_field"))
     }
 }
 
+
+
 if(function_exists("register_field_group"))
 {
 
@@ -155,6 +202,46 @@ if(function_exists("register_field_group"))
                     'param' => 'page_template',
                     'operator' => '==',
                     'value' => 'homepage.php'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'revisions',
+                3 => 'format',
+                4 => 'featured_image',
+                5 => 'categories',
+                6 => 'tags',
+                7 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* Campus Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_campuses'),
+        'title' => 'Campuses',
+        'fields' => [
+            get_acf_common_field('image_slider'),
+            acf_field_def_text("field_".md5(THEME_PREFIX."campus_service_times"),"Service Times (Welcome Text)","services_times",['placeholder'=>'SUNDAY SERVICES @ 9 & 10:45 AM']),
+            acf_field_def_google_map("field_".md5(THEME_PREFIX."campus_location"),"Map Location","map_location",[
+                'center_lat' => '33.4483771',
+                'center_lng' => '-112.0740373'
+            ])
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => THEME_PREFIX.'campus'
                 ]
             ],
         ],
