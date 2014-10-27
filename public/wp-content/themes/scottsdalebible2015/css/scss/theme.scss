@@ -1090,3 +1090,142 @@ section.upcoming-events
         margin-top: 30px;
     }    
 }
+
+
+/**
+*
+* 9.0 Component - Last Weekend and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+
+section.last-and-upcoming-message
+{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    
+    > .row
+    {
+        
+        > div
+        {
+            > div
+            {
+                display: inline-block;
+                text-align: left;
+                
+                > div:nth-child(2)
+                {
+                    border-top: 5px solid #be955b;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    padding-left: 50px;
+                    padding-right: 25px;
+                    
+                    > h3
+                    {
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        position: relative;
+                        margin-bottom: 3px;
+                        
+                        > span
+                        {
+                            font-weight: 700;
+                        }
+                        
+                        > .fa
+                        {
+                            position: absolute;
+                            left: -25px;
+                            top: 3px;
+                        }
+                    }
+                    
+                    > h5
+                    {
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }    
+            }    
+        }
+    
+        > div:first-child
+        {
+            text-align: right;
+            
+            > div
+            {
+                max-width: 608px;
+                padding: 0px;
+                margin: 0px;
+                
+                > div:last-child
+                {
+                    background-color: #414042;
+                    
+                    > h3
+                    {
+                        color: #ffffff;
+                    }
+                    
+                    > h5
+                    {
+                        color: #ffffff;
+                    }
+                    
+                    .fa
+                    {
+                        color: #be955b;
+                    }
+                }
+            }    
+        }
+        
+        > div:last-child
+        {
+            text-align: left;
+            
+            > div
+            {
+                max-width: 410px;
+                padding: 0px;
+                margin: 0px;
+                
+                > div:nth-child(2)
+                {
+                    > h3
+                    {
+                        color: #414042;
+                    }
+                    
+                    > h5
+                    {
+                        color: #414042;
+                    }                    
+                }
+                
+                > div:last-child
+                {
+                    padding-left: 50px;
+
+                    a
+                    {
+                        font-size: 30px;
+                        color: #be955b;
+                        padding-right: 30px;                 
+                    }
+
+                    a:hover
+                    {
+                        color: #414042; 
+                    }
+                }                
+            }
+            
+        }
+    }
+}
