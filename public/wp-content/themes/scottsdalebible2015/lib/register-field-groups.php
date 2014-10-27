@@ -105,6 +105,135 @@ if(!function_exists("acf_field_def_image"))
     }
 }
 
+if(!function_exists("acf_field_def_post_object"))
+{
+    function acf_field_def_post_object($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'post_object',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'post_type' => [],
+            'taxonomy' => '',
+            'allow_null' => 1,
+            'multiple' => 0,
+            'return_format' => 'object',
+            'ui' => 1,
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_true_false"))
+{
+    function acf_field_def_true_false($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'message' => '',
+            'default_value' => 0
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_email"))
+{
+    function acf_field_def_email($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'email',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => ''
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_repeater"))
+{
+    function acf_field_def_repeater($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'repeater',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'min' => '',
+            'max' => '',
+            'layout' => 'table',
+            'button_label' => 'Add Row',
+            'sub_fields' => []
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_date_time_picker"))
+{
+    function acf_field_def_date_time_picker($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'date_time_picker',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'show_date' => 'false',
+            'date_format' => 'm/d/y',
+            'time_format' => 'h:mm tt',
+            'show_week_number' => 'false',
+            'picker' => 'select',
+            'save_as_timestamp' => 'false',
+            'get_as_timestamp' => 'false',
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_checkbox"))
+{
+    function acf_field_def_checkbox($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'checkbox',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'choices' => [],
+            'default_value' => implode("\n",[]),
+            'layout' => 'horizontal'
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -146,21 +275,9 @@ if(!function_exists("get_acf_common_field"))
                     'readonly' => 0,
                     'disabled' => 0
                 ],
-                [
-                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule'),
-                    'label' => 'Display Schedule<br />(Timezone: '.date("T").')<br />(Default: Always Active)',
-                    'name' => 'schedule',
-                    'type' => 'repeater',
-                    'sub_fields' => [
-                        [
-                            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_days'),
-                            'label' => 'Days',
-                            'name' => 'days',
-                            'prefix' => '',
-                            'type' => 'checkbox',
-                            'instructions' => '',
-                            'required' => 0,
-                            'conditional_logic' => 0,
+                acf_field_def_repeater("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule'),'Display Schedule<br />(Timezone: '.date("T").')<br />(Default: Always Active)',"schedule",[
+                    'sub_fields'=>[
+                        acf_field_def_checkbox("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_days'),"Days","days",[
                             'choices' => [
                                 'Sunday' => 'Sun',
                                 'Monday' => 'Mon',
@@ -178,56 +295,19 @@ if(!function_exists("get_acf_common_field"))
                                 'Thursday' => 'Thursday',
                                 'Friday' => 'Friday',
                                 'Saturday' => 'Saturday',
-                            ]),
-                            'layout' => 'horizontal'
-                        ],
-                        [
-                            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times'),
-                            'label' => 'Times',
-                            'name' => 'times',
-                            'type' => 'repeater',
-                            'column_width' => '',
-                            'sub_fields' => [
-                                [
-                                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_start'),
-                                    'label' => 'Start Time',
-                                    'name' => 'start',
-                                    'type' => 'date_time_picker',
-                                    'column_width' => '',
-                                    'show_date' => 'false',
-                                    'date_format' => 'm/d/y',
-                                    'time_format' => 'h:mm tt',
-                                    'show_week_number' => 'false',
-                                    'picker' => 'select',
-                                    'save_as_timestamp' => 'false',
-                                    'get_as_timestamp' => 'false',
-                                ],
-                                [
-                                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_end'),
-                                    'label' => 'End Time',
-                                    'name' => 'end',
-                                    'type' => 'date_time_picker',
-                                    'column_width' => '',
-                                    'show_date' => 'false',
-                                    'date_format' => 'm/d/y',
-                                    'time_format' => 'h:mm tt',
-                                    'show_week_number' => 'false',
-                                    'picker' => 'select',
-                                    'save_as_timestamp' => 'false',
-                                    'get_as_timestamp' => 'false',
-                                ],
+                            ])
+                        ]),
+                        acf_field_def_repeater("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times'),"Times","times",[
+                            'sub_fields'=>[
+                                acf_field_def_date_time_picker("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_start'),"Start Time","start"),
+                                acf_field_def_date_time_picker("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_times_end'),"End Time","end")
                             ],
-                            'row_min' => '',
-                            'row_limit' => '',
-                            'layout' => 'table',
-                            'button_label' => 'Add Time Interval',
-                        ],
+                            'button_label' => 'Add Time Interval'
+                        ])
                     ],
-                    'row_min' => '',
-                    'row_limit' => '',
                     'layout' => 'row',
-                    'button_label' => 'Add Scheduled Time',
-                ],
+                    'button_label' => 'Add Schedule'
+                ]),
             ],
             'row_min' => 1,
             'row_limit' => '',
@@ -302,6 +382,53 @@ if(function_exists("register_field_group"))
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => THEME_PREFIX.'campus'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'revisions',
+                3 => 'format',
+                4 => 'featured_image',
+                5 => 'categories',
+                6 => 'tags',
+                7 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* Campus Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_church_groups'),
+        'title' => 'Church Groups',
+        'fields' => [
+            acf_field_def_post_object("field_".md5(THEME_PREFIX."church_group_campus"),"Campus","campus",['post_type'=>[0 => 'sb_campus']]),
+            acf_field_def_text("field_".md5(THEME_PREFIX."church_group_leader"),"Group Leader","group_leader"),
+            acf_field_def_text("field_".md5(THEME_PREFIX."church_group_life_stage"),"Life Stage","life_stage"),
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."church_group_child_friendly"),"Child Friendly","child_friendly"),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."church_group_meeting_times"),"Meeting Times","meeting_times",['sub_fields'=>[
+                acf_field_def_text("field_".md5(THEME_PREFIX."church_group_meets_on"),"Meets On","meets_on"),
+                acf_field_def_date_time_picker("field_".md5(THEME_PREFIX."church_group_meet_time"),"Meeting Time","meeting_time")
+            ]]),
+            acf_field_def_google_map("field_".md5(THEME_PREFIX."church_group_map_location"),"Map Location (If different than campus)","map_location",[
+                'center_lat' => '33.4483771',
+                'center_lng' => '-112.0740373'
+            ]),
+            acf_field_def_email("field_".md5(THEME_PREFIX."church_group_contact_email"),"Contact Email","contact_email")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => THEME_PREFIX.'group'
                 ]
             ],
         ],

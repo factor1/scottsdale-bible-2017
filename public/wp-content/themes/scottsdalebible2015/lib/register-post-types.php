@@ -15,6 +15,13 @@ if(!function_exists("f1_register_custom_post_types"))
             ->register()
             ;
 
+        /* Church Groups */
+        $pt = new CustomPostType("Group",[],THEME_PREFIX);
+        $pt
+            ->setPermalinks("/groups/%postname%/")
+            ->register()
+            ;
+
         if(defined("FLUSH_REWRITE_RULES")&&FLUSH_REWRITE_RULES===true) {
             flush_rewrite_rules();
         }
