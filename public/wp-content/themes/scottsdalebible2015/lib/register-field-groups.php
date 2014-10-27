@@ -410,16 +410,28 @@ if(function_exists("register_field_group"))
         'title' => 'Church Groups',
         'fields' => [
             acf_field_def_post_object("field_".md5(THEME_PREFIX."church_group_campus"),"Campus","campus",['post_type'=>[0 => 'sb_campus']]),
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."church_group_on_campus"),"On Campus?","on_campus"),
             acf_field_def_text("field_".md5(THEME_PREFIX."church_group_leader"),"Group Leader","group_leader"),
             acf_field_def_text("field_".md5(THEME_PREFIX."church_group_life_stage"),"Life Stage","life_stage"),
-            acf_field_def_true_false("field_".md5(THEME_PREFIX."church_group_child_friendly"),"Child Friendly","child_friendly"),
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."church_group_child_friendly"),"Child Friendly?","child_friendly"),
             acf_field_def_repeater("field_".md5(THEME_PREFIX."church_group_meeting_times"),"Meeting Times","meeting_times",['sub_fields'=>[
                 acf_field_def_text("field_".md5(THEME_PREFIX."church_group_meets_on"),"Meets On","meets_on"),
                 acf_field_def_date_time_picker("field_".md5(THEME_PREFIX."church_group_meet_time"),"Meeting Time","meeting_time")
             ]]),
-            acf_field_def_google_map("field_".md5(THEME_PREFIX."church_group_map_location"),"Map Location (If different than campus)","map_location",[
+            acf_field_def_google_map("field_".md5(THEME_PREFIX."church_group_map_location"),"Map Location","map_location",[
                 'center_lat' => '33.4483771',
-                'center_lng' => '-112.0740373'
+                'center_lng' => '-112.0740373',
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."church_group_on_campus"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
             ]),
             acf_field_def_email("field_".md5(THEME_PREFIX."church_group_contact_email"),"Contact Email","contact_email")
         ],
