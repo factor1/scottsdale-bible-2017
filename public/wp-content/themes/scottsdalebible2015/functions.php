@@ -88,16 +88,6 @@ if(!function_exists("sb_template_init"))
             unregister_widget( 'WP_Widget_Search' );
             unregister_widget( 'WP_Widget_Recent_Comments' );
 
-            register_sidebar([
-                'name' => __( 'Sidebar', 'f1' ),
-                'id' => 'sidebar',
-                'description' => __( 'The primary widget area on the right side', 'f1' ),
-                'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-                'after_widget' => '</div>',
-                'before_title' => '<h4 class="widget-title">',
-                'after_title' => '</h4>'
-            ]);
-
             /* Remove the recent comments style that is automatically added */
             remove_action('wp_head',[
                 $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
@@ -186,6 +176,35 @@ if(!function_exists("sb_template_init"))
             return $a;
         });
 
+    }
+}
+
+if(!function_exists("sb_get_sidebar"))
+{
+    function sb_get_sidebar($post = null)
+    {
+        if(!$post) {
+            $post =& get_queried_object();
+        }
+        if(!$post) {
+            return null;
+        }
+        $post_id = (get_field("use_parent_menu",$post->ID)) ? $post->post_parent : $post->ID;
+
+        if(!($menu_id=get_field("sidebar_menu",$post_id))) {
+            return null;
+        }
+
+        if(!($menu=wp_get_nav_menu_object($menu_id))) {
+            return null;
+        }
+
+        return "<h3>".esc_html($menu->name)."</h3>".
+                    sb_get_nav_menu([
+                        'menu'=>$menu_id,
+                        'items_wrap'=>'<ul class="no-bullet">%3$s</ul>'
+                    ])
+                    ;
     }
 }
 

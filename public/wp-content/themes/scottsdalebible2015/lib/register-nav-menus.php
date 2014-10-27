@@ -9,6 +9,21 @@ if(function_exists("register_nav_menus"))
 
     ]);
 */
+
+    add_action("widgets_init",function() {
+
+        register_sidebar([
+            'name' => __( 'Sidebar', 'f1' ),
+            'id' => 'sidebar',
+            'description' => __( 'The primary widget area on the right side', 'f1' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+        ]);
+
+    });
+
 }
 
 if(!function_exists("f1_get_nav_menu")) {

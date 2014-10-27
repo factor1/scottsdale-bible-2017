@@ -45,6 +45,66 @@ if(!function_exists("acf_field_def_google_map"))
     }
 }
 
+if(!function_exists("acf_field_def_checkbox"))
+{
+    function acf_field_def_checkbox($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'checkbox',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'choices' => [],
+            'default_value' => '',
+            'layout' => 'horizontal'
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_nav_menu"))
+{
+    function acf_field_def_nav_menu($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'nav_menu',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'save_format' => 'id',
+            'container' => 0,
+            'allow_null' => 1
+        ],$data);
+    }
+}
+
+if(!function_exists("acf_field_def_image"))
+{
+    function acf_field_def_image($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'return_format' => 'array',
+            'preview_size' => 'thumbnail',
+            'library' => 'all'
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -260,6 +320,59 @@ if(function_exists("register_field_group"))
                 5 => 'categories',
                 6 => 'tags',
                 7 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* Sidebar Menu Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_sidebar_menu'),
+        'title' => 'Sidebar Menus',
+        'fields' => [
+            acf_field_def_checkbox("field_".md5(THEME_PREFIX."sidebar_use_parent_menu"),"","use_parent_menu",['choices'=>['1'=>'Use Parent Sidebar Menu (if set)'],'default_value'=>1]),
+            acf_field_def_nav_menu("field_".md5(THEME_PREFIX."sidebar_sub_menu"),"Sidebar Menu","sidebar_menu",[
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."sidebar_use_parent_menu"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
+            acf_field_def_image("field_".md5(THEME_PREFIX."featured_image"),"Featured Image","featured_image")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page'
+                ],
+                [
+                    'param' => 'page_template',
+                    'operator' => '!=',
+                    'value' => 'homepage.php'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
             ]
         ]
     ]);
