@@ -1,5 +1,6 @@
 <?php
 
-get_header();
-
-get_footer();
+/* Redirect to Homepage */
+header("Location: /");
+header("Status: 302");
+exit;

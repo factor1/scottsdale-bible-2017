@@ -11,10 +11,12 @@
         </li>
         <?php } ?>
     </ul>
+    <?php if($slide_count>1) { ?>
     <div class="controls-move">
         <?php for($n=1;$n<=$slide_count;$n++) { ?>
         <i class="fa fa-circle-o fa-lg<?php echo (($n===1)?" active":""); ?>"></i>
         <?php } ?>
     </div>
+    <?php } ?>
 </section>
 <?php } ?>
