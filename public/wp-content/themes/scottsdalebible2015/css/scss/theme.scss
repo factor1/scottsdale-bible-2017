@@ -606,6 +606,11 @@ body
                             color: #ffffff;
                             border-bottom: 1px solid #6d6e71;
                             padding-bottom: 4px;
+                            
+                            > a
+                            {
+                                color: #ffffff;
+                            }
                         }
                         
                         > ul

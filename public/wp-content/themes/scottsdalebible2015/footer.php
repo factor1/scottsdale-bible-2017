@@ -26,62 +26,7 @@
         </div>
         <div class="row">
             <div class="small-12 columns">
-                <ul class="large-block-grid-6">
-                    <li>
-                        <h4>Visit</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">I'm New Here</a></li>
-                            <li><a href="#">Locations</a></li>
-                            <li><a href="#">Online</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Connect</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">Small Groups</a></li>
-                            <li><a href="#">Next Steps</a></li>
-                            <li><a href="#">Ministries</a></li>
-                            <li><a href="#">Calendar</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Serve</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">Here at Scottsdale Bible</a></li>
-                            <li><a href="#">Our Community</a></li>
-                            <li><a href="#">The World</a></li>
-                            <li><a href="#">Tanzania Village Partnership</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Watch</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">Message</a></li>
-                            <li><a href="#">Our Stories</a></li>
-                            <li><a href="#">Media</a></li>
-                            <li><a href="#">Resources</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Care</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">We Can Help</a></li>
-                            <li><a href="#">Programs</a></li>
-                            <li><a href="#">Support Groups</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h4>Give</h4>
-                        <ul class="no-bullet">
-                            <li><a href="#">My Tithe</a></li>
-                            <li><a href="#">Compelled by Grace</a></li>
-                            <li><a href="#">Grace</a></li>
-                            <li><a href="#">Tanzania Village Partnership</a></li>
-                            <li><a href="#">Elder's Fund</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <?php get_template_part("components/menus/footer-menu"); ?>
             </div>
         </div>
         <section>
