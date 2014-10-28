@@ -1275,6 +1275,9 @@ section.page-content
         
         > div.sidebar
         {
+            padding-left: 40px;
+            padding-right: 40px;
+            
             > h3
             {
                 margin: 0px;
@@ -1289,6 +1292,8 @@ section.page-content
             
             > ul
             {
+                margin-bottom: 60px;
+                
                 > li
                 {
                     font-size: 18px;

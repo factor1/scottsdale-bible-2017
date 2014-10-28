@@ -179,32 +179,51 @@ if(!function_exists("sb_template_init"))
     }
 }
 
-if(!function_exists("sb_get_sidebar"))
+if(!function_exists("sb_get_sidebar_menus"))
 {
-    function sb_get_sidebar($post = null)
+    function sb_get_sidebar_menus($post = null)
     {
         if(!$post) {
             $post =& get_queried_object();
         }
         if(!$post) {
-            return null;
+            return [];
         }
         $post_id = (get_field("use_parent_menu",$post->ID)) ? $post->post_parent : $post->ID;
+        $menus = [];
 
-        if(!($menu_id=get_field("sidebar_menu",$post_id))) {
-            return null;
+        if(!($sidebar_menus=get_field("sidebar_menus",$post_id))) {
+            return $menus;
         }
 
-        if(!($menu=wp_get_nav_menu_object($menu_id))) {
-            return null;
+        foreach($sidebar_menus as $obs) {
+            if(!($menu=wp_get_nav_menu_object($obs['sidebar_menu']))) {
+                continue;
+            }
+            $menus[$menu->name] = sb_get_nav_menu([
+                'menu'=>$menu->term_id,
+                'items_wrap'=>'<ul class="no-bullet">%3$s</ul>'
+            ]);
         }
 
-        return "<h3>".esc_html($menu->name)."</h3>".
-                    sb_get_nav_menu([
-                        'menu'=>$menu_id,
-                        'items_wrap'=>'<ul class="no-bullet">%3$s</ul>'
-                    ])
-                    ;
+        return $menus;
+    }
+}
+
+if(!function_exists("sb_get_sidebar_content"))
+{
+    function sb_get_sidebar_content($post = null)
+    {
+        if(!$post) {
+            $post =& get_queried_object();
+        }
+        if(!$post) {
+            return [];
+        }
+        $post_id = (get_field("use_parent_sidebar_content",$post->ID)) ? $post->post_parent : $post->ID;
+        $menus = [];
+
+        return sb_get_content_field("sidebar_content",$post_id);
     }
 }
 

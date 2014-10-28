@@ -234,6 +234,22 @@ if(!function_exists("acf_field_def_checkbox"))
     }
 }
 
+if(!function_exists("acf_field_def_wysiwyg"))
+{
+    function acf_field_def_wysiwyg($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'type' => 'wysiwyg',
+            'default_value' => '',
+            'toolbar'=> 'full',
+            'media_upload'=> 'yes'
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -404,7 +420,8 @@ if(function_exists("register_field_group"))
         ]
     ]);
 
-    /* Campus Fields */
+    /* Group Fields */
+    /*
     register_field_group([
         'id' => "field_".md5(THEME_PREFIX.'group_church_groups'),
         'title' => 'Church Groups',
@@ -462,14 +479,19 @@ if(function_exists("register_field_group"))
             ]
         ]
     ]);
+    */
 
     /* Sidebar Menu Fields */
     register_field_group([
         'id' => "field_".md5(THEME_PREFIX.'group_sidebar_menu'),
         'title' => 'Sidebar Menus',
         'fields' => [
-            acf_field_def_checkbox("field_".md5(THEME_PREFIX."sidebar_use_parent_menu"),"","use_parent_menu",['choices'=>['1'=>'Use Parent Sidebar Menu (if set)'],'default_value'=>1]),
-            acf_field_def_nav_menu("field_".md5(THEME_PREFIX."sidebar_sub_menu"),"Sidebar Menu","sidebar_menu",[
+            acf_field_def_image("field_".md5(THEME_PREFIX."featured_image"),"Featured Image","featured_image"),
+            acf_field_def_checkbox("field_".md5(THEME_PREFIX."sidebar_use_parent_menu"),"","use_parent_menu",['choices'=>['1'=>'Use Parent Sidebar Menu(s)'],'default_value'=>1]),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."sidebar_sub_menus"),"Sidebar Menus","sidebar_menus",[
+                'sub_fields' => [
+                    acf_field_def_nav_menu("field_".md5(THEME_PREFIX."sidebar_menu"),"Sidebar Menu","sidebar_menu")
+                ],
                 'conditional_logic' => [
                     'status' => 1,
                     'rules' => [
@@ -480,9 +502,24 @@ if(function_exists("register_field_group"))
                         ],
                     ],
                     'allorany' => 'all'
+                ],
+                'button_label' => 'Add Menu'
+            ]),
+            acf_field_def_checkbox("field_".md5(THEME_PREFIX."sidebar_use_parent_sidebar_content"),"","use_parent_sidebar_content",['choices'=>['1'=>'Use Parent Sidebar Content'],'default_value'=>1]),
+            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."sidebar_content"),"Sidebar Content","sidebar_content",[
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."sidebar_use_parent_sidebar_content"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
                 ]
             ]),
-            acf_field_def_image("field_".md5(THEME_PREFIX."featured_image"),"Featured Image","featured_image")
+            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."page_content"),"Main Page Content","page_content")
         ],
         'location' => [
             [
@@ -505,13 +542,14 @@ if(function_exists("register_field_group"))
             'label_placement' => 'top',
             'instruction_placement' => 'label',
             'hide_on_screen' => [
-                0 => 'custom_fields',
-                1 => 'revisions',
-                2 => 'format',
-                3 => 'categories',
-                4 => 'tags',
-                5 => 'featured_image',
-                6 => 'send-trackbacks'
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'revisions',
+                3 => 'format',
+                4 => 'categories',
+                5 => 'tags',
+                6 => 'featured_image',
+                7 => 'send-trackbacks'
             ]
         ]
     ]);
