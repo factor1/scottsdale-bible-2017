@@ -157,6 +157,43 @@ body
             color: #414042;
         }
     }
+
+    .bar
+    {
+        display: block;
+        width: auto;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 35px;
+        background-color: #414042;
+        color: #ffffff;
+        padding-left: 40px;
+        text-decoration: none;
+        
+        > .fa
+        {
+            margin-left: 10px;
+            line-height: inherit;
+            color: #be955b;
+        }
+    }
+    
+    .bar-toggle
+    {
+        > div:last-child
+        {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 2px solid #414042;
+        }    
+    }
+    
+    .bar:hover
+    {
+        text-decoration: none;
+    }
     
     .upper
     {
@@ -1251,8 +1288,10 @@ section.featured-image
             
             img
             {
-                width: 1100px;
-                height: 300px;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
             }
         }
     }
@@ -1350,6 +1389,12 @@ section.page-content
                     }
                 }
             }
+        }
+        
+        > div.small-12
+        {
+            padding-left: 10%;
+            padding-right: 10%;
         }
     }
 }

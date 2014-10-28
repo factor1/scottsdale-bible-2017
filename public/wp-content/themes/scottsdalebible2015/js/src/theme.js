@@ -5,6 +5,12 @@
 
         $(document).foundation();
 
+        /* Data Toggles */
+        $("[data-toggle]").click(function(e) {
+           e.preventDefault();
+           $($(this).data("toggle")).toggle();
+        });
+
         /* Image Sliders */
         sliders$ = $("section.image-slider");
         if(sliders$.length) {

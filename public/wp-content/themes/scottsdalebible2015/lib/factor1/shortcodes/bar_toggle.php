@@ -5,14 +5,14 @@ if(!$type) {
 }
 
 if(!isset($icon)) {
-    $icon = "";
+    $icon = "fa-chevron-circle-right";
 }
 
 $id = "tog".md5(uniqid(microtime(),true));
 
-echo '<div class="'.esc_html($style).'">'.
+echo '<div class="bar-toggle">'.
             '<div>'.
-                "<a href=\"".esc_html($href)."\" class=\"button ".esc_html($type)."\" data-toggle=\"#".$id."\">".
+                "<a href=\"".esc_html($href)."\" class=\"bar ".esc_html($type)."\" data-toggle=\"#".$id."\">".
                     "<span>".esc_html($title)."</span>".
                     (($icon)?"<i class=\"fa ".esc_html($icon)."\"></i>":"").
                 "</a>".

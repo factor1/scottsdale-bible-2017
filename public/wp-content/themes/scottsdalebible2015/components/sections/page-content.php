@@ -22,7 +22,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         </div>
         <div class="large-9 columns">
         <?php } else { ?>
-        <div class="large-12 columns">
+        <div class="small-12 columns">
         <?php } ?>
             <?php get_template_part("components/posts/article"); ?>
         </div>
