@@ -2,13 +2,10 @@
 
 if(function_exists("register_nav_menus"))
 {
-/*
+
     register_nav_menus([
-
-
-
+        'header_mega_menu' => 'Header Mega Menu'
     ]);
-*/
 
     add_action("widgets_init",function() {
 
