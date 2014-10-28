@@ -250,6 +250,23 @@ if(!function_exists("acf_field_def_wysiwyg"))
     }
 }
 
+if(!function_exists("acf_field_def_tab"))
+{
+    function acf_field_def_tab($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'tab',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -552,6 +569,34 @@ if(function_exists("register_field_group"))
                 7 => 'send-trackbacks'
             ]
         ]
+    ]);
+
+    /* Theme Options */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_theme_options'),
+        'title' => 'Theme Options',
+        'fields' => [
+            acf_field_def_tab("field_".md5(THEME_PREFIX."tab_social_media"),"Social Media","tab_social_media"),
+            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_twiiter_url"),"Twitter URL","twitter_url"),
+            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_facebook_url"),"Facebook URL","twitter_url"),
+            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_instagram_url"),"Instagram URL","instagram_url"),
+            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_flickr_url"),"Flickr URL","flickr_url")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options-theme-options'
+                ]
+            ],
+        ],
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => ''
     ]);
 
 }

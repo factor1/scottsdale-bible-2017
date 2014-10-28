@@ -62,6 +62,9 @@ if(!function_exists("sb_template_init"))
                 $register_custom_post_types();
             }
 
+            /* Add ACF Options Page */
+            acf_add_options_page("Theme Options");
+
             /* Remove Head Links */
             remove_action('wp_head', 'rsd_link');
             remove_action('wp_head', 'wlwmanifest_link');
