@@ -30,7 +30,7 @@
             e.preventDefault();
             search$ = $(this).find("input[name='search']");
             if(search$.length&&search$.val()) {
-                location.href = "/?s="+search$.val();
+                location.href = $(this).data("action")+"/?s="+search$.val();
             }
         });
 

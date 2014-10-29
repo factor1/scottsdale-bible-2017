@@ -68,13 +68,13 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <div class="medium-7 large-9 columns">
             <ul class="inline-list">
                 <li>
-                    <i class="fa fa-lock"></i><a href="#">Sign In</a>
+                    <i class="fa fa-lock"></i><a href="<?php echo wp_login_url(); ?>">Sign In</a>
                 </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
                 </li>
                 <li>
-                    <form>
+                    <form data-action="<?php bloginfo('siteurl'); ?>">
                         <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
                     </form>
                 </li>
