@@ -161,5 +161,106 @@
     }
 }    
 
+/**
+*
+* 3.0 - Component - Last and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:first-child
+            {
+                text-align: center;
+                padding-bottom: 40px;
+            }
+            
+            > div:last-child
+            {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:last-child
+            {
+                > div
+                {
+                    > div:last-child
+                    {
+                        a
+                        {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+/**
+*
+* 4.0 - Component - Upcoming Events
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 500px)
+{
+    section.upcoming-events
+    {
+        > .row:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    > .row
+                    {
+                        > div.columns
+                        {
+                            width: 100%;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
 
 
+/**
+*
+* 5.0 - Footer Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    body
+    {
+        > footer
+        {
+            > .row:first-child
+            {
+                > .columns:first-child
+                {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }    
+}
+
+  

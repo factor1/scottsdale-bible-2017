@@ -10,7 +10,7 @@ if(!$news_posts) {
 <section class="news-and-stories">
     <h1><i class="fa fa-news-and-stories"></i>News <span>and</span> Stories</h1>
     <div class="row">
-        <ul class="large-block-grid-3">
+        <ul class="small-block-grid-1 large-block-grid-3">
             <?php foreach($news_posts as $post) { $post =& $post['news_story']; $image = get_field("featured_image",$post->ID); ?>
             <li>
                 <div>
@@ -20,8 +20,8 @@ if(!$news_posts) {
                         <?php } ?>
                     </div>
                     <div>
-                        <h3><a href="#"><?php echo esc_html($post->post_title); ?></a></h3>
-                        <a href="#"><i class="fa fa-thin-chevron-right"></i></a>
+                        <h3><a href="<?php echo get_permalink($post->ID); ?>"><?php echo esc_html($post->post_title); ?></a></h3>
+                        <a href="<?php echo get_permalink($post->ID); ?>"><i class="fa fa-thin-chevron-right"></i></a>
                         <p>
                             <?php echo esc_html(get_field("story_subtitle",$post->ID)); ?>
                         </p>
@@ -29,55 +29,6 @@ if(!$news_posts) {
                 </div>
             </li>
             <?php } ?>
-
-            <?php /* ?>
-            <li>
-                <div>
-                    <div>
-                        <img src="http://placehold.it/340x230" alt="" title="" />
-                    </div>
-                    <div>
-                        <h3><a href="#">CHECK OUT OUR NEW CAMPUS!</a></h3>
-                        <a href="#"><i class="fa fa-thin-chevron-right"></i></a>
-                        <p>
-                            Our Sunday service times are 9 and 10:45am.<br />
-                            We look forward to worshipping with you
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div>
-                        <img src="http://placehold.it/340x230" alt="" title="" />
-                    </div>
-                    <div>
-                        <h3><a href="#">CHECK OUT OUR NEW CAMPUS!</a></h3>
-                        <a href="#"><i class="fa fa-thin-chevron-right"></i></a>
-                        <p>
-                            Our Sunday service times are 9 and 10:45am.<br />
-                            We look forward to worshipping with you
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div>
-                        <img src="http://placehold.it/340x230" alt="" title="" />
-                    </div>
-                    <div>
-                        <h3><a href="#">CHECK OUT OUR NEW CAMPUS!</a></h3>
-                        <a href="#"><i class="fa fa-thin-chevron-right"></i></a>
-                        <p>
-                            Our Sunday service times are 9 and 10:45am.<br />
-                            We look forward to worshipping with you
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <?php */ ?>
-
         </ul>
     </div>
     <div class="row">

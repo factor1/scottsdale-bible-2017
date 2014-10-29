@@ -3,14 +3,14 @@
 ?>
     <footer>
         <div class="row">
-            <div class="large-4 columns">
+            <div class="small-12 large-4 columns small-text-center large-text-left">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo-white.png" alt="" title="" />
             </div>
-            <div class="large-4 columns">
+            <div class="medium-6 large-4 columns">
                 <div>For general information or our pastor-on-call:</div>
                 <div><a class="button">(480) 824-7200</a></div>
             </div>
-            <div class="large-4 columns">
+            <div class="medium-6 large-4 columns small-text-center large-text-right">
                 <div>
                     <a href="mailto:feedback@scottsdalebible.com"><i class="fa fa-envelope"></i><span>feedback@scottsdalebible.com</span></a>
                 </div>
