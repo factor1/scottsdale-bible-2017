@@ -348,6 +348,21 @@ if(!function_exists("get_acf_common_field"))
             'button_label' => 'Add Image',
         ];
 
+        $fields['news_and_stories'] = [
+            'key' => "field_".md5(THEME_PREFIX.$key_prefix.'news_and_stories'),
+            'label' => 'News and Stories',
+            'name' => 'news_and_stories',
+            'type' => 'repeater',
+            'required' => 0,
+            'sub_fields' => [
+                acf_field_def_post_object("field_".md5(THEME_PREFIX."news_and_stories_post"),"News/Story Post","news_story",['post_type'=>[0 =>THEME_PREFIX.'news_story']])
+            ],
+            'row_min' => 1,
+            'row_limit' => '',
+            'layout' => 'row',
+            'button_label' => 'Add Story',
+        ];
+
         return (isset($fields[$field])) ? $fields[$field] : null;
     }
 }
@@ -362,7 +377,8 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_homepage'),
         'title' => 'Homepage',
         'fields' => [
-            get_acf_common_field('image_slider','homepage')
+            get_acf_common_field('image_slider','homepage'),
+            get_acf_common_field('news_and_stories','homepage')
         ],
         'location' => [
             [
@@ -407,7 +423,8 @@ if(function_exists("register_field_group"))
             acf_field_def_google_map("field_".md5(THEME_PREFIX."campus_location"),"Map Location","map_location",[
                 'center_lat' => '33.4483771',
                 'center_lng' => '-112.0740373'
-            ])
+            ]),
+            get_acf_common_field('news_and_stories','campus')
         ],
         'location' => [
             [
@@ -432,6 +449,74 @@ if(function_exists("register_field_group"))
                 4 => 'featured_image',
                 5 => 'categories',
                 6 => 'tags',
+                7 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* News Story Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_news_stories'),
+        'title' => 'News Stories',
+        'fields' => [
+            acf_field_def_text("field_".md5(THEME_PREFIX."news_story_subtitle"),"Subtitle","story_subtitle",['placeholder'=>'short excerpt for front pages']),
+            acf_field_def_image("field_".md5(THEME_PREFIX."news_story_featured_image"),"Featured Image","featured_image"),
+            acf_field_def_checkbox("field_".md5(THEME_PREFIX."news_story_show_sidebar"),"","show_side_bar",['choices'=>['1'=>'Show Sidebar Column'],'default_value'=>0]),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."news_story_sidebar_sub_menus"),"Sidebar Menus","sidebar_menus",[
+                'sub_fields' => [
+                    acf_field_def_nav_menu("field_".md5(THEME_PREFIX."news_story_sidebar_menu"),"Sidebar Menu","sidebar_menu")
+                ],
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."news_story_show_sidebar"),
+                            'operator' => '==',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ],
+                'button_label' => 'Add Menu'
+            ]),
+            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."news_story_sidebar_content"),"Sidebar Content","sidebar_content",[
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."news_story_show_sidebar"),
+                            'operator' => '==',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
+            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."news_story_page_content"),"Main Page Content","page_content")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => THEME_PREFIX.'news_story'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'revisions',
+                3 => 'format',
+                4 => 'categories',
+                5 => 'tags',
+                6 => 'featured_image',
                 7 => 'send-trackbacks'
             ]
         ]

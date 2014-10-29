@@ -934,6 +934,14 @@ section.news-and-stories
                     > div:first-child
                     {
                         text-align: center;
+                        max-height: 230px;
+                        overflow: hidden;
+                        
+                        img
+                        {
+                            min-height: 230px;
+                            min-width: 100%;
+                        }
                     }
                     
                     > div:last-child
@@ -1512,4 +1520,29 @@ section.welcome-to-campus
             }
         }
     }
-}    
+}
+
+/**
+*
+* 12.0 Component - Not Found
+* -----------------------------------------------------------------------------
+*/
+
+section.not-found
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    padding: 100px;
+    
+    > .row
+    {
+        background-color: #ffffff;
+        padding: 40px;
+        
+        > h2
+        {
+            border-bottom: 2px solid #be955b;
+        }
+    }
+}

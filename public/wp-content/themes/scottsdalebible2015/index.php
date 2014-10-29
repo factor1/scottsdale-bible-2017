@@ -13,7 +13,7 @@ get_header();
             <div class="row">
                     <div class="small-12 medium-11 medium-centered columns">
                      <?php get_template_part("components/posts/meta.php"); ?>
-                     <?php echo sb_get_the_content(); ?>
+                     <?php echo get_the_content(); ?>
                     </div>
             </div>
         </section>

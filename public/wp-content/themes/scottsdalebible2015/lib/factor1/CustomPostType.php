@@ -44,7 +44,7 @@ class CustomPostType {
         $this->_blog = $current_blog;
         $this->_name = $post_type_name;
         $this->_prefix = $type_prefix;
-        $this->_slug = substr($this->_prefix.str_replace(" ","_",strtolower($this->_name)),0,20);
+        $this->_slug = (isset($params['slug'])) ? $this->_prefix.$params['slug'] : substr($this->_prefix.str_replace(" ","_",strtolower($this->_name)),0,20);
         $this->_args['rewrite']['slug'] = $this->_str_pluralize(str_replace(" ","-",strtolower($this->_name)));
         $this->_set_labels();
         $this->_args = array_merge($this->_args,$params);

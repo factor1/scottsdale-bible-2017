@@ -24,6 +24,21 @@ if(!function_exists("f1_register_custom_post_types"))
             ;
         */
 
+        /* News and Stories */
+        $pt = new CustomPostType("News Story",[
+            'rewrite' => [
+                'with_front'=>true,
+                'feeds'=>true,
+                'pages'=>false,
+                'ep_mask'=>EP_PERMALINK,
+                'slug'=>'news'
+            ]
+        ],THEME_PREFIX);
+        $pt
+            ->setPermalinks("/news/%postname%/")
+            ->register()
+            ;
+
         if(defined("FLUSH_REWRITE_RULES")&&FLUSH_REWRITE_RULES===true) {
             flush_rewrite_rules();
         }
