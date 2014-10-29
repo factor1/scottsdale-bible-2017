@@ -62,10 +62,10 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 
 <header>
     <div class="row">
-        <div class="medium-5 large-3 columns">
+        <div class="large-4 columns">
             <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo.png" alt="" title="" /></a>
         </div>
-        <div class="medium-7 large-9 columns">
+        <div class="large-8 columns">
             <ul class="inline-list">
                 <li>
                     <i class="fa fa-lock"></i><a href="<?php echo wp_login_url(); ?>">Sign In</a>

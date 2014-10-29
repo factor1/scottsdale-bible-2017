@@ -3,13 +3,13 @@
 <section class="upcoming-events">
     <h1><i class="fa fa-calendar"></i>Upcoming <span>Events</span></h1>
     <div class="row">
-        <ul class="large-block-grid-2">
+        <ul class="small-block-grid-1 large-block-grid-2">
             <li>
                 <div class="row">
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                         <img src="http://placehold.it/120x120" alt="" title="" />
                     </div>
-                    <div class="large-9 columns">
+                    <div class="small-9 columns">
                         <h3>PAUL BALOCHE CONCERT</h3>
                         <h5>Friday, September 26, 7pm, Worship Center</h5>
                         <div>
@@ -29,10 +29,10 @@
             </li>
             <li>
                 <div class="row">
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                         <img src="http://placehold.it/120x120" alt="" title="" />
                     </div>
-                    <div class="large-9 columns">
+                    <div class="small-9 columns">
                         <h3>PAUL BALOCHE CONCERT</h3>
                         <h5>Friday, September 26, 7pm, Worship Center</h5>
                         <div>
@@ -52,10 +52,10 @@
             </li>
             <li>
                 <div class="row">
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                         <img src="http://placehold.it/120x120" alt="" title="" />
                     </div>
-                    <div class="large-9 columns">
+                    <div class="small-9 columns">
                         <h3>PAUL BALOCHE CONCERT</h3>
                         <h5>Friday, September 26, 7pm, Worship Center</h5>
                         <div>
@@ -75,10 +75,10 @@
             </li>
             <li>
                 <div class="row">
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                         <img src="http://placehold.it/120x120" alt="" title="" />
                     </div>
-                    <div class="large-9 columns">
+                    <div class="small-9 columns">
                         <h3>PAUL BALOCHE CONCERT</h3>
                         <h5>Friday, September 26, 7pm, Worship Center</h5>
                         <div>
