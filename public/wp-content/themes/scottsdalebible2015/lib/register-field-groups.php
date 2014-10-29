@@ -522,6 +522,42 @@ if(function_exists("register_field_group"))
         ]
     ]);
 
+    /* Event Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_events'),
+        'title' => 'Events',
+        'fields' => [
+            acf_field_def_text("field_".md5(THEME_PREFIX."event_subtitle"),"Subtitle","event_subtitle",['placeholder'=>'for front pages, e.g. "Friday, September 26, 7pm, Worship Center"']),
+            acf_field_def_image("field_".md5(THEME_PREFIX."event_featured_image"),"Featured Image","featured_image"),
+            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."event_excerpt"),"Short Excerpt","event_excerpt")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'event'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
     /* Group Fields */
     /*
     register_field_group([

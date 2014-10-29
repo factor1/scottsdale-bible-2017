@@ -1088,6 +1088,11 @@ section.upcoming-events
                             margin: 0px;
                             padding: 0px;
                             line-height: 1;
+                            
+                            > a
+                            {
+                                color: #be955b;   
+                            }
                         }
                         
                         > h5

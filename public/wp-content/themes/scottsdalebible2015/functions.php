@@ -179,6 +179,11 @@ if(!function_exists("sb_template_init"))
             return $a;
         });
 
+        /* Remove Custom Fields/Excerpts from Events */
+        add_filter("em_cp_event_supports",function($a) {
+            return ['title','editor','custom-fields','revisions','post-formats'];
+        });
+
     }
 }
 
@@ -227,6 +232,78 @@ if(!function_exists("sb_get_sidebar_content"))
         $menus = [];
 
         return sb_get_content_field("sidebar_content",$post_id);
+    }
+}
+
+if(!function_exists("sb_get_post_id_by_location_id"))
+{
+    function sb_get_post_id_by_location_id($location_id)
+    {
+        global $wpdb;
+        $results = $wpdb->get_results(
+            "select distinct ".$wpdb->base_prefix."posts.ID from ".$wpdb->base_prefix."posts ".
+                "left join ".$wpdb->base_prefix."postmeta on(".$wpdb->base_prefix."posts.ID=".$wpdb->base_prefix."postmeta.post_id) ".
+                "where post_type='location' and meta_key='_location_id' and meta_value='".$wpdb->_real_escape($location_id)."'"
+        );
+        return ($results) ? (int) $results[0]->ID : 0;
+    }
+}
+
+if(!function_exists("sb_get_upcoming_events"))
+{
+    function sb_get_upcoming_events(array $args = [])
+    {
+        $events = get_posts(array_merge([
+            'posts_per_page' => 4,
+            'post_type' => 'event',
+            'post_status'      => 'publish',
+            'suppress_filters' => true
+        ],$args));
+
+        if(!$events) { return []; }
+
+        foreach($events as $event) {
+            if(!($meta_values = get_post_meta($event->ID))) {
+                continue;
+            }
+            $event->meta = new stdClass;
+
+            foreach($meta_values as $k => $v) {
+
+                $v = $v[0];
+
+                if($k==="_location_id") {
+
+                    if(!$v) { continue; }
+
+                    $event->meta->location = new stdClass;
+                    $event->meta->location->post_id = sb_get_post_id_by_location_id($v);
+
+                    if(!($location_meta = get_post_meta($event->meta->location->post_id))) {
+                        continue;
+                    }
+
+                    foreach($location_meta as $lk =>$lv) {
+                        $lv = $lv[0];
+                        if(!preg_match("#^_location_#imsu",$k)) {
+                            continue;
+                        }
+                        $lk = preg_replace("#^_location_#imsu","",$lk);
+                        $event->meta->location->$lk = $lv;
+                    }
+
+                    continue;
+                }
+
+                if(!preg_match("#^_event_#imsu",$k)) {
+                    continue;
+                }
+                $k = preg_replace("#^_event_#imsu","",$k);
+                $event->meta->$k = $v;
+            }
+        }
+
+        return $events;
     }
 }
 
