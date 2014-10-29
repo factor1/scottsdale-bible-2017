@@ -263,4 +263,27 @@
     }    
 }
 
-  
+
+/**
+*
+* 6.0 - Component - Article
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    section.article
+    {
+        > div:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    width: 100%;
+                    padding-bottom: 10px;
+                }
+            }            
+        }
+    }
+}

@@ -1390,21 +1390,30 @@ section.page-content
                 {
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    
-                    > a
+                }
+                
+                > div:first-of-type
+                {
+                    > ul
                     {
-                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
-                        font-size: 15px;
-                        font-weight: 700;
-                        color: #414042;
-                        margin-right: 30px;
-                        line-height: 18px;
-                        
-                        > .fa
+                        > li
                         {
-                            font-size: 18px;
-                            color: #be955b;
-                            margin-right: 5px;
+                            > a
+                            {
+                                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                font-size: 15px;
+                                font-weight: 700;
+                                color: #414042;
+                                margin-right: 30px;
+                                line-height: 18px;
+
+                                > .fa
+                                {
+                                    font-size: 18px;
+                                    color: #be955b;
+                                    margin-right: 5px;
+                                }
+                            }                        
                         }
                     }
                 }
@@ -1563,7 +1572,10 @@ section.posts-archive
     background-image: url(../images/backgrounds/grid.png);
     background-repeat: repeat;
     background-position: 0px 0px;
-    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;    
     
     > .row
     {

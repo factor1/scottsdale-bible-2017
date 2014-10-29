@@ -32,6 +32,6 @@ if(!$news_posts) {
         </ul>
     </div>
     <div class="row">
-        <a href="#" class="button dark-brown">View <span>all</span> stories</a>
+        <a href="<?php echo get_option('siteurl'); ?>/news/" class="button dark-brown">View <span>all</span> stories</a>
     </div>
 </section>
