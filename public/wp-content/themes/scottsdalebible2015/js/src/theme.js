@@ -25,5 +25,14 @@
             });
         }
 
+        /* Search Form */
+        $("header form").submit(function(e) {
+            e.preventDefault();
+            search$ = $(this).find("input[name='search']");
+            if(search$.length&&search$.val()) {
+                location.href = "/?s="+search$.val();
+            }
+        });
+
     });
 })(jQuery);

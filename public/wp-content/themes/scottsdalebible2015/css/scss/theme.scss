@@ -1546,3 +1546,50 @@ section.not-found
         }
     }
 }
+
+/**
+*
+* 13.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.posts-archive
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    padding: 100px;
+    
+    > .row
+    {
+        background-color: #ffffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        > h2
+        {
+            border-bottom: 2px solid #be955b;
+            margin-bottom: 4px;
+            
+            > a
+            {
+                color: #be955b;
+            }
+        }
+        
+        h3
+        {
+            margin-bottom: 3px;
+        }
+        
+        .meta
+        {
+            font-family: Kepler, "Times New Roman", serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22px;        
+        }
+    }
+}

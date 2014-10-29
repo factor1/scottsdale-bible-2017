@@ -9,7 +9,7 @@ if(!function_exists("f1_register_custom_post_types"))
     {
 
         /* Campuses */
-        $pt = new CustomPostType("Campus",[],THEME_PREFIX);
+        $pt = new CustomPostType("Campus",['exclude_from_search'=>false],THEME_PREFIX);
         $pt
             ->setPermalinks("/campuses/%postname%/")
             ->register()
@@ -17,7 +17,7 @@ if(!function_exists("f1_register_custom_post_types"))
 
         /* Church Groups */
         /*
-        $pt = new CustomPostType("Group",[],THEME_PREFIX);
+        $pt = new CustomPostType("Group",['exclude_from_search'=>false],THEME_PREFIX);
         $pt
             ->setPermalinks("/groups/%postname%/")
             ->register()
@@ -26,6 +26,7 @@ if(!function_exists("f1_register_custom_post_types"))
 
         /* News and Stories */
         $pt = new CustomPostType("News Story",[
+            'exclude_from_search' => false,
             'rewrite' => [
                 'with_front'=>true,
                 'feeds'=>true,

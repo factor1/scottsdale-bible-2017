@@ -74,7 +74,9 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
                 </li>
                 <li>
-                    <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
+                    <form>
+                        <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
+                    </form>
                 </li>
             </ul>
         </div>
