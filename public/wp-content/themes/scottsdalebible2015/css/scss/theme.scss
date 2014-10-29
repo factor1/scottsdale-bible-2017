@@ -273,15 +273,18 @@ body
         > .row:first-child
         {
 
-            .columns
+            > .columns
             {
                 height: 125px;
             }
 
-            .columns:first-child
+            > .columns:first-child
             {
-                a
+                text-align: center;
+                
+                > a
                 {
+                    display: inline-block;
                     line-height: 100px;
                 }
 
@@ -291,7 +294,7 @@ body
                 }            
             }
 
-            .columns:last-child
+            > .columns:last-child
             {
                 line-height: 125px;
                 text-align: right;
@@ -744,6 +747,8 @@ section.image-slider
             display: none;
             margin: 0px;
             padding: 0px;
+            overflow: hidden;
+            text-align: center;
         }
         
         > li:first-child
@@ -802,7 +807,7 @@ section.select-campus
         width: 100%;
         max-width: 100%;
         text-align: center;
-        z-index: 9999;
+        z-index: 2000;
         
         > ul
         {
