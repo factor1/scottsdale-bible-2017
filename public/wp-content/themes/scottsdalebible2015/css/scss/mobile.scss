@@ -125,11 +125,83 @@
             }
         }
     }
-}    
+}
 
 /**
 *
-* 2.0 Image Slider Styles
+* 3.0 Header Mega Mobile Menu Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 640px)
+{
+    body
+    {
+        > header
+        {
+            > section
+            {
+                height: auto;
+                
+                > .row
+                {
+                
+                    > .columns
+                    {
+                        text-align: left;
+                        
+                        > a
+                        {
+                            text-align: inherit;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            border-top: 2px solid #be955b;
+                        }
+                        
+                        > nav
+                        {
+                            position: static;
+                            
+                            > ul.inline-list
+                            {
+                                > li
+                                {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    
+                    > .columns:first-child
+                    {
+                        > a
+                        {
+                            border-top: 0px;
+                        }
+                    }
+                    
+                    > .columns:hover
+                    {
+                        > nav
+                        {
+                            display: none;
+                        }
+                    }
+                    
+                    > .columns + .columns
+                    {
+                        display: none;
+                    }
+                }    
+            }
+        }
+    }    
+}
+
+
+/**
+*
+* 4.0 Image Slider Styles
 * -----------------------------------------------------------------------------
 */
 
@@ -163,7 +235,7 @@
 
 /**
 *
-* 3.0 - Component - Last and Upcoming Message
+* 5.0 - Component - Last and Upcoming Message
 * -----------------------------------------------------------------------------
 */
 
@@ -212,7 +284,7 @@
 
 /**
 *
-* 4.0 - Component - Upcoming Events
+* 6.0 - Component - Upcoming Events
 * -----------------------------------------------------------------------------
 */
 
@@ -242,7 +314,7 @@
 
 /**
 *
-* 5.0 - Footer Styles
+* 7.0 - Footer Styles
 * -----------------------------------------------------------------------------
 */
 
@@ -266,7 +338,7 @@
 
 /**
 *
-* 6.0 - Component - Article
+* 8.0 - Component - Article
 * -----------------------------------------------------------------------------
 */
 
