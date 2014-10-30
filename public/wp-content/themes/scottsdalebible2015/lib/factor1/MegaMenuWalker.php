@@ -83,7 +83,7 @@ class MegaMenuWalker extends \Walker_Nav_Menu {
         $item_indent = str_repeat( "\t", $depth+3 );
 
         if(!$depth) {
-            $output .= $indent."<div class=\"small-2 columns\">\n";
+            $output .= $indent."<div class=\"medium-2 columns\">\n";
         } else {
             $output .= $indent."<li>\n";
         }

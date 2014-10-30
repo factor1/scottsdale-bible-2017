@@ -34,5 +34,19 @@
             }
         });
 
+        /* Mobile Menu Toggles */
+        $(window).resize(function() {
+            $("header > section nav").add($("header > section .columns")).attr("style","");
+        });
+        $("header > section > .row > .columns:first-child > a").click(function(e) {
+            $(this).parent().nextAll(".columns").slideToggle();
+        });
+        $("header > section > .row > .columns + .columns > a").click(function(e) {
+            var n$ = $(this).next("nav");
+            if(n$.length<1||$(window).width()>640) { return true; }
+            e.preventDefault();
+            n$.slideToggle();
+        });
+
     });
 })(jQuery);
