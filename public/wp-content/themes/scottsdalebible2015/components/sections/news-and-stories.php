@@ -11,7 +11,7 @@ if(!$news_posts) {
     <h1><i class="fa fa-news-and-stories"></i>News <span>and</span> Stories</h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-3">
-            <?php foreach($news_posts as $post) { $post =& $post['news_story']; $image = get_field("featured_image",$post->ID); ?>
+            <?php foreach($news_posts as $story) { $story =& $story['news_story']; $image = get_field("featured_image",$story->ID); ?>
             <li>
                 <div>
                     <div>
@@ -20,10 +20,10 @@ if(!$news_posts) {
                         <?php } ?>
                     </div>
                     <div>
-                        <h3><a href="<?php echo get_permalink($post->ID); ?>"><?php echo esc_html($post->post_title); ?></a></h3>
-                        <a href="<?php echo get_permalink($post->ID); ?>"><i class="fa fa-thin-chevron-right"></i></a>
+                        <h3><a href="<?php echo get_permalink($story->ID); ?>"><?php echo esc_html($story->post_title); ?></a></h3>
+                        <a href="<?php echo get_permalink($story->ID); ?>"><i class="fa fa-thin-chevron-right"></i></a>
                         <p>
-                            <?php echo esc_html(get_field("story_subtitle",$post->ID)); ?>
+                            <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
                         </p>
                     </div>
                 </div>

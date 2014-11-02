@@ -249,6 +249,43 @@ if(!function_exists("sb_get_post_id_by_location_id"))
     }
 }
 
+if(!function_exists("sb_load_all_event_data"))
+{
+    function sb_load_all_event_data(WP_Post $event)
+    {
+         if(!($meta_values = get_post_meta($event->ID))) {
+             return $event;
+         }
+         $event->meta = new stdClass;
+         foreach($meta_values as $k => $v) {
+             $v = $v[0];
+             if($k==="_location_id") {
+                 if(!$v) { continue; }
+                 $event->meta->location = new stdClass;
+                 $event->meta->location->post_id = sb_get_post_id_by_location_id($v);
+                 if(!($location_meta = get_post_meta($event->meta->location->post_id))) {
+                     continue;
+                 }
+                 foreach($location_meta as $lk =>$lv) {
+                     $lv = $lv[0];
+                     if(!preg_match("#^_location_#imsu",$k)) {
+                         continue;
+                     }
+                     $lk = preg_replace("#^_location_#imsu","",$lk);
+                     $event->meta->location->$lk = $lv;
+                 }
+                 continue;
+             }
+             if(!preg_match("#^_event_#imsu",$k)) {
+                 continue;
+             }
+             $k = preg_replace("#^_event_#imsu","",$k);
+             $event->meta->$k = $v;
+        }
+        return $event;
+    }
+}
+
 if(!function_exists("sb_get_upcoming_events"))
 {
     function sb_get_upcoming_events(array $args = [])
@@ -256,53 +293,17 @@ if(!function_exists("sb_get_upcoming_events"))
         $events = get_posts(array_merge([
             'posts_per_page' => 4,
             'post_type' => 'event',
-            'post_status'      => 'publish',
-            'suppress_filters' => true
+            'post_status' => 'publish',
+            'suppress_filters' => true,
+            'orderby' => 'post_date',
+            'order' => 'DESC',
         ],$args));
 
         if(!$events) { return []; }
 
         foreach($events as $event) {
-            if(!($meta_values = get_post_meta($event->ID))) {
-                continue;
-            }
-            $event->meta = new stdClass;
-
-            foreach($meta_values as $k => $v) {
-
-                $v = $v[0];
-
-                if($k==="_location_id") {
-
-                    if(!$v) { continue; }
-
-                    $event->meta->location = new stdClass;
-                    $event->meta->location->post_id = sb_get_post_id_by_location_id($v);
-
-                    if(!($location_meta = get_post_meta($event->meta->location->post_id))) {
-                        continue;
-                    }
-
-                    foreach($location_meta as $lk =>$lv) {
-                        $lv = $lv[0];
-                        if(!preg_match("#^_location_#imsu",$k)) {
-                            continue;
-                        }
-                        $lk = preg_replace("#^_location_#imsu","",$lk);
-                        $event->meta->location->$lk = $lv;
-                    }
-
-                    continue;
-                }
-
-                if(!preg_match("#^_event_#imsu",$k)) {
-                    continue;
-                }
-                $k = preg_replace("#^_event_#imsu","",$k);
-                $event->meta->$k = $v;
-            }
+            $event = sb_load_all_event_data($event);
         }
-
         return $events;
     }
 }

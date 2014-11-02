@@ -1,6 +1,18 @@
 <?php if(!isset($wp)) { return; }
 
-$events = sb_get_upcoming_events();
+/* Load Preset Events if Set */
+$events = [];
+if($upcoming_events = get_field("upcoming_events")) {
+    foreach($upcoming_events as $event) {
+        $event =& $event['event'];
+        $events[] = sb_load_all_event_data($event);
+    }
+}
+
+/* No Preset, Load Most Recent Posts */
+if(!$events) {
+    $events = sb_get_upcoming_events();
+}
 
 if(!$events) {
     return;

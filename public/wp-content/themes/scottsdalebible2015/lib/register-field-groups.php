@@ -355,11 +355,11 @@ if(!function_exists("get_acf_common_field"))
             'type' => 'repeater',
             'required' => 0,
             'sub_fields' => [
-                acf_field_def_post_object("field_".md5(THEME_PREFIX."news_and_stories_post"),"News/Story Post","news_story",['post_type'=>[0 =>THEME_PREFIX.'news_story']])
+                acf_field_def_post_object("field_".md5(THEME_PREFIX."news_and_stories_post"),"","news_story",['post_type'=>[0 =>THEME_PREFIX.'news_story']])
             ],
             'row_min' => 1,
             'row_limit' => '',
-            'layout' => 'row',
+            'layout' => 'table',
             'button_label' => 'Add Story',
         ];
 
@@ -372,13 +372,51 @@ if(!function_exists("get_acf_common_field"))
 if(function_exists("register_field_group"))
 {
 
+    /* Default Post Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_posts'),
+        'title' => 'Posts',
+        'fields' => [
+            acf_field_def_text("field_".md5(THEME_PREFIX."post_subtitle"),"Subtitle (optional)","post_subtitle",['placeholder'=>'short excerpt for front pages']),
+            acf_field_def_image("field_".md5(THEME_PREFIX."post_featured_image"),"Featured Image","featured_image"),
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'custom_fields',
+                1 => 'featured_image'
+            ]
+        ]
+    ]);
+
     /* Homepage Fields */
     register_field_group([
         'id' => "field_".md5(THEME_PREFIX.'group_homepage'),
         'title' => 'Homepage',
         'fields' => [
             get_acf_common_field('image_slider','homepage'),
-            get_acf_common_field('news_and_stories','homepage')
+            acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_last_weekend_message"),"Last Weekend Message","last_weekend_message",['post_type'=>'post']),
+            acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_upcoming_message"),"Upcoming Message","upcoming_message",['post_type'=>'post']),
+            get_acf_common_field('news_and_stories','homepage'),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."homepage_upcoming_events"),"Upcoming Events","upcoming_events",[
+                'sub_fields'=>[
+                    acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_upcoming_event"),"","event",['post_type'=>'event'])
+                ],
+                'button_label'=>'Add Event'
+            ])
         ],
         'location' => [
             [
