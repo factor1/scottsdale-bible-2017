@@ -308,5 +308,20 @@ if(!function_exists("sb_get_upcoming_events"))
     }
 }
 
+if(!function_exists("sb_get_campuses"))
+{
+    function sb_get_campuses(array $args = [])
+    {
+        return get_posts(array_merge([
+            'posts_per_page' => -1,
+            'post_type' => 'sb_campus',
+            'post_status' => 'publish',
+            'suppress_filters' => true,
+            'orderby' => 'post_title',
+            'order' => 'ASC',
+        ],$args));
+    }
+}
+
 $init = THEME_PREFIX."template_init";
 $init();

@@ -276,7 +276,7 @@ if(!function_exists("get_acf_common_field"))
             'label' => 'Image Slider',
             'name' => 'image_slider',
             'type' => 'repeater',
-            'required' => 1,
+            'required' => 0,
             'sub_fields' => [
                 [
                     'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image'),

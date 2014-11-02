@@ -1,29 +1,25 @@
-<?php if(!isset($wp)) { return; } ?>
+<?php if(!isset($wp)) { return; }
 
+$campuses = sb_get_campuses();
+
+if(!$campuses) {
+    return;
+}
+
+?>
 <section class="select-campus">
     <div class="row">
         <ul class="no-bullet">
             <li>
                 <h3>Select <span>your</span> campus <i class="fa fa-chevron-down"></i></h3>
             </li>
+            <?php foreach($campuses as $campus) { $campus_name = explode(" ",$campus->post_title); ?>
             <li>
-                <a href="#"><span>Shea</span> Campus</a>
+                <a href="<?php echo get_permalink($campus->ID); ?>">
+                    <span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?>
+                </a>
             </li>
-            <li>
-                <a href="#"><span>Cactus</span> Campus</a>
-            </li>
-            <li>
-                <a href="#"><span>Worship</span> Center</a>
-            </li>
-            <li>
-                <a href="#"><span>Venue</span> Community</a>
-            </li>
-            <li>
-                <a href="#"><span>Grace</span> Chapel</a>
-            </li>
-            <li>
-                <a href="#"><span>Hayden</span> Chapel</a>
-            </li>
+            <?php } ?>
         </ul>
     </div>
 </section>
