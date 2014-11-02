@@ -1,5 +1,8 @@
 <?php
 
+$campus = get_queried_object();
+sb_set_campus_cookie($campus->ID);
+
 get_header();
 get_template_part("components/sections/image-slider");
 get_template_part("components/sections/welcome-to-campus");

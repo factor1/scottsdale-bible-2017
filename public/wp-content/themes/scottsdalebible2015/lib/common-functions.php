@@ -11,6 +11,36 @@ if(!function_exists("getRequestURI"))
     }
 }
 
+if(!function_exists("f1_get_http_host"))
+{
+    function f1_get_http_host($port = false)
+    {
+        $host = explode(":",$_SERVER['HTTP_HOST']);
+        return $host[0].(($port===true&&isset($host[1]))?":".$host[1]:"");
+    }
+}
+
+if(!function_exists("f1_get_site_tld"))
+{
+    function f1_get_site_tld()
+    {
+        $domain_list = explode(".",f1_get_http_host());
+        return (string) ((count($domain_list)>1) ? implode(".",array_slice($domain_list,-2)) : f1_get_http_host());
+    }
+}
+
+if(!function_exists("f1_create_cookie"))
+{
+    function f1_create_cookie($n,$s,$e = 0,$cookie_dir = "")
+    {
+        $n = (string) $n;
+        $s = (string) $s;
+        $e = (int) $e;
+        $cookie_dir = (string) $cookie_dir;
+        @setcookie($n,$s,$e,$cookie_dir,".".f1_get_site_tld());
+    }
+}
+
 if(!function_exists("f1_get_page_title"))
 {
     function f1_get_page_title()
@@ -263,6 +293,9 @@ if(!function_exists("f1_get_slider_images"))
 }
 
 $theme_functions = [
+    'f1_get_http_host',
+    'f1_get_site_tld',
+    'f1_create_cookie',
     'f1_get_page_title',
     'f1_get_repeater_subfields',
     'f1_get_image',

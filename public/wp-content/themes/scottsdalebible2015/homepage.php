@@ -3,6 +3,8 @@
 Template Name: Homepage
 */
 
+sb_campus_cookie_check();
+
 get_header();
 get_template_part("components/sections/image-slider");
 get_template_part("components/sections/select-campus");

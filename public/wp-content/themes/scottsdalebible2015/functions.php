@@ -3,6 +3,9 @@
 define("THEME_PREFIX","sb_");
 define("THEME_TIMEZONE","America/Phoenix");
 
+define("CAMPUS_COOKIE","sb_campus");
+define("CAMPUS_COOKIE_EXPIRATION",(60*60*24*30)); // Seconds Added to Current Time
+
 if(!defined("THEME_TYPEKIT")) {
     define("THEME_TYPEKIT","//use.typekit.net/awe4auy.js"); //Development Kit
     //define("THEME_TYPEKIT","//use.typekit.net/aww5xwt.js"); //Production Kit
@@ -320,6 +323,38 @@ if(!function_exists("sb_get_campuses"))
             'orderby' => 'post_title',
             'order' => 'ASC',
         ],$args));
+    }
+}
+
+if(!function_exists("sb_campus_cookie_check"))
+{
+    function sb_campus_cookie_check()
+    {
+        if(!($campus=sb_get_campus_cookie())) {
+            return;
+        }
+        if(!($permalink=get_permalink($campus))) {
+            return;
+        }
+        header("Location: ".$permalink);
+        header("Status: 302");
+        exit;
+    }
+}
+
+if(!function_exists("sb_set_campus_cookie"))
+{
+    function sb_set_campus_cookie($id)
+    {
+        sb_create_cookie(CAMPUS_COOKIE,(string)$id,time()+CAMPUS_COOKIE_EXPIRATION,"/");
+    }
+}
+
+if(!function_exists("sb_get_campus_cookie"))
+{
+    function sb_get_campus_cookie()
+    {
+        return (isset($_COOKIE[CAMPUS_COOKIE])&&$_COOKIE[CAMPUS_COOKIE]) ? (int) $_COOKIE[CAMPUS_COOKIE] : 0;
     }
 }
 
