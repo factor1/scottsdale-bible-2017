@@ -241,8 +241,11 @@ if(!function_exists("f1_get_slider_images"))
 {
     function f1_get_slider_images($field_name,$subfield_name,$scheduled_only = false)
     {
+        if(!($slider=get_field($field_name))) {
+            return [];
+        }
         $images = [];
-        foreach(get_field($field_name) as $field) {
+        foreach($slider as $field) {
             if($scheduled_only===true) {
                 if(!f1_scheduled_to_display($field)) {
                     continue;

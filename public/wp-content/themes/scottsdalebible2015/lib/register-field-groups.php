@@ -462,6 +462,8 @@ if(function_exists("register_field_group"))
                 'center_lat' => '33.4483771',
                 'center_lng' => '-112.0740373'
             ]),
+            acf_field_def_post_object("field_".md5(THEME_PREFIX."campus_last_weekend_message"),"Last Weekend Message","last_weekend_message",['post_type'=>'post']),
+            acf_field_def_post_object("field_".md5(THEME_PREFIX."campus_upcoming_message"),"Upcoming Message","upcoming_message",['post_type'=>'post']),
             get_acf_common_field('news_and_stories','campus')
         ],
         'location' => [
