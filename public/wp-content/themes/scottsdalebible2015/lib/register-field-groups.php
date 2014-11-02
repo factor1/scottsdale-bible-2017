@@ -377,7 +377,7 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_posts'),
         'title' => 'Posts',
         'fields' => [
-            acf_field_def_text("field_".md5(THEME_PREFIX."post_subtitle"),"Subtitle (optional)","post_subtitle",['placeholder'=>'short excerpt for front pages']),
+            acf_field_def_text("field_".md5(THEME_PREFIX."post_subtitle"),"Subtitle (optional)","subtitle",['placeholder'=>'short excerpt for front pages']),
             acf_field_def_image("field_".md5(THEME_PREFIX."post_featured_image"),"Featured Image","featured_image"),
         ],
         'location' => [

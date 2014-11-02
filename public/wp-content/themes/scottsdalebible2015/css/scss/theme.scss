@@ -1225,6 +1225,19 @@ section.last-and-upcoming-message
                 padding: 0px;
                 margin: 0px;
                 
+                > div:first-child
+                {
+                    text-align: center;
+                    max-height: 340px;
+                    overflow: hidden;
+
+                    img
+                    {
+                        min-height: 340px;
+                        min-width: 100%;
+                    }                    
+                }                
+                
                 > div:last-child
                 {
                     background-color: #414042;
@@ -1256,6 +1269,19 @@ section.last-and-upcoming-message
                 max-width: 410px;
                 padding: 0px;
                 margin: 0px;
+                
+                > div:first-child
+                {
+                    text-align: center;
+                    max-height: 250px;
+                    overflow: hidden;
+
+                    img
+                    {
+                        min-height: 250px;
+                        min-width: 100%;
+                    }                    
+                }                 
                 
                 > div:nth-child(2)
                 {
