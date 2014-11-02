@@ -72,6 +72,13 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                 </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
+                    <ul class="no-bullet">
+                        <?php foreach(sb_get_campuses() as $campus) { $campus_name = explode(" ",trim($campus->post_title)); ?>
+                        <li>
+                            <a href="<?php echo get_permalink($campus->ID); ?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
+                        </li>
+                        <?php } ?>
+                    </ul>
                 </li>
                 <li>
                     <form data-action="<?php bloginfo('siteurl'); ?>">

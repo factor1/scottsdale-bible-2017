@@ -306,8 +306,9 @@ body
                 font-size: 14px;
                 font-weight: 300;
                 vertical-align: middle;
+                overflow: visible;
 
-                li
+                > li
                 {
                     position: relative;
                     height: 25px;
@@ -315,7 +316,8 @@ body
                     padding: 0px;
                     margin: auto;
                     margin-right: 50px;
-
+                    overflow: visible;
+                   
                     i.fa
                     {
                         line-height: inherit;
@@ -361,7 +363,69 @@ body
                     {
                         color: #be955b;
                     }
+                    
+                    > ul
+                    {
+                        display: none;
+                        position: absolute;
+                        top: 22px;
+                        left: 50%;
+                        width: 340px;
+                        margin-left: -170px;
+                        z-index: 9999;
+                        
+                        > li
+                        {
+                            display: block;
+                            background-color: #414042;
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            padding-right: 0px;
+                            padding-left: 0px;
+                            text-align: center;
 
+                            > a
+                            {
+                                font-size: 24px;
+                                font-weight: 300;
+                                color: #ffffff;
+                                text-decoration: underline;
+                                text-transform: uppercase;
+                                white-space: nowrap;                                
+
+                                > span
+                                {
+                                    font-weight: 700;
+                                }
+                            }
+
+                            > a:hover
+                            {
+                                color: #be955b;
+                            }                            
+                        }
+                        
+                        > li:first-child
+                        {
+                            margin-top: 10px;
+                            padding-top: 26px;
+                        }
+                        
+                        > li:last-child
+                        {
+                            padding-bottom: 26px;
+                        }
+                        
+                    }
+
+                }
+                
+                > li:hover
+                {
+                    > ul
+                    {
+                        display: block;
+                    }
                 }
             }
         }
