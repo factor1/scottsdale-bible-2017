@@ -82,6 +82,11 @@ if(!function_exists("sb_template_init"))
                 echo "<meta name=\"author\" content=\"Factor1\" />";
             });
 
+            /* Check for Campus Clear */
+            if(isset($_GET['clear_campus'])) {
+                sb_clear_campus_cookie();
+            }
+
         });
 
         /* Widgets Init */
@@ -168,6 +173,18 @@ if(!function_exists("sb_template_init"))
             remove_meta_box( 'authordiv','page','normal' ); // Author Metabox
 
         });
+
+        /* Add Clear Cookie to Admin Menu */
+        add_action("admin_bar_menu",function($wp_admin_bar) {
+            if(!sb_get_campus_cookie()) {
+                return;
+            }
+            $wp_admin_bar->add_node([
+                'id' => THEME_PREFIX.'_clear_campus',
+                'title' => 'Clear Campus Cookie',
+                'href' => getRequestURI(false).(($q=getRequestURIQuery())?$q."&":"?")."clear_campus"
+            ]);
+        },999);
 
         /* Remove lame user profit data */
         add_filter('user_contactmethods',function($contactmethods) {
@@ -356,6 +373,20 @@ if(!function_exists("sb_get_campus_cookie"))
     function sb_get_campus_cookie()
     {
         return (isset($_COOKIE[CAMPUS_COOKIE])&&$_COOKIE[CAMPUS_COOKIE]) ? (int) $_COOKIE[CAMPUS_COOKIE] : 0;
+    }
+}
+
+if(!function_exists("sb_clear_campus_cookie"))
+{
+    function sb_clear_campus_cookie()
+    {
+        $_COOKIE[CAMPUS_COOKIE] = null;
+        sb_create_cookie(CAMPUS_COOKIE,"0",time()-CAMPUS_COOKIE_EXPIRATION,"/");
+        add_action("admin_notices",function() {
+            echo    "<div class=\"updated\">".
+                            "<p>Campus cookie has been cleared!</p>".
+                        "</div>";
+        });
     }
 }
 
