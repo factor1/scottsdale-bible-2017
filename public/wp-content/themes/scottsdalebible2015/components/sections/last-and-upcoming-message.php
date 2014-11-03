@@ -1,18 +1,16 @@
 <?php if(!isset($wp)) { return; }
 
-$last_weekend = get_field("last_weekend_message");
-$upcoming_message = get_field("upcoming_message");
+if(!isset($post)) {
+    $post = get_queried_object();
+}
+$msg_post_id = (get_field("use_homepage_messages")) ? sb_get_homepage_post_id() : $post->ID;
+
+$last_weekend = ($f=get_field("last_weekend_message",$msg_post_id)) ? (object) $f[0] : null;
+$upcoming_message = ($f=get_field("upcoming_message",$msg_post_id)) ? (object) $f[0] : null;
 
 if(!$last_weekend||!$upcoming_message) {
     return;
 }
-
-/*
-<span class='st_facebook_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-<span class='st_twitter_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-<span class='st_email_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-<span class='st_pinterest_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-*/
 
 ?>
 <section class="last-and-upcoming-message">
@@ -21,14 +19,14 @@ if(!$last_weekend||!$upcoming_message) {
         <div class="large-7 columns">
             <div>
                 <div>
-                    <?php if($image=get_field("featured_image",$last_weekend->ID)) { ?>
-                    <img src="<?php echo esc_attr($image['sizes']['large']); ?>" alt="" title="" />
+                    <?php if($last_weekend->image) { ?>
+                    <img src="<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>" alt="" title="" />
                     <?php } ?>
                 </div>
                 <div>
-                    <h3><i class="fa fa-calendar"></i><span>Last Weekend:</span> <?php echo esc_html($last_weekend->post_title); ?></h3>
-                    <?php if($field=get_field("subtitle",$last_weekend->ID)) { ?>
-                    <h5><?php echo esc_html($field); ?></h5>
+                    <h3><i class="fa fa-calendar"></i><span>Last Weekend:</span> <?php echo esc_html($last_weekend->title); ?></h3>
+                    <?php if($last_weekend->subtitle) { ?>
+                    <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
                 </div>
             </div>
@@ -38,14 +36,14 @@ if(!$last_weekend||!$upcoming_message) {
         <div class="large-5 columns">
             <div>
                 <div>
-                    <?php if($image=get_field("featured_image",$upcoming_message->ID)) { ?>
-                    <img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
+                    <?php if($upcoming_message->image) { ?>
+                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['medium']); ?>" alt="" title="" />
                     <?php } ?>
                 </div>
                 <div>
-                    <h3><i class="fa fa-calendar"></i><span>UPCOMING</span> MESSAGE:<br /><?php echo esc_html($upcoming_message->post_title); ?></h3>
-                    <?php if($field=get_field("subtitle",$upcoming_message->ID)) { ?>
-                    <h5><?php echo esc_html($field); ?></h5>
+                    <h3><i class="fa fa-calendar"></i><span>UPCOMING</span> MESSAGE:<br /><?php echo esc_html($upcoming_message->title); ?></h3>
+                    <?php if($upcoming_message->subtitle) { ?>
+                    <h5><?php echo esc_html($upcoming_message->subtitle); ?></h5>
                     <?php } ?>
                 </div>
                 <div>

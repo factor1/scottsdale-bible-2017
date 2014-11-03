@@ -359,5 +359,15 @@ if(!function_exists("sb_get_campus_cookie"))
     }
 }
 
+if(!function_exists("sb_get_homepage_post_id"))
+{
+    function sb_get_homepage_post_id()
+    {
+        global $wpdb;
+        $results = $wpdb->get_results("select distinct post_id from wp_postmeta where meta_key='_wp_page_template' and meta_value='homepage.php'");
+        return ($results) ? (int) $results[0]->post_id : 0;
+    }
+}
+
 $init = THEME_PREFIX."template_init";
 $init();
