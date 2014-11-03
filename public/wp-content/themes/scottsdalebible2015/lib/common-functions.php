@@ -11,6 +11,11 @@ if(!function_exists("getRequestURI"))
     }
 }
 
+if(!function_exists("getRequestURIQuery"))
+{
+    function getRequestURIQuery() { return preg_replace("#^".preg_quote(getRequestURI(false))."#ismu","",getRequestURI(true)); }
+}
+
 if(!function_exists("f1_get_http_host"))
 {
     function f1_get_http_host($port = false)
