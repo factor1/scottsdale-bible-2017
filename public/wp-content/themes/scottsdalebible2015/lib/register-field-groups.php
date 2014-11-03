@@ -267,6 +267,25 @@ if(!function_exists("acf_field_def_tab"))
     }
 }
 
+if(!function_exists("acf_field_def_url"))
+{
+    function acf_field_def_url($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'url',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'default_value' => '',
+            'placeholder' => ''
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -278,36 +297,10 @@ if(!function_exists("get_acf_common_field"))
             'type' => 'repeater',
             'required' => 0,
             'sub_fields' => [
-                [
-                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image'),
-                    'label' => 'Slider Image',
-                    'name' => 'slider_image',
-                    'prefix' => '',
-                    'type' => 'image',
-                    'instructions' => '',
-                    'required' => 1,
-                    'conditional_logic' => 0,
-                    'return_format' => 'array',
-                    'preview_size' => 'thumbnail',
-                    'library' => 'all'
-                ],
-                [
-                    'key' => "field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image_link'),
-                    'label' => 'Slider Image LInk',
-                    'name' => 'slider_image_link',
-                    'prefix' => '',
-                    'type' => 'text',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'default_value' => '',
-                    'placeholder' => 'url',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => 255,
-                    'readonly' => 0,
-                    'disabled' => 0
-                ],
+                acf_field_def_image("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image'),'Slider Image','slider_image',[
+                    'required' => 1
+                ]),
+                acf_field_def_url("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_slider_image_link'),'Slider Image LInk','slider_image_link'),
                 acf_field_def_repeater("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule'),'Display Schedule<br />(Timezone: '.date("T").')<br />(Default: Always Active)',"schedule",[
                     'sub_fields'=>[
                         acf_field_def_checkbox("field_".md5(THEME_PREFIX.$key_prefix.'image_slider_schedule_days'),"Days","days",[
@@ -408,8 +401,30 @@ if(function_exists("register_field_group"))
         'title' => 'Homepage',
         'fields' => [
             get_acf_common_field('image_slider','homepage'),
-            acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_last_weekend_message"),"Last Weekend Message","last_weekend_message",['post_type'=>'post']),
-            acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_upcoming_message"),"Upcoming Message","upcoming_message",['post_type'=>'post']),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."homepage_last_weekend_message"),"Last Weekend Meesage","last_weekend_message",[
+                'min'=>'0',
+                'max'=>'1',
+                'sub_fields'=>[
+                    acf_field_def_image("field_".md5(THEME_PREFIX."homepage_last_weekend_image"),"Image","image"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."homepage_last_weekend_title"),"Headline","title"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."homepage_last_weekend_subtitle"),"Subline","subtitle"),
+                    acf_field_def_url("field_".md5(THEME_PREFIX."homepage_last_weekend_url"),"URL","url")
+                ],
+                'layout'=>'row',
+                'button_label'=>'Add Message'
+            ]),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."homepage_upcoming_message"),"Upcoming Meesage","upcoming_message",[
+                'min'=>'0',
+                'max'=>'1',
+                'sub_fields'=>[
+                    acf_field_def_image("field_".md5(THEME_PREFIX."homepage_upcoming_image"),"Image","image"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."homepage_upcoming_title"),"Headline","title"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."homepage_upcoming_subtitle"),"Subline","subtitle"),
+                    acf_field_def_url("field_".md5(THEME_PREFIX."homepage_upcoming_url"),"URL","url")
+                ],
+                'layout'=>'row',
+                'button_label'=>'Add Message'
+            ]),
             get_acf_common_field('news_and_stories','homepage'),
             acf_field_def_repeater("field_".md5(THEME_PREFIX."homepage_upcoming_events"),"Upcoming Events","upcoming_events",[
                 'sub_fields'=>[
@@ -462,8 +477,58 @@ if(function_exists("register_field_group"))
                 'center_lat' => '33.4483771',
                 'center_lng' => '-112.0740373'
             ]),
-            acf_field_def_post_object("field_".md5(THEME_PREFIX."campus_last_weekend_message"),"Last Weekend Message","last_weekend_message",['post_type'=>'post']),
-            acf_field_def_post_object("field_".md5(THEME_PREFIX."campus_upcoming_message"),"Upcoming Message","upcoming_message",['post_type'=>'post']),
+
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_messages"),"","use_homepage_messages",[
+                'default_value'=>'1',
+                'message' => 'Use Homepage Last Weekend and Upcoming Messages'
+            ]),
+
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."campus_last_weekend_message"),"Last Weekend Meesage","last_weekend_message",[
+                'min'=>'0',
+                'max'=>'1',
+                'sub_fields'=>[
+                    acf_field_def_image("field_".md5(THEME_PREFIX."campus_last_weekend_image"),"Image","image"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."campus_last_weekend_title"),"Headline","title"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."campus_last_weekend_subtitle"),"Subline","subtitle"),
+                    acf_field_def_url("field_".md5(THEME_PREFIX."campus_last_weekend_url"),"URL","url")
+                ],
+                'layout'=>'row',
+                'button_label'=>'Add Message',
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_messages"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."campus_upcoming_message"),"Upcoming Meesage","upcoming_message",[
+                'min'=>'0',
+                'max'=>'1',
+                'sub_fields'=>[
+                    acf_field_def_image("field_".md5(THEME_PREFIX."campus_upcoming_image"),"Image","image"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."campus_upcoming_title"),"Headline","title"),
+                    acf_field_def_text("field_".md5(THEME_PREFIX."campus_upcoming_subtitle"),"Subline","subtitle"),
+                    acf_field_def_url("field_".md5(THEME_PREFIX."campus_upcoming_url"),"URL","url")
+                ],
+                'layout'=>'row',
+                'button_label'=>'Add Message',
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_messages"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
             get_acf_common_field('news_and_stories','campus')
         ],
         'location' => [
