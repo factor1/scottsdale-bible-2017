@@ -738,8 +738,10 @@ if(function_exists("register_field_group"))
         'title' => 'Theme Options',
         'fields' => [
             acf_field_def_tab("field_".md5(THEME_PREFIX."tab_social_media"),"Social Media","tab_social_media"),
+            /*
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_twiiter_url"),"Twitter URL","twitter_url"),
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_facebook_url"),"Facebook URL","twitter_url"),
+            */
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_instagram_url"),"Instagram URL","instagram_url"),
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_flickr_url"),"Flickr URL","flickr_url")
         ],

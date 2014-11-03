@@ -48,5 +48,11 @@
             n$.slideToggle();
         });
 
+        /* Social Icons - ShareThis Triggers */
+        $("a[data-trigger-click]").click(function(e) {
+            e.preventDefault();
+            $("footer span."+$(this).data("trigger-click")+" > span").click();
+        });
+
     });
 })(jQuery);
