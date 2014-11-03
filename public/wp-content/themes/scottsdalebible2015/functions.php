@@ -66,7 +66,9 @@ if(!function_exists("sb_template_init"))
             }
 
             /* Add ACF Options Page */
-            acf_add_options_page("Theme Options");
+            if(function_exists("acf_add_options_page")) {
+                acf_add_options_page("Theme Options");
+            }
 
             /* Remove Head Links */
             remove_action('wp_head', 'rsd_link');
