@@ -9,4 +9,6 @@ Version: 0.1
 
 @import url("./css/theme.min.css");
 @import url("./css/mobile.min.css") screen;
+/*
 @import url("./css/print.min.css") print;
+*/
