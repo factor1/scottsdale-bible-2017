@@ -1,6 +1,11 @@
 <?php if(!isset($wp)) { return; }
 
-$news_posts = get_field("news_and_stories");
+if(!isset($post)) {
+    $post = get_queried_object();
+}
+$news_post_id = (get_field("use_homepage_news")) ? sb_get_homepage_post_id() : $post->ID;
+
+$news_posts = get_field("news_and_stories",$news_post_id);
 
 if(!$news_posts) {
     return;

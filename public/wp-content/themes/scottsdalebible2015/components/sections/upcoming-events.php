@@ -1,8 +1,13 @@
 <?php if(!isset($wp)) { return; }
 
+if(!isset($post)) {
+    $post = get_queried_object();
+}
+$events_post_id = (get_field("use_homepage_events")) ? sb_get_homepage_post_id() : $post->ID;
+
 /* Load Preset Events if Set */
 $events = [];
-if($upcoming_events = get_field("upcoming_events")) {
+if($upcoming_events = get_field("upcoming_events",$events_post_id)) {
     foreach($upcoming_events as $event) {
         $event =& $event['event'];
         $events[] = sb_load_all_event_data($event);
@@ -10,9 +15,11 @@ if($upcoming_events = get_field("upcoming_events")) {
 }
 
 /* No Preset, Load Most Recent Posts */
+/* Inactive for Now
 if(!$events) {
     $events = sb_get_upcoming_events();
 }
+*/
 
 if(!$events) {
     return;

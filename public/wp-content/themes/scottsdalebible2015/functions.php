@@ -364,6 +364,9 @@ if(!function_exists("sb_set_campus_cookie"))
 {
     function sb_set_campus_cookie($id)
     {
+        if(isset($_GET['clear_campus'])) {
+            return;
+        }
         sb_create_cookie(CAMPUS_COOKIE,(string)$id,time()+CAMPUS_COOKIE_EXPIRATION,"/");
     }
 }
@@ -392,11 +395,16 @@ if(!function_exists("sb_clear_campus_cookie"))
 
 if(!function_exists("sb_get_homepage_post_id"))
 {
+    $homepage_post_id = null;
     function sb_get_homepage_post_id()
     {
-        global $wpdb;
+        global $wpdb, $homepage_post_id;
+        if(!is_null($homepage_post_id)) {
+            return $homepage_post_id;
+        }
         $results = $wpdb->get_results("select distinct post_id from wp_postmeta where meta_key='_wp_page_template' and meta_value='homepage.php'");
-        return ($results) ? (int) $results[0]->post_id : 0;
+        $homepage_post_id = ($results) ? (int) $results[0]->post_id : 0;
+        return $homepage_post_id;
     }
 }
 
