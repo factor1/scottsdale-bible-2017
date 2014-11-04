@@ -529,7 +529,44 @@ if(function_exists("register_field_group"))
                     'allorany' => 'all'
                 ]
             ]),
-            get_acf_common_field('news_and_stories','campus')
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_news"),"","use_homepage_news",[
+                'default_value'=>'1',
+                'message' => 'Use Homepage News and Stories'
+            ]),
+            array_merge(get_acf_common_field('news_and_stories','campus'),[
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_news"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_events"),"","use_homepage_events",[
+                'default_value'=>'1',
+                'message' => 'Use Homepage Upcoming Events'
+            ]),
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."campus_upcoming_events"),"Upcoming Events","upcoming_events",[
+                'sub_fields'=>[
+                    acf_field_def_post_object("field_".md5(THEME_PREFIX."campus_upcoming_event"),"","event",['post_type'=>'event'])
+                ],
+                'button_label'=>'Add Event',
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_events"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ])
         ],
         'location' => [
             [
