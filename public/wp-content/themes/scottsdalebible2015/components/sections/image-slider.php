@@ -1,6 +1,19 @@
-<?php if(!isset($wp)) { return; } ?>
+<?php if(!isset($wp)) { return; }
 
-<?php if($images=sb_get_slider_images("image_slider","slider_image",true)) { $slide_count = count($images); ?>
+if(!isset($post)) {
+    $post = get_queried_object();
+}
+$slider_post_id = (get_field("use_homepage_slider")) ? sb_get_homepage_post_id() : $post->ID;
+
+$images = sb_get_slider_images("image_slider","slider_image",true,$slider_post_id);
+
+if(!$images) {
+    return;
+}
+
+$slide_count = count($images);
+
+?>
 <section class="image-slider">
     <ul>
         <?php foreach($images as $image) { ?>
@@ -19,4 +32,3 @@
     </div>
     <?php } ?>
 </section>
-<?php } ?>

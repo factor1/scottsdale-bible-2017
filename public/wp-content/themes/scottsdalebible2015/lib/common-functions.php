@@ -274,9 +274,9 @@ if(!function_exists("f1_scheduled_to_display"))
 
 if(!function_exists("f1_get_slider_images"))
 {
-    function f1_get_slider_images($field_name,$subfield_name,$scheduled_only = false)
+    function f1_get_slider_images($field_name,$subfield_name,$scheduled_only = false,$post_id = false)
     {
-        if(!($slider=get_field($field_name))) {
+        if(!($slider=get_field($field_name,$post_id))) {
             return [];
         }
         $images = [];

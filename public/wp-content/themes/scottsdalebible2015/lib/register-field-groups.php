@@ -471,7 +471,26 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_campuses'),
         'title' => 'Campuses',
         'fields' => [
-            get_acf_common_field('image_slider','campuses'),
+
+            acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_slider"),"","use_homepage_slider",[
+                'default_value'=>'1',
+                'message' => 'Use Homepage Image Slider'
+            ]),
+
+            array_merge(get_acf_common_field('image_slider','campuses'),[
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_slider"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
+            ]),
+
             acf_field_def_text("field_".md5(THEME_PREFIX."campus_service_times"),"Service Times (Welcome Text)","service_times",['placeholder'=>'SUNDAY SERVICES @ 9 & 10:45 AM']),
             acf_field_def_google_map("field_".md5(THEME_PREFIX."campus_location"),"Map Location","map_location",[
                 'center_lat' => '33.4483771',
