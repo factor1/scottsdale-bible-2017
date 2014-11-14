@@ -1385,7 +1385,7 @@ section.last-and-upcoming-message
 
 /**
 *
-* 10.0 Component - Featured Image Banner
+* 10.0 Component - Featured Images and Videos
 * -----------------------------------------------------------------------------
 */
 
@@ -1407,6 +1407,20 @@ section.featured-image
                 min-width: 100%;
                 max-width: 100%;
                 height: auto;
+            }
+        }
+    }
+}
+
+section.featured-video
+{   
+    > .row
+    {
+        > .columns
+        {
+            iframe
+            {
+                width: 100%;
             }
         }
     }

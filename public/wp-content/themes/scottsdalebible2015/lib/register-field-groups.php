@@ -286,6 +286,25 @@ if(!function_exists("acf_field_def_url"))
     }
 }
 
+if(!function_exists("acf_field_def_oembed"))
+{
+    function acf_field_def_oembed($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'oembed',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'width' => '',
+            'height' => '',
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -622,6 +641,7 @@ if(function_exists("register_field_group"))
         'fields' => [
             acf_field_def_text("field_".md5(THEME_PREFIX."news_story_subtitle"),"Subtitle","story_subtitle",['placeholder'=>'short excerpt for front pages']),
             acf_field_def_image("field_".md5(THEME_PREFIX."news_story_featured_image"),"Featured Image","featured_image"),
+            acf_field_def_oembed("field_".md5(THEME_PREFIX."news_story_featured_video"),"Featured Video (If set, replaces featured image on story page)","featured_video"),
             acf_field_def_checkbox("field_".md5(THEME_PREFIX."news_story_show_sidebar"),"","show_side_bar",['choices'=>['1'=>'Show Sidebar Column'],'default_value'=>0]),
             acf_field_def_repeater("field_".md5(THEME_PREFIX."news_story_sidebar_sub_menus"),"Sidebar Menus","sidebar_menus",[
                 'sub_fields' => [
