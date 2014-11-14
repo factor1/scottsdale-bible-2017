@@ -800,12 +800,13 @@ if(function_exists("register_field_group"))
     ]);
     */
 
-    /* Sidebar Menu Fields */
+    /* General Page Fields */
     register_field_group([
         'id' => "field_".md5(THEME_PREFIX.'group_sidebar_menu'),
         'title' => 'Sidebar Menus',
         'fields' => [
             acf_field_def_image("field_".md5(THEME_PREFIX."featured_image"),"Featured Image","featured_image"),
+            acf_field_def_oembed("field_".md5(THEME_PREFIX."page_featured_video"),"Featured Video (If set, replaces featured image on page)","featured_video"),
             acf_field_def_checkbox("field_".md5(THEME_PREFIX."sidebar_use_parent_menu"),"","use_parent_menu",['choices'=>['1'=>'Use Parent Sidebar Menu(s)'],'default_value'=>1]),
             acf_field_def_repeater("field_".md5(THEME_PREFIX."sidebar_sub_menus"),"Sidebar Menus","sidebar_menus",[
                 'sub_fields' => [
