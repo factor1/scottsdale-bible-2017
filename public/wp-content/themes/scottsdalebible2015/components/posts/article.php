@@ -17,7 +17,5 @@
     </div>
     <div>
         <?php echo ($c=sb_get_content_field("page_content")) ? $c : get_the_content(); ?>
-        <!-- the content -->
-        <?php the_content();?>
     </div>
 </section>
