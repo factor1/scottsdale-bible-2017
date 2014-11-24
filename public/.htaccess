@@ -2,6 +2,9 @@
    Header set Access-Control-Allow-Origin "*"
  </IfModule>
  
+ php_value suhosin.post.max_vars 2048
+php_value suhosin.request.max_vars 2048
+ 
  
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
