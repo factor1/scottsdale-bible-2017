@@ -121,7 +121,7 @@ class CustomPostType {
 
     protected function _blog_path()
     {
-        return preg_replace("#^/#","",$this->_blog->path);
+        //return preg_replace("#^/#","",$this->_blog->path);
     }
 
     protected function _get_rewrite_rules($permastruct)
