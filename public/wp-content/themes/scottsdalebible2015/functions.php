@@ -215,7 +215,7 @@ if(!function_exists("sb_get_sidebar_menus"))
     function sb_get_sidebar_menus($post = null)
     {
         if(!$post) {
-            $post =& get_queried_object();
+            $post = get_queried_object();
         }
         if(!$post) {
             return [];
@@ -246,7 +246,7 @@ if(!function_exists("sb_get_sidebar_content"))
     function sb_get_sidebar_content($post = null)
     {
         if(!$post) {
-            $post =& get_queried_object();
+            $post = get_queried_object();
         }
         if(!$post) {
             return [];

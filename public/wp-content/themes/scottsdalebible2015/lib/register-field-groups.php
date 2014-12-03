@@ -862,7 +862,7 @@ if(function_exists("register_field_group"))
             'label_placement' => 'top',
             'instruction_placement' => 'label',
             'hide_on_screen' => [
-                //0 => 'the_content',
+                0 => 'the_content',
                 1 => 'custom_fields',
                 2 => 'revisions',
                 3 => 'format',
