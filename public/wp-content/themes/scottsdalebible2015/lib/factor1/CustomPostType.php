@@ -121,6 +121,9 @@ class CustomPostType {
 
     protected function _blog_path()
     {
+        if(!is_object($this->_blog)||!property_exits($this->_blog,"path")) {
+            return "";
+        }
         return preg_replace("#^/#","",$this->_blog->path);
     }
 
