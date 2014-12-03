@@ -221,7 +221,7 @@ class CustomPostType {
         }
 
         $templates = [
-            $this->slug.'.php',
+            $this->_slug.'.php',
             sanitize_title($this->_name).'.php',
             'page.php',
             'index.php',
