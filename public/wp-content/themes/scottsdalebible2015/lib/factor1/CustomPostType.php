@@ -206,7 +206,7 @@ class CustomPostType {
             }
 
             $templates = [
-                $this->_str_pluralize($this->slug).'.php',
+                $this->_str_pluralize($this->_slug).'.php',
                 sanitize_title($this->_str_pluralize($this->_name)).'.php',
                 'page-'.sanitize_title($this->_str_pluralize($this->_name)).'.php',
                 'archive.php',

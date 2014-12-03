@@ -101,10 +101,12 @@ if(!function_exists("sb_template_init"))
             unregister_widget( 'WP_Widget_Recent_Comments' );
 
             /* Remove the recent comments style that is automatically added */
+            /*
             remove_action('wp_head',[
                 $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
                 'recent_comments_style'
             ]);
+            */
 
         },1);
 
