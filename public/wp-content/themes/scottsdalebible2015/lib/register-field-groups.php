@@ -672,8 +672,7 @@ if(function_exists("register_field_group"))
                     ],
                     'allorany' => 'all'
                 ]
-            ]),
-            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."news_story_page_content"),"Main Page Content","page_content")
+            ])
         ],
         'location' => [
             [
@@ -691,14 +690,13 @@ if(function_exists("register_field_group"))
             'label_placement' => 'top',
             'instruction_placement' => 'label',
             'hide_on_screen' => [
-                0 => 'the_content',
-                1 => 'custom_fields',
-                2 => 'revisions',
-                3 => 'format',
-                4 => 'categories',
-                5 => 'tags',
-                6 => 'featured_image',
-                7 => 'send-trackbacks'
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
             ]
         ]
     ]);
@@ -838,8 +836,7 @@ if(function_exists("register_field_group"))
                     ],
                     'allorany' => 'all'
                 ]
-            ]),
-            acf_field_def_wysiwyg("field_".md5(THEME_PREFIX."page_content"),"Main Page Content","page_content")
+            ])
         ],
         'location' => [
             [
@@ -862,14 +859,13 @@ if(function_exists("register_field_group"))
             'label_placement' => 'top',
             'instruction_placement' => 'label',
             'hide_on_screen' => [
-                0 => 'the_content',
-                1 => 'custom_fields',
-                2 => 'revisions',
-                3 => 'format',
-                4 => 'categories',
-                5 => 'tags',
-                6 => 'featured_image',
-                7 => 'send-trackbacks'
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
             ]
         ]
     ]);

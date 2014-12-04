@@ -16,6 +16,6 @@
         </ul>
     </div>
     <div>
-        <?php echo ($c=sb_get_content_field("page_content")) ? $c : get_the_content(); ?>
+        <?php echo ($c=sb_get_content_field("page_content")) ? $c : sb_get_the_content(); ?>
     </div>
 </section>
