@@ -65,7 +65,7 @@ if(!function_exists("f1_get_page_title"))
             $pg_title = "";
         }
         $pg_title .= bloginfo("name").((is_home())?" - ".bloginfo("description"):"").(($paged>1)?" - Page ".$paged:"");
-        return htmlentities($page_title);
+        return htmlentities($pg_title);
     }
 }
 

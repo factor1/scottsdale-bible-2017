@@ -19,7 +19,9 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
     <meta property="og:title" content="<?php the_title(); ?>" />
+    <?php /* ?>
     <meta property="og:description" content="<?php the_excerpt(); ?>" />
+    <?php */ ?>
     <meta property="og:site_name" content="<?php bloginfo('name') ?>" />
     <title><?php echo sb_get_page_title(); ?></title>
     <meta name="author" content="Factor1" />
