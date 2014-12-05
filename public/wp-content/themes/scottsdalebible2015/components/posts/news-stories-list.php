@@ -1,7 +1,7 @@
 <section class="news-and-stories">
     <h1><i class="fa fa-news-and-stories"></i>News <span>and</span> Stories</h1>
     <div class="row">
-        <ul class="small-block-grid-1 large-block-grid-3">
+        <ul class="small-block-grid-1 medium-block-grid-3">
             <?php while(have_posts()) { the_post(); $story = get_post(); $image = get_field("featured_image",$story->ID); ?>
             <li>
                 <div>
