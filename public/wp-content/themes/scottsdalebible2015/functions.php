@@ -331,11 +331,24 @@ if(!function_exists("sb_get_upcoming_events"))
     }
 }
 
+if(!function_exists("sb_get_campus_order"))
+{
+    function sb_get_campus_order()
+    {
+        $order = get_field("campus_order","option");
+        $campus_order = [];
+        foreach($order as $obs) {
+            $campus_order[] = (int) $obs['campus'];
+        }
+        return $campus_order;
+    }
+}
+
 if(!function_exists("sb_get_campuses"))
 {
     function sb_get_campuses(array $args = [])
     {
-        return get_posts(array_merge([
+        $campuses = get_posts(array_merge([
             'posts_per_page' => -1,
             'post_type' => 'sb_campus',
             'post_status' => 'publish',
@@ -343,6 +356,18 @@ if(!function_exists("sb_get_campuses"))
             'orderby' => 'post_title',
             'order' => 'ASC',
         ],$args));
+
+        $order = sb_get_campus_order();
+        usort($campuses,function($a,$b) use($order) {
+            $ai = (($k=array_search((int)$a->ID,$order))!==false) ? $k : 9999;
+            $bi = (($k=array_search((int)$b->ID,$order))!==false) ? $k : 9999;
+            if($ai===$bi) {
+                return strcmp($a->post_title,$b->post_title);
+            }
+            return ($ai<$bi) ? -1 : 1;
+        });
+
+        return $campuses;
     }
 }
 

@@ -881,7 +881,20 @@ if(function_exists("register_field_group"))
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_facebook_url"),"Facebook URL","twitter_url"),
             */
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_instagram_url"),"Instagram URL","instagram_url"),
-            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_flickr_url"),"Flickr URL","flickr_url")
+            acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_flickr_url"),"Flickr URL","flickr_url"),
+
+            acf_field_def_tab("field_".md5(THEME_PREFIX."tab_campus_order"),"Campus Order","tab_campus_order"),
+
+            acf_field_def_repeater("field_".md5(THEME_PREFIX."theme_options_campus_order"),"(Any unlisted are added to the bottom in alphabetical order)","campus_order",[
+                'sub_fields' => [
+                    acf_field_def_post_object("field_".md5(THEME_PREFIX."theme_options_campus_order_campus"),"","campus",[
+                        'post_type'=>THEME_PREFIX.'campus',
+                        'return_format' => 'id'
+                    ])
+                ],
+                'button_label' => 'Add Campus'
+            ])
+
         ],
         'location' => [
             [
