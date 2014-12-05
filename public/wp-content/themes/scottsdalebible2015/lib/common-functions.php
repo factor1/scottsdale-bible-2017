@@ -50,6 +50,7 @@ if(!function_exists("f1_get_page_title"))
 {
     function f1_get_page_title()
     {
+        global $paged;
         if(function_exists("is_tag") && is_tag()) {
             $pg_title = single_tag_title("Tag Archive for \"",false)."\" - ";
         } elseif(is_archive()) {

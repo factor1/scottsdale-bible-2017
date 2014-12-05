@@ -254,6 +254,16 @@ body
         background-position: center center;
         background-size: cover;
     }
+    
+    span.stButton
+    {
+        box-sizing: content-box;
+        
+        span
+        {
+            box-sizing: content-box;
+        }
+    }
 
 }
 

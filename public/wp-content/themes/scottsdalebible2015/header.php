@@ -81,7 +81,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                     </ul>
                 </li>
                 <li>
-                    <form data-action="<?php bloginfo('siteurl'); ?>">
+                    <form data-action="<?php echo get_option('siteurl'); ?>">
                         <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
                     </form>
                 </li>
