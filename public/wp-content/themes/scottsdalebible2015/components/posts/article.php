@@ -1,8 +1,11 @@
 <?php if(!isset($wp)) { return; } ?>
 
 <section class="article">
+    <?php if(!get_field("hide_titlebar")) { ?>
     <h1><?php echo get_the_title(); ?></h1>
+    <?php } ?>
     <div>
+        <?php if(!get_field("hide_social_links")) { ?>
         <ul class="inline-list">
             <li>
                 <a href="#"><i class="fa fa-facebook-square"></i>Share this post on Facebook</a>
@@ -14,6 +17,7 @@
                 <a href="#"><i class="fa fa-pinterest-square"></i>Pin this post</a>
             </li>
         </ul>
+        <?php } ?>
     </div>
     <div>
         <?php echo ($c=sb_get_content_field("page_content")) ? $c : sb_get_the_content(); ?>
