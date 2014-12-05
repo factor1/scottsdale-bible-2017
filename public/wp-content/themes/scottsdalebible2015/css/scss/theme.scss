@@ -1094,7 +1094,13 @@ section.news-and-stories
     {
         text-align: center;
         margin-top: 30px;
+        
+        > .navigation
+        {
+            text-align: left;
+        }
     }
+    
 }
 
 /**

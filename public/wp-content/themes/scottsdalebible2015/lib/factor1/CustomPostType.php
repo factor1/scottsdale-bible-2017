@@ -157,7 +157,7 @@ class CustomPostType {
                 $v = str_replace("%search_query%","s",$v);
                 $rule .= "&".str_replace("%","",$v)."=\$matches[".($k+1)."]";
             }
-            $rules[$this->_blog_path().$rule_key] = $rule."&page=\$matches[".(count($query_vars)+2)."]";
+            $rules[$this->_blog_path().$rule_key] = $rule."&paged=\$matches[".(count($query_vars)+2)."]";
         }
 
         $rules[$this->_blog_path().$segments[0]."/?$"] = "index.php?post_type=".$this->_slug;
