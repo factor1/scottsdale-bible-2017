@@ -220,10 +220,22 @@ if(!function_exists("sb_get_sidebar_menus"))
         if(!$post) {
             return [];
         }
-        $post_id = (get_field("use_parent_menu",$post->ID)) ? $post->post_parent : $post->ID;
+
         $menus = [];
 
-        if(!($sidebar_menus=get_field("sidebar_menus",$post_id))) {
+        $post_id = $post->ID;
+        $sidebar_menus = [];
+        while(!$sidebar_menus) {
+            if(!get_field("use_parent_menu",$post_id)) {
+                $sidebar_menus = get_field("sidebar_menus",$post_id);
+                break;
+            }
+            if(!($post_id = wp_get_post_parent_id($post_id))) {
+                break;
+            }
+        }
+
+        if(!$sidebar_menus) {
             return $menus;
         }
 
@@ -251,8 +263,16 @@ if(!function_exists("sb_get_sidebar_content"))
         if(!$post) {
             return [];
         }
-        $post_id = (get_field("use_parent_sidebar_content",$post->ID)) ? $post->post_parent : $post->ID;
+
         $menus = [];
+        $post_id = $post->ID;
+
+        while(get_field("use_parent_sidebar_content",$post_id)) {
+            if(!($id = wp_get_post_parent_id($post_id))) {
+                break;
+            }
+            $post_id = $id;
+        }
 
         return sb_get_content_field("sidebar_content",$post_id);
     }
