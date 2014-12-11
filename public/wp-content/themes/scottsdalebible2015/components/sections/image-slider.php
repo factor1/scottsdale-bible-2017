@@ -11,6 +11,9 @@ if(!$images) {
     return;
 }
 
+$first = array_shift($images);
+$images = array_merge([$first],array_reverse($images));
+
 $slide_count = count($images);
 
 ?>
