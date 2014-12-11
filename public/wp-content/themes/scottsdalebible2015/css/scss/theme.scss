@@ -285,7 +285,26 @@ body
         float: right;
         margin-left: 20px;
         margin-bottom: 20px;
-    } 
+    }
+    
+    .image-block-center
+    {
+        display: block;
+        position: relative;
+        height: 100%;
+        left: 50%;
+        overflow: visible;
+        text-align: left;
+
+        > img
+        {
+            position: relative;
+            min-width: 100%;
+            max-width: initial;
+            height: 100%;
+            margin-left: 0;
+        }
+    }    
 
 }
 
@@ -1180,6 +1199,12 @@ section.upcoming-events
                     > div:first-child
                     {
                         text-align: center;
+                        overflow: hidden;
+                        
+                        > a
+                        {
+                            height: 150px;
+                        }
                     }
                     
                     > div:last-child

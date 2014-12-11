@@ -25,6 +25,15 @@
             });
         }
 
+        /* Image Center Blocks */
+        var centerImageBlocks = function() {
+            $(".image-block-center > img").each(function() {
+                $(this).css("margin-left",($(this).outerWidth()/-2)+"px");
+            });
+        }
+        centerImageBlocks();
+        $(window).resize(centerImageBlocks);
+
         /* Search Form */
         $("header form").submit(function(e) {
             e.preventDefault();

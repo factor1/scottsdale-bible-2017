@@ -34,11 +34,11 @@ if(!$events) {
             <li>
                 <div class="row">
                     <?php if($image=get_field("featured_image",$event->ID)) { ?>
-                    <div class="small-3 columns">
-                        <img src="<?php echo esc_attr($image['sizes']['thumbnail']); ?>" alt="" title="" />
+                    <div class="large-6 columns">
+                        <a class="image-block-center"><img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" /></a>
                     </div>
                     <?php } ?>
-                    <div class="small-9 columns">
+                    <div class="large-6 columns">
                         <h3>
                             <a href="<?php echo get_permalink($event->ID); ?>"><?php echo esc_html($event->post_title); ?></a>
                         </h3>
