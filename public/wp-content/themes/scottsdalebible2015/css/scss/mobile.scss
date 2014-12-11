@@ -288,6 +288,34 @@
 * -----------------------------------------------------------------------------
 */
 
+@media only screen and (max-width: 1024px)
+{
+    section.upcoming-events
+    {
+        > .row:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    > .row
+                    {
+                        > div.columns:first-child
+                        {
+                            max-width: 300px;
+                        }
+                        
+                        > div:last-child
+                        {
+                            float: left;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 500px)
 {
     section.upcoming-events
