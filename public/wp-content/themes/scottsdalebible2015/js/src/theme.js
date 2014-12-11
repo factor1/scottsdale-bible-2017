@@ -44,9 +44,11 @@
         });
 
         /* Mobile Menu Toggles */
+        /*
         $(window).resize(function() {
             $("header > section nav").add($("header > section .columns")).attr("style","");
         });
+        */
         $("header > section > .row > .columns:first-child > a").click(function(e) {
             $(this).parent().nextAll(".columns").slideToggle();
         });
