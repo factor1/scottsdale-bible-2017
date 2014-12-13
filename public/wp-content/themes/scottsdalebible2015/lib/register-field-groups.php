@@ -737,6 +737,47 @@ if(function_exists("register_field_group"))
         ]
     ]);
 
+    /* Events Archive Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_events_archive'),
+        'title' => 'Events Archive Fields',
+        'fields' => [
+            acf_field_def_image("field_".md5(THEME_PREFIX."events_archive_featured_image"),"Featured Image","featured_image"),
+            acf_field_def_oembed("field_".md5(THEME_PREFIX."events_archive_featured_video"),"Featured Video (If set, replaces featured image on page)","featured_video")
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page'
+                ],
+                [
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'events.php'
+                ]
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'the_content',
+                1 => 'custom_fields',
+                2 => 'revisions',
+                3 => 'format',
+                4 => 'featured_image',
+                5 => 'categories',
+                6 => 'tags',
+                7 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
     /* Group Fields */
     /*
     register_field_group([
@@ -853,6 +894,11 @@ if(function_exists("register_field_group"))
                     'param' => 'page_template',
                     'operator' => '!=',
                     'value' => 'homepage.php'
+                ],
+                [
+                    'param' => 'page_template',
+                    'operator' => '!=',
+                    'value' => 'events.php'
                 ]
             ],
         ],
