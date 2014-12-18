@@ -18,11 +18,11 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <?php if (is_search()) { ?>
     <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
-    <meta property="og:title" content="<?php the_title(); ?>" />
-    <?php /* ?>
+    <?php /* Added via WordPress SEO ?>
+    <meta property="og:title" content="<?php sb_get_page_title(); ?>" />
     <meta property="og:description" content="<?php the_excerpt(); ?>" />
-    <?php */ ?>
     <meta property="og:site_name" content="<?php bloginfo('name') ?>" />
+    <?php */ ?>
     <title><?php echo sb_get_page_title(); ?></title>
     <meta name="author" content="Factor1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

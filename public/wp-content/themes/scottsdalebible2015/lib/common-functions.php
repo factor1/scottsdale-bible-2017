@@ -56,7 +56,7 @@ if(!function_exists("f1_get_page_title"))
         } elseif(is_archive()) {
            $pg_title =  wp_title("",false)." Archive - ";
         } elseif(is_search()) {
-            $pg_title = "Search for \"".$s."\" - ";
+            $pg_title = "Search for \"".get_query_var('s')."\"";
         } elseif(is_404()) {
             $pg_title = "Not Found - ";
         } elseif(is_single()||is_page()) {
@@ -64,7 +64,10 @@ if(!function_exists("f1_get_page_title"))
         } else {
             $pg_title = "";
         }
-        $pg_title .= bloginfo("name").((is_home())?" - ".bloginfo("description"):"").(($paged>1)?" - Page ".$paged:"");
+        if($pg_title) {
+            $pg_title .= " | ";
+        }
+        $pg_title .= get_bloginfo("name").((is_home())?" - ".bloginfo("description"):"").(($paged>1)?" - Page ".$paged:"");
         return htmlentities($pg_title);
     }
 }
