@@ -208,30 +208,47 @@
 @media only screen and (max-width: 900px)
 {
     section.image-slider
-    {
-        > ul
-        {    
-            > li
+    {  
+        > .controls-move
+        {
+            margin-top: -69px;
+            line-height: 22px;
+            
+            > .fa
             {
-                >a
-                {
-                    display: block;
-                    width: 800px;
-                    position: relative;
-                    text-align: center;
-                    left: 50%;
-                    margin-left: -400px;
-
-                    img
-                    {
-                        max-width: initial;
-                        height: 250px;   
-                    }
-                }    
-            }
+                font-size: 14px;
+            }    
         }
-    }
-}    
+    }   
+}
+
+@media only screen and (max-width: 600px)
+{
+    section.image-slider
+    {  
+        > .controls-move
+        {
+            margin-top: -57px;
+            line-height: 16px;
+            
+            > .fa
+            {
+                font-size: 12px;
+            }    
+        }
+    }   
+}
+
+@media only screen and (max-width: 350px)
+{
+    section.image-slider
+    {  
+        > .controls-move
+        {
+            display: none;   
+        }
+    }   
+} 
 
 /**
 *
@@ -257,6 +274,30 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: 650px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > .columns
+            {
+                > div:first-child
+                {
+                    > div:first-child
+                    {
+                        img
+                        {
+                            min-height: initial;
+                            min-width: initial;
+                        }                      
+                    }
+                }
+            }
+        }
+    }    
 }
 
 @media only screen and (max-width: 400px)
