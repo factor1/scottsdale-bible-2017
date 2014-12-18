@@ -70,7 +70,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <div class="large-8 columns">
             <ul class="inline-list">
                 <li>
-                    <i class="fa fa-lock"></i><a href="<?php echo wp_login_url(); ?>">Sign In</a>
+                    <i class="fa fa-lock"></i><a href="https://my.scottsdalebible.com/portal/login.aspx?ReturnUrl=%2fportal%2fmy_user_account.aspx">Sign In</a>
                 </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
