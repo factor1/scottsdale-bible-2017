@@ -1783,3 +1783,24 @@ section.posts-archive
         }
     }
 }
+
+
+/**
+*
+* 14.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.search-results
+{
+    > .row
+    {
+        > .columns
+        {
+            > p.no-break
+            {
+                display: none; /* Hide Social Media Links */
+            }
+        }
+    }    
+}
