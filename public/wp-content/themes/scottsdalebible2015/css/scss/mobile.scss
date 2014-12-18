@@ -428,3 +428,28 @@
         }
     }
 }
+
+
+/**
+*
+* 9.0 Section - Welcome to Campus
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 600px)
+{
+    section.welcome-to-campus
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    section.welcome-to-campus
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+} 

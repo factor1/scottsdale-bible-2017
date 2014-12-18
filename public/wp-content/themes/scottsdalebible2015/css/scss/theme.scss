@@ -1689,14 +1689,21 @@ section.welcome-to-campus
     {
         > .columns
         {
+            line-height: 120px;
+            text-align: center;
+            
             > h2
             {
+                display: inline-block;
                 font-size: 24px;
                 font-weight: 300;         
                 text-transform: uppercase;
                 text-align: center;
                 color: #ffffff;
-                line-height: 120px;
+                line-height: 1.2;
+                vertical-align: middle;
+                padding-left: 20px;
+                padding-right: 20px;
                 
                 > span
                 {
