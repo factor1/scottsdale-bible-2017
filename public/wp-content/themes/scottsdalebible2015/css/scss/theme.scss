@@ -534,9 +534,10 @@ body
                         }
                         
                         > ul.inline-list
-                        {
+                        {               
                             > li
                             {
+                                min-height: 200px;
                                 
                                 > p
                                 {
@@ -549,6 +550,8 @@ body
                                 
                                 ul
                                 {
+                                    margin-top: 5px;
+                                    
                                     > li
                                     {
                                         font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -826,6 +829,7 @@ section.subscribe-to-news
         
         .button
         {
+            color: #ffffff;
             font-size: 20px;
             padding-left: 50px;
             padding-right: 50px;
@@ -833,6 +837,7 @@ section.subscribe-to-news
         
         .button:hover
         {
+            color: #be955b;      
             background-color: #ffffff;
         }
     }
@@ -1547,6 +1552,13 @@ section.page-content
         {
             > section.article
             {
+                h1, h2, h3
+                {
+                    font-size: initial;
+                    font-weight: initial;
+                    text-transform: initial;
+                }
+            
                 > h1
                 {
                     margin: 0px;

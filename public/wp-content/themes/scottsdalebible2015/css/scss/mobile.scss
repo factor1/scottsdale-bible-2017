@@ -133,6 +133,47 @@
 * -----------------------------------------------------------------------------
 */
 
+@media only screen and (max-width: 789px)
+{
+    body
+    {
+        > header
+        {
+            > section
+            {
+                > .row
+                {
+                    > .columns
+                    {
+                        > nav
+                        {
+                            > ul.inline-list
+                            {
+                                > li
+                                {
+                                    width: 100%;
+                                    min-height: initial;
+                                    padding-bottom: 20px;
+                                    
+                                    ul[class*="block-grid-"]
+                                    {
+                                        width: 100%;
+                                        
+                                        > li
+                                        {
+                                            width: 100%;
+                                        }
+                                    }                                    
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }    
+}
+
 @media only screen and (max-width: 640px)
 {
     body
@@ -167,6 +208,7 @@
                                 > li
                                 {
                                     width: 100%;
+                                    min-height: initial;
                                 }
                             }
                         }

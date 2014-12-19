@@ -923,16 +923,15 @@ if(function_exists("register_field_group"))
     /* Theme Options */
     register_field_group([
         'id' => "field_".md5(THEME_PREFIX.'group_theme_options'),
-        'title' => 'Theme Options',
+        'title' => 'Settings',
         'fields' => [
+            /* Hard Coded right now, turn these on to move to theme options
             acf_field_def_tab("field_".md5(THEME_PREFIX."tab_social_media"),"Social Media","tab_social_media"),
-            /*
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_twiiter_url"),"Twitter URL","twitter_url"),
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_facebook_url"),"Facebook URL","twitter_url"),
-            */
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_instagram_url"),"Instagram URL","instagram_url"),
             acf_field_def_text("field_".md5(THEME_PREFIX."theme_options_flickr_url"),"Flickr URL","flickr_url"),
-
+            */
             acf_field_def_tab("field_".md5(THEME_PREFIX."tab_campus_order"),"Campus Order","tab_campus_order"),
 
             acf_field_def_repeater("field_".md5(THEME_PREFIX."theme_options_campus_order"),"(Any unlisted are added to the bottom in alphabetical order)","campus_order",[
