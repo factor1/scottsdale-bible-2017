@@ -1,0 +1,1829 @@
+/**
+*
+* 1.0 Global Styles
+* -----------------------------------------------------------------------------
+*/
+
+
+html, body
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: Oswald, Helvetica, Arial, sans-serif;
+    font-size: 16px;    
+    color: #414042;
+    z-index: 0;
+}
+
+body
+{
+
+    img
+    {
+        border: 0px;
+    }
+
+    table
+    {
+        border-collapse: collapse;
+    }
+
+    form
+    {
+        padding: 0px;
+        margin: 0px;
+        
+        input
+        {
+            color: #414042;
+        }
+
+        input[type='text'], input[type='email']
+        {
+            font-size: 16px;
+        }
+    }
+
+    th,td,tbody
+    {
+        padding: 0px;
+        vertical-align: top;
+    }
+    
+    h1, h2, h3, h4, h5, h6
+    {
+        font-family: Oswald, Helvetica, Arial, sans-serif;
+        color: #414042;
+    }
+    
+    h1
+    {
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }    
+    
+    h2
+    {
+        font-size: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    h3
+    {
+        font-size: 20px;
+        font-weight: 700;
+        color: #be955b;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: #414042;
+    }
+
+    a:hover
+    {
+        color: #be955b;
+        text-decoration: underline;
+    }
+    
+    strong
+    {
+        font-family: Kepler, "Times New Roman", serif;
+        font-weight: 800;
+    }
+    
+    p
+    {
+        font-family: Kepler, "Times New Roman", serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        
+        a
+        {
+            color: #be955b;
+            text-decoration: underline;        
+        }
+    }
+    
+    ul
+    {
+        list-style: disc;
+    }
+    
+    .button
+    {
+        font-family: Oswald, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #be955b;
+        border-radius: 20px;
+        line-height: 1;
+        text-decoration: none;
+    }
+    
+    .button:hover
+    {
+        background-color: #414042;
+        color: #be955b;
+        text-decoration: none;
+    }
+    
+    .button.dark-brown
+    {
+        background-color: #414042;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: 300;
+        color: #ffffff;
+        
+        > span
+        {
+            font-weight: 700;
+            color: #be955b;
+        }
+    }
+    
+    .button.dark-brown:hover
+    {
+        background-color: #be955b;
+        
+        > span
+        {
+            color: #414042;
+        }
+    }
+
+    .bar
+    {
+        display: block;
+        width: auto;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 35px;
+        background-color: #414042;
+        color: #ffffff;
+        padding-left: 40px;
+        text-decoration: none;
+        
+        > .fa
+        {
+            margin-left: 10px;
+            line-height: inherit;
+            color: #be955b;
+        }
+    }
+    
+    .bar-toggle
+    {
+        > div:last-child
+        {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 2px solid #414042;
+        }    
+    }
+    
+    .bar:hover
+    {
+        text-decoration: none;
+    }
+    
+    .upper
+    {
+        text-transform: uppercase;
+    }   
+
+    > section 
+    {
+        z-index: 1;
+    }
+    
+    > footer 
+    {
+        z-index: 1;
+    }
+    
+    .row
+    {
+        max-width: 1100px;
+    }
+
+    .fluidMedia
+    {
+        position: relative;
+        padding-bottom: 54.25%;
+        padding-top: 20px;
+        height: 0;
+        overflow: hidden;
+        
+        iframe
+        {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }        
+    }
+    
+    .fa-news-and-stories
+    {
+        display: inline-block;
+        height: 38px;
+        width: 38px;
+        background-image: url(../images/icons/icon-news-and-stories.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .fa-thin-chevron-right
+    {
+        display: inline-block;
+        height: 30px;
+        width: 22px;
+        background-image: url(../images/icons/icon-thin-chevron-right.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    span.stButton
+    {
+        box-sizing: content-box;
+        
+        span
+        {
+            box-sizing: content-box;
+        }
+    }
+    
+    img.alignleft
+    {
+        display: block;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;        
+    }
+    
+    img.alignright
+    {
+        display: block;
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .image-block-center
+    {
+        display: block;
+        position: relative;
+        height: 100%;
+        left: 50%;
+        overflow: visible;
+        text-align: left;
+
+        > img
+        {
+            position: relative;
+            min-width: 100%;
+            max-width: initial;
+            height: 100%;
+            margin-left: 0;
+        }
+    }    
+
+}
+
+
+/**
+ * 2.0 Header Styles
+ * -----------------------------------------------------------------------------
+ */
+ 
+body
+{
+    > header
+    {
+        z-index: 1;
+        
+        /* Header - Top Row */
+        > .row:first-child
+        {
+
+            > .columns
+            {
+                height: 125px;
+            }
+
+            > .columns:first-child
+            {
+                text-align: center;
+                
+                > a
+                {
+                    display: inline-block;
+                    line-height: 100px;
+                }
+
+                img
+                {
+                    vertical-align: middle;
+                }            
+            }
+
+            > .columns:last-child
+            {
+                line-height: 125px;
+                text-align: right;
+            }
+
+            ul.inline-list
+            {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 300;
+                vertical-align: middle;
+                overflow: visible;
+
+                > li
+                {
+                    position: relative;
+                    height: 25px;
+                    line-height: 25px;
+                    padding: 0px;
+                    margin: auto;
+                    margin-right: 50px;
+                    overflow: visible;
+                   
+                    i.fa
+                    {
+                        line-height: inherit;
+                        display: inline-block;
+                        position: relative;
+                        top: -1px;
+                        color: #be955b;
+                    }
+
+                    i.fa.fa-search
+                    {
+                        display: block;
+                        position: absolute;
+                        top: 0px;
+                        left: 5px;
+
+                        + input
+                        {
+                            width: 160px;
+                            margin: auto;
+                            padding-left: 22px;
+                            padding-right: 4px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            font-size: inherit;
+                            height: auto;
+                            border: 0px;
+                            background-color: #f1f2f2;
+                            box-shadow: none;
+                            -web-kit-box-shadow: none;
+                        }
+                    }
+
+                    a
+                    {
+                        display: inline;
+                        color: inherit;
+                        padding-left: 5px;
+                        text-decoration: none;
+                    }
+                    
+                    a:hover
+                    {
+                        color: #be955b;
+                    }
+                    
+                    > ul
+                    {
+                        display: none;
+                        position: absolute;
+                        top: 22px;
+                        left: 50%;
+                        width: 340px;
+                        margin-left: -170px;
+                        z-index: 9999;
+                        
+                        > li
+                        {
+                            display: block;
+                            background-color: #414042;
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            padding-right: 0px;
+                            padding-left: 0px;
+                            text-align: center;
+
+                            > a
+                            {
+                                font-size: 24px;
+                                font-weight: 300;
+                                color: #ffffff;
+                                text-decoration: underline;
+                                text-transform: uppercase;
+                                white-space: nowrap;                                
+
+                                > span
+                                {
+                                    font-weight: 700;
+                                }
+                            }
+
+                            > a:hover
+                            {
+                                color: #be955b;
+                            }                            
+                        }
+                        
+                        > li:first-child
+                        {
+                            margin-top: 10px;
+                            padding-top: 26px;
+                        }
+                        
+                        > li:last-child
+                        {
+                            padding-bottom: 26px;
+                        }
+                        
+                    }
+
+                }
+                
+                > li:hover
+                {
+                    > ul
+                    {
+                        display: block;
+                    }
+                }
+            }
+        }
+    
+        /* Header - Navigation */
+    
+        > section
+        {
+            background-image: url(../images/backgrounds/binding_dark.png);
+            background-repeat: repeat;
+            background-position: 0px 0px;
+            height: 50px;
+        
+            > .row
+            {
+                position: relative;
+            
+                > .columns
+                {
+                    position: static;
+                
+                    > a
+                    {
+                        display: block;
+                        line-height: 50px;
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #ffffff;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                    
+                    > nav
+                    {
+                        display: none;
+                        position: absolute;
+                        left: 0px;
+                        top: 50px;
+                        width: 100%;
+                        height: auto;
+                        min-height: 100px;
+                        padding: 30px;
+                        padding-bottom: 10px;
+                        margin: auto;
+                        background-color: #ffffff;
+                        
+                        h5
+                        {
+                            font-size: 14px;
+                            font-weight: 400;
+                            padding-bottom: 5px;
+                            border-bottom: 2px solid #be955b;
+                        }
+                        
+                        > ul.inline-list
+                        {               
+                            > li
+                            {
+                                min-height: 200px;
+                                
+                                > p
+                                {
+                                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    max-width: 250px;
+                                }
+                                
+                                ul
+                                {
+                                    margin-top: 5px;
+                                    
+                                    > li
+                                    {
+                                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        padding: auto;
+                                        padding-bottom: 10px;
+                                        line-height: 16px;
+                                        
+                                        > a
+                                        {
+                                            color: inherit;
+                                            text-decoration: none;
+                                        }
+                                        
+                                        > a:hover
+                                        {
+                                            color: #be955b;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                                
+                                ul[class*="block-grid-"]
+                                {
+                                    width: 300px;
+                                
+                                    > li
+                                    {
+                                        padding-left: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        > div:last-child
+                        {
+                            text-align: center;
+                            
+                            > .fa
+                            {
+                                color: #be955b;
+                                font-size: 32px;
+                                font-weight: 400;
+                                cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                
+                }
+                
+                > .columns:hover
+                {
+                    > nav
+                    {
+                        display: block;
+                        z-index: 9999;
+                    }
+                
+                    > a
+                    {
+                        background-color: #be955b;
+                    }
+                }
+                
+            } 
+        }
+
+    
+    }
+}
+
+/**
+ * 3.0 Footer Styles
+ * -----------------------------------------------------------------------------
+ */
+ 
+body 
+{
+    > footer
+    {
+        background-image: url(../images/backgrounds/dust.png);
+        background-repeat: repeat;
+        background-position: 0px 0px;
+        color: #ffffff;
+        
+        > .row:first-child
+        {
+            padding-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3b3b3c;
+        
+            > .columns:nth-child(2)
+            {
+                text-align: center;
+                line-height: 28px;
+                
+                > div:first-child
+                {
+                    padding-bottom: 6px;
+                }
+                
+                .button:hover
+                {
+                    background-color: #ffffff;
+                }
+            }
+            
+            a
+            {
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                font-weight: 800;
+                color: #ffffff;
+                
+                
+                > .fa
+                {
+                    line-height: inherit;
+                    vertical-align: middle;
+                    position: relative;
+                    top: -1px;
+                    margin-right: 5px;
+                }
+            }
+            
+            a:hover
+            {
+                color: #be955b;
+            }
+            
+            > .columns:last-child
+            {
+                text-align: right;
+                
+                > div:last-child
+                {
+                    a
+                    {
+                        margin-left: 15px;
+                        
+                        .fa
+                        {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        > .row:nth-child(2)
+        {
+            padding-top: 30px;
+            
+            > .columns
+            {
+                text-align: center;
+                
+                ul[class*="block-grid-"]
+                {
+                    display: inline-block;
+                    text-align: left;
+                    
+                    > li
+                    {
+                        width: 140px;
+                        
+                        > h4
+                        {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #ffffff;
+                            border-bottom: 1px solid #6d6e71;
+                            padding-bottom: 4px;
+                            
+                            > a
+                            {
+                                color: #ffffff;
+                            }
+                        }
+                        
+                        > ul
+                        {
+                            > li
+                            {
+                                line-height: 1.1;
+                                padding-bottom: 8px;
+                          
+                                > a
+                                {
+                                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #6d6e71;
+                                }
+
+                                > a:hover
+                                {
+                                    color: #be955b;
+                                }                       
+                            }
+                        }
+                    }
+                }                
+            }
+        }
+        
+        > section
+        {
+            background-color: #414042;
+            text-align: center;
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #939598;
+            line-height: 35px;
+            
+            > span
+            {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            
+            > span:first-child
+            {
+                border-right: 1px solid #939598;
+            }
+        }
+        
+    }
+}
+
+/**
+*
+* 4.0 Component - Subscribe to News
+* -----------------------------------------------------------------------------
+*/
+
+section.subscribe-to-news
+{
+    background-color: #414042;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    
+    > h1
+    {
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        padding-bottom: 20px;
+        
+        > .fa
+        {
+            margin-right: 20px;
+            color: #be955b;
+        }
+        
+        > span
+        {
+            font-weight: 300;
+        }
+    }
+    
+    > form
+    {
+        input
+        {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 10px;
+            color: #414042;
+        }
+        
+        input.button
+        {
+            font-family: Oswald, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .button:hover
+        {
+            color: #be955b;      
+            background-color: #ffffff;
+        }
+    }
+}
+
+
+/**
+*
+* 5.0 Component - Image Slider
+* -----------------------------------------------------------------------------
+*/
+
+section.image-slider
+{
+    position: relative;
+    max-height: 500px;
+    overflow: hidden;
+    
+    > ul
+    {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        
+        > li
+        {
+            display: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        > li:first-child
+        {
+            display: block;
+        }
+    }
+    
+    > .controls-move
+    {
+        position: absolute;
+        width: 18px;
+        left: auto;
+        right: 16%;
+        top: 50%;
+        bottom: auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 32px;
+        margin-top: -80px;
+        
+        > .fa
+        {
+            font-size: 18px;
+            line-height: 1;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 0px 0px 0px #777777;            
+        }
+        
+        > .fa.active:before, > .fa:hover:before
+        {
+            content: "\f111";
+        }
+    }
+}
+
+
+/**
+*
+* 6.0 Component - Select Your Campus
+* -----------------------------------------------------------------------------
+*/
+
+section.select-campus
+{
+    background-image: url(../images/backgrounds/dark_wood.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    height: 120px;
+    overflow: visible;
+    
+    > .row
+    {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        z-index: 2000;
+        
+        > ul
+        {
+            display: inline-block;
+            margin-top: 42px;
+            
+            > li:first-child
+            {
+                display: block;
+                padding-bottom: 6px;
+                
+                > h3
+                {
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    
+                    > span
+                    {
+                        color: #be955b;
+                        font-weight: 700;
+                    }
+                    
+                    > .fa
+                    {
+                        margin-left: 10px;
+                        font-size: 20px;
+                        height: 32px;
+                        line-height: 24px;
+                        vertical-align: middle;
+                    }
+                }
+            }   
+            
+            > li + li
+            {
+                background-color: #414042;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                padding-right: 80px;
+                padding-left: 80px;
+                display: none;
+                
+                > a
+                {
+                    font-size: 24px;
+                    font-weight: 300;
+                    color: #ffffff;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    
+                    > span
+                    {
+                        font-weight: 700;
+                    }
+                }
+                
+                > a:hover
+                {
+                    color: #be955b;
+                }
+            }
+            
+            > li:nth-child(2)
+            {
+                padding-top: 26px;
+            }
+            
+            > li:last-child
+            {
+                padding-bottom: 26px;
+            }             
+        }
+        
+        > ul:hover
+        {  
+            > li + li
+            {
+                display: block;
+            }            
+        }
+    }
+}
+
+/**
+*
+* 7.0 Component - News and Stories
+* -----------------------------------------------------------------------------
+*/
+
+section.news-and-stories
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    > h1
+    {
+        font-weight: 700;
+        text-align: center;
+        
+        > .fa
+        {
+            margin-right: 20px;
+        }
+        
+        > span
+        {
+            font-weight: 300;
+        }
+    }
+    
+    > .row:first-of-type
+    {
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+                
+                > div
+                {
+                    max-width: 340px;
+                    margin: auto;
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        max-height: 230px;
+                        overflow: hidden;
+                        
+                        img
+                        {
+                            width: 100%;
+                            min-width: 100%;
+                        }
+                    }
+                    
+                    > div:last-child
+                    {
+                        border-top: 5px solid #be955b;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        
+                        > h3
+                        {
+                            > a
+                            {
+                               color: inherit; 
+                               text-decoration: none;
+                            }
+                        }
+
+                        > a
+                        {
+                            display: block;
+                            float: right;
+                            position: relative;
+                            top: -20px;
+
+                            >.fa
+                            {
+                                margin-left: 10px;
+                                font-size: 32px;
+                                font-weight: 300;
+                                color: #be955b;
+                            }
+                        }                        
+                        
+                        > p
+                        {
+                            font-size: 13px;
+                            line-height: 1.3;
+                        }
+                        
+                        > p:last-of-type
+                        {
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+                
+                > div:hover
+                {
+                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
+                    
+                    > div:last-child
+                    {
+                        > h3
+                        {
+                            color: #414042;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+        
+        > .navigation
+        {
+            text-align: left;
+        }
+    }
+    
+}
+
+/**
+*
+* 8.0 Component - Upcoming Events
+* -----------------------------------------------------------------------------
+*/
+
+section.upcoming-events
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    
+    > h1
+    {
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+        padding: auto;
+        
+        > .fa
+        {
+            position: relative;
+            top: -8px;
+            margin-right: 18px;
+            font-size: 38px;
+            color: #be955b;
+        }
+        
+        > span
+        {
+            font-weight: 300;
+        }
+    }
+    
+    > .row:first-of-type
+    {
+        margin-top: 30px;
+        
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+                
+                > .row
+                {
+                    margin: 0px;
+                    padding: 10px;
+                    border-top: 3px solid #414042;
+                    background-color: #ffffff;
+                    
+                    > div
+                    {
+                        padding: 10px;
+                    }
+                    
+                    > div:first-child
+                    {
+                        text-align: center;
+                        overflow: hidden;
+                        
+                        > a
+                        {
+                            height: 150px;
+                        }
+                    }
+                    
+                    > div:last-child
+                    {
+                        text-align: left;
+ 
+                        > h3
+                        {
+                            margin: 0px;
+                            padding: 0px;
+                            line-height: 1;
+                            
+                            > a
+                            {
+                                color: #be955b;   
+                            }
+                        }
+                        
+                        > h5
+                        {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1;
+                        }
+                        
+                        > div
+                        {
+                            font-family: Kepler, "Times New Roman", serif;
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 19px;
+                            padding-top: 10px;
+                            
+                            p
+                            {
+                                font-size: inherit;
+                                font-weight: inherit;
+                                line-height: inherit;
+                            }
+                            
+                            p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+                            
+                            a
+                            {
+                                font-weight: 700;
+                                font-style: italic;
+                                color: #be955b;
+                                text-decoration: underline;
+                            }
+                            
+                            a:hover
+                            {
+                                color: #414042;   
+                            }
+                        }
+                    }
+                }
+                
+                > .row:hover
+                {
+                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
+                }
+            }
+        }
+    }
+    
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+    }    
+}
+
+
+/**
+*
+* 9.0 Component - Last Weekend and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+
+section.last-and-upcoming-message
+{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    
+    > .row
+    {
+        
+        > div
+        {
+            > div
+            {
+                display: inline-block;
+                text-align: left;
+                
+                > div:nth-child(2)
+                {
+                    border-top: 5px solid #be955b;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    padding-left: 50px;
+                    padding-right: 25px;
+                    
+                    > h3
+                    {
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        position: relative;
+                        margin-bottom: 3px;
+                        
+                        > span
+                        {
+                            font-weight: 700;
+                        }
+                        
+                        > .fa
+                        {
+                            position: absolute;
+                            left: -25px;
+                            top: 3px;
+                        }
+                    }
+                    
+                    > h5
+                    {
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }    
+            }    
+        }
+    
+        > div:first-child
+        {
+            text-align: right;
+            
+            > div
+            {
+                max-width: 608px;
+                padding: 0px;
+                margin: 0px;
+                
+                > div:first-child
+                {
+                    text-align: center;
+                    max-height: 340px;
+                    overflow: hidden;
+
+                    img
+                    {
+                        min-width: 100%;
+                    }                    
+                }                
+                
+                > div:last-child
+                {
+                    background-color: #414042;
+                    
+                    > h3
+                    {
+                        color: #ffffff;
+                    }
+                    
+                    > h5
+                    {
+                        color: #ffffff;
+                    }
+                    
+                    .fa
+                    {
+                        color: #be955b;
+                    }
+                }
+            }    
+        }
+        
+        > div:last-child
+        {
+            text-align: left;
+            
+            > div
+            {
+                background-color: #ffffff;
+                max-width: 410px;
+                padding: 0px;
+                margin: 0px;
+                
+                > div:first-child
+                {
+                    text-align: center;
+                    max-height: 250px;
+                    overflow: hidden;
+
+                    img
+                    {
+                        min-height: 250px;
+                        min-width: 100%;
+                    }                    
+                }                 
+                
+                > div:nth-child(2)
+                {
+                    > h3
+                    {
+                        color: #414042;
+                    }
+                    
+                    > h5
+                    {
+                        color: #414042;
+                    }                    
+                }
+                
+                > div:last-child
+                {
+                    padding-left: 50px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                    a
+                    {
+                        font-size: 30px;
+                        color: #be955b;
+                        padding-right: 30px;                 
+                    }
+
+                    a:hover
+                    {
+                        color: #414042; 
+                    }
+                }                
+            }
+            
+        }
+    }
+}
+
+
+/**
+*
+* 10.0 Component - Featured Images and Videos
+* -----------------------------------------------------------------------------
+*/
+
+section.featured-image
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;    
+    
+    > .row
+    {
+        > .columns
+        {
+            padding: 0px;
+            
+            img
+            {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+section.featured-video
+{   
+    > .row
+    {
+        > .columns
+        {
+            iframe
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/**
+*
+* 10.0 Page Template
+* -----------------------------------------------------------------------------
+*/
+
+section.page-content
+{
+    > .row
+    {
+        border-top: 6px solid #be955b;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        
+        > div.sidebar
+        {
+            padding-left: 40px;
+            padding-right: 40px;
+            
+            > h3
+            {
+                margin: 0px;
+                margin-top: 15px;
+                padding: 0px;
+                padding-bottom: 10px;
+                color: #414042;
+                line-height: 1;
+                border-bottom: 2px solid #be955b;
+                text-transform: uppercase;
+            }
+            
+            > ul
+            {
+                margin-bottom: 60px;
+                
+                > li
+                {
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.2;
+                    padding-left: 20px;
+                    padding-right: 10px;
+                    padding-top: 20px;
+                    padding-bottom: 0px;
+                    
+                    a
+                    {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        > div
+        {
+            > section.article
+            {
+                h1, h2, h3
+                {
+                    font-size: initial;
+                    font-weight: initial;
+                    text-transform: initial;
+                }
+            
+                > h1
+                {
+                    margin: 0px;
+                    padding: 0px;
+                    padding-bottom: 10px;
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 1;
+                    border-bottom: 2px solid #be955b;
+                }
+                
+                > div
+                {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                > div:first-of-type
+                {
+                    > ul
+                    {
+                        > li
+                        {
+                            > a
+                            {
+                                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                font-size: 15px;
+                                font-weight: 700;
+                                color: #414042;
+                                margin-right: 30px;
+                                line-height: 18px;
+
+                                > .fa
+                                {
+                                    font-size: 18px;
+                                    color: #be955b;
+                                    margin-right: 5px;
+                                }
+                            }                        
+                        }
+                    }
+                }
+            }
+        }
+        
+        > div.small-12
+        {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+}
+
+
+/**
+*
+* 11.0 - Component - Group Search Form
+* -----------------------------------------------------------------------------
+*/
+
+section.group-search-form
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    font-weight: 400;    
+    
+    > form
+    {
+        > .row
+        {
+            padding-left: 40px;
+            
+            > div.columns
+            {
+                > select
+                {
+                    font-family: Oswald, Helvetica, Arial, sans-serif;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    text-transform: uppercase;
+                    border: 2px solid #be955b;
+                    
+                    > option
+                    {
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+                
+                > div
+                {
+                    line-height: 1;
+                    padding-bottom: 6px;
+                    
+                    > .fa
+                    {
+                        color: #be955b;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+            }
+            
+            > .columns:nth-child(5)
+            {
+                width: auto;
+            }
+            
+            > .columns:last-child
+            {
+                float: left;
+                
+                > .button
+                {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+}
+
+/**
+*
+* 12.0 Component - Welcome to Campus
+* -----------------------------------------------------------------------------
+*/
+
+section.welcome-to-campus
+{
+    background-image: url(../images/backgrounds/dark_wood.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    
+    > .row
+    {
+        > .columns
+        {
+            line-height: 120px;
+            text-align: center;
+            
+            > h2
+            {
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 300;         
+                text-transform: uppercase;
+                text-align: center;
+                color: #ffffff;
+                line-height: 1.2;
+                vertical-align: middle;
+                padding-left: 20px;
+                padding-right: 20px;
+                
+                > span
+                {
+                    font-weight: 700;
+                    color: #be955b;
+                }
+            }
+        }
+    }
+}
+
+/**
+*
+* 12.0 Component - Not Found
+* -----------------------------------------------------------------------------
+*/
+
+section.not-found
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    padding: 100px;
+    
+    > .row
+    {
+        background-color: #ffffff;
+        padding: 40px;
+        
+        > h2
+        {
+            border-bottom: 2px solid #be955b;
+        }
+    }
+}
+
+/**
+*
+* 13.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.posts-archive
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;    
+    
+    > .row
+    {
+        background-color: #ffffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        > h2
+        {
+            border-bottom: 2px solid #be955b;
+            margin-bottom: 4px;
+            
+            > a
+            {
+                color: #be955b;
+            }
+        }
+        
+        h3
+        {
+            margin-bottom: 3px;
+        }
+        
+        .meta
+        {
+            font-family: Kepler, "Times New Roman", serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22px;        
+        }
+    }
+}
+
+
+/**
+*
+* 14.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.search-results
+{
+    > .row
+    {
+        > .columns
+        {
+            > p.no-break
+            {
+                display: none; /* Hide Social Media Links */
+            }
+        }
+    }    
+}

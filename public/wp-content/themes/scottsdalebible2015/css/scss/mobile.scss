@@ -1,0 +1,499 @@
+/**
+*
+* 1.0 Admin Bar Fix
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 782px)
+{
+    html
+    {
+        margin-top: 0px !important;
+    }
+    
+    body.admin-bar
+    {
+        padding-top: 46px !important;
+    }
+}
+
+/**
+*
+* 2.0 Header Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width:901px) and (max-width: 1074px)
+{
+    body
+    {
+        > header
+        {
+            .large-4
+            {
+                width: 33.33%;
+            }
+            
+            .large-8
+            {
+                width: 66.66%;
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 900px)
+{
+    body
+    {
+        > header
+        {
+            > .row:first-child
+            {
+                > .columns
+                {
+                    height: auto;
+                }
+                
+                > .columns:first-child
+                {
+                    line-height: 1;
+                    
+                    > a
+                    {
+                        line-height: 1;
+                        padding: 30px;
+                    }
+                }
+                
+                > .columns:last-child
+                {
+                    text-align: center;
+                    line-height: 1;
+                    padding-bottom: 20px;
+                    
+                    > ul.inline-list
+                    {
+                        > li
+                        {
+                            margin-left: 40px;
+                            margin-right: 10px;
+                            line-height: 1.2;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    body
+    {
+        > header
+        {
+            > .row:first-child
+            {
+                > .columns:last-child
+                {
+                    > ul.inline-list
+                    {
+                        > li
+                        {
+                            width: 50%;
+                            margin-left: 0px;
+                            margin-right: 0px;
+                            padding-left: 25px;
+                            padding-right: 25px;
+                        }
+                        
+                        > li:last-child
+                        {
+                            width: 100%;
+                            text-align: center;
+                            margin-top: 20px;
+                            
+                            > form
+                            {
+                                display: inline-block;
+                                position: relative;
+                                left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+*
+* 3.0 Header Mega Mobile Menu Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 789px)
+{
+    body
+    {
+        > header
+        {
+            > section
+            {
+                > .row
+                {
+                    > .columns
+                    {
+                        > nav
+                        {
+                            > ul.inline-list
+                            {
+                                > li
+                                {
+                                    width: 100%;
+                                    min-height: initial;
+                                    padding-bottom: 20px;
+                                    
+                                    ul[class*="block-grid-"]
+                                    {
+                                        width: 100%;
+                                        
+                                        > li
+                                        {
+                                            width: 100%;
+                                        }
+                                    }                                    
+                                }
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 640px)
+{
+    body
+    {
+        > header
+        {
+            > section
+            {
+                height: auto;
+                
+                > .row
+                {
+                
+                    > .columns
+                    {
+                        text-align: left;
+                        
+                        > a
+                        {
+                            text-align: inherit;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            border-top: 2px solid #be955b;
+                        }
+                        
+                        > nav
+                        {
+                            position: static;
+                            
+                            > ul.inline-list
+                            {
+                                > li
+                                {
+                                    width: 100%;
+                                    min-height: initial;
+                                }
+                            }
+                        }
+                    }
+                    
+                    > .columns:first-child
+                    {
+                        > a
+                        {
+                            border-top: 0px;
+                        }
+                    }
+                    
+                    > .columns:hover
+                    {
+                        > nav
+                        {
+                            display: none;
+                        }
+                    }
+                    
+                    > .columns + .columns
+                    {
+                        display: none;
+                    }
+                }    
+            }
+        }
+    }    
+}
+
+
+/**
+*
+* 4.0 Image Slider Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 900px)
+{
+    section.image-slider
+    {  
+        > .controls-move
+        {
+            margin-top: -69px;
+            line-height: 22px;
+            
+            > .fa
+            {
+                font-size: 14px;
+            }    
+        }
+    }   
+}
+
+@media only screen and (max-width: 600px)
+{
+    section.image-slider
+    {  
+        > .controls-move
+        {
+            margin-top: -57px;
+            line-height: 16px;
+            
+            > .fa
+            {
+                font-size: 12px;
+            }    
+        }
+    }   
+}
+
+@media only screen and (max-width: 350px)
+{
+    section.image-slider
+    {  
+        > .controls-move
+        {
+            display: none;   
+        }
+    }   
+} 
+
+/**
+*
+* 5.0 - Component - Last and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:first-child
+            {
+                text-align: center;
+                padding-bottom: 40px;
+            }
+            
+            > div:last-child
+            {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > .columns
+            {
+                > div:first-child
+                {
+                    > div:first-child
+                    {
+                        img
+                        {
+                            min-height: initial;
+                            min-width: initial;
+                        }                      
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 400px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:last-child
+            {
+                > div
+                {
+                    > div:last-child
+                    {
+                        a
+                        {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+/**
+*
+* 6.0 - Component - Upcoming Events
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    section.upcoming-events
+    {
+        > .row:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    > .row
+                    {
+                        > div.columns:first-child
+                        {
+                            max-width: 300px;
+                        }
+                        
+                        > div:last-child
+                        {
+                            float: left;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    section.upcoming-events
+    {
+        > .row:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    > .row
+                    {
+                        > div.columns
+                        {
+                            width: 100%;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
+
+
+/**
+*
+* 7.0 - Footer Styles
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    body
+    {
+        > footer
+        {
+            > .row:first-child
+            {
+                > .columns:first-child
+                {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }    
+}
+
+
+/**
+*
+* 8.0 - Component - Article
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px)
+{
+    section.article
+    {
+        > div:first-of-type
+        {
+            > ul
+            {
+                > li
+                {
+                    width: 100%;
+                    padding-bottom: 10px;
+                }
+            }            
+        }
+    }
+}
+
+
+/**
+*
+* 9.0 Section - Welcome to Campus
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 600px)
+{
+    section.welcome-to-campus
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    section.welcome-to-campus
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+} 
