@@ -32,7 +32,9 @@
         </div>
         <div class="row">
             <div class="small-12 columns">
+                
                 <?php get_template_part("components/menus/footer-menu"); ?>
+                
             </div>
         </div>
         <section>
@@ -40,6 +42,7 @@
             <span>All Rights Reserved</span>
         </section>
     </footer>
+                <?php get_template_part("components/menus/footer_tracking"); ?>
 
 <?php wp_footer(); ?>
 </body>
