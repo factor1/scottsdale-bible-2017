@@ -13,6 +13,7 @@ if(!$last_weekend||!$upcoming_message) {
 }
 
 ?>
+
 <section class="last-and-upcoming-message">
     <div class="row">
         <?php if($last_weekend) { ?>
@@ -20,7 +21,9 @@ if(!$last_weekend||!$upcoming_message) {
             <div>
                 <div>
                     <?php if($last_weekend->image) { ?>
+                    <a href="<?php echo esc_attr($last_weekend->url); ?>">
                     <img src="<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>" alt="" title="" />
+                    </a>
                     <?php } ?>
                 </div>
                 <div>
