@@ -16,7 +16,14 @@ $images = array_merge([$first],array_reverse($images));
 
 $slide_count = count($images);
 
+$image_sources = array_map(function($e) {
+    return esc_attr($e->url);
+},$images);
+
 ?>
+<script type="text/javascript">
+preloadImages('<?php echo implode("','",$image_sources); ?>');
+</script>
 <section class="image-slider">
     <ul>
         <?php foreach($images as $image) { ?>

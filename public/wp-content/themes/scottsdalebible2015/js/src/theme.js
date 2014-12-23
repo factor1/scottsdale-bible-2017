@@ -1,6 +1,24 @@
 ;
 
+/**
+*   Image Preloader
+*   Author: James R.Latham, Factor 1 Studios
+*
+**/
+var preloadImages = function() {
+    if(document.images) {
+        var image_list = new Array();
+        var args = arguments || this.arguments;
+        for(var i=0;i<args.length;i++) {
+            img = image_list[image_list.length] = new Image();
+            img.src = (args[i].substr(0,1)=="/") ?
+            location.protocol+"//"+document.domain+args[i] : args[i];
+        }
+    }
+};
+
 (function($){
+
     $(document).ready(function() {
 
         $(document).foundation();
