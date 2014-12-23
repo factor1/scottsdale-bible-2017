@@ -1,0 +1,259 @@
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+.main_content {
+	width: 690px;
+	margin: 20px 0 20px 10px;
+	text-align: left;
+	float: left; }
+	
+.main_content.wide {width: 1030px;}
+.main_content.wide .content .row,
+.main_content.wide .content .large-12 {padding: 0 !important; margin: 0px !important}
+
+.main_content .titlebar {
+	width: 690px;
+	height: 80px;
+	margin: 0 0 10px 0px;
+	padding: 0 10px;
+	color: #fff;
+	background: url(../images/header/absurd.png) repeat;
+	background-color: #222;
+	position: relative;
+}
+
+.main_content.wide .titlebar {width: 990px;}
+
+.main_content .titlebar h1 {
+	font-family: 'BebasNeueRegular', Arial, sans-serif;
+	font-size: 32px;
+	color: #fff;
+	display: inline-block;
+	padding: 22px 0 0 10px;
+}
+
+.main_content .titlebar .social {
+	width: 150px;
+	padding: 5px;
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+.social_tools {display: none;}
+.main_content .titlebar .social:hover + .social_tools,
+.social_tools:hover {
+	display: block;
+	background: #333 url(../images/header/bg_nav_drop.jpg) no-repeat top center;
+	padding: 20px;
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	z-index: 999;}
+	
+	
+.featured {
+	background: url(../images/header/bg_featured.png) no-repeat top center;
+	width: 690px;
+	height: 400px;
+	padding: 24px 16px 0 20px;
+}
+
+
+.excerpt {
+	float: left;
+	display: block;
+	background: #333 url(../images/header/bg_nav_drop.jpg) no-repeat top center;
+	border-top: 1px solid #999;
+	border-bottom: 2px solid #000;
+	-webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .5);
+	width: 180px;
+	padding: 12px;
+	margin: 0 12px;
+	min-height: 200px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.excerpt p {
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+	padding-bottom: 10px;
+}
+
+.excerpt a {
+	font-size: 11px; 
+	color: #fff; 
+	text-decoration: underline;}
+
+.main_content.wide .content {margin: 0; width: 100% !important;}
+.main_content .content {
+	float: left;
+	display: block;
+	width: 100%;
+	margin: 0 0 0 5px;
+	}
+	
+	.content.narrow {width: 455px;}
+	
+	.content h1.title {
+		width: 100%;
+		font-size: 30px;
+		color: #00477a;
+		padding: 0;
+		margin: 0;
+		border-bottom: 1px solid;
+	}
+	
+
+.addthis_toolbox {margin: 12px 0 15px;}
+
+.content p, 
+.content li {
+	font-size: 14px; 
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	color: #222;
+}
+
+
+
+/*------------------------------------*\
+    SIDEBAR
+\*------------------------------------*/
+
+.sidebar {
+	float: right;
+	text-align: left;
+	width: 260px;
+	margin: 10px 25px 20px 0;
+}
+
+.sidebar .widget {
+	margin: 20px 15px 20px 0;
+	padding: 20px;
+	width: 240px;
+	background: url(../images/header/bg_sidebar.jpg);
+	border-top: 1px solid #fff;
+	border-bottom: 2px solid #333;
+	-webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, .5);
+}
+
+.sidebar .widgettitle {
+	font-size: 30px;
+	line-height: 30px;
+	padding: 10px 0px 5px;
+	margin: 5px 0px 15px;
+	border-bottom: 1px solid;
+	color: #111;
+	font-family: 'BebasNeueRegular', Arial, sans-serif;
+}
+
+.sidebar ul {margin: 0; padding: 0 0px;}
+.sidebar li {
+	margin: 0;
+	font-size: 14px;
+	list-style: none;
+	
+}
+
+.sidebar li ul {margin: 0 0 0 10px;}
+
+.sidebar li a {
+	font-weight: bold;
+	color: #00506d;
+	padding: 10px;
+	display: block;
+	text-transform: capitalize;
+	border-bottom: 1px dotted #999;
+}
+
+.sidebar li li {font-size: 12px !important;}
+.sidebar li li a {font-weight: normal; color: #0092c8;}
+
+.sidebar li.current_page_item a {color: #000;}
+
+.sidebar li.current_page_item li a {color: #0092c8;}
+.sidebar li a:hover {
+	text-decoration: none;
+	background: #eee
+}
+
+
+
+/* Sidebar upcoming Events */
+
+.gcalevents {margin: 0 0 0 0;}
+
+.gcalevents li {
+	clear: both;
+	width: 100%;
+	padding: 0 0 8px 0;
+	margin: 5px 0 10px;
+	color: #00a0cf;
+}
+
+.gcalevents li:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+.gcalevents li a {
+	text-decoration: none;
+	color: #00a0cf;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.gcalevents li a:hover {
+	text-decoration: underline;
+	color: #022b80;
+	background: none;
+	border: none;
+}
+
+.gcalevents .eventdata .date {
+	float: left;
+	display: block;
+	width: 36px;
+	text-align: center;
+	border-right: 1px solid #333;
+	padding: 4px 3px 2px 0;
+	margin: 0 6px 0 0;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 14px;
+}
+
+.gcalevents .eventdata .date .month {
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+	font-weight: 100;
+	width: 100%;
+	display: block;
+}
+
+.gcalevents .eventdata .details {
+	float: left;
+	display: block;
+	width: 190px;
+	font-weight: bold;
+}
+
+.gcalevents .eventdata .details .times {
+	width: 100%;
+	display: block;
+	font-weight: normal;
+}
