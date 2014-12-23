@@ -1,0 +1,265 @@
+/**
+*
+* 1.0 Admin Bar Fix
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 782px) {
+  /* line 10, scss/mobile.scss */
+  html {
+    margin-top: 0px !important;
+  }
+
+  /* line 15, scss/mobile.scss */
+  body.admin-bar {
+    padding-top: 46px !important;
+  }
+}
+/**
+*
+* 2.0 Header Styles
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (min-width: 901px) and (max-width: 1074px) {
+  /* line 33, scss/mobile.scss */
+  body > header .large-4 {
+    width: 33.33%;
+  }
+  /* line 38, scss/mobile.scss */
+  body > header .large-8 {
+    width: 66.66%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  /* line 54, scss/mobile.scss */
+  body > header > .row:first-child > .columns {
+    height: auto;
+  }
+  /* line 59, scss/mobile.scss */
+  body > header > .row:first-child > .columns:first-child {
+    line-height: 1;
+  }
+  /* line 63, scss/mobile.scss */
+  body > header > .row:first-child > .columns:first-child > a {
+    line-height: 1;
+    padding: 30px;
+  }
+  /* line 70, scss/mobile.scss */
+  body > header > .row:first-child > .columns:last-child {
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+  /* line 78, scss/mobile.scss */
+  body > header > .row:first-child > .columns:last-child > ul.inline-list > li {
+    margin-left: 40px;
+    margin-right: 10px;
+    line-height: 1.2;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 104, scss/mobile.scss */
+  body > header > .row:first-child > .columns:last-child > ul.inline-list > li {
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  /* line 113, scss/mobile.scss */
+  body > header > .row:first-child > .columns:last-child > ul.inline-list > li:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  /* line 119, scss/mobile.scss */
+  body > header > .row:first-child > .columns:last-child > ul.inline-list > li:last-child > form {
+    display: inline-block;
+    position: relative;
+    left: 10px;
+  }
+}
+/**
+*
+* 3.0 Header Mega Mobile Menu Styles
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 789px) {
+  /* line 155, scss/mobile.scss */
+  body > header > section > .row > .columns > nav > ul.inline-list > li {
+    width: 100%;
+    min-height: initial;
+    padding-bottom: 20px;
+  }
+  /* line 161, scss/mobile.scss */
+  body > header > section > .row > .columns > nav > ul.inline-list > li ul[class*="block-grid-"] {
+    width: 100%;
+  }
+  /* line 165, scss/mobile.scss */
+  body > header > section > .row > .columns > nav > ul.inline-list > li ul[class*="block-grid-"] > li {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 186, scss/mobile.scss */
+  body > header > section {
+    height: auto;
+  }
+  /* line 193, scss/mobile.scss */
+  body > header > section > .row > .columns {
+    text-align: left;
+  }
+  /* line 197, scss/mobile.scss */
+  body > header > section > .row > .columns > a {
+    text-align: inherit;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 2px solid #be955b;
+  }
+  /* line 205, scss/mobile.scss */
+  body > header > section > .row > .columns > nav {
+    position: static;
+  }
+  /* line 211, scss/mobile.scss */
+  body > header > section > .row > .columns > nav > ul.inline-list > li {
+    width: 100%;
+    min-height: initial;
+  }
+  /* line 222, scss/mobile.scss */
+  body > header > section > .row > .columns:first-child > a {
+    border-top: 0px;
+  }
+  /* line 230, scss/mobile.scss */
+  body > header > section > .row > .columns:hover > nav {
+    display: none;
+  }
+  /* line 236, scss/mobile.scss */
+  body > header > section > .row > .columns + .columns {
+    display: none;
+  }
+}
+/**
+*
+* 4.0 Image Slider Styles
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 900px) {
+  /* line 257, scss/mobile.scss */
+  section.image-slider > .controls-move {
+    margin-top: -69px;
+    line-height: 22px;
+  }
+  /* line 262, scss/mobile.scss */
+  section.image-slider > .controls-move > .fa {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 274, scss/mobile.scss */
+  section.image-slider > .controls-move {
+    margin-top: -57px;
+    line-height: 16px;
+  }
+  /* line 279, scss/mobile.scss */
+  section.image-slider > .controls-move > .fa {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  /* line 291, scss/mobile.scss */
+  section.image-slider > .controls-move {
+    display: none;
+  }
+}
+/**
+*
+* 5.0 - Component - Last and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 1024px) {
+  /* line 310, scss/mobile.scss */
+  section.last-and-upcoming-message > .row > div:first-child {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  /* line 316, scss/mobile.scss */
+  section.last-and-upcoming-message > .row > div:last-child {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 336, scss/mobile.scss */
+  section.last-and-upcoming-message > .row > .columns > div:first-child > div:first-child img {
+    min-height: initial;
+    min-width: initial;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 360, scss/mobile.scss */
+  section.last-and-upcoming-message > .row > div:last-child > div > div:last-child a {
+    padding-right: 20px;
+  }
+}
+/**
+*
+* 6.0 - Component - Upcoming Events
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 1024px) {
+  /* line 389, scss/mobile.scss */
+  section.upcoming-events > .row:first-of-type > ul > li > .row > div.columns:first-child {
+    max-width: 300px;
+  }
+  /* line 394, scss/mobile.scss */
+  section.upcoming-events > .row:first-of-type > ul > li > .row > div:last-child {
+    float: left;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 417, scss/mobile.scss */
+  section.upcoming-events > .row:first-of-type > ul > li > .row > div.columns {
+    width: 100%;
+  }
+}
+/**
+*
+* 7.0 - Footer Styles
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 1024px) {
+  /* line 443, scss/mobile.scss */
+  body > footer > .row:first-child > .columns:first-child {
+    padding-bottom: 30px;
+  }
+}
+/**
+*
+* 8.0 - Component - Article
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 1024px) {
+  /* line 467, scss/mobile.scss */
+  section.article > div:first-of-type > ul > li {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+/**
+*
+* 9.0 Section - Welcome to Campus
+* -----------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 600px) {
+  /* line 486, scss/mobile.scss */
+  section.welcome-to-campus {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 495, scss/mobile.scss */
+  section.welcome-to-campus {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
