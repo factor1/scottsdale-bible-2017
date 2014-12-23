@@ -1,0 +1,537 @@
+/* @group Layout */
+
+*{margin:0;padding:0;}
+
+body{
+	margin:0 auto;
+	padding: 0;
+}
+
+#sbc_hdr-nav {
+	display: block;
+}
+
+/*test test test*/
+
+#wrapper {
+	margin: 0 auto;
+	width: 990px;
+	padding: 0;
+}
+
+
+#sbc_body{
+	padding: 15px;
+}
+
+.sbc_body-main-one-col{
+	float: left;
+	width: 99%;
+	min-width: 500px;
+}
+
+.sbc_body-main-left-col{
+	float: left;
+	width: 69%;/*lolz*/
+	min-width: 500px;
+}
+
+.sbc_body-main-right-col{
+	float: right;
+	width: 29%;
+	min-width: 220px;
+}
+
+/* @end */
+
+/* @group Backgrounds */
+
+body{
+	background: #ddd url(http://scottsdalebible.com/assets/images/bg.gif) repeat;
+}
+
+#sbc_body{
+	/*border: 1px solid #ccc;*/
+	box-shadow: 0px 0px 3px #aaa;
+	-moz-box-shadow: 0px 0px 3px #aaa;
+	-webkit-box-shadow: 0px 0px 3px #aaa;
+	background: #fdfdfd url(http://scottsdalebible.com/assets/images/main_bg.gif) repeat;
+}
+
+.observation_report{
+	background: #fff;
+	box-shadow: 1px 1px 5px #ccc;
+	-moz-box-shadow: 1px 1px 5px #ccc;
+	-webkit-box-shadow: 1px 1px 5px #ccc;
+	margin-bottom: 10px;
+	padding: 20px 25px 20px 10px;
+}
+
+.sbc_body-main-right-col{
+	border-left: 1px solid #ddd;
+	padding-left: 10px;
+}
+
+/* @end */
+
+/* @group Text */
+
+body{
+	font: 100%/150% "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	color: #111;
+}
+
+.observation_report p{
+	padding-left: 10px;
+}
+
+.assessment p{
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+/* @end */
+
+/* @group Header */
+
+
+#sbc_hdr{
+	margin-top: 15px;
+}
+
+.appswitcher{
+	float: left;
+	font-size: 180%;
+	font-weight: bold;
+	text-shadow: #6d6d6d 0 1px 1px;
+	margin-right: 20px;
+}
+.other_apps {
+border:1px solid black;
+display:none;
+float:right;
+margin-left:60px;
+margin-top:11px;
+padding:0;
+position:absolute;
+text-align:left;
+}
+.other_apps ul, .other_apps li
+{
+	margin: 0px;
+	padding: 0px;
+}
+div.appswitcher_wrapper:hover .other_apps
+{
+	display:block;
+}
+div.appswitcher_wrapper
+{
+	height: 43px;
+	float: left;
+}
+
+.site_name{
+	color: #fff;
+	font-style: italic;
+}
+
+.app_name{
+	color: #a21029;
+}
+
+/* @end */
+
+
+
+/* @group Nav */
+#sbc_hdr-nav ul{
+	display:block;
+	position: relative;
+	top: 1px;
+}
+
+#sbc_hdr-nav ul li a{
+	color: #222;
+	text-decoration: none;
+	font-size: 110%;
+	float: left;
+	padding: 10px;
+	margin-right: 5px;
+	display: block;
+	background-color: #eee;
+}
+
+#sbc_hdr-nav ul li a.active{
+	float: left;
+	padding: 10px;
+	border-top: 1px solid #fefefe;
+	background: #fdfdfd url(http://scottsdalebible.com/assets/images/main_bg.gif) repeat;
+}
+
+#sbc_hdr-nav ul li a.current{
+	background: #fdfdfd  url(http://scottsdalebible.com/assets/images/main_bg.gif) repeat;
+	/*box-shadow: 0px 0px 2px #aaa;
+	-moz-box-shadow: 0px 0px 2px #aaa;
+	-webkit-box-shadow: 0px 0px 2px #aaa;*/
+}
+
+/* @end */
+
+/* @group Images */
+img
+{
+	border: 0;
+}
+
+/* @end */
+
+/* @group Headings */
+
+#sbc_body h2{
+	color: #222;
+	text-shadow: #fff 0 1px 1px;
+}
+
+
+.sbc_body-main-right-col h1, .sbc_body-main-right-col h2, .sbc_body-main-right-col h3{
+	color: #666;
+}
+
+.report_heading{ /*the heading [h2] above the observation report*/
+	margin: 20px 0;
+}
+
+.observation_report h3{
+	margin-bottom: 15px;
+}
+
+/* @end */
+
+
+.column{
+width: 320px;
+}
+ul li{
+list-style-type: none;
+padding-left: 20px;
+}
+.no-padding
+{
+padding: 0px;
+}
+.float-left
+{
+float: left;
+}
+.float-right
+{
+float: right;
+}
+#login
+{
+float: right;
+/*position:relative;
+top:0;*/
+}
+.ministry_role
+{
+padding:5px;
+margin-bottom: 10px;
+background-color: #efefef;
+border: 1px solid #dadada;
+}
+.ministry_role h3
+{
+color: #a21029;
+}
+.validationHint{font-size: 10px; color: #808080;}
+.validationHintRed{font-size: 10px; color: #FF0000;}
+.validationErrorBox{border: 2px solid red;}
+.notificationBox{border: 1px solid #E2C822; padding: 3px 4px; background-color: #FFF9D7;}
+.big_button
+{
+}
+.big_button a
+{
+display:block;
+float: left;
+background-color:#B0D0FF;
+border:3px solid #3764A7;
+height:40px;
+margin-right:10px;
+text-align:center;
+padding-top: 15px;
+padding-right: 5px;
+padding-left: 5px;
+text-decoration:none;
+}
+.big_button a:hover {
+background-color:#3764A7;
+color:#FFFFFF;
+text-decoration:underline;
+}
+
+/* @group Buttons */
+
+.buttons a, .buttons button{
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:100%;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+
+.buttons a.big{
+	width: 300px;
+	text-align:center;
+	padding: 20px 0;
+	font-size: 170%;
+	margin-left: 10px;
+}
+
+.buttons button{
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+.buttons button[type]{
+    padding:5px 10px 5px 7px; /* Firefox */
+    line-height:17px; /* Safari */
+}
+*:first-child+html button[type]{
+    padding:4px 10px 3px 7px; /* IE7 */
+}
+.buttons button img, .buttons a img{
+    margin:0 3px -3px 0 !important;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+div.interested{
+	position: relative;
+	float: right;
+}
+
+div.interested a{
+	/*position: absolute;
+    top: 0;*/
+  /*  text-indent: -9000px;*/
+  /*  overflow: hidden;*/
+  /*  background: url(http://scottsdalebible.com/assets/images/interested.gif) no-repeat 0 0;*/
+  
+  
+  
+   display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f7f7f7;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+  
+}
+
+div.interested a:hover{
+	background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+
+div.interested a:active{
+	background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
+
+/* @end */
+
+/* STANDARD */
+
+button:hover, .buttons a:hover{
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+}
+.buttons a:active{
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#ffffff;
+}
+
+/* POSITIVE */
+
+button.positive, .buttons a.positive{
+    color:#529214;
+}
+.buttons a.positive:hover, button.positive:hover{
+    background-color:#E6EFC2;
+    border:1px solid #C6D880;
+    color:#529214;
+}
+.buttons a.positive:active{
+    background-color:#529214;
+    border:1px solid #529214;
+    color:#fff;
+}
+
+/* NEGATIVE */
+
+.buttons a.negative, button.negative{
+    color:#d12f19;
+}
+.buttons a.negative:hover, button.negative:hover{
+    background:#fbe3e4;
+    border:1px solid #fbc2c4;
+    color:#d12f19;
+}
+.buttons a.negative:active{
+    background-color:#d12f19;
+    border:1px solid #d12f19;
+    color:#fff;
+}
+.quick_links
+{
+padding: 4px 8px;
+}
+.quick_links li
+{
+padding:0px;
+}
+.quick_links li a
+{
+text-decoration: none;
+}
+.quick_links li a:hover
+{
+text-decoration: underline;
+}
+
+fieldset
+{
+width:220px;
+}
+.error
+{
+background-color: #efefef;
+border: 1px solid red;
+}
+.assessment_question
+{
+}
+.question_radio
+{
+float: left;
+width: 100px;
+height: 40px;	
+}
+.question_text
+{
+}
+.accent
+{
+	background-color:#f1f1f1;
+}
+.sbc_body-main-left-col p
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sbc_body-main-left-col ol
+{
+	padding-left: 20px;
+}
+.create_account
+{
+	width: 350px;
+}
+.create_account label
+{
+	width: 290px;
+}
+.float_left
+{
+	float: left;
+}
+
+.float_right
+{
+	float: right;
+}
+.observation_report
+{
+	padding-left: 20px;
+}
+
+.clear{
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}
+
+/*workers specific*/
+table.list {
+border-collapse:collapse;
+font-size:0.85em;
+width: 100%;
+}
+
+table.list thead th {
+background-color:#FFFFFF;
+border-bottom:2px solid #333333;
+color:#333333;
+font-weight:bold;
+padding:0 1em 0.8em;
+text-align:left;
+}
+
+table.list td {
+background-color:#FFFFFF;
+border-bottom:1px solid #EEEEEE;
+padding:0.8em 1em;
+vertical-align:middle;
+}
+
+h1 {
+border-bottom:1px solid #EAEAEA;
+color:#333333;
+font-size:1.6em;
+margin:0.4em 0 1em;
+padding:0 0 0.1em;
+position:relative;
+}
+
+h1 .title-addon {
+color:#AAAAAA;
+font-size:0.55em;
+padding:0.85em 0 0;
+position:absolute;
+right:0;
+top:0;
+}
+
+p.helper {
+margin:0.5em 0 1.75em;
+}
