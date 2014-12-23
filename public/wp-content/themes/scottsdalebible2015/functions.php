@@ -130,6 +130,10 @@ if(!function_exists("sb_template_init"))
             remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
         });
+        
+        
+        /* Set up custom thumbnail sizes */
+        add_image_size( 'event_home', '500', '300', 'true' );
 
         add_filter('excerpt_more',function() {
             return ' &hellip; <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'f1' ) . '</a>';
