@@ -7,7 +7,7 @@
                 <div class="row">
                     <?php if($image=get_field("featured_image",$event->ID)) { ?>
                     <div class="medium-6 columns">
-                        <a class="image-block-center"><img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" /></a>
+                        <a class="image-block-center"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
                     </div>
                     <?php } ?>
                     <div class="medium-6 columns">
