@@ -12,7 +12,6 @@ $wp_query = new WP_Query([
     'orderby' => 'meta_value',
     'meta_key' => '_event_start_date',
     'order' => 'ASC',
-     'event-categories' => 'featured',
     'meta_query' => array(
         array(
             'key' => '_event_start_date',
