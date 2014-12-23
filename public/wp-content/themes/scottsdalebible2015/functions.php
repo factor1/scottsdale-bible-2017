@@ -338,8 +338,17 @@ if(!function_exists("sb_get_upcoming_events"))
             'post_type' => 'event',
             'post_status' => 'publish',
             'suppress_filters' => true,
-            'orderby' => 'post_date',
-            'order' => 'DESC',
+            'orderby' => 'meta_value',
+		    'meta_key' => '_event_start_date',
+		    'order' => 'ASC',
+			 'meta_query' => array(
+		        array(
+		            'key' => '_event_start_date',
+		            'value' => $today,
+		            'compare' => '>=',
+					)
+				)
+
         ],$args));
 
         if(!$events) { return []; }
