@@ -130,8 +130,8 @@ if(!function_exists("sb_template_init"))
             remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
         });
-        
-        
+
+
         /* Set up custom thumbnail sizes */
         add_image_size( 'event_home', '500', '300', 'true' );
 
@@ -209,6 +209,11 @@ if(!function_exists("sb_template_init"))
         /* Remove Custom Fields/Excerpts from Events */
         add_filter("em_cp_event_supports",function($a) {
             return ['title','editor','custom-fields','revisions','post-formats'];
+        });
+
+        /* Add WP Media Element for Series Engine */
+        add_action("wp_enqueue_scripts",function() {
+            wp_enqueue_script('wp-mediaelement');
         });
 
     }
@@ -343,15 +348,15 @@ if(!function_exists("sb_get_upcoming_events"))
             'post_status' => 'publish',
             'suppress_filters' => true,
             'orderby' => 'meta_value',
-		    'meta_key' => '_event_start_date',
-		    'order' => 'ASC',
-			 'meta_query' => array(
-		        array(
-		            'key' => '_event_start_date',
-		            'value' => $today,
-		            'compare' => '>=',
-					)
-				)
+            'meta_key' => '_event_start_date',
+            'order' => 'ASC',
+             'meta_query' => array(
+                array(
+                    'key' => '_event_start_date',
+                    'value' => $today,
+                    'compare' => '>=',
+                    )
+                )
 
         ],$args));
 
