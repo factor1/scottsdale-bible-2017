@@ -53,8 +53,10 @@ if(!$last_weekend||!$upcoming_message) {
                     <a href="#" data-trigger-click="st_email_large"><i class="fa fa-envelope"></i></a>
                     <a href="#" data-trigger-click="st_twitter_large"><i class="fa fa-twitter"></i></a>
                     <a href="#" data-trigger-click="st_facebook_large"><i class="fa fa-facebook"></i></a>
+                    <?php /* ?>
                     <a href="<?php echo (($f=get_field("instagram_url","option"))?esc_attr($f):"#"); ?>"><i class="fa fa-instagram"></i></a>
                     <a href="<?php echo (($f=get_field("flickr_url","option"))?esc_attr($f):"#"); ?>"><i class="fa fa-flickr"></i></a>
+                    <?php */ ?>
                 </div>
             </div>
         </div>

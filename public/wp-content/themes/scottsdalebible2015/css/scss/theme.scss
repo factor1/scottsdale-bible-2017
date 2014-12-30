@@ -1,5 +1,18 @@
 /**
 *
+* Stylesheet Variables
+* -----------------------------------------------------------------------------
+*/
+
+/* Fonts */
+$Oswald: Oswald, Helvetica, Arial, sans-serif;
+$Kepler: "kepler-std", georgia, "Times New Roman", serif;
+
+/* Colors */
+$lightbrown: #be955b;
+
+/**
+*
 * 1.0 Global Styles
 * -----------------------------------------------------------------------------
 */
@@ -9,7 +22,7 @@ html, body
 {
     padding: 0px;
     margin: 0px;
-    font-family: Oswald, Helvetica, Arial, sans-serif;
+    font-family: $Oswald;
     font-size: 16px;    
     color: #414042;
     z-index: 0;
@@ -52,7 +65,7 @@ body
     
     h1, h2, h3, h4, h5, h6
     {
-        font-family: Oswald, Helvetica, Arial, sans-serif;
+        font-family: $Oswald;
         color: #414042;
     }
     
@@ -74,7 +87,7 @@ body
     {
         font-size: 20px;
         font-weight: 700;
-        color: #be955b;
+        color: $lightbrown;
     }
 
     a
@@ -85,26 +98,26 @@ body
 
     a:hover
     {
-        color: #be955b;
+        color: $lightbrown;
         text-decoration: underline;
     }
     
     strong
     {
-        font-family: Kepler, "Times New Roman", serif;
+        font-family: $Kepler;
         font-weight: 800;
     }
     
     p
     {
-        font-family: Kepler, "Times New Roman", serif;
+        font-family: $Kepler;
         font-size: 17px;
         font-weight: 400;
         line-height: 22px;
         
         a
         {
-            color: #be955b;
+            color: $lightbrown;
             text-decoration: underline;        
         }
     }
@@ -116,7 +129,7 @@ body
     
     .button
     {
-        font-family: Oswald, Helvetica, Arial, sans-serif;
+        font-family: $Oswald;
         font-size: 15px;
         font-weight: 400;
         color: #ffffff;
@@ -126,7 +139,7 @@ body
         padding-bottom: 10px;
         padding-left: 40px;
         padding-right: 40px;
-        background-color: #be955b;
+        background-color: $lightbrown;
         border-radius: 20px;
         line-height: 1;
         text-decoration: none;
@@ -135,7 +148,7 @@ body
     .button:hover
     {
         background-color: #414042;
-        color: #be955b;
+        color: $lightbrown;
         text-decoration: none;
     }
     
@@ -150,13 +163,13 @@ body
         > span
         {
             font-weight: 700;
-            color: #be955b;
+            color: $lightbrown;
         }
     }
     
     .button.dark-brown:hover
     {
-        background-color: #be955b;
+        background-color: $lightbrown;
         
         > span
         {
@@ -180,7 +193,7 @@ body
         {
             margin-left: 10px;
             line-height: inherit;
-            color: #be955b;
+            color: $lightbrown;
         }
     }
     
@@ -375,7 +388,7 @@ body
                         display: inline-block;
                         position: relative;
                         top: -1px;
-                        color: #be955b;
+                        color: $lightbrown;
                     }
 
                     i.fa.fa-search
@@ -412,7 +425,7 @@ body
                     
                     a:hover
                     {
-                        color: #be955b;
+                        color: $lightbrown;
                     }
                     
                     > ul
@@ -452,7 +465,7 @@ body
 
                             > a:hover
                             {
-                                color: #be955b;
+                                color: $lightbrown;
                             }                            
                         }
                         
@@ -530,7 +543,7 @@ body
                             font-size: 14px;
                             font-weight: 400;
                             padding-bottom: 5px;
-                            border-bottom: 2px solid #be955b;
+                            border-bottom: 2px solid $lightbrown;
                         }
                         
                         > ul.inline-list
@@ -569,7 +582,7 @@ body
                                         
                                         > a:hover
                                         {
-                                            color: #be955b;
+                                            color: $lightbrown;
                                             text-decoration: underline;
                                         }
                                     }
@@ -593,7 +606,7 @@ body
                             
                             > .fa
                             {
-                                color: #be955b;
+                                color: $lightbrown;
                                 font-size: 32px;
                                 font-weight: 400;
                                 cursor: pointer;
@@ -614,7 +627,7 @@ body
                 
                     > a
                     {
-                        background-color: #be955b;
+                        background-color: $lightbrown;
                     }
                 }
                 
@@ -681,7 +694,7 @@ body
             
             a:hover
             {
-                color: #be955b;
+                color: $lightbrown;
             }
             
             > .columns:last-child
@@ -751,7 +764,7 @@ body
 
                                 > a:hover
                                 {
-                                    color: #be955b;
+                                    color: $lightbrown;
                                 }                       
                             }
                         }
@@ -807,7 +820,7 @@ section.subscribe-to-news
         > .fa
         {
             margin-right: 20px;
-            color: #be955b;
+            color: $lightbrown;
         }
         
         > span
@@ -829,7 +842,7 @@ section.subscribe-to-news
         
         input.button
         {
-            font-family: Oswald, Helvetica, Arial, sans-serif;
+            font-family: $Oswald;
             color: #ffffff;
             font-size: 20px;
             padding-left: 50px;
@@ -838,7 +851,7 @@ section.subscribe-to-news
         
         .button:hover
         {
-            color: #be955b;      
+            color: $lightbrown;      
             background-color: #ffffff;
         }
     }
@@ -870,6 +883,7 @@ section.image-slider
             padding: 0px;
             overflow: hidden;
             text-align: center;
+            height: 500px !important;
         }
         
         > li:first-child
@@ -952,7 +966,7 @@ section.select-campus
                     
                     > span
                     {
-                        color: #be955b;
+                        color: $lightbrown;
                         font-weight: 700;
                     }
                     
@@ -992,7 +1006,7 @@ section.select-campus
                 
                 > a:hover
                 {
-                    color: #be955b;
+                    color: $lightbrown;
                 }
             }
             
@@ -1072,7 +1086,7 @@ section.news-and-stories
                     
                     > div:last-child
                     {
-                        border-top: 5px solid #be955b;
+                        border-top: 5px solid $lightbrown;
                         padding-top: 15px;
                         padding-bottom: 15px;
                         padding-left: 10px;
@@ -1099,7 +1113,7 @@ section.news-and-stories
                                 margin-left: 10px;
                                 font-size: 32px;
                                 font-weight: 300;
-                                color: #be955b;
+                                color: $lightbrown;
                             }
                         }                        
                         
@@ -1172,7 +1186,7 @@ section.upcoming-events
             top: -8px;
             margin-right: 18px;
             font-size: 38px;
-            color: #be955b;
+            color: $lightbrown;
         }
         
         > span
@@ -1226,7 +1240,7 @@ section.upcoming-events
                             
                             > a
                             {
-                                color: #be955b;   
+                                color: $lightbrown;   
                             }
                         }
                         
@@ -1239,7 +1253,7 @@ section.upcoming-events
                         
                         > div
                         {
-                            font-family: Kepler, "Times New Roman", serif;
+                            font-family: $Kepler;
                             font-size: 15px;
                             font-weight: 300;
                             line-height: 19px;
@@ -1261,7 +1275,7 @@ section.upcoming-events
                             {
                                 font-weight: 700;
                                 font-style: italic;
-                                color: #be955b;
+                                color: $lightbrown;
                                 text-decoration: underline;
                             }
                             
@@ -1315,7 +1329,7 @@ section.last-and-upcoming-message
                 
                 > div:nth-child(2)
                 {
-                    border-top: 5px solid #be955b;
+                    border-top: 5px solid $lightbrown;
                     padding-top: 15px;
                     padding-bottom: 15px;
                     padding-left: 50px;
@@ -1388,7 +1402,7 @@ section.last-and-upcoming-message
                     
                     .fa
                     {
-                        color: #be955b;
+                        color: $lightbrown;
                     }
                 }
             }    
@@ -1440,7 +1454,7 @@ section.last-and-upcoming-message
                     a
                     {
                         font-size: 30px;
-                        color: #be955b;
+                        color: $lightbrown;
                         padding-right: 30px;                 
                     }
 
@@ -1510,7 +1524,7 @@ section.page-content
 {
     > .row
     {
-        border-top: 6px solid #be955b;
+        border-top: 6px solid $lightbrown;
         padding-top: 40px;
         padding-bottom: 50px;
         
@@ -1521,34 +1535,49 @@ section.page-content
             
             > h3
             {
-                margin: 0px;
-                margin-top: 15px;
+                margin: 15px 0px;
                 padding: 0px;
                 padding-bottom: 10px;
                 color: #414042;
                 line-height: 1;
-                border-bottom: 2px solid #be955b;
+                border-bottom: 2px solid $lightbrown;
                 text-transform: uppercase;
             }
             
             > ul
             {
                 margin-bottom: 60px;
+                padding: 0 0 20px 0;
                 
                 > li
                 {
                     font-size: 18px;
                     font-weight: 300;
-                    line-height: 1.2;
-                    padding-left: 20px;
-                    padding-right: 10px;
-                    padding-top: 20px;
-                    padding-bottom: 0px;
+                    line-height: 1.3;
+                    padding: 0px 0px 20px 0;
+                    
+                    
+                    li.current-menu-ancestor a {color: #fff;}
+                   
                     
                     a
                     {
                         text-decoration: none;
                     }
+                    
+                    ul {
+                        margin: 0 0 20px;
+                        padding: 0 0 0 8px;
+                        
+                        li {padding: 0px 0px 5px 0;}
+                       
+                        
+                        ul {
+                            margin-bottom: 20px;
+                             border-left: dotted 1px #bf965c;
+                            }
+                    }
+                   
                 }
             }
         }
@@ -1572,7 +1601,7 @@ section.page-content
                     font-size: 35px;
                     font-weight: 700;
                     line-height: 1;
-                    border-bottom: 2px solid #be955b;
+                    border-bottom: 2px solid $lightbrown;
                 }
                 
                 > div
@@ -1599,7 +1628,7 @@ section.page-content
                                 > .fa
                                 {
                                     font-size: 18px;
-                                    color: #be955b;
+                                    color: $lightbrown;
                                     margin-right: 5px;
                                 }
                             }                        
@@ -1641,14 +1670,14 @@ section.group-search-form
             {
                 > select
                 {
-                    font-family: Oswald, Helvetica, Arial, sans-serif;
+                    font-family: $Oswald;
                     font-size: 15px;
                     font-weight: 400;
                     line-height: 19px;
                     padding-top: 6px;
                     padding-bottom: 6px;
                     text-transform: uppercase;
-                    border: 2px solid #be955b;
+                    border: 2px solid $lightbrown;
                     
                     > option
                     {
@@ -1664,7 +1693,7 @@ section.group-search-form
                     
                     > .fa
                     {
-                        color: #be955b;
+                        color: $lightbrown;
                         position: relative;
                         top: -1px;
                     }
@@ -1725,7 +1754,7 @@ section.welcome-to-campus
                 > span
                 {
                     font-weight: 700;
-                    color: #be955b;
+                    color: $lightbrown;
                 }
             }
         }
@@ -1752,7 +1781,7 @@ section.not-found
         
         > h2
         {
-            border-bottom: 2px solid #be955b;
+            border-bottom: 2px solid #bf965c;
         }
     }
 }
@@ -1783,12 +1812,12 @@ section.posts-archive
         
         > h2
         {
-            border-bottom: 2px solid #be955b;
+            border-bottom: 2px solid $lightbrown;
             margin-bottom: 4px;
             
             > a
             {
-                color: #be955b;
+                color: $lightbrown;
             }
         }
         
@@ -1799,7 +1828,7 @@ section.posts-archive
         
         .meta
         {
-            font-family: Kepler, "Times New Roman", serif;
+            font-family: $Kepler;
             font-size: 17px;
             font-weight: 400;
             line-height: 22px;        
@@ -1826,4 +1855,64 @@ section.search-results
             }
         }
     }    
+}
+
+
+/**
+*
+* 15.0 Page - Messages - Series Archives
+* -----------------------------------------------------------------------------
+*/
+
+section.page-content
+{
+    div#seriesengine
+    {
+        width: 100%;
+        
+        h3.enmse-archive-title
+        {
+            font-family: $Oswald !important;
+            font-weight: 500;
+            color: $lightbrown !important;
+        }
+        
+        table.enmse-archive-table
+        {
+            tr
+            {
+                background-color: transparent;
+                
+                td
+                {
+                    font-family: $Oswald !important;
+                    color: #000000;
+                    line-height: 1.2;
+                    
+                    > a
+                    {
+                        font-family: inherit !important;
+                        color: inherit;
+                    }
+                    
+                    > a:hover
+                    {
+                        color: $lightbrown;
+                    }
+                }
+                
+                td.enmse-archive-title-cell
+                {
+                    font-weight: 700;
+                    padding-left: 0px;
+                }
+                
+                td.enmse-archive-explore-cell
+                {
+                    text-align: right;
+                    padding-right: 0px;
+                }                
+            }    
+        }
+    }
 }

@@ -14,3 +14,4 @@ scripts/.config.*
 !wp-config.php
 error_log
 desktop.ini
+.sass-cache/
