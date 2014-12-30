@@ -249,10 +249,60 @@
 * -----------------------------------------------------------------------------
 */
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 1440px)
 {
     section.image-slider
-    {  
+    {
+        > ul
+        {
+            > li
+            {
+                height: 450px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 1280px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 400px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 1120px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 350px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 960px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 300px !important;
+            }
+        }    
+    
         > .controls-move
         {
             margin-top: -69px;
@@ -266,10 +316,32 @@
     }   
 }
 
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 800px)
 {
     section.image-slider
-    {  
+    {
+        > ul
+        {
+            > li
+            {
+                height: 250px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 640px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 200px !important;
+            }
+        }
+        
         > .controls-move
         {
             margin-top: -57px;
@@ -279,6 +351,48 @@
             {
                 font-size: 12px;
             }    
+        }        
+    }   
+}
+
+@media only screen and (max-width: 576px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 180px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 512px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 160px !important;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width: 480px)
+{
+    section.image-slider
+    {
+        > ul
+        {
+            > li
+            {
+                height: 150px !important;
+            }
         }
     }   
 }
@@ -292,7 +406,7 @@
             display: none;   
         }
     }   
-} 
+}
 
 /**
 *

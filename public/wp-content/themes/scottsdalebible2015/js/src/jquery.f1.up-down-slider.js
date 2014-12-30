@@ -27,7 +27,8 @@
             circles: null
         },
         slide_css: {},
-        onready: null
+        onready: null,
+        change: null
     };
 
     var UpDownSlider = function(container,options) {
@@ -255,6 +256,10 @@
                 .toggle(true)
                 ;
 
+            if(_this.options.change) {
+                (_this.options.change)(n$);
+            }
+
             c$.add(n$).animate(
                 { top: "-="+_this.ul$.height()+"px" },
                 _this.options.speed,
@@ -291,6 +296,10 @@
                 .css("top",(p$.outerHeight()*-1)+"px")
                 .toggle(true)
                 ;
+
+            if(_this.options.change) {
+                (_this.options.change)(p$);
+            }
 
             c$.add(p$).animate(
                 { top: "+="+_this.ul$.height()+"px" },

@@ -28,7 +28,7 @@ preloadImages('<?php echo implode("','",$image_sources); ?>');
     <ul>
         <?php foreach($images as $image) { ?>
         <li>
-            <a<?php echo (($url=$image->slider_image_link)?" href=\"".esc_attr($url)."\"":""); ?>>
+            <a<?php echo (($url=$image->slider_image_link)?" href=\"".esc_attr($url)."\"":""); ?> class="image-block-center">
                 <img src="<?php echo esc_attr($image->url); ?>" alt="<?php echo esc_attr($image->title); ?>" title="<?php echo esc_attr($image->title); ?>" />
             </a>
         </li>
