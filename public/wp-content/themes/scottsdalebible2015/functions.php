@@ -216,6 +216,18 @@ if(!function_exists("sb_template_init"))
             wp_enqueue_script('wp-mediaelement');
         });
 
+        /* Ensure Events pages use proper template */
+        add_filter("template_include",function($template) {
+            global $wp_query;
+            if(!$wp_query->is_post_type_archive) {
+                return $template;
+            }
+            if(!isset($wp_query->query['post_type'])||!in_array($wp_query->query['post_type'],['event','event-recurring'])) {
+                return $template;
+            }
+            return get_query_template('event',['archive-events.php','archive.php','index.php']);
+        },100);
+
     }
 }
 
@@ -470,6 +482,21 @@ if(!function_exists("sb_get_homepage_post_id"))
         $results = $wpdb->get_results("select distinct post_id from wp_postmeta where meta_key='_wp_page_template' and meta_value='homepage.php'");
         $homepage_post_id = ($results) ? (int) $results[0]->post_id : 0;
         return $homepage_post_id;
+    }
+}
+
+if(!function_exists("sb_get_eventspage_post_id"))
+{
+    $eventspage_post_id = null;
+    function sb_get_eventspage_post_id()
+    {
+        global $wpdb, $eventspage_post_id;
+        if(!is_null($eventspage_post_id)) {
+            return $eventspage_post_id;
+        }
+        $results = $wpdb->get_results("select distinct post_id from wp_postmeta where meta_key='_wp_page_template' and meta_value='events.php'");
+        $eventspage_post_id = ($results) ? (int) $results[0]->post_id : 0;
+        return $eventspage_post_id;
     }
 }
 
