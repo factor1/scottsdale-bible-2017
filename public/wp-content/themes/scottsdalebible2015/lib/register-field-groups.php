@@ -763,6 +763,13 @@ if(function_exists("register_field_group"))
                     'value' => 'event'
                 ]
             ],
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'event-recurring'
+                ]
+            ],
         ],
         'options' => [
             'menu_order' => 0,
