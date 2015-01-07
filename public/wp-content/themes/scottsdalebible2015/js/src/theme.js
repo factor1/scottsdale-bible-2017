@@ -23,6 +23,12 @@ var preloadImages = function() {
 
         $(document).foundation();
 
+        /* Open New Window/Tab in place of deprecated target="_blank" */
+        $("a[href][data-target='new-window']").click(function(e) {
+            e.preventDefault();
+            window.open($(this).attr("href"));
+        });
+
         /* Data Toggles */
         $("[data-toggle]").click(function(e) {
            e.preventDefault();
