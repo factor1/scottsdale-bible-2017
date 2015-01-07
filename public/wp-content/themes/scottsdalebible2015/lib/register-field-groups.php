@@ -305,6 +305,34 @@ if(!function_exists("acf_field_def_oembed"))
     }
 }
 
+if(!function_exists("acf_field_def_taxonomy"))
+{
+    function acf_field_def_taxonomy($field_key,$field_label,$field_name,array $data = [])
+    {
+        return array_merge([
+            'key' => $field_key,
+            'label' => $field_label,
+            'name' => $field_name,
+            'prefix' => '',
+            'type' => 'taxonomy',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => [
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ],
+            'taxonomy' => '',
+            'field_type' => 'select',
+            'allow_null' => 0,
+            'load_save_terms' => 1,
+            'return_format' => 'object',
+            'multiple' => 0
+        ],$data);
+    }
+}
+
 if(!function_exists("get_acf_common_field"))
 {
     function get_acf_common_field($field = null,$key_prefix = "")
@@ -450,6 +478,9 @@ if(function_exists("register_field_group"))
                     acf_field_def_post_object("field_".md5(THEME_PREFIX."homepage_upcoming_event"),"","event",['post_type'=>'event'])
                 ],
                 'button_label'=>'Add Event'
+            ]),
+            acf_field_def_taxonomy("field_".md5(THEME_PREFIX."homepage_events_category"),"Category for \"See All Events\" Link","events_category",[
+                'taxonomy'=>'event-categories'
             ])
         ],
         'location' => [
@@ -604,6 +635,20 @@ if(function_exists("register_field_group"))
                     ],
                     'allorany' => 'all'
                 ]
+            ]),
+            acf_field_def_taxonomy("field_".md5(THEME_PREFIX."campus_events_category"),"Category for \"See All Events\" Link","events_category",[
+                'taxonomy'=>'event-categories',
+                'conditional_logic' => [
+                    'status' => 1,
+                    'rules' => [
+                        [
+                            'field' => "field_".md5(THEME_PREFIX."campus_inherit_events"),
+                            'operator' => '!=',
+                            'value' => '1'
+                        ],
+                    ],
+                    'allorany' => 'all'
+                ]
             ])
         ],
         'location' => [
@@ -716,6 +761,13 @@ if(function_exists("register_field_group"))
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'event'
+                ]
+            ],
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'event-recurring'
                 ]
             ],
         ],

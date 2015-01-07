@@ -14,6 +14,8 @@ if($upcoming_events = get_field("upcoming_events",$events_post_id)) {
     }
 }
 
+$events_link = ($f=get_field("events_category",$events_post_id)) ? get_term_link($f) : get_option('siteurl')."/events/";
+
 /* No Preset, Load Most Recent Posts */
 /* Inactive for Now
 if(!$events) {
@@ -57,6 +59,6 @@ if(!$events) {
         </ul>
     </div>
     <div class="row">
-        <a href="<?php echo get_option('siteurl'); ?>/events/" class="button dark-brown">See <span>all</span> events</a>
+        <a href="<?php echo esc_attr($events_link); ?>" class="button dark-brown">See <span>all</span> events</a>
     </div>
 </section>

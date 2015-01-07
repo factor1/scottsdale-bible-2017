@@ -15,3 +15,4 @@ scripts/.config.*
 error_log
 desktop.ini
 .sass-cache/
+public/dev/

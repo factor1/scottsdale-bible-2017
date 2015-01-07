@@ -10,6 +10,7 @@ $Kepler: "kepler-std", georgia, "Times New Roman", serif;
 
 /* Colors */
 $lightbrown: #be955b;
+$darkbrown: #414042;
 
 /**
 *
@@ -24,7 +25,7 @@ html, body
     margin: 0px;
     font-family: $Oswald;
     font-size: 16px;    
-    color: #414042;
+    color: $darkbrown;
     z-index: 0;
 }
 
@@ -48,7 +49,7 @@ body
         
         input
         {
-            color: #414042;
+            color: $darkbrown;
         }
 
         input[type='text'], input[type='email']
@@ -66,7 +67,7 @@ body
     h1, h2, h3, h4, h5, h6
     {
         font-family: $Oswald;
-        color: #414042;
+        color: $darkbrown;
     }
     
     h1
@@ -93,7 +94,7 @@ body
     a
     {
         text-decoration: none;
-        color: #414042;
+        color: $darkbrown;
     }
 
     a:hover
@@ -147,14 +148,14 @@ body
     
     .button:hover
     {
-        background-color: #414042;
+        background-color: $darkbrown;
         color: $lightbrown;
         text-decoration: none;
     }
     
     .button.dark-brown
     {
-        background-color: #414042;
+        background-color: $darkbrown;
         padding-left: 50px;
         padding-right: 50px;
         font-weight: 300;
@@ -173,9 +174,34 @@ body
         
         > span
         {
-            color: #414042;
+            color: $darkbrown;
         }
     }
+    
+    .button.light-brown
+    {
+        background-color: $lightbrown;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: 300;
+        color: #ffffff;
+        
+        > span
+        {
+            font-weight: 700;
+            color: $lightbrown;
+        }
+    }
+    
+    .button.light-brown:hover
+    {
+        background-color: $darkbrown;
+        
+        > span
+        {
+            color: $darkbrown;
+        }
+    }    
 
     .bar
     {
@@ -184,7 +210,7 @@ body
         font-size: 22px;
         font-weight: 700;
         line-height: 35px;
-        background-color: #414042;
+        background-color: $darkbrown;
         color: #ffffff;
         padding-left: 40px;
         text-decoration: none;
@@ -205,7 +231,7 @@ body
             padding-bottom: 20px;
             padding-left: 40px;
             padding-right: 40px;
-            border: 2px solid #414042;
+            border: 2px solid $darkbrown;
         }    
     }
     
@@ -441,7 +467,7 @@ body
                         > li
                         {
                             display: block;
-                            background-color: #414042;
+                            background-color: $darkbrown;
                             padding-top: 6px;
                             padding-bottom: 6px;
                             padding-right: 0px;
@@ -775,7 +801,7 @@ body
         
         > section
         {
-            background-color: #414042;
+            background-color: $darkbrown;
             text-align: center;
             font-family: "Open Sans", Helvetica, Arial, sans-serif;
             font-size: 10px;
@@ -806,7 +832,7 @@ body
 
 section.subscribe-to-news
 {
-    background-color: #414042;
+    background-color: $darkbrown;
     padding-top: 70px;
     padding-bottom: 70px;
     
@@ -837,7 +863,7 @@ section.subscribe-to-news
             font-size: 18px;
             font-weight: 400;
             padding: 10px;
-            color: #414042;
+            color: $darkbrown;
         }
         
         input.button
@@ -884,6 +910,11 @@ section.image-slider
             overflow: hidden;
             text-align: center;
             height: 500px !important;
+            
+            > a
+            {
+                max-width: 1600px;
+            }
         }
         
         > li:first-child
@@ -983,7 +1014,7 @@ section.select-campus
             
             > li + li
             {
-                background-color: #414042;
+                background-color: $darkbrown;
                 padding-top: 6px;
                 padding-bottom: 6px;
                 padding-right: 80px;
@@ -1138,7 +1169,7 @@ section.news-and-stories
                     {
                         > h3
                         {
-                            color: #414042;
+                            color: $darkbrown;
                         }
                     }
                 }
@@ -1209,7 +1240,7 @@ section.upcoming-events
                 {
                     margin: 0px;
                     padding: 10px;
-                    border-top: 3px solid #414042;
+                    border-top: 3px solid $darkbrown;
                     background-color: #ffffff;
                     
                     > div
@@ -1281,7 +1312,7 @@ section.upcoming-events
                             
                             a:hover
                             {
-                                color: #414042;   
+                                color: $darkbrown;   
                             }
                         }
                     }
@@ -1388,7 +1419,7 @@ section.last-and-upcoming-message
                 
                 > div:last-child
                 {
-                    background-color: #414042;
+                    background-color: $darkbrown;
                     
                     > h3
                     {
@@ -1436,12 +1467,12 @@ section.last-and-upcoming-message
                 {
                     > h3
                     {
-                        color: #414042;
+                        color: $darkbrown;
                     }
                     
                     > h5
                     {
-                        color: #414042;
+                        color: $darkbrown;
                     }                    
                 }
                 
@@ -1460,7 +1491,7 @@ section.last-and-upcoming-message
 
                     a:hover
                     {
-                        color: #414042; 
+                        color: $darkbrown; 
                     }
                 }                
             }
@@ -1538,7 +1569,7 @@ section.page-content
                 margin: 15px 0px;
                 padding: 0px;
                 padding-bottom: 10px;
-                color: #414042;
+                color: $darkbrown;
                 line-height: 1;
                 border-bottom: 2px solid $lightbrown;
                 text-transform: uppercase;
@@ -1556,26 +1587,26 @@ section.page-content
                     line-height: 1.3;
                     padding: 0px 0px 20px 0;
                     
-                    
-                    li.current-menu-ancestor a {color: #fff;}
-                   
-                    
                     a
                     {
                         text-decoration: none;
                     }
                     
-                    ul {
+                    ul
+                    {
                         margin: 0 0 20px;
                         padding: 0 0 0 8px;
                         
-                        li {padding: 0px 0px 5px 0;}
-                       
+                        li
+                        {
+                            padding: 0px 0px 5px 0;
+                        }
                         
-                        ul {
+                        ul
+                        {
                             margin-bottom: 20px;
-                             border-left: dotted 1px #bf965c;
-                            }
+                            border-left: dotted 1px #bf965c;
+                        }
                     }
                    
                 }
@@ -1621,7 +1652,7 @@ section.page-content
                                 font-family: "Open Sans", Helvetica, Arial, sans-serif;
                                 font-size: 15px;
                                 font-weight: 700;
-                                color: #414042;
+                                color: $darkbrown;
                                 margin-right: 30px;
                                 line-height: 18px;
 
@@ -1735,28 +1766,39 @@ section.welcome-to-campus
     {
         > .columns
         {
-            line-height: 120px;
             text-align: center;
             
-            > h2
+            > div
             {
                 display: inline-block;
-                font-size: 24px;
-                font-weight: 300;         
-                text-transform: uppercase;
-                text-align: center;
-                color: #ffffff;
-                line-height: 1.2;
                 vertical-align: middle;
-                padding-left: 20px;
-                padding-right: 20px;
-                
-                > span
+                line-height: 1;
+                padding: 20px;
+            
+                > h2
                 {
-                    font-weight: 700;
-                    color: $lightbrown;
+                    display: inline-block;
+                    font-size: 24px;
+                    font-weight: 300;         
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: #ffffff;
+                    line-height: 1.2;
+                    vertical-align: middle;
+                    padding: 10px;
+
+                    > span
+                    {
+                        font-weight: 700;
+                        color: $lightbrown;
+                    }
                 }
-            }
+
+                > p
+                {
+                    margin: auto;
+                }
+            }    
         }
     }
 }

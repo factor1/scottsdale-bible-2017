@@ -17,7 +17,7 @@ $wp_query = new WP_Query([
             'key' => '_event_start_date',
             'value' => $today,
             'compare' => '>=',
-           
+
         )
     )
 ]);
