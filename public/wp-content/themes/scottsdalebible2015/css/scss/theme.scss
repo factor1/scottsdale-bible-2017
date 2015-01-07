@@ -910,6 +910,11 @@ section.image-slider
             overflow: hidden;
             text-align: center;
             height: 500px !important;
+            
+            > a
+            {
+                max-width: 1600px;
+            }
         }
         
         > li:first-child
