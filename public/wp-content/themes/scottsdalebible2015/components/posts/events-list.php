@@ -28,5 +28,5 @@
             <?php } ?>
         </ul>
     </div>
-    <?php get_template_part("components/posts/nav"); ?>
+    <?php get_template_part("components/posts/event-nav"); ?>
 </section>
