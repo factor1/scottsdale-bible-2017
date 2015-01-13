@@ -611,3 +611,29 @@
         padding-bottom: 40px;
     }
 } 
+
+
+/**
+*
+* 10.0 Events - Details Page
+* -----------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 600px)
+{
+    body.single-event
+    {
+        section.article
+        {  
+            div.em-location-map-container
+            {
+                height: 500px !important;
+                
+                div.gm-style-iw
+                {
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+}    

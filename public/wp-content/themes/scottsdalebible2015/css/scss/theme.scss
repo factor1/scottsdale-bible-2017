@@ -1979,3 +1979,35 @@ section.page-content
         }
     }
 }
+
+/**
+*
+* 16.0 Events - Details Page
+* -----------------------------------------------------------------------------
+*/
+
+body.single-event
+{
+    section.article
+    {
+        > div
+        {
+            max-width: 100%;
+            
+            > div[style^='float:right']
+            {
+                max-width: 100%;
+                
+                > div
+                {
+                    max-width: 100%;
+                }
+            }
+        }
+        
+        div.em-location-map-container
+        {
+
+        }
+    }
+}    
