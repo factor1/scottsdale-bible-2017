@@ -914,6 +914,11 @@ section.image-slider
             > a
             {
                 max-width: 1600px;
+                
+                > img
+                {
+                    margin-left: -800px;
+                }
             }
         }
         
