@@ -341,6 +341,10 @@
                 .fadeIn(_this.options.speed)
                 ;
 
+            if(_this.options.change) {
+                (_this.options.change)(n$);
+            }
+
             c$.fadeOut(_this.options.speed);
 
             _this.markCircle(_this.li$.index(n$)+1);
