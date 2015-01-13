@@ -216,7 +216,16 @@ if(!function_exists("sb_template_init"))
             wp_enqueue_script('wp-mediaelement');
         });
 
-        /* Ensure Events pages use proper template */
+        /* Ensure Event archive pages use proper template */
+        add_action("generate_rewrite_rules",function($wp_rewrite) {
+            $new_rules = [
+              'events/categories/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=event&event-categories=$matches[1]&feed=$matches[2]',
+              'events/categories/(.+?)/(feed|rdf|rss|rss2|atom)/?$' => 'index.php?post_type=event&event-categories=$matches[1]&feed=$matches[2]',
+              'events/categories/(.+?)/page/?([0-9]{1,})/?$' => 'index.php?post_type=event&event-categories=$matches[1]&paged=$matches[2]',
+              'events/categories/(.+?)/?$' => 'index.php?post_type=event&event-categories=$matches[1]'
+            ];
+            $wp_rewrite->rules = array_merge($wp_rewrite->rules,$new_rules);
+        },100);
         add_filter("template_include",function($template) {
             global $wp_query;
             if(!$wp_query->is_post_type_archive) {
