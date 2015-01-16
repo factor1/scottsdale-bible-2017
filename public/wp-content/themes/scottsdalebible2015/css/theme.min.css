@@ -1053,11 +1053,11 @@ section.search-results > .row > .columns > p.no-break {
 */
 section.page-content div#seriesengine {
   width: 100%; }
-  section.page-content div#seriesengine #enmse-selector {
+  section.page-content div#seriesengine .enmse-selector {
     display: none; }
   section.page-content div#seriesengine h3.enmse-poweredby {
     display: none; }
-  section.page-content div#seriesengine .enmse-media-containe {
+  section.page-content div#seriesengine .enmse-media-container {
     width: 100% !important; }
   section.page-content div#seriesengine h3.enmse-archive-title {
     font-family: Oswald, Helvetica, Arial, sans-serif !important;
