@@ -1938,6 +1938,16 @@ section.page-content
     {
         width: 100%;
         
+        .enmse-selector{
+	        display: none;
+        }
+        
+        h3.enmse-poweredby {
+	        display: none;
+        }
+        
+        .enmse-media-container {width:100% !important;}
+        
         h3.enmse-archive-title
         {
             font-family: $Oswald !important;
