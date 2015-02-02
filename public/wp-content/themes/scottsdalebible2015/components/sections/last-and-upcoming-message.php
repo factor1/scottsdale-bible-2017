@@ -40,7 +40,7 @@ if(!$last_weekend||!$upcoming_message) {
             <div>
                 <div>
                     <?php if($upcoming_message->image) { ?>
-                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['medium']); ?>" alt="" title="" />
+                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
                     <?php } ?>
                 </div>
                 <div>
