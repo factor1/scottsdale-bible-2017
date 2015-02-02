@@ -24,7 +24,6 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <meta property="og:site_name" content="<?php bloginfo('name') ?>" />
     <?php */ ?>
     <title><?php echo sb_get_page_title(); ?></title>
-    <meta name="author" content="Factor1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <?php if(@file_exists(get_template_directory()."/favicon.ico")) { /* ?>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri()."/favicon.ico"; ?>" type="image/x-icon" />

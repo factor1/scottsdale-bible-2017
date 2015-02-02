@@ -77,10 +77,6 @@ if(!function_exists("sb_template_init"))
             /* Add Page Excerpts */
             add_post_type_support('page',['excerpt']);
 
-            /* Add Meta Author */
-            add_action( 'wp_head',function() {
-                echo "<meta name=\"author\" content=\"Factor1\" />";
-            });
 
             /* Check for Campus Clear */
             if(isset($_GET['clear_campus'])) {
