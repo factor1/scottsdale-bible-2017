@@ -17,6 +17,7 @@
     <div class="row">
         <div class="large-12 columns">
             <img src="<?php echo esc_attr($image['url']); ?>" alt="" title="" />
+            <meta property="og:image" content="<?php echo esc_attr($image['url']); ?>">
         </div>
     </div>
 </section>
