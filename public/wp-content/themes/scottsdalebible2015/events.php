@@ -12,14 +12,13 @@ $wp_query = new WP_Query([
     'orderby' => 'meta_value',
     'meta_key' => '_event_start_date',
     'order' => 'ASC',
-    'meta_query' => array(
-        array(
+    'meta_query' => [
+        [
             'key' => '_event_start_date',
-            'value' => $today,
-            'compare' => '>=',
-
-        )
-    )
+            'value' => date("Y-m-d"),
+            'compare' => '>='
+        ]
+    ]
 ]);
 
 ?>
