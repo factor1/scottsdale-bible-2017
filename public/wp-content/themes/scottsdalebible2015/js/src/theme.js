@@ -71,6 +71,8 @@ var preloadImages = function() {
                 location.href = $(this).data("action")+"/?s="+search$.val();
             }
         });
+        
+
 
         /* Mobile Menu Toggles */
         /*

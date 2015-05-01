@@ -47,7 +47,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/style.css"; ?>" type="text/css" />
 
     
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<!--     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
     <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.6/js/foundation.min.js"></script>
@@ -55,6 +55,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <script src="<?php echo get_template_directory_uri()."/js/jquery.remodal.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.up-down-slider.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/theme.min.js"; ?>" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri()."/js/dropdowns.min.js"; ?>" type="text/javascript"></script>
     
 
 	
