@@ -347,6 +347,17 @@ body
 
 }
 
+.mask{
+width: 100%;
+height: 100%;
+opacity: 1;
+z-index: 9998;
+position: fixed;
+top: 0;
+left: 0;
+display: block;
+background: none;
+}
 
 /**
  * 2.0 Header Styles
@@ -357,7 +368,8 @@ body
 {
     > header
     {
-        z-index: 1;
+        z-index: 9999;
+        position: relative;
         
         /* Header - Top Row */
         > .row:first-child
