@@ -367,14 +367,13 @@ if(!function_exists("sb_get_upcoming_events"))
             'orderby' => 'meta_value',
             'meta_key' => '_event_start_date',
             'order' => 'ASC',
-             'meta_query' => array(
-                array(
+             'meta_query' => [
+                [
                     'key' => '_event_start_date',
                     'value' => $today,
                     'compare' => '>=',
-                    )
-                )
-
+                ]
+            ]
         ],$args));
 
         if(!$events) { return []; }
@@ -431,7 +430,8 @@ if(!function_exists("sb_campus_cookie_check"))
     function sb_campus_cookie_check()
     {
         if(!($campus=sb_get_campus_cookie())) {
-            return;
+            sb_set_campus_cookie(72); // Default to Shea Campus, 8/10/2015
+            //return;
         }
         if(!($permalink=get_permalink($campus))) {
             return;

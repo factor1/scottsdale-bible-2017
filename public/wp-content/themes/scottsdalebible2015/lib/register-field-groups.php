@@ -951,12 +951,53 @@ if(function_exists("register_field_group"))
                     'param' => 'page_template',
                     'operator' => '!=',
                     'value' => 'events.php'
-                ]
+                ],
             ],
         ],
         'options' => [
             'menu_order' => 0,
             'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* Ministry Page Added Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_ministry_page'),
+        'title' => 'Ministry Page Fields',
+        'fields' => [
+            acf_field_def_taxonomy("field_".md5(THEME_PREFIX."ministry_page_events_category"),"Category for \"Upcoming Events\"","events_category",[
+                'taxonomy'=>'event-categories'
+            ])
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page'
+                ],
+                [
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page-ministry.php'
+                ],
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'normal',
             'style' => 'seamless',
             'label_placement' => 'top',
             'instruction_placement' => 'label',
