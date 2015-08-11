@@ -979,7 +979,8 @@ if(function_exists("register_field_group"))
         'fields' => [
             acf_field_def_taxonomy("field_".md5(THEME_PREFIX."ministry_page_events_category"),"Category for \"Upcoming Events\"","events_category",[
                 'taxonomy'=>'event-categories'
-            ])
+            ]),
+            get_acf_common_field('news_and_stories','ministry_page'),
         ],
         'location' => [
             [
