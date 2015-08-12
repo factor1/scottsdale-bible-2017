@@ -71,7 +71,7 @@ var preloadImages = function() {
                 location.href = $(this).data("action")+"/?s="+search$.val();
             }
         });
-        
+
 
 
         /* Mobile Menu Toggles */
@@ -95,6 +95,19 @@ var preloadImages = function() {
             e.preventDefault();
             $("footer span."+$(this).data("trigger-click")+" > span").click();
         });
+
+        /* Location Maps */
+        var map$ = $("div.map-container[data-key]");
+        if(map$.length) {
+            map$.mapLoader({
+                height: ((h=map$.data("height"))?h:$(window).height()+"px"),
+                markers: [
+                    {
+                        position: { lat: map$.data('lat'), lng: map$.data('lng') },
+                    }
+                ]
+            });
+        }
 
     });
 })(jQuery);
