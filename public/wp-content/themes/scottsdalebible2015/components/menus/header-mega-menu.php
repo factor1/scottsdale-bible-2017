@@ -2,7 +2,7 @@
 
 $items_wrap = "\n<section>".
                                 "\n\t<div class=\"row\">".
-                                    "\n\t\t<div class=\"small-12 columns hide-for-medium-up text-center\"><a href=\"#\"><i class=\"fa fa-bars fa-lg\"></i> Site Menu</a></div>".
+                                    "\n\t\t<div class=\"small-12 columns hide-for-medium-up text-center\"><a href=\"#\"><i class=\"fa fa-bars fa-lg\"></i> Menu</a></div>".
                                     "\n%3\$s".
                                 "\n\t</div>".
                             "\n</section>";
