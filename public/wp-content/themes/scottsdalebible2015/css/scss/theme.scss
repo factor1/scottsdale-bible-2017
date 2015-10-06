@@ -371,6 +371,11 @@ body
         z-index: 9999;
         position: relative;
         
+        .fa-bars
+        {
+            vertical-align: -5%;
+        }        
+        
         /* Header - Top Row */
         > .row:first-child
         {
@@ -1952,11 +1957,11 @@ section.page-content
         width: 100%;
         
         .enmse-selector{
-	        display: none;
+            display: none;
         }
         
         h3.enmse-poweredby {
-	        display: none;
+            display: none;
         }
         
         .enmse-media-container {width:100% !important;}
@@ -2038,4 +2043,18 @@ body.single-event
 
         }
     }
-}    
+}
+
+
+/**
+*
+* 17.0 Section - Map Locations
+* -----------------------------------------------------------------------------
+*/
+
+section.location-map
+{
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+}

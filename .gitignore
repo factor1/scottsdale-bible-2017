@@ -17,3 +17,4 @@ error_log
 desktop.ini
 .sass-cache/
 public/dev/
+*_to_local.sh
