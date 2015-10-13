@@ -101,11 +101,8 @@ var preloadImages = function() {
         if(map$.length) {
             map$.mapLoader({
                 height: ((h=map$.data("height"))?h:$(window).height()+"px"),
-                markers: [
-                    {
-                        position: { lat: map$.data('lat'), lng: map$.data('lng') },
-                    }
-                ]
+                iconWidth: 40,
+                iconHeight: 40
             });
         }
 
