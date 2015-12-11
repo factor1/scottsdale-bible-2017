@@ -76,3 +76,11 @@ p.vip{
 	border-radius:0;
 }
 
+.remodal-close{
+	border: 2px solid #414042;
+}
+
+.remodal-close:hover{
+	color: #414042;
+}
+
