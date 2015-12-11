@@ -2057,4 +2057,17 @@ section.location-map
     height: 500px;
     padding: 0px;
     margin: 0px;
+    
+    div.map-location
+    {
+        display: none;
+    }
+    
+    div.map-container
+    {
+        div.map-location
+        {
+            display: block;
+        }    
+    }
 }

@@ -23,8 +23,10 @@ if(!function_exists("sb_template_init"))
         $ShortcodeMaker = new ShortcodeMaker();
 
         /* Strip P and BR tags for shortcodes */
+
         remove_filter('the_content','wpautop');
         add_filter('the_content','wpautop',12);
+
 
         /* Custom Login Logo */
         add_action('login_head',function() {

@@ -225,10 +225,6 @@ f1.MapLoader = f1.MapLoader || {};
 
                 loader.container$.find(".map-location").each(function() {
                     var c$ = $(this).parent().parent().toggleClass("map-location-container",true);
-                    var l$ = c$.children("div:last-child");
-                    if(!l$.children("i.fa").length) {
-                        l$.append("<i class=\"fa fa-times fa-lg\"></i>");
-                    }
                 });
 
             })
