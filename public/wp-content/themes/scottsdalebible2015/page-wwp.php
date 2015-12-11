@@ -226,9 +226,7 @@ get_template_part("components/sections/featured-image");
 						<div class="f1_mentor_summary_name"><strong><?php the_field( "first_name" ); ?>&nbsp;<?php the_field( "last_name" ); ?></strong></div>
 						<div class="f1_mentor_summary_title"><small><?php if(get_field( "title" )) : the_field( "title" ); endif; ?></small></div>
 					</a>
-				</li>
-				
-				<!-- Remodal -->
+					<!-- Remodal -->
 				<div class="remodal" data-remodal-id="modal-<?php the_ID();?>">
 					<div class="row">
 						<div class="medium-4 columns">
@@ -260,6 +258,10 @@ get_template_part("components/sections/featured-image");
 						</div>
 					</div>
 				</div>
+				</li>
+				
+				
+				
 				<?php endforeach; wp_reset_postdata();?>
 			</ul>
 			
