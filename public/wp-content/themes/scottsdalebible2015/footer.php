@@ -21,7 +21,7 @@ if($location) {
             </div>
             <div class="medium-6 large-4 columns small-text-center large-text-right">
                 <div>
-                    <a href="mailto:feedback@scottsdalebible.com"><i class="fa fa-envelope"></i><span>feedback@scottsdalebible.com</span></a>
+                    <a href="mailto:info@scottsdalebible.com"><i class="fa fa-envelope"></i><span>info@scottsdalebible.com</span></a>
                 </div>
                 <div>
                     <a href="https://twitter.com/scottsdalebible"><i class="fa fa-twitter"></i></a>
