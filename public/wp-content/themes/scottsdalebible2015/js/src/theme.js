@@ -72,6 +72,8 @@ var preloadImages = function() {
             }
         });
 
+
+
         /* Mobile Menu Toggles */
         /*
         $(window).resize(function() {
@@ -93,6 +95,16 @@ var preloadImages = function() {
             e.preventDefault();
             $("footer span."+$(this).data("trigger-click")+" > span").click();
         });
+
+        /* Location Maps */
+        var map$ = $("div.map-container[data-key]");
+        if(map$.length) {
+            map$.mapLoader({
+                height: ((h=map$.data("height"))?h:$(window).height()+"px"),
+                iconWidth: 40,
+                iconHeight: 40
+            });
+        }
 
     });
 })(jQuery);

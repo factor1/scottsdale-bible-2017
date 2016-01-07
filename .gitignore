@@ -7,6 +7,7 @@ public/wp-content/plugins/*
 public/wp-content/uploads/*
 !.gitkeep
 /public/wp-content/backupwordpress*
+/public/wp-content/wfcache*
 scripts/snapshots/*
 scripts/.config.*
 !scripts/.config.env
@@ -16,3 +17,4 @@ error_log
 desktop.ini
 .sass-cache/
 public/dev/
+*_to_local.sh

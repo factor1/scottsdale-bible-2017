@@ -521,12 +521,11 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_campuses'),
         'title' => 'Campuses',
         'fields' => [
-
+            acf_field_def_nav_menu("field_".md5(THEME_PREFIX."campus_header_menu"),"Header Menu (uses default theme 'Header Mega Menu' if not set)","header_menu"),
             acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_slider"),"","use_homepage_slider",[
                 'default_value'=>'1',
                 'message' => 'Use Homepage Image Slider'
             ]),
-
             array_merge(get_acf_common_field('image_slider','campuses'),[
                 'conditional_logic' => [
                     'status' => 1,
@@ -540,18 +539,15 @@ if(function_exists("register_field_group"))
                     'allorany' => 'all'
                 ]
             ]),
-
             acf_field_def_text("field_".md5(THEME_PREFIX."campus_service_times"),"Service Times (Welcome Text)","service_times",['placeholder'=>'SUNDAY SERVICES @ 9 & 10:45 AM']),
             acf_field_def_google_map("field_".md5(THEME_PREFIX."campus_location"),"Map Location","map_location",[
                 'center_lat' => '33.4483771',
                 'center_lng' => '-112.0740373'
             ]),
-
             acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_messages"),"","use_homepage_messages",[
                 'default_value'=>'1',
                 'message' => 'Use Homepage Last Weekend and Upcoming Messages'
             ]),
-
             acf_field_def_repeater("field_".md5(THEME_PREFIX."campus_last_weekend_message"),"Last Weekend Meesage","last_weekend_message",[
                 'min'=>'0',
                 'max'=>'1',
@@ -951,12 +947,54 @@ if(function_exists("register_field_group"))
                     'param' => 'page_template',
                     'operator' => '!=',
                     'value' => 'events.php'
-                ]
+                ],
             ],
         ],
         'options' => [
             'menu_order' => 0,
             'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => [
+                0 => 'custom_fields',
+                1 => 'revisions',
+                2 => 'format',
+                3 => 'categories',
+                4 => 'tags',
+                5 => 'featured_image',
+                6 => 'send-trackbacks'
+            ]
+        ]
+    ]);
+
+    /* Ministry Page Added Fields */
+    register_field_group([
+        'id' => "field_".md5(THEME_PREFIX.'group_ministry_page'),
+        'title' => 'Ministry Page Fields',
+        'fields' => [
+            acf_field_def_taxonomy("field_".md5(THEME_PREFIX."ministry_page_events_category"),"Category for \"Upcoming Events\"","events_category",[
+                'taxonomy'=>'event-categories'
+            ]),
+            get_acf_common_field('news_and_stories','ministry_page'),
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page'
+                ],
+                [
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page-ministry.php'
+                ],
+            ],
+        ],
+        'options' => [
+            'menu_order' => 0,
+            'position' => 'normal',
             'style' => 'seamless',
             'label_placement' => 'top',
             'instruction_placement' => 'label',

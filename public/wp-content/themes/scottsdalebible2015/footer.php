@@ -1,5 +1,11 @@
 <?php
 
+$location = get_field('map_location');
+
+if($location) {
+    $address = preg_replace('#,\s*United States$#ismu','',$location['address']);
+}
+
 ?>
     <footer>
         <div class="row">
@@ -9,10 +15,13 @@
             <div class="medium-6 large-4 columns">
                 <div>For general information or our pastor-on-call:</div>
                 <div><a href="#" class="button">(480) 824-7200</a></div>
+                <?php if(isset($address)) { ?>
+                <div><?php echo esc_html($address); ?></div>
+                <?php } ?>
             </div>
             <div class="medium-6 large-4 columns small-text-center large-text-right">
                 <div>
-                    <a href="mailto:feedback@scottsdalebible.com"><i class="fa fa-envelope"></i><span>feedback@scottsdalebible.com</span></a>
+                    <a href="mailto:info@scottsdalebible.com"><i class="fa fa-envelope"></i><span>info@scottsdalebible.com</span></a>
                 </div>
                 <div>
                     <a href="https://twitter.com/scottsdalebible"><i class="fa fa-twitter"></i></a>
@@ -32,9 +41,9 @@
         </div>
         <div class="row">
             <div class="small-12 columns">
-                
+
                 <?php get_template_part("components/menus/footer-menu"); ?>
-                
+
             </div>
         </div>
         <section>

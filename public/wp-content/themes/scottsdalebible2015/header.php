@@ -38,20 +38,28 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <?php wp_head(); ?>
+
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/foundation.min.css" />
     <link type="text/css" rel="stylesheet"  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/css/jquery.remodal.css"; ?>" type="text/css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/style.css"; ?>" type="text/css" />
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+
+<!--     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
     <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.6/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.4.6/js/foundation/foundation.tooltip.min.js"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.remodal.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.up-down-slider.min.js"; ?>" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.map-loader.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/theme.min.js"; ?>" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri()."/js/dropdowns.min.js"; ?>" type="text/javascript"></script>
+
+
+
     <?php if(THEME_TYPEKIT) { ?>
     <script src="<?php echo THEME_TYPEKIT; ?>"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -69,7 +77,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <div class="large-8 columns">
             <ul class="inline-list">
                 <li>
-                    <i class="fa fa-lock"></i><a href="https://my.scottsdalebible.com/portal/login.aspx?ReturnUrl=%2fportal%2fmy_user_account.aspx">Sign In</a>
+                    <i class="fa fa-lock"></i><a href="https://scottsdalebible.onlinegiving.cc/donate/login">Sign In</a>
                 </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>

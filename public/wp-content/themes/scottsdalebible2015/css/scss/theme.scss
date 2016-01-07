@@ -347,6 +347,17 @@ body
 
 }
 
+.mask{
+width: 100%;
+height: 100%;
+opacity: 1;
+z-index: 9998;
+position: fixed;
+top: 0;
+left: 0;
+display: block;
+background: none;
+}
 
 /**
  * 2.0 Header Styles
@@ -357,7 +368,13 @@ body
 {
     > header
     {
-        z-index: 1;
+        z-index: 9999;
+        position: relative;
+        
+        .fa-bars
+        {
+            vertical-align: -5%;
+        }        
         
         /* Header - Top Row */
         > .row:first-child
@@ -374,13 +391,14 @@ body
                 
                 > a
                 {
-                    display: inline-block;
+                    display: block;
                     line-height: 100px;
                 }
 
                 img
                 {
                     vertical-align: middle;
+                    max-height: 109px;
                 }            
             }
 
@@ -1939,11 +1957,11 @@ section.page-content
         width: 100%;
         
         .enmse-selector{
-	        display: none;
+            display: none;
         }
         
         h3.enmse-poweredby {
-	        display: none;
+            display: none;
         }
         
         .enmse-media-container {width:100% !important;}
@@ -2025,4 +2043,31 @@ body.single-event
 
         }
     }
-}    
+}
+
+
+/**
+*
+* 17.0 Section - Map Locations
+* -----------------------------------------------------------------------------
+*/
+
+section.location-map
+{
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+    
+    div.map-location
+    {
+        display: none;
+    }
+    
+    div.map-container
+    {
+        div.map-location
+        {
+            display: block;
+        }    
+    }
+}

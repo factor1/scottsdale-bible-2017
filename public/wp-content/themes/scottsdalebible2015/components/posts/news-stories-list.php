@@ -7,7 +7,9 @@
                 <div>
                     <div>
                         <?php if($image) { ?>
-                        <img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
+                        <a href="<?php echo get_permalink($story->ID); ?>">
+                        	<img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
+                        </a>
                         <?php } ?>
                     </div>
                     <div>
