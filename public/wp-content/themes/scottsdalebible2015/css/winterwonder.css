@@ -47,12 +47,28 @@ span.detail{font-style: italic; font-size: .8em; text-transform: uppercase; font
 	line-height:1.85em !important;
 }
 
+.christmasproject {
+	display: block;
+	margin: 40px 0 20px;
+	background: #97262a;
+	text-align: center;
+}
+
+.christmasproject img {
+	margin: 0 auto;
+}
+
 p.vip{
 	margin-bottom: .5em;
 }
 
-.f1_mentor_photo_container{
+.f1_mentor_photo_container, .f1_mentor_photo_container:visited{
 	margin: 15px 0 15px 0;
+	border: 10px solid #fff;
+}
+
+.f1_mentor_photo_container:hover{
+    border: 10px solid #be955b;
 }
 
 .f1_mentor_summary_name strong, .f1_mentor_details_name strong{
@@ -62,6 +78,11 @@ p.vip{
     font-weight: 700;
     text-transform: uppercase !important;
     font-family: 'Oswald', sans-serif !important;
+}
+
+
+.page-id-39061 ul li:hover .f1_mentor_summary_name strong{
+	color: #be955b;
 }
 
 .f1_mentor_summary_title small{
