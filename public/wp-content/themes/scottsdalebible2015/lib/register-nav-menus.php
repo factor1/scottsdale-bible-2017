@@ -9,9 +9,9 @@ if(function_exists("register_nav_menus"))
         */
         'header_mega_menu_visit' => 'Header Mega Menu - Visit',
         'header_mega_menu_connect' => 'Header Mega Menu - Connect',
-        'header_mega_menu_servce' => 'Header Mega Menu - Serve',
+        'header_mega_menu_serve' => 'Header Mega Menu - Serve',
         'header_mega_menu_watch' => 'Header Mega Menu - Watch',
-        'header_mega_menu_connect' => 'Header Mega Menu - Care',
+        'header_mega_menu_care' => 'Header Mega Menu - Care',
         'header_mega_menu_give' => 'Header Mega Menu - Give',
 
         'footer_menu' => 'Footer Menu'
