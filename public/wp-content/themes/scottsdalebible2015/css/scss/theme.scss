@@ -1307,14 +1307,15 @@ section.upcoming-events
                         
                         > div
                         {
-                            font-family: $Kepler;
+                            font-family: $Oswald;
                             font-size: 15px;
                             font-weight: 300;
                             line-height: 19px;
-                            padding-top: 10px;
+                            padding-top: 5px;
                             
                             p
                             {
+                                 font-family: $Oswald;
                                 font-size: inherit;
                                 font-weight: inherit;
                                 line-height: inherit;
