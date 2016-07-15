@@ -1632,6 +1632,21 @@ section.page-content
                             border-left: dotted 1px #bf965c;
                         }
                     }
+                    
+                    > ul
+                    {
+                        >li
+                        {
+                            > ul
+                            {
+                                // Collapsed for at 3rd tier down
+                                ul.sub-menu
+                                {
+                                    display: none;
+                                }
+                            }
+                        }    
+                    }
                    
                 }
             }
