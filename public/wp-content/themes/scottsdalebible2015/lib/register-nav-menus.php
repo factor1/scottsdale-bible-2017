@@ -7,33 +7,12 @@ if(function_exists("register_nav_menus"))
         /* old full menu not used anymore
         'header_mega_menu' => 'Header Mega Menu - Top Level',
         */
-        'header_mega_menu_visit' => 'Header Mega Menu - Visit (Default)',
-        'header_mega_menu_connect' => 'Header Mega Menu - Connect (Default)',
-        'header_mega_menu_serve' => 'Header Mega Menu - Serve (Default)',
-        'header_mega_menu_watch' => 'Header Mega Menu - Watch (Default)',
-        'header_mega_menu_care' => 'Header Mega Menu - Care (Default)',
-        'header_mega_menu_give' => 'Header Mega Menu - Give (Default)',
-
-        'shea_header_mega_menu_visit' => 'Header Mega Menu - Visit (Shea)',
-        'shea_header_mega_menu_connect' => 'Header Mega Menu - Connect (Shea)',
-        'shea_header_mega_menu_serve' => 'Header Mega Menu - Serve (Shea)',
-        'shea_header_mega_menu_watch' => 'Header Mega Menu - Watch (Shea)',
-        'shea_header_mega_menu_care' => 'Header Mega Menu - Care (Shea)',
-        'shea_header_mega_menu_give' => 'Header Mega Menu - Give (Shea)',
-
-        'mv_header_mega_menu_visit' => 'Header Mega Menu - Visit (Mountain Valley)',
-        'mv_header_mega_menu_connect' => 'Header Mega Menu - Connect (Mountain Valley)',
-        'mv_header_mega_menu_serve' => 'Header Mega Menu - Serve (Mountain Valley)',
-        'mv_header_mega_menu_watch' => 'Header Mega Menu - Watch (Mountain Valley)',
-        'mv_header_mega_menu_care' => 'Header Mega Menu - Care (Mountain Valley)',
-        'mv_header_mega_menu_give' => 'Header Mega Menu - Give (Mountain Valley)',
-
-        'cactus_header_mega_menu_visit' => 'Header Mega Menu - Visit (Cactus)',
-        'cactus_header_mega_menu_connect' => 'Header Mega Menu - Connect (Cactus)',
-        'cactus_header_mega_menu_serve' => 'Header Mega Menu - Serve (Cactus)',
-        'cactus_header_mega_menu_watch' => 'Header Mega Menu - Watch (Cactus)',
-        'cactus_header_mega_menu_care' => 'Header Mega Menu - Care (Cactus)',
-        'cactus_header_mega_menu_give' => 'Header Mega Menu - Give (Cactus)',
+        'header_mega_menu_visit' => 'Header Mega Menu - Visit',
+        'header_mega_menu_connect' => 'Header Mega Menu - Connect',
+        'header_mega_menu_serve' => 'Header Mega Menu - Serve',
+        'header_mega_menu_watch' => 'Header Mega Menu - Watch',
+        'header_mega_menu_care' => 'Header Mega Menu - Care',
+        'header_mega_menu_give' => 'Header Mega Menu - Give',
 
         'footer_menu' => 'Footer Menu'
     ]);

@@ -106,16 +106,5 @@ var preloadImages = function() {
             });
         }
 
-        // Add expand open to 3rd tier sidebar menu items when on page
-        $('div.sidebar >ul a[href]').each(function() {
-            var href = $(this).attr('href');
-
-            if(href !== window.location.href) {
-                return;
-            }
-
-            $(this).next('ul').toggle(true);
-        });
-
     });
 })(jQuery);

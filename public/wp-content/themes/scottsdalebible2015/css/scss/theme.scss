@@ -1307,15 +1307,14 @@ section.upcoming-events
                         
                         > div
                         {
-                            font-family: $Oswald;
+                            font-family: $Kepler;
                             font-size: 15px;
                             font-weight: 300;
                             line-height: 19px;
-                            padding-top: 5px;
+                            padding-top: 10px;
                             
                             p
                             {
-                                 font-family: $Oswald;
                                 font-size: inherit;
                                 font-weight: inherit;
                                 line-height: inherit;
@@ -1631,21 +1630,6 @@ section.page-content
                             margin-bottom: 20px;
                             border-left: dotted 1px #bf965c;
                         }
-                    }
-                    
-                    > ul
-                    {
-                        >li
-                        {
-                            > ul
-                            {
-                                // Collapsed for at 3rd tier down
-                                ul.sub-menu
-                                {
-                                    display: none;
-                                }
-                            }
-                        }    
                     }
                    
                 }
