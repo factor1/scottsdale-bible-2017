@@ -1,33 +1,3 @@
-<!-- Start Quantcast tag -->
-<script type="text/javascript">
-_qoptions={
-qacct:"p-aalJ8sFCvGENQ"
-};
-</script>
-<?php
-if($_SERVER["HTTPS"])
-{
-	echo '<script type="text/javascript" src="https://edge.quantserve.com/quant.js"></script>';
-}
-else
-{
-	echo '<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>';
-}
- ?>
-<noscript>
-<?php
-if($_SERVER["HTTPS"])
-{
-	echo '<img src="https://pixel.quantserve.com/pixel/p-aalJ8sFCvGENQ.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>';
-}
-else
-{
-	echo '<img src="http://pixel.quantserve.com/pixel/p-aalJ8sFCvGENQ.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>';
-}
- ?>
-
-</noscript>
-<!-- End Quantcast tag -->
 <!-- Start Google Analytics -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
