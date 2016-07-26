@@ -42,7 +42,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/normalize.css" />
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/5.4.6/css/foundation.min.css" />
-    <link type="text/css" rel="stylesheet"  href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
+	<script src="https://use.fontawesome.com/71eb3125bb.js"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/css/jquery.remodal.css"; ?>" type="text/css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/style.css"; ?>" type="text/css" />
 

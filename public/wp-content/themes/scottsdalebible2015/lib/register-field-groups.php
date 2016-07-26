@@ -521,7 +521,9 @@ if(function_exists("register_field_group"))
         'id' => "field_".md5(THEME_PREFIX.'group_campuses'),
         'title' => 'Campuses',
         'fields' => [
+            /*
             acf_field_def_nav_menu("field_".md5(THEME_PREFIX."campus_header_menu"),"Header Menu (uses default theme 'Header Mega Menu' if not set)","header_menu"),
+            */
             acf_field_def_true_false("field_".md5(THEME_PREFIX."campus_inherit_slider"),"","use_homepage_slider",[
                 'default_value'=>'1',
                 'message' => 'Use Homepage Image Slider'
