@@ -18,7 +18,7 @@
                         <h5><?php echo esc_html($field); ?></h5>
                         <?php } ?>
                         <?php if($field=get_field("event_excerpt",$event->ID)) { ?>
-                        <div>
+                        <div class="event-excerpt">
                             <?php echo $field; ?>
                         </div>
                         <?php } ?>
