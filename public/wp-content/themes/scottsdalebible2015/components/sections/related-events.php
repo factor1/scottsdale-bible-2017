@@ -3,6 +3,18 @@
 global $post;
 $post_slug=$post->post_name;
 
+if( $post_slug == 'family' ){
+  $post_slug = 'family-life';
+} elseif ( $post_slug == 'special' ) {
+  $post_slug = 'special-ministries';
+} elseif ( $post_slug == 'worship' ) {
+  $post_slug = 'worship-arts';
+} elseif ( $post_slug == 'marriage' ) {
+  $post_slug = 'marriage-ministry';
+} elseif ( $post_slug == 'college' ) {
+  $post_slug = 'college-group';
+}
+
 // WP_Query arguments
 $args = array (
 	'post_type'              => array( 'event' ),
