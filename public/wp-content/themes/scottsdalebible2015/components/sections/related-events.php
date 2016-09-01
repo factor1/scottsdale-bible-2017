@@ -24,7 +24,7 @@ if( $query->have_posts() ):
             <div class="row">
                 <?php if($image=get_field("featured_image",$event->ID)) { ?>
                 <div class="medium-6 columns">
-                    <a class="image-block-center" href="<?php echo get_permalink($event->ID); ?>"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
+                    <a href="<?php echo get_permalink($event->ID); ?>"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
                 </div>
                 <?php } ?>
                 <div class="medium-6 columns">
