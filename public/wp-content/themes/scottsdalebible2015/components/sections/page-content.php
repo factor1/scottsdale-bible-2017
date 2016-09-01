@@ -24,14 +24,15 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         <?php } else { ?>
         <div class="small-12 columns">
         <?php } ?>
-            <?php get_template_part("components/posts/article"); ?>
+            <?php
+            // Get Post Articles
+            get_template_part("components/posts/article");
 
-            <div class="small-12 columns">
-              <p>
-                Where does this appear?
-              </p>
-            </div>
-            
+            // Get Related Events
+            if( get_field('show_related_events') === true ){
+              get_template_part("components/sections/related-events");
+            }
+            ?>
         </div>
     </div>
 </section>
