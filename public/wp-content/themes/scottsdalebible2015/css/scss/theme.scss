@@ -1749,9 +1749,37 @@ section.page-content
     height: auto;
   }
 
+  a{
+    color: $lightbrown;
+  }
+
+  h3{
+    line-height: 1;
+  }
+
+  h5{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .event-excerpt{
+    padding-top: 5px;
+    p{
+      font-family: Oswald,Helvetica,Arial,sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 19px;
+    }
+  }
+
   li{
-    border-top: 3px solid black;
     overflow: hidden;
+    > .row{
+      border-top: 3px solid black;
+      max-width: 95%;
+      margin: 0 auto;
+    }
   }
 
 }

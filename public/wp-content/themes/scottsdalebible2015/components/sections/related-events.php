@@ -19,14 +19,14 @@ if( $post_slug == 'family' ){
 $args = array (
 	'post_type'              => array( 'event' ),
 	'event-categories'       => $post_slug,
-  'posts_per_page'         => '3',
+  'posts_per_page'         => '4',
   'meta_query' => array( 'key' => '_start_ts', 'value' => current_time('timestamp'), 'compare' => '>=', 'type'=>'numeric' ),
-      		'orderby' => 'meta_value_num',
-      		'order' => 'ASC',
-      		'meta_key' => '_start_ts',
-      		'meta_value' => current_time('timestamp'),
-      		'meta_value_num' => current_time('timestamp'),
-      		'meta_compare' => '>='
+	'orderby' => 'meta_value_num',
+	'order' => 'ASC',
+	'meta_key' => '_start_ts',
+	'meta_value' => current_time('timestamp'),
+	'meta_value_num' => current_time('timestamp'),
+	'meta_compare' => '>='
 );
 
 // The Query
@@ -36,11 +36,11 @@ if( $query->have_posts() ):
 ?>
 <div class="row">
   <div class="small-12 columns">
-    <h2>Related Events</h2>
+    <h2>Upcoming Events</h2>
   </div>
 </div>
 <div class="row">
-    <ul class="small-block-grid-1 large-block-grid-1 related-events">
+    <ul class="small-block-grid-1 large-block-grid-2 related-events">
         <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
         <li>
             <div class="row">
