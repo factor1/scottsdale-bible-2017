@@ -27,7 +27,7 @@ if(!$last_weekend||!$upcoming_message) {
                     <?php } ?>
                 </div>
                 <div>
-                    <h3><i class="fa fa-calendar"></i><span>Last Weekend THIS IS A TEST COMMIT:</span> <?php echo esc_html($last_weekend->title); ?></h3>
+                    <h3><i class="fa fa-calendar"></i><span>Last Weekend:</span> <?php echo esc_html($last_weekend->title); ?></h3>
                     <?php if($last_weekend->subtitle) { ?>
                     <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
