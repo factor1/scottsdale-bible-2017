@@ -588,6 +588,10 @@ body
                             font-weight: 400;
                             padding-bottom: 5px;
                             border-bottom: 2px solid $lightbrown;
+                            a:hover{
+                              text-decoration: none;
+                              color: #414042;
+                            }
                         }
 
                         > ul.inline-list
@@ -2112,6 +2116,12 @@ body.single-event
     }
 }
 
+.event-single-map{
+  .em-location-map-container{
+    width: 100% !important;
+    height: 450px !important;
+  }
+}
 
 /**
 *
