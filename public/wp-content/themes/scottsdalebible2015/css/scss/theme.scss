@@ -1760,11 +1760,13 @@ section.page-content
   }
 
   .event-excerpt{
-    font-family: Oswald,Helvetica,Arial,sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 19px;
     padding-top: 5px;
+    p{
+      font-family: Oswald,Helvetica,Arial,sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 19px;
+    }
   }
 
   li{
