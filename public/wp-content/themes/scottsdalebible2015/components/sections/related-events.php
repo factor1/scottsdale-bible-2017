@@ -36,7 +36,7 @@ if( $query->have_posts() ):
 ?>
 <div class="row">
   <div class="small-12 columns">
-    <h2>Related Events</h2>
+    <h2>Upcoming Events</h2>
   </div>
 </div>
 <div class="row">
