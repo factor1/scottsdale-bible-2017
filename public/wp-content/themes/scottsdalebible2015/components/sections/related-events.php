@@ -1,9 +1,12 @@
 <?php // Related Events
 
+global $post;
+$post_slug=$post->post_name;
+
 // WP_Query arguments
 $args = array (
 	'post_type'              => array( 'event' ),
-	'event-categories'       => 'women',
+	'event-categories'       => $post_slug,
   'posts_per_page'         => '3'
 );
 
