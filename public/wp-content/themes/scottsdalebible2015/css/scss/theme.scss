@@ -1739,15 +1739,16 @@ section.page-content
 
 // Related Events on default page
 .related-events {
+
   img{
     max-width: 100%;
     height: auto;
   }
-  ul{
-    li{
-      border-top: 3px solid black;
-    }
+
+  li{
+    border-top: 3px solid black;
   }
+  
 }
 
 .releated-events-img{
