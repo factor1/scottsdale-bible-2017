@@ -40,7 +40,7 @@ if( $query->have_posts() ):
   </div>
 </div>
 <div class="row">
-    <ul class="small-block-grid-1 large-block-grid-1 related-events">
+    <ul class="small-block-grid-1 large-block-grid-2 related-events">
         <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
         <li>
             <div class="row">

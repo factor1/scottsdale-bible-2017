@@ -1750,8 +1750,12 @@ section.page-content
   }
 
   li{
-    border-top: 3px solid black;
     overflow: hidden;
+    > .row{
+      border-top: 3px solid black;
+      max-width: 95%;
+      margin: 0 auto;
+    }
   }
 
 }
