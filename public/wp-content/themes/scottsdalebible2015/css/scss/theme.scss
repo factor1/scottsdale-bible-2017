@@ -588,6 +588,10 @@ body
                             font-weight: 400;
                             padding-bottom: 5px;
                             border-bottom: 2px solid $lightbrown;
+                            a:hover{
+                              text-decoration: none;
+                              color: #414042;
+                            }
                         }
 
                         > ul.inline-list
