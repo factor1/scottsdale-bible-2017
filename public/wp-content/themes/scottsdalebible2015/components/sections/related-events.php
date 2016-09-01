@@ -12,9 +12,13 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ):
 ?>
-
 <div class="row">
-    <ul class="small-block-grid-1 large-block-grid-2">
+  <div class="small-12 columns">
+    <h2>Related Events</h2>
+  </div>
+</div>
+<div class="row">
+    <ul class="small-block-grid-1 large-block-grid-1 related-events">
         <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
         <li>
             <div class="row">
