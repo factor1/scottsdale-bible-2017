@@ -26,5 +26,10 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         <?php } ?>
             <?php get_template_part("components/posts/article"); ?>
         </div>
+        <div class="small-12 columns">
+          <p>
+            Where does this appear?
+          </p>
+        </div>
     </div>
 </section>
