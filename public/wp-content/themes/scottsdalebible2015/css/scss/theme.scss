@@ -24,7 +24,7 @@ html, body
     padding: 0px;
     margin: 0px;
     font-family: $Oswald;
-    font-size: 16px;    
+    font-size: 16px;
     color: $darkbrown;
     z-index: 0;
 }
@@ -46,7 +46,7 @@ body
     {
         padding: 0px;
         margin: 0px;
-        
+
         input
         {
             color: $darkbrown;
@@ -63,27 +63,27 @@ body
         padding: 0px;
         vertical-align: top;
     }
-    
+
     h1, h2, h3, h4, h5, h6
     {
         font-family: $Oswald;
         color: $darkbrown;
     }
-    
+
     h1
     {
         font-size: 40px;
         font-weight: 400;
         text-transform: uppercase;
-    }    
-    
+    }
+
     h2
     {
         font-size: 32px;
         font-weight: 400;
         text-transform: uppercase;
     }
-    
+
     h3
     {
         font-size: 20px;
@@ -102,32 +102,32 @@ body
         color: $lightbrown;
         text-decoration: underline;
     }
-    
+
     strong
     {
         font-family: $Kepler;
         font-weight: 800;
     }
-    
+
     p
     {
         font-family: $Kepler;
         font-size: 17px;
         font-weight: 400;
         line-height: 22px;
-        
+
         a
         {
             color: $lightbrown;
-            text-decoration: underline;        
+            text-decoration: underline;
         }
     }
-    
+
     ul
     {
         list-style: disc;
     }
-    
+
     .button
     {
         font-family: $Oswald;
@@ -145,14 +145,14 @@ body
         line-height: 1;
         text-decoration: none;
     }
-    
+
     .button:hover
     {
         background-color: $darkbrown;
         color: $lightbrown;
         text-decoration: none;
     }
-    
+
     .button.dark-brown
     {
         background-color: $darkbrown;
@@ -160,24 +160,24 @@ body
         padding-right: 50px;
         font-weight: 300;
         color: #ffffff;
-        
+
         > span
         {
             font-weight: 700;
             color: $lightbrown;
         }
     }
-    
+
     .button.dark-brown:hover
     {
         background-color: $lightbrown;
-        
+
         > span
         {
             color: $darkbrown;
         }
     }
-    
+
     .button.light-brown
     {
         background-color: $lightbrown;
@@ -185,23 +185,23 @@ body
         padding-right: 50px;
         font-weight: 300;
         color: #ffffff;
-        
+
         > span
         {
             font-weight: 700;
             color: $lightbrown;
         }
     }
-    
+
     .button.light-brown:hover
     {
         background-color: $darkbrown;
-        
+
         > span
         {
             color: $darkbrown;
         }
-    }    
+    }
 
     .bar
     {
@@ -214,7 +214,7 @@ body
         color: #ffffff;
         padding-left: 40px;
         text-decoration: none;
-        
+
         > .fa
         {
             margin-left: 10px;
@@ -222,7 +222,7 @@ body
             color: $lightbrown;
         }
     }
-    
+
     .bar-toggle
     {
         > div:last-child
@@ -232,29 +232,29 @@ body
             padding-left: 40px;
             padding-right: 40px;
             border: 2px solid $darkbrown;
-        }    
+        }
     }
-    
+
     .bar:hover
     {
         text-decoration: none;
     }
-    
+
     .upper
     {
         text-transform: uppercase;
-    }   
+    }
 
-    > section 
+    > section
     {
         z-index: 1;
     }
-    
-    > footer 
+
+    > footer
     {
         z-index: 1;
     }
-    
+
     .row
     {
         max-width: 1100px;
@@ -267,17 +267,17 @@ body
         padding-top: 20px;
         height: 0;
         overflow: hidden;
-        
+
         iframe
         {
             position: absolute;
-            top: 0; 
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-        }        
+        }
     }
-    
+
     .fa-news-and-stories
     {
         display: inline-block;
@@ -288,7 +288,7 @@ body
         background-position: center center;
         background-size: cover;
     }
-    
+
     .fa-thin-chevron-right
     {
         display: inline-block;
@@ -299,25 +299,25 @@ body
         background-position: center center;
         background-size: cover;
     }
-    
+
     span.stButton
     {
         box-sizing: content-box;
-        
+
         span
         {
             box-sizing: content-box;
         }
     }
-    
+
     img.alignleft
     {
         display: block;
         float: left;
         margin-right: 20px;
-        margin-bottom: 20px;        
+        margin-bottom: 20px;
     }
-    
+
     img.alignright
     {
         display: block;
@@ -325,7 +325,7 @@ body
         margin-left: 20px;
         margin-bottom: 20px;
     }
-    
+
     .image-block-center
     {
         display: block;
@@ -343,7 +343,7 @@ body
             height: 100%;
             margin-left: 0;
         }
-    }    
+    }
 
 }
 
@@ -363,19 +363,19 @@ background: none;
  * 2.0 Header Styles
  * -----------------------------------------------------------------------------
  */
- 
+
 body
 {
     > header
     {
         z-index: 9999;
         position: relative;
-        
+
         .fa-bars
         {
             vertical-align: -5%;
-        }        
-        
+        }
+
         /* Header - Top Row */
         > .row:first-child
         {
@@ -388,7 +388,7 @@ body
             > .columns:first-child
             {
                 text-align: center;
-                
+
                 > a
                 {
                     display: block;
@@ -399,7 +399,7 @@ body
                 {
                     vertical-align: middle;
                     max-height: 109px;
-                }            
+                }
             }
 
             > .columns:last-child
@@ -425,7 +425,7 @@ body
                     margin: auto;
                     margin-right: 50px;
                     overflow: visible;
-                   
+
                     i.fa
                     {
                         line-height: inherit;
@@ -466,12 +466,12 @@ body
                         padding-left: 5px;
                         text-decoration: none;
                     }
-                    
+
                     a:hover
                     {
                         color: $lightbrown;
                     }
-                    
+
                     > ul
                     {
                         display: none;
@@ -481,7 +481,7 @@ body
                         width: 340px;
                         margin-left: -170px;
                         z-index: 9999;
-                        
+
                         > li
                         {
                             display: block;
@@ -499,7 +499,7 @@ body
                                 color: #ffffff;
                                 text-decoration: underline;
                                 text-transform: uppercase;
-                                white-space: nowrap;                                
+                                white-space: nowrap;
 
                                 > span
                                 {
@@ -510,24 +510,24 @@ body
                             > a:hover
                             {
                                 color: $lightbrown;
-                            }                            
+                            }
                         }
-                        
+
                         > li:first-child
                         {
                             margin-top: 10px;
                             padding-top: 26px;
                         }
-                        
+
                         > li:last-child
                         {
                             padding-bottom: 26px;
                         }
-                        
+
                     }
 
                 }
-                
+
                 > li:hover
                 {
                     > ul
@@ -537,24 +537,24 @@ body
                 }
             }
         }
-    
+
         /* Header - Navigation */
-    
+
         > section
         {
             background-image: url(../images/backgrounds/binding_dark.png);
             background-repeat: repeat;
             background-position: 0px 0px;
             height: 50px;
-        
+
             > .row
             {
                 position: relative;
-            
+
                 > .columns
                 {
                     position: static;
-                
+
                     > a
                     {
                         display: block;
@@ -567,7 +567,7 @@ body
                         text-transform: uppercase;
                         text-decoration: none;
                     }
-                    
+
                     > nav
                     {
                         display: none;
@@ -581,7 +581,7 @@ body
                         padding-bottom: 10px;
                         margin: auto;
                         background-color: #ffffff;
-                        
+
                         h5
                         {
                             font-size: 14px;
@@ -589,13 +589,13 @@ body
                             padding-bottom: 5px;
                             border-bottom: 2px solid $lightbrown;
                         }
-                        
+
                         > ul.inline-list
-                        {               
+                        {
                             > li
                             {
                                 min-height: 200px;
-                                
+
                                 > p
                                 {
                                     font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -604,11 +604,11 @@ body
                                     line-height: 18px;
                                     max-width: 250px;
                                 }
-                                
+
                                 ul
                                 {
                                     margin-top: 5px;
-                                    
+
                                     > li
                                     {
                                         font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -617,13 +617,13 @@ body
                                         padding: auto;
                                         padding-bottom: 10px;
                                         line-height: 16px;
-                                        
+
                                         > a
                                         {
                                             color: inherit;
                                             text-decoration: none;
                                         }
-                                        
+
                                         > a:hover
                                         {
                                             color: $lightbrown;
@@ -631,11 +631,11 @@ body
                                         }
                                     }
                                 }
-                                
+
                                 ul[class*="block-grid-"]
                                 {
                                     width: 300px;
-                                
+
                                     > li
                                     {
                                         padding-left: 0px;
@@ -643,11 +643,11 @@ body
                                 }
                             }
                         }
-                        
+
                         > div:last-child
                         {
                             text-align: center;
-                            
+
                             > .fa
                             {
                                 color: $lightbrown;
@@ -656,11 +656,11 @@ body
                                 cursor: pointer;
                             }
                         }
-                        
+
                     }
-                
+
                 }
-                
+
                 > .columns:hover
                 {
                     > nav
@@ -668,17 +668,17 @@ body
                         display: block;
                         z-index: 9999;
                     }
-                
+
                     > a
                     {
                         background-color: $lightbrown;
                     }
                 }
-                
-            } 
+
+            }
         }
 
-    
+
     }
 }
 
@@ -686,8 +686,8 @@ body
  * 3.0 Footer Styles
  * -----------------------------------------------------------------------------
  */
- 
-body 
+
+body
 {
     > footer
     {
@@ -695,37 +695,37 @@ body
         background-repeat: repeat;
         background-position: 0px 0px;
         color: #ffffff;
-        
+
         > .row:first-child
         {
             padding-top: 30px;
             padding-bottom: 20px;
             border-bottom: 3px solid #3b3b3c;
-        
+
             > .columns:nth-child(2)
             {
                 text-align: center;
                 line-height: 28px;
-                
+
                 > div:first-child
                 {
                     padding-bottom: 6px;
                 }
-                
+
                 .button:hover
                 {
                     background-color: #ffffff;
                 }
             }
-            
+
             a
             {
                 font-family: "Open Sans", Helvetica, Arial, sans-serif;
                 font-size: 15px;
                 font-weight: 800;
                 color: #ffffff;
-                
-                
+
+
                 > .fa
                 {
                     line-height: inherit;
@@ -735,22 +735,22 @@ body
                     margin-right: 5px;
                 }
             }
-            
+
             a:hover
             {
                 color: $lightbrown;
             }
-            
+
             > .columns:last-child
             {
                 text-align: right;
-                
+
                 > div:last-child
                 {
                     a
                     {
                         margin-left: 15px;
-                        
+
                         .fa
                         {
                             font-size: 24px;
@@ -759,24 +759,24 @@ body
                 }
             }
         }
-        
+
         > .row:nth-child(2)
         {
             padding-top: 30px;
-            
+
             > .columns
             {
                 text-align: center;
-                
+
                 ul[class*="block-grid-"]
                 {
                     display: inline-block;
                     text-align: left;
-                    
+
                     > li
                     {
                         width: 140px;
-                        
+
                         > h4
                         {
                             font-size: 18px;
@@ -784,20 +784,20 @@ body
                             color: #ffffff;
                             border-bottom: 1px solid #6d6e71;
                             padding-bottom: 4px;
-                            
+
                             > a
                             {
                                 color: #ffffff;
                             }
                         }
-                        
+
                         > ul
                         {
                             > li
                             {
                                 line-height: 1.1;
                                 padding-bottom: 8px;
-                          
+
                                 > a
                                 {
                                     font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -809,14 +809,14 @@ body
                                 > a:hover
                                 {
                                     color: $lightbrown;
-                                }                       
+                                }
                             }
                         }
                     }
-                }                
+                }
             }
         }
-        
+
         > section
         {
             background-color: $darkbrown;
@@ -826,19 +826,19 @@ body
             font-weight: 400;
             color: #939598;
             line-height: 35px;
-            
+
             > span
             {
                 padding-left: 4px;
                 padding-right: 4px;
             }
-            
+
             > span:first-child
             {
                 border-right: 1px solid #939598;
             }
         }
-        
+
     }
 }
 
@@ -853,26 +853,26 @@ section.subscribe-to-news
     background-color: $darkbrown;
     padding-top: 70px;
     padding-bottom: 70px;
-    
+
     > h1
     {
         font-weight: 700;
         color: #ffffff;
         text-align: center;
         padding-bottom: 20px;
-        
+
         > .fa
         {
             margin-right: 20px;
             color: $lightbrown;
         }
-        
+
         > span
         {
             font-weight: 300;
         }
     }
-    
+
     > form
     {
         input
@@ -883,7 +883,7 @@ section.subscribe-to-news
             padding: 10px;
             color: $darkbrown;
         }
-        
+
         input.button
         {
             font-family: $Oswald;
@@ -892,10 +892,10 @@ section.subscribe-to-news
             padding-left: 50px;
             padding-right: 50px;
         }
-        
+
         .button:hover
         {
-            color: $lightbrown;      
+            color: $lightbrown;
             background-color: #ffffff;
         }
     }
@@ -913,13 +913,13 @@ section.image-slider
     position: relative;
     max-height: 500px;
     overflow: hidden;
-    
+
     > ul
     {
         list-style-type: none;
         margin: 0px;
         padding: 0px;
-        
+
         > li
         {
             display: none;
@@ -928,24 +928,24 @@ section.image-slider
             overflow: hidden;
             text-align: center;
             height: 500px !important;
-            
+
             > a
             {
                 max-width: 1600px;
-                
+
                 > img
                 {
                     margin-left: -800px;
                 }
             }
         }
-        
+
         > li:first-child
         {
             display: block;
         }
     }
-    
+
     > .controls-move
     {
         position: absolute;
@@ -958,16 +958,16 @@ section.image-slider
         font-size: 18px;
         line-height: 32px;
         margin-top: -80px;
-        
+
         > .fa
         {
             font-size: 18px;
             line-height: 1;
             color: #ffffff;
             cursor: pointer;
-            text-shadow: 0px 0px 0px #777777;            
+            text-shadow: 0px 0px 0px #777777;
         }
-        
+
         > .fa.active:before, > .fa:hover:before
         {
             content: "\f111";
@@ -989,7 +989,7 @@ section.select-campus
     background-position: 0px 0px;
     height: 120px;
     overflow: visible;
-    
+
     > .row
     {
         position: absolute;
@@ -997,17 +997,17 @@ section.select-campus
         max-width: 100%;
         text-align: center;
         z-index: 2000;
-        
+
         > ul
         {
             display: inline-block;
             margin-top: 42px;
-            
+
             > li:first-child
             {
                 display: block;
                 padding-bottom: 6px;
-                
+
                 > h3
                 {
                     margin: 0px;
@@ -1017,13 +1017,13 @@ section.select-campus
                     color: #ffffff;
                     text-transform: uppercase;
                     cursor: pointer;
-                    
+
                     > span
                     {
                         color: $lightbrown;
                         font-weight: 700;
                     }
-                    
+
                     > .fa
                     {
                         margin-left: 10px;
@@ -1033,8 +1033,8 @@ section.select-campus
                         vertical-align: middle;
                     }
                 }
-            }   
-            
+            }
+
             > li + li
             {
                 background-color: $darkbrown;
@@ -1043,7 +1043,7 @@ section.select-campus
                 padding-right: 80px;
                 padding-left: 80px;
                 display: none;
-                
+
                 > a
                 {
                     font-size: 24px;
@@ -1051,36 +1051,36 @@ section.select-campus
                     color: #ffffff;
                     text-decoration: underline;
                     text-transform: uppercase;
-                    
+
                     > span
                     {
                         font-weight: 700;
                     }
                 }
-                
+
                 > a:hover
                 {
                     color: $lightbrown;
                 }
             }
-            
+
             > li:nth-child(2)
             {
                 padding-top: 26px;
             }
-            
+
             > li:last-child
             {
                 padding-bottom: 26px;
-            }             
+            }
         }
-        
+
         > ul:hover
-        {  
+        {
             > li + li
             {
                 display: block;
-            }            
+            }
         }
     }
 }
@@ -1095,23 +1095,23 @@ section.news-and-stories
 {
     padding-top: 40px;
     padding-bottom: 40px;
-    
+
     > h1
     {
         font-weight: 700;
         text-align: center;
-        
+
         > .fa
         {
             margin-right: 20px;
         }
-        
+
         > span
         {
             font-weight: 300;
         }
     }
-    
+
     > .row:first-of-type
     {
         > ul
@@ -1119,7 +1119,7 @@ section.news-and-stories
             > li
             {
                 padding: 15px;
-                
+
                 > div
                 {
                     max-width: 340px;
@@ -1130,14 +1130,14 @@ section.news-and-stories
                         text-align: center;
                         max-height: 230px;
                         overflow: hidden;
-                        
+
                         img
                         {
                             width: 100%;
                             min-width: 100%;
                         }
                     }
-                    
+
                     > div:last-child
                     {
                         border-top: 5px solid $lightbrown;
@@ -1145,12 +1145,12 @@ section.news-and-stories
                         padding-bottom: 15px;
                         padding-left: 10px;
                         padding-right: 10px;
-                        
+
                         > h3
                         {
                             > a
                             {
-                               color: inherit; 
+                               color: inherit;
                                text-decoration: none;
                             }
                         }
@@ -1169,25 +1169,25 @@ section.news-and-stories
                                 font-weight: 300;
                                 color: $lightbrown;
                             }
-                        }                        
-                        
+                        }
+
                         > p
                         {
                             font-size: 13px;
                             line-height: 1.3;
                         }
-                        
+
                         > p:last-of-type
                         {
                             margin-bottom: 4px;
                         }
                     }
                 }
-                
+
                 > div:hover
                 {
                     box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
-                    
+
                     > div:last-child
                     {
                         > h3
@@ -1199,18 +1199,18 @@ section.news-and-stories
             }
         }
     }
-    
+
     > .row:last-child
     {
         text-align: center;
         margin-top: 30px;
-        
+
         > .navigation
         {
             text-align: left;
         }
     }
-    
+
 }
 
 /**
@@ -1226,14 +1226,14 @@ section.upcoming-events
     background-image: url(../images/backgrounds/grid.png);
     background-repeat: repeat;
     background-position: 0px 0px;
-    
+
     > h1
     {
         text-align: center;
         font-weight: 700;
         margin: auto;
         padding: auto;
-        
+
         > .fa
         {
             position: relative;
@@ -1242,69 +1242,69 @@ section.upcoming-events
             font-size: 38px;
             color: $lightbrown;
         }
-        
+
         > span
         {
             font-weight: 300;
         }
     }
-    
+
     > .row:first-of-type
     {
         margin-top: 30px;
-        
+
         > ul
         {
             > li
             {
                 padding: 15px;
-                
+
                 > .row
                 {
                     margin: 0px;
                     padding: 10px;
                     border-top: 3px solid $darkbrown;
                     background-color: #ffffff;
-                    
+
                     > div
                     {
                         padding: 10px;
                     }
-                    
+
                     > div:first-child
                     {
                         text-align: center;
                         overflow: hidden;
-                        
+
                         > a
                         {
                             height: 150px;
                         }
                     }
-                    
+
                     > div:last-child
                     {
                         text-align: left;
- 
+
                         > h3
                         {
                             margin: 0px;
                             padding: 0px;
                             line-height: 1;
-                            
+
                             > a
                             {
-                                color: $lightbrown;   
+                                color: $lightbrown;
                             }
                         }
-                        
+
                         > h5
                         {
                             font-size: 15px;
                             font-weight: 300;
                             line-height: 1;
                         }
-                        
+
                         > div
                         {
                             font-family: $Oswald;
@@ -1312,7 +1312,7 @@ section.upcoming-events
                             font-weight: 300;
                             line-height: 19px;
                             padding-top: 5px;
-                            
+
                             p
                             {
                                  font-family: $Oswald;
@@ -1320,12 +1320,12 @@ section.upcoming-events
                                 font-weight: inherit;
                                 line-height: inherit;
                             }
-                            
+
                             p:last-of-type
                             {
                                 margin-bottom: 4px;
                             }
-                            
+
                             a
                             {
                                 font-weight: 700;
@@ -1333,15 +1333,15 @@ section.upcoming-events
                                 color: $lightbrown;
                                 text-decoration: underline;
                             }
-                            
+
                             a:hover
                             {
-                                color: $darkbrown;   
+                                color: $darkbrown;
                             }
                         }
                     }
                 }
-                
+
                 > .row:hover
                 {
                     box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
@@ -1349,12 +1349,12 @@ section.upcoming-events
             }
         }
     }
-    
+
     > .row:last-child
     {
         text-align: center;
         margin-top: 30px;
-    }    
+    }
 }
 
 
@@ -1371,17 +1371,17 @@ section.last-and-upcoming-message
     background-image: url(../images/backgrounds/grid.png);
     background-repeat: repeat;
     background-position: 0px 0px;
-    
+
     > .row
     {
-        
+
         > div
         {
             > div
             {
                 display: inline-block;
                 text-align: left;
-                
+
                 > div:nth-child(2)
                 {
                     border-top: 5px solid $lightbrown;
@@ -1389,19 +1389,19 @@ section.last-and-upcoming-message
                     padding-bottom: 15px;
                     padding-left: 50px;
                     padding-right: 25px;
-                    
+
                     > h3
                     {
                         text-transform: uppercase;
                         font-weight: 300;
                         position: relative;
                         margin-bottom: 3px;
-                        
+
                         > span
                         {
                             font-weight: 700;
                         }
-                        
+
                         > .fa
                         {
                             position: absolute;
@@ -1409,26 +1409,26 @@ section.last-and-upcoming-message
                             top: 3px;
                         }
                     }
-                    
+
                     > h5
                     {
                         font-size: 14px;
                         font-weight: 300;
                     }
-                }    
-            }    
+                }
+            }
         }
-    
+
         > div:first-child
         {
             text-align: right;
-            
+
             > div
             {
                 max-width: 608px;
                 padding: 0px;
                 margin: 0px;
-                
+
                 > div:first-child
                 {
                     text-align: center;
@@ -1438,42 +1438,42 @@ section.last-and-upcoming-message
                     img
                     {
                         min-width: 100%;
-                    }                    
-                }                
-                
+                    }
+                }
+
                 > div:last-child
                 {
                     background-color: $darkbrown;
-                    
+
                     > h3
                     {
                         color: #ffffff;
                     }
-                    
+
                     > h5
                     {
                         color: #ffffff;
                     }
-                    
+
                     .fa
                     {
                         color: $lightbrown;
                     }
                 }
-            }    
+            }
         }
-        
+
         > div:last-child
         {
             text-align: left;
-            
+
             > div
             {
                 background-color: #ffffff;
                 max-width: 410px;
                 padding: 0px;
                 margin: 0px;
-                
+
                 > div:first-child
                 {
                     text-align: center;
@@ -1484,22 +1484,22 @@ section.last-and-upcoming-message
                     {
                         min-height: 250px;
                         min-width: 100%;
-                    }                    
-                }                 
-                
+                    }
+                }
+
                 > div:nth-child(2)
                 {
                     > h3
                     {
                         color: $darkbrown;
                     }
-                    
+
                     > h5
                     {
                         color: $darkbrown;
-                    }                    
+                    }
                 }
-                
+
                 > div:last-child
                 {
                     padding-left: 50px;
@@ -1510,16 +1510,16 @@ section.last-and-upcoming-message
                     {
                         font-size: 30px;
                         color: $lightbrown;
-                        padding-right: 30px;                 
+                        padding-right: 30px;
                     }
 
                     a:hover
                     {
-                        color: $darkbrown; 
+                        color: $darkbrown;
                     }
-                }                
+                }
             }
-            
+
         }
     }
 }
@@ -1535,14 +1535,14 @@ section.featured-image
 {
     background-image: url(../images/backgrounds/grid.png);
     background-repeat: repeat;
-    background-position: 0px 0px;    
-    
+    background-position: 0px 0px;
+
     > .row
     {
         > .columns
         {
             padding: 0px;
-            
+
             img
             {
                 width: 100%;
@@ -1555,7 +1555,7 @@ section.featured-image
 }
 
 section.featured-video
-{   
+{
     > .row
     {
         > .columns
@@ -1582,12 +1582,12 @@ section.page-content
         border-top: 6px solid $lightbrown;
         padding-top: 40px;
         padding-bottom: 50px;
-        
+
         > div.sidebar
         {
             padding-left: 40px;
             padding-right: 40px;
-            
+
             > h3
             {
                 margin: 15px 0px;
@@ -1598,41 +1598,41 @@ section.page-content
                 border-bottom: 2px solid $lightbrown;
                 text-transform: uppercase;
             }
-            
+
             > ul
             {
                 margin-bottom: 60px;
                 padding: 0 0 20px 0;
-                
+
                 > li
                 {
                     font-size: 18px;
                     font-weight: 300;
                     line-height: 1.3;
                     padding: 0px 0px 20px 0;
-                    
+
                     a
                     {
                         text-decoration: none;
                     }
-                    
+
                     ul
                     {
                         margin: 0 0 20px;
                         padding: 0 0 0 8px;
-                        
+
                         li
                         {
                             padding: 0px 0px 5px 0;
                         }
-                        
+
                         ul
                         {
                             margin-bottom: 20px;
                             border-left: dotted 1px #bf965c;
                         }
                     }
-                    
+
                     > ul
                     {
                         >li
@@ -1645,13 +1645,13 @@ section.page-content
                                     display: none;
                                 }
                             }
-                        }    
+                        }
                     }
-                   
+
                 }
             }
         }
-        
+
         > div
         {
             > section.article
@@ -1664,14 +1664,14 @@ section.page-content
                     text-transform: initial;
                     color: $darkbrown;
                 }
-                
+
                 ul, li
                 {
                     font-family: inherit;
                     font-size: initial;
                     font-weight: initial;
                 }
-            
+
                 > h1
                 {
                     margin: 0px;
@@ -1682,25 +1682,25 @@ section.page-content
                     line-height: 1;
                     border-bottom: 2px solid $lightbrown;
                 }
-                
+
                 a
                 {
                     color: $lightbrown;
-                    text-decoration: underline;        
+                    text-decoration: underline;
                 }
-                
+
                 a:hover
                 {
-                    color: $darkbrown;   
-                }                
-                
+                    color: $darkbrown;
+                }
+
                 > div
                 {
                     font-family: $Kepler;
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
-                
+
                 > div:first-of-type
                 {
                     > ul
@@ -1722,19 +1722,70 @@ section.page-content
                                     color: $lightbrown;
                                     margin-right: 5px;
                                 }
-                            }                        
+                            }
                         }
                     }
                 }
             }
         }
-        
+
         > div.small-12
         {
             padding-left: 10%;
             padding-right: 10%;
         }
     }
+}
+
+// Related Events on default page
+.row .row{
+  overflow: hidden;
+}
+
+.related-events {
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  a{
+    color: $lightbrown;
+  }
+
+  h3{
+    line-height: 1;
+  }
+
+  h5{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .event-excerpt{
+    padding-top: 5px;
+    p{
+      font-family: Oswald,Helvetica,Arial,sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 19px;
+    }
+  }
+
+  li{
+    overflow: hidden;
+    > .row{
+      border-top: 3px solid black;
+      max-width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.related-events-img{
+  padding: 0;
 }
 
 
@@ -1749,14 +1800,14 @@ section.group-search-form
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 15px;
-    font-weight: 400;    
-    
+    font-weight: 400;
+
     > form
     {
         > .row
         {
             padding-left: 40px;
-            
+
             > div.columns
             {
                 > select
@@ -1769,19 +1820,19 @@ section.group-search-form
                     padding-bottom: 6px;
                     text-transform: uppercase;
                     border: 2px solid $lightbrown;
-                    
+
                     > option
                     {
                         font-size: inherit;
                         font-weight: inherit;
                     }
                 }
-                
+
                 > div
                 {
                     line-height: 1;
                     padding-bottom: 6px;
-                    
+
                     > .fa
                     {
                         color: $lightbrown;
@@ -1790,16 +1841,16 @@ section.group-search-form
                     }
                 }
             }
-            
+
             > .columns:nth-child(5)
             {
                 width: auto;
             }
-            
+
             > .columns:last-child
             {
                 float: left;
-                
+
                 > .button
                 {
                     padding-left: 50px;
@@ -1821,25 +1872,25 @@ section.welcome-to-campus
     background-image: url(../images/backgrounds/dark_wood.png);
     background-repeat: repeat;
     background-position: 0px 0px;
-    
+
     > .row
     {
         > .columns
         {
             text-align: center;
-            
+
             > div
             {
                 display: inline-block;
                 vertical-align: middle;
                 line-height: 1;
                 padding: 20px;
-            
+
                 > h2
                 {
                     display: inline-block;
                     font-size: 24px;
-                    font-weight: 300;         
+                    font-weight: 300;
                     text-transform: uppercase;
                     text-align: center;
                     color: #ffffff;
@@ -1858,7 +1909,7 @@ section.welcome-to-campus
                 {
                     margin: auto;
                 }
-            }    
+            }
         }
     }
 }
@@ -1875,12 +1926,12 @@ section.not-found
     background-repeat: repeat;
     background-position: 0px 0px;
     padding: 100px;
-    
+
     > .row
     {
         background-color: #ffffff;
         padding: 40px;
-        
+
         > h2
         {
             border-bottom: 2px solid #bf965c;
@@ -1902,8 +1953,8 @@ section.posts-archive
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 10px;
-    padding-right: 10px;    
-    
+    padding-right: 10px;
+
     > .row
     {
         background-color: #ffffff;
@@ -1911,29 +1962,29 @@ section.posts-archive
         padding-right: 40px;
         padding-top: 20px;
         padding-bottom: 20px;
-        
+
         > h2
         {
             border-bottom: 2px solid $lightbrown;
             margin-bottom: 4px;
-            
+
             > a
             {
                 color: $lightbrown;
             }
         }
-        
+
         h3
         {
             margin-bottom: 3px;
         }
-        
+
         .meta
         {
             font-family: $Kepler;
             font-size: 17px;
             font-weight: 400;
-            line-height: 22px;        
+            line-height: 22px;
         }
     }
 }
@@ -1956,7 +2007,7 @@ section.search-results
                 display: none; /* Hide Social Media Links */
             }
         }
-    }    
+    }
 }
 
 
@@ -1971,60 +2022,60 @@ section.page-content
     div#seriesengine
     {
         width: 100%;
-        
+
         .enmse-selector{
             display: none;
         }
-        
+
         h3.enmse-poweredby {
             display: none;
         }
-        
+
         .enmse-media-container {width:100% !important;}
-        
+
         h3.enmse-archive-title
         {
             font-family: $Oswald !important;
             font-weight: 500;
             color: $lightbrown !important;
         }
-        
+
         table.enmse-archive-table
         {
             tr
             {
                 background-color: transparent;
-                
+
                 td
                 {
                     font-family: $Oswald !important;
                     color: #000000;
                     line-height: 1.2;
-                    
+
                     > a
                     {
                         font-family: inherit !important;
                         color: inherit;
                     }
-                    
+
                     > a:hover
                     {
                         color: $lightbrown;
                     }
                 }
-                
+
                 td.enmse-archive-title-cell
                 {
                     font-weight: 700;
                     padding-left: 0px;
                 }
-                
+
                 td.enmse-archive-explore-cell
                 {
                     text-align: right;
                     padding-right: 0px;
-                }                
-            }    
+                }
+            }
         }
     }
 }
@@ -2042,18 +2093,18 @@ body.single-event
         > div
         {
             max-width: 100%;
-            
+
             > div[style^='float:right']
             {
                 max-width: 100%;
-                
+
                 > div
                 {
                     max-width: 100%;
                 }
             }
         }
-        
+
         div.em-location-map-container
         {
 
@@ -2073,17 +2124,17 @@ section.location-map
     height: 500px;
     padding: 0px;
     margin: 0px;
-    
+
     div.map-location
     {
         display: none;
     }
-    
+
     div.map-container
     {
         div.map-location
         {
             display: block;
-        }    
+        }
     }
 }
