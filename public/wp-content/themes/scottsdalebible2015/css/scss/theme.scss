@@ -1749,6 +1749,24 @@ section.page-content
     height: auto;
   }
 
+  a{
+    color: $lightbrown;
+  }
+
+  h5{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .event-excerpt{
+    font-family: Oswald,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    padding-top: 5px;
+  }
+
   li{
     overflow: hidden;
     > .row{
