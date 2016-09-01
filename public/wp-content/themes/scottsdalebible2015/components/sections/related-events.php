@@ -4,6 +4,7 @@
 $args = array (
 	'post_type'              => array( 'event' ),
 	'event-categories'       => 'women',
+  'posts_per_page'         => '3'
 );
 
 // The Query
