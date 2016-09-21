@@ -77,7 +77,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <div class="large-8 columns">
             <ul class="inline-list">
                 <li>
-                    <i class="fa fa-video-camera"></i><a href="https://scottsdalebible.onlinegiving.cc/donate/login">Sign In</a>
+                    <i class="fa fa-video-camera"></i><a href="http://scottsdalebible.com/live/">Live Streaming</a>
                 </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
