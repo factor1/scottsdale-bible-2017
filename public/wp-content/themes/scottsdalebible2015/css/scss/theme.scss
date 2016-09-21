@@ -1742,9 +1742,12 @@ section.page-content
 }
 
 // Related Events on default page
+// Not sure why this was needed, it breaks it on chrome - MA
+/*
 .row .row{
   overflow: hidden;
 }
+*/
 
 .related-events {
 
