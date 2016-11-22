@@ -15,7 +15,7 @@ get_template_part("components/sections/featured-image");
 	
 <div class="medium-9 medium-centered columns">
 	
-	<?php get_template_part("components/sections/page-content"); ?>
+	<?php get_template_part("components/posts/article");?>
 </div>
 </div>
  
