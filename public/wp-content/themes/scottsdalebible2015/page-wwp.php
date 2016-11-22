@@ -7,151 +7,90 @@ get_template_part("components/sections/featured-image");
 <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/winterwonder.css">
 
 <div class="winterwonder">
-	
-<!--<div class="row">
-	<h2>Program</h2>
-	
-
-
-	<h3> Overture </h3>
-	<p><strong> “Miracle of Christmas”/”Carol of the Bells”	</strong>........ Scottsdale Bible Orchestra, Faith Collins, Erin Collins, Hannah Montgomery, Julie Kassenbrock – dance</p>
-
- 
-</div>
-
-
-<div class="row">
-	<div class="medium-6 columns">
-		<h3> ACT I </h3>
-		<p><strong> “Carol of the Bells”</strong>........ Derek Brandt, Kerri Jones, Carson Parks, Kacey Pearson, Brooklyn Peterson, Troy Peterson</p>
-		<p><strong> White Pants </strong>........ Steve Eriksson & Rustin Rossello </p>
-		<p><strong> “Jingle Bells” </strong>........ Scottsdale Bible Choir, Handbells & Dance Troupe </p>
-		<p><strong> Christmas Around the World </strong></p>
-		<p><strong> Mexico – “Feliz Navidad”	</strong>........ Rita Kurtz & Laura Milus </p>
-		<p><strong> England – Carol Medley </strong>........ Adam Coburn, Georgia Dolph, Ron Fisher, Mary Henry, Julie Michael, Tom Vinopal, Mary Whaley, Mat Yokoyama </p>
-		<p><strong> Russia – “Trepak” </strong>........ Eva Britton, Erin Collins, Kayl Hill, Isabella King, Hannah Lopez, Sofia Lopez, Avery Okland, Reese Okland</p>
-		<p><strong> Sweden – “Sankta Lucia” </strong>........ Rebecca Dias </p>
-		<p><strong> Switzerland </strong></p>
-		<p><strong> Scotland – “Little Drummer Boy” </strong>........ Michael McClanathan – bagpipe, Calem Reimche & Alec Sanchez – percussion</p>
-		<p><strong> Austria – “Stille Nacht” </strong>........ David Britton – solo, Gerald Fercho - guitar </p>
-		<p><strong> Tanzania </strong></p>
-		<p><strong> America – “Jingle Bell Rock” </strong>........ Matt Taylor, Ashlyn Bentley, Faith Collins, Brooke Goodale, Dorian Harris & Scottsdale Bible Children’s Choir</p>
-		<p><strong> Adeste Fideles</strong>........Kristina Bubar, Margaux Cavitt, Gabby Vatistas</p>
-		<p><strong> Compassion Project</strong></p>
-	 
-	</div>
-		
-		
-	<div class="medium-6 columns">
-		<h3> INTERMISSION </h3>
-			
-		<h3> ACT II </h3>
-		<p><strong> “It’s the Most Wonderful Time of the Year” </strong>........ Carson Parks – trombone solo</p>
-		<p><strong> “Hallelujah”</strong>........ Derek Brandt – solo, Debra Murrow – iPad artist </p>
-		<p><strong> Spoken Word </strong>........ Hansley Musotte </p>
-		<p><strong> “O Come, O Come Emmanuel” </strong>........ Lizzy Tuten – Mary, Andy Hone – Joseph </p>
-		<p><strong> “Mary, Did You Know?” </strong>........ Leah Deeney (Thursday, Saturday @ 1 & 4), Katie Rodin (Friday, Saturday @ 7, Sunday @ 2 & 5), Julie Kassenbrock – dance </p>
-		<p><strong> “Sing We Now of Christmas”	</strong>........ Nativity Cast </p>
-		<p><strong> Pastoral Invitation </strong></p>
-		<p><strong> “O Holy Night” </strong>........ Donielle Palomo – solo, Marissa Dudek & Megan Whitley – dance </p>
-		<p><strong> “Hallelujah Chorus” </strong></p>
-	</div>
-</div> -->
 
 
 
 <div class="row">
-	<h2> Winter Wonder Cast and Participants </h2>
+	<h2> Winter Wonder Cast and Crew </h2>
 	
 <div class="medium-9 medium-centered columns">
 	
-	<h3> Winter Wonder Opener </h3>
-	<p> Mia Wines <span class="detail">– choreographer</span> </p>
+	<h3> Dancers </h3>
+	<p> Ann Blackman and Jaimie Sophia <span class="detail">– choreographer</span> </p>
 	
-	<p>Ashlyn Bentley, Erin Collins, Faith Collins, Becca Dominguez, Brooke Goodale, Olivia Helton, Julie Kassenbrock, Eliza Krolick, Maddy Krolick, Claire Kurtz, Haley Marks, Reece Marks, Caileigh McBride, Maggie McBride, Hannah Montgomery, Avery Okland, Emme Paisley, Peyton Peterson, Sophia Smith, Analise Wachtel, Andrew Wachtel, Rhyan Wilson, Taro Yokoyama</p>
+	<p>Jillian Bogdansky, Marissa Dudek, Dorian Harris, Julie Kassenbrock, Miranda Manley, Sami Ownby, Sydney Sears, Jaimie Sofia, Halle Switzer, Sami Vega</p>
 	
  
 	
-	<h3> Winter Wonder Orchestra</h3>
+	<h3> Orchestra</h3>
 	<p> Joe Bubar <span class="detail">- director,</span> Sandee Coppola <span class="detail">- accompanist</span></br> 
-	 <span class="emphasis">Violin 1 </span> Karen Schreck, Cristina Alasu, Lisa Elliott, Bud Locker, Amy Schroader, Kyle Malkin </br>
-	 <span class="emphasis">Violin 2 </span> Beth Benson-Swain, Ann Sandford, Joan Stempski, Sandy Wallace, Patti Boyce, Christina Reimche</br>
+	 <span class="emphasis">Violin 1 </span> Christina Alasu, Sharon Falada, Bud Locker, Kyle Malkin, Karen Schreck - principal, Amy Schroeder </br>
+	 <span class="emphasis">Violin 2 </span> Beth Benson-Swain - principal, Ciprian Jivcu, Audrey Kurtz, Christina Reimche, Ann Sandford, Joan Stempski, Sandy Wallace</br>
 	 <span class="emphasis">Viola </span> Marg Loewen, Katie Paulsen, Alexis Pillow </br>
-	 <span class="emphasis">Cello </span> Robin Dias, Terri Clark, Emily Hayes </br>
+	 <span class="emphasis">Cello </span> Robin Dias - principal, Terri Clarke </br>
 	 <span class="emphasis">Bass </span> Bob Larson, Danyell Wilt </br>
-	 <span class="emphasis">Trumpet </span> Mark Coats, Paul Alasu, Marty Sellberg, Harry Koehnemann, Braden Reimche </br>
-	 <span class="emphasis">Trombone </span> Bob Anderson, Bim Fritz, Bryce Good, Doug Nixon, Carson Parks </br>
-	 <span class="emphasis">Baritone </span> Bruce Meyer, John Donnell, Amber Jarosz </br>
+	 <span class="emphasis">Trumpet </span> Paul Alasu, Mark Coats - principal, Harry Koehnemann, Braden Reimche, Marty Sellberg </br>
+	 <span class="emphasis">Trombone </span> Bob Anderson, Bryce Good, Bob Hamilton, Doug Nixon, Carson Parks </br>
+	 <span class="emphasis">French Horn </span> Dean Anderson, Stacey D’Abate - principal, Robert Dickinson, Benn Smith </br>
+	 <span class="emphasis">Baritone </span> John Donnell, Bruce Meyer - principal </br>
 	 <span class="emphasis">Tuba </span>  Angel Boici, Danielle Rothleutner </br>
-	 <span class="emphasis">French Horn </span> Stacey D’Abate, Dean Andersen, Robert Dickinson, Benn Smith </br>
-	 <span class="emphasis">Alto Saxophone </span> Alan Knight, Kyle Karasch </br>
-	 <span class="emphasis">Tenor Saxophone </span> David Parrott, Jim Hawthorne </br>
-	 <span class="emphasis">Flute </span> Sheri MacDonald, Leslie Lewis, Tricia Fox </br>
-	 <span class="emphasis">Oboe </span> Shayne Budin </br>
-	 <span class="emphasis">Clarinet </span> Melanie McBride, Dawn Anvik </br>
-	 <span class="emphasis">Bass </span> Clarinet Karen DeMoss</br>
-	 <span class="emphasis">Percussion </span> Stewart Milus, Chris Lindblade, Joey Manuele</br>
-	 <span class="emphasis">Piano </span> Joe Bubar</br>
+	 <span class="emphasis">Alto Saxophone </span> Rick Smith, Steven Terry </br>
+	 <span class="emphasis">Tenor Saxophone </span> Jim Hawthorne, David Parrott - principal </br>
+	 <span class="emphasis">Flute </span> Tricia Fox, Sheri MacDonald – principal, Michelle Rogers </br>
+	 <span class="emphasis">Oboe </span> Shayne Budin, Melanie McBride </br>
+	 <span class="emphasis">Clarinet </span> Gail Crow, Linda Duncan </br>
+	 <span class="emphasis">Bass Clarinet </span> Karen DeMoss</br>
+	 <span class="emphasis">Percussion </span> Chris Lindblade, Joey Manuele, Stewart Milus – principal</br>
+	 <span class="emphasis">Piano </span> Joe Bubar, Joshua Stefanski</br>
 	 <span class="emphasis">Keyboards </span> Sandee Coppola</br>
-	 <span class="emphasis">Electric Guitar </span> Ed Heisler</br>
-	 <span class="emphasis">Acoustic Guitar </span> Mark Erwin</br>
+	 <span class="emphasis">Electric Guitar </span> Gerald Fercho – principal, Jim Gazia</br>
 	 <span class="emphasis">Bass Guitar </span> Nelson Eubank</br>
-	 <span class="emphasis">Drums </span> Rex Williamson </p>
+	 <span class="emphasis">Drums </span> Chad Salsbury </p>
 	
  
 	
-	<h3> Scottsdale Bible Choir</h3>
+	<h3> Choir</h3>
 	<p> Troy Peterson <span class="detail">– director,</span> Tammy Reimche <span class="detail">- accompanist</span> </p>
 	
-	<p><span class="emphasis">Soprano</span>  Betty Beran, Mary Berbaum, Jenny Black, Cindy Covington, Marilyn DeSanto, Sandra Dill, Angie Domini, Twyla Dudley, Yvonne Heaton, Ruth Ireland, Pamela Jansick, Cyndi Keen, Donna Kent, Sachi Kurtz, Nina Leo, Joyce Martindale, Linda Mattos, Julie Michael, Deborah Moak, Maxine Newsome, Niko Pagni, Chamberlain Peterson, Nancy Pipher, Lynne Ramey, Karen Rummel, Sandra Saenz, Cheryl Slusser, Linda Smith, Margaret Soberg, Linda Stromberg, Blythe Sweeney, Telly Tan, Mary Jane Waddell, Mary Whaley, Veronica Ye</p>
+	<p><span class="emphasis">Soprano</span>  Linda Allen, Betty Beran, Mary Berbaum, Jenny Black, Patsy Brummett, Danielle Brunton, Telly Der, Sandra Dill, Angie Domini, Twyla Dudley, Yvonne Heaton, Dru Heffington, Ruth Ireland, Pamela Jansick, Cyndi Keen, Donna Kent, Sachi Kurtz, Nina Leo, Debi Lerkins, Julie Michael, Deborah Moak, Linda Muhlenfeld, Niko Pagni, Annette Pears, Chamberlain Peterson, Nancy Pipher, Lynne Ramey, Karen Rummel, Sandra Saenz, Cheryl Slusser, Linda Smith, Margaret Soberg, Linda Stromberg, Blythe Sweeney, Mary Whaley, Bo Whittendon, Carolyn Wilder, Veronica Ye</p>
 	
-	<p><span class="emphasis">Alto</span>  Lois Anderson, Marsha Anderson, Gayle Bielanski, Lynn Brown, Fran Cain, Carol Coats, Laurinda Cumming, Penny Derr, Leslie Doan, Georgia Dolph, Penny Eubank, Suzanne Gallaher, Katie Gant, Elsie Gonser, Bonnie Heng, Annette Johnson, Cyndy Johnston, Laura Kluvo, Bev Lambright, Sue Marion, Wanda Martindale, Sharon Meddles, Laura Milus, Danette Moe, Nancy Nixon, Wendy Peterson, Sue Phipps, Terry Sparks, Betsy Way, Natasha Wiener</p>
+	<p><span class="emphasis">Alto</span>  Karen Andersen, Lois Anderson, Marsha Anderson, Vera Beck, Gayle Bielanski, Britt Boyse, Lynn Brown, Fran Cain, Carol Coats, Debbie Condo, Laurinda Cumming, Penny Derr, Georgia Dolph, Marsha Bush-Freyling, Suzanne Gallaher, Elsie Gonser, Bonnie Heng, Annette Johnson, Susan Kassenbrock, Bev Lambright, Sue Marion, Wanda Martindale, Sharon Meddles, Danette Moe, Nancy Nixon, Wendy Peterson, Sue Phipps, Terry Sparks, Betsy Way, Natasha Wiener, Candi Williams</p>
 	
-	<p><span class="emphasis">Tenor</span> Tim Allen, Michael Andersen, Vera Beck, Magnus Eriksson, David Hone, Theresa Klassen, Bernie Lambright, Tom Loewen, Al McClain, David Parker, John Pilzner, Tom Vinopal, Doug Wallace, Mat Yokoyama</p>
+	<p><span class="emphasis">Tenor</span> Adam Coburn, Andy Gyure, David Hone, Theresa Klassen, Bernie Lambright, Brian Lerkins, Tom Loewen, Andres Marrufo, Al McClain, Matthew Moore, David Parker, Barb Schmal, Brad Taylor, Matthew Taylor, Tom Vinopal, Doug Wallace, Mat Yokoyama</p>
 	
-	<p><span class="emphasis">Bass</span> Adam Coburn, Ron Fisher, Bill Gillen, Budge Gonser, Denny Halvorson, Steven Houston, Judd Jackson, Frank Klassen, Michael Krolick, Bruce McBride, Lonny McClung, Richard Michael, Sergei Ochkur, Don Pipher, Keith Sandford, Warren Soberg, Paul Stromberg, Bill Waddell, Peter Ye </p>
+	<p><span class="emphasis">Bass</span> Ken Cain, Dan Duncan, Ron Fisher, Bill Gillen, Budge Gonser, Denny Halvorson, Steven Houston, Judd Jackson, John Karasch, Frank Klassen, Michael Krolick, Caio Lima, Bruce McBride, Richard Michael, Sergei Ochkur, Don Pipher, Keith Sandford, Warren Soberg, Paul Stromberg, Peter Ye </p>
+	
+ 
+	<h3> Children’s Choir</h3>
+	<p> Sandee Coppola and René Suderman <span class="detail">– co-directors</span> </p>
+	
+	<p> Anya Abello, Deklan Abello, Derek Abello, Eden Abello, Megan Bechert, Pax Bleger, Quincy Bowers, Erin Collins, Lily Dahl, Cade Dietrich, Marie Fox, Charissa Franklin, Fallon Goble, Amy Gravel, Kaley Gravel, Olivia Helton, Lily Hughes, Trinity Krossman, Tristan Krossman, Bria Lindblade, Hannah Lindblade, Sam MacDonald, Reece Marks, Ella Palomo, Kaliegh Pardo, Biance Rahme, Jhalina Wisser</p>
+
+
+	
+	<h3> “SING GLORIA (FUM, FUM, FUM)” OPERA STARS</h3>
+	<p> Andres Marrufo, Matthew Moore, Donielle Palomo, Debbie Vinopal, Bo Whittenton</p>
 	
  
 	
-	<h3> Grace Chapel Bell Choir</h3>
-	<p> Sandee Coppola and Katie Gant <span class="detail">– directors</span></p> 
-	<p>Dawn Anvik, Carol Coats, Teri Davies, Karen DeMoss, Katie Gant, Carol Ketcherside, Sachi Kurtz, Jeff MacDonald, Sue Marion, Jacque Surrett, Emily Tuggle, Joyce Wieler</p>
+	<h3> “Jingle Bells” Cup Jive Team </h3>
+	<p> Sandee Coppola and René Suderman <span class="detail">– co-directors</span> </p>
 	
- 
-	
-	<h3> “Jingle Bells” Dancers </h3>
-	<p>Ann Blackman <span class="detail">– choreographer</span></p> 
-	<p>Marissa Dudek, Dorian Harris, Andy Hone, Eve-Ana Ontiveros, Kamryn Smith, Susan Swanson, Halle Switzer, Dexter Tuten, Emma Tuten, Megan Whitley</p>
-	
- 
-	
-	<h3> “Sankta Lucia” Girls</h3>
-	<p> Charlie Chamberlain, Elsa Eriksson, Amy Gravel, Kaley Gravel, Ella Palomo, Zöe Shewchuk </p>
-	
- 
-	
-	<h3> Swedish Candle Carriers</h3>
-	<p> Ashlyn Bentley, Faith Collins, Becca Dominguez, Brooke Goodale, Olivia Helton, Eliza Krolick, Maddy Krolick, Claire Kurtz, Haley Marks, Caileigh McBride, Maggie McBride, Reese Okland, Emme Paisley, Peyton Peterson, Bianca Rahme, Kailey Rawdon, Rhyan Wilson, Chloe Wright</p>
-	
- 
-	
-	<h3> Winter Wonder Children’s Choir</h3>
-	<p> Sandee Coppola and René Suderman <span class="detail">– directors</span> </p>
-	
-	<p> Anya Abello, Derek Abello, Eden Abello, Pax Bleger, Quincy Bowers, Sarah Brennan, Alex Britton, Erin Collins, Becca Dominguez, Charissa Franklin, Amy Gravel, Kaley Gravel, Bella Herbein, Kayl Hill, Olivia Helton, Olivia Holzhauer, Audrey Kurtz, Bria Lindblade, Hannah Lopez, Sam MacDonald, Stephanie MacDonald, Haley Marks, Reece Marks, Caileigh McBride, Maggie McBride, Reed Moore, Reese Okland, Emme Paisley, Ella Palomo, Peyton Peterson, Bianca Rahme, Kailey Rawdon, Sophia Smith, Robyn Teske, Analise Wachtel, Tessa Wachtel, Katherine Welchert, Rhyan Wilson, Chloe Wright, Josh Zakaras</p>
+	<p> Anya Abello, Willy Bubar, Erin Collins, Becca Dominguez, Erika Germinario, Olivia Helton, Trinity Krossman, Tristan Krossman, Haley Marks, Maggie McBride, Reese Okland, Emme Paisley, Peyton Peterson, Kailey Rawdon, Rhyan Wilson, Josh Zarakas</p>
 	
  
 	
 	<h3> Nativity Cast</h3>
-	<p> Barb Napoletano, Sachiko Yokoyama and Lori Morgan <span class="detail">– coordination and staging managers</span> </p>
+	<p> Lori Morgan and Barb Napoletano <span class="detail">– coordination and staging managers</span> </p>
 	
-	<p> Micheal Allen, Aly Cavness, Faith Collins, Claire Gallagher, Grace Gallagher, Kelsey Gallagher, Reagan Gallagher, Adrianna Gorgone, Mark Hirschbirg, Adam Hone, Ethan Ivie, Paul Johnson, Eric Jones, Evelyn Jones, Joshua Jones,  Caleb Jones, Eliza Krolick, Maddy Krolick, Claire Kurtz, Bogar Lorenzo, Noel Lorenzo, Marc Manuele, Vince Manuele, Lauren Markus, Kelsi McAnally, Dave Morgan, Mattie Napoletano, Reuben Palomo, Adam Ponter, Brielle Rothrock, Becca Tunnicliff, Lizzy Tuten, Dexter Tuten, Andrew Wachtel, Taro Yokoyama </p>
+	<p> Micheal Allen, Natalie Bartolini, Joey Bubar, Claire Gallagher, Grace Gallagher, Kelsey Gallagher, Felicia Harris, Isabella Harris, Lilyana Harris, Eliza Krolick, Maddy Krolick, Mark Manuele, Reece Marks, Reese Okland, Reuben Palomo, Bella Grace Peoples, Adam Ponter, Josh Rairdan, Dexter Tuten, Chris Whittemore, Kate Whittemore, Taro Yokoyama, Josh Zarakas </p>
 	
  
 	
-	<h3> “O Holy Night” Dancers </h3>
-	<p> Ann Blackman <span class="detail">– choreographer,</span> Debbie Vinopal <span class="detail">– assistant choreographer</span></p> 
-	<p>Marissa Dudek, Dorian Harris, Eve-Ana Ontiveros, Kamryn Smith, Halle Switzer with Faith Collins, Claire Kurtz, and Emma Tuten </p>
+	<h3> “Joy to the World” Dancers </h3>
+	<p> Ann Blackman <span class="detail">– choreographer,</span> </p>
+	
+	<p> Marissa Dudek, Dorian Harris, Julie Kassenbrock, Miranda Manley, Sami Ownby, Sydney Sears, Jaimie Sofia, Halle Switzer, Sami Vega </p>
 	
  
 	
@@ -161,19 +100,24 @@ get_template_part("components/sections/featured-image");
  
 	
 	<h3> Production Crew</h3>
-	<p> Braxton Apana, Josh Best, Derek Brandt, John Buttel, Todd Cook, Valerie Egnash, Amy Farrugia, Jadon Floyd, Karl Forster, Cade Franklin, James George, DJ Hepburn, Sam Lincoln, Nate Lindgren, Caleb Niño, Dave Pennington, Leah Powell, Kevin Stayte, Greg Vatt, John Wallace, Mark Whitehouse, Amber Wong</p>
+	<p> Dawn Anvik, Marc Bailey, Stephanie Bailey, Josh Best, John Buttel, Valerie Egnash, Amy Farrugia, Karl Forster, James George, Sam Lincoln, Hadden Newlander, Caleb Niño, Sandy Osborn, Patti Passow, Dave Pennington, Suzanne Reinke, Jacob Roberts, Cindy Vatt, Greg Vatt, John Wallace, Mark Whitehouse</p>
 	
  
 	
-	<h3>Stage Crew</h3>
-	<p> Barb Napoletano and Loyd Sparks <span class="detail">– stage managers</span> </p>
+	<h3> Stage Crew</h3>
+	<p> Loyd Sparks and Debbie Vinopal <span class="detail">– stage managers</span> </p>
 	
-	<p> Alex Apodaca, Paul Johnson, Hadden Newlander, Tim Reimche</p>
+	<p> Matthew Edson, Austin Goss, Ryan Gravel, Jessica Jenkins, Karl Marks</p>
 	
  
 	
-	<h3> Sets/Props/Costumes </h3>
-	<p> Leslie Doan, Pam Jansick, Jan Nickel, Nancy Reinauer, Loyd Sparks, Jacque Surrett </p>
+	<h3> Sets</h3>
+	<p> Joel Grauman, Pam Jansick, Joel Maupin, Loyd Sparks </p>
+	
+	
+	
+	<h3> Costumes</h3>
+	<p> Fran Cain, Susan Kassenbrock, Barb Napoletano, Jan Nickel, Amy Ponczak, Nancy Reinauer, Jacque Surrett </p>
 	
 	<div class="centered">
 		<h3></h3>
@@ -272,19 +216,6 @@ get_template_part("components/sections/featured-image");
  
  
 
-<!--<div class="row">
-	<div class="medium-6 columns">
-		<h3> Choir </h3>
-		<p> Tim Allen, Lois Anderson, Marsha Anderson, Michael Anderson, Vera Beck, Betty Beran, Mary Berbaum, Gayle Bielanski, Jenny Black, Lynn Brown, Fran Cain, Carol Coats, Adam Coburn, Cindy Covington, Laurinda Cumming, Penny Derr, Marilyn DeSanto, Sandra Dill, Leslie Doan, Georgia Dolph, Angie Domini, Twyla Dudley, Magnus Eriksson, Penny Eubank, Ron Fisher, Suzanne Gallaher, Katie Gant, Bill Gillen, Budge Gonser, Elsie Gonser, Denny Halvorson, Yvonne Heaton, Bonnie Heng, David Hone, Steven Houston, Ruth Ireland, Judd Jackson, Pam Jansick, Annette Johnson, Cyndy Johnston, Cyndi Keen, Donna Kent, Frank Klassen, Theresa Klassen, Laura Kluvo, Michael Krolick, Sachi Kurtz, Bernie Lambright, Bev Lambright, Nina Leo, Tom Loewen, Sue Marion, Joyce Martindale, Wanda Martindale, Linda Mattos, Bruce McBride, Al McClain, Lonny McClung, Sharon Meddles, Julie Michael, Richard Michael, Laura Milus, Deborah Moak, Danette Moe, Maxine Newsome, Nancy Nixon, Sergei Ochkur, Niko Pagni, David Parker, Chamberlain Peterson, Wendy Peterson, Sue Phipps, John Pilzner, Don Pipher, Nancy Pipher, Lynne Ramey, Karen Rummel, Sandra Saenz, Keith Sandford, Cheryl Slusser, Linda Smith, Margaret Soberg, Warren Soberg, Terry Sparks, Linda Stromberg, Paul Stromber, Blythe Sweeney, Telly Tan, Tom Vinopal, Bill Waddell, Mary Jane Waddell, Doug Wallace, Betsy Way, Mary Whaley, Natasha Wiener, Peter Ye, Veronica Ye, Mat Yokoyama </p>
-	</div>
-
-
-	<div class="medium-6 columns">	
-		<h3> Orchestra </h3>
-		<p> Cristina Alasu, Paul Alasu, Bob Anderson, Dawn Anvik, Dean Anderson, Beth Benson-Swain, Angel Boici, Patti Boyce, Terri Clarke, Mark Coats, Sandee Coppola, Stacey D’Abate, Karen DeMoss, Robin Dias, Robert Dickinson, John Donnell, Lisa Elliott, Mark Erwin, Nelson Eubank, Sharon Falada, Bim Fritz, Bryce Good, Emily Hayes, Ed Heisler, Amber Jarosz, Erik Ketcherside, Alan Knight, Bob Larson, Chris Lindblade, Bud Locker, Marg Loewen, Sheri MacDonald, Joey Manuele, Melanie McBride, Bruce Meyer, Stewart Milus, Doug Nixon, David Parrott, Katie Paulsen, Alexis Pillow, Danielle Rothleutner, Ann Sandford, Karen Schreck, Amy Schroader, Benn Smith, Joan Stempski, Sandy Wallace, Rex Williamson  </p>
-	</div>
-	 
-</div> -->
 
 <div class="row">
 	<h2> Christmas Giving Project </h2>
