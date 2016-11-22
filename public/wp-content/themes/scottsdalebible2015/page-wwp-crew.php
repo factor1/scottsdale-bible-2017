@@ -36,7 +36,7 @@ get_template_part("components/sections/featured-image");
 						<!-- Photo -->
 						<div class="f1_mentor_photo_container">
 							<?php if(has_post_thumbnail()) {
-								the_post_thumbnail('medium');
+								the_post_thumbnail('staff_grid');
 								} else {	}
 							?>
 						</div>
@@ -90,28 +90,6 @@ get_template_part("components/sections/featured-image");
  
  
 
-
-<div class="row">
-	<h2> Christmas Giving Project </h2>
-	
-	<div class="medium-9 medium-centered columns">
-		<h3></h3>
-		
-		<p>Each year at Winter Wonder, we choose an opportunity to meet a specific need in our community and extend generosity in Christ’s name. This year, we’re adopting four Title 1 schools in Scottsdale (Hohokam, Navajo, Tavan & Yavapai) and partnering with Healthy Packs and Concerned Citizens for Community Health to help children experiencing weekend hunger. The Healthy Packs program provides a $4-6 pack of nutritious food to sustain a child from Friday evening through Sunday. We plan to fully fund the program at these four schools for the ’15/’16 school year.</p>
-		
-		<p><a href="http://ccch.azurewebsites.net/programs/healthy-packs" target="_blank">Learn more about the Healthy Packs Program here.</a> This <a href="http://www.azcentral.com/story/news/local/scottsdale/2014/09/25/scottsdale-schools-healthy-packs-feed-kids/16208929/?from=global&sessionKey=&autologin=" target="_blank">AZ Central article</a> shares more about the impact of this program on Scottsdale kids.</p>
-		
-		<p>In addition to funding the Healthy Packs program, we will also provide Christmas stockings for approximately 1,500 children and gifts for teachers and staff at three of these schools. Gifts will be presented at surprise assemblies on December 17, 2015. Our vision is to share Christ’s love and build lasting relationships at each of these schools.</p>
-		
-		<p>If you would like to participate in supporting this project, <a href="https://scottsdalebible.onlinegiving.cc/donate/login" target="_blank">you may give online here.</a> You may also give by texting “give” to 480.771.1722 or via check to Scottsdale Bible Church.  Thank you for your generosity toward this effort!</p>
-
-	</div>
-</div>
-
-
-<div class="row centered">
-	<p class="italictext winterfoot"> Are you interested in being part of Winter Wonder 2016? Email <a href="mailto:worship@scottsdalebible.com">worship@scottsdalebible.com</a> and indicate your area of experience/interest. </p>
-</div>
 
 </div>
 
