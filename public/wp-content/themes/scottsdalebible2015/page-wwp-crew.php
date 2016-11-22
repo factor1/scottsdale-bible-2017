@@ -36,7 +36,7 @@ get_template_part("components/sections/featured-image");
 						<!-- Photo -->
 						<div class="f1_mentor_photo_container">
 							<?php if(has_post_thumbnail()) {
-								the_post_thumbnail();
+								the_post_thumbnail('medium');
 								} else {	}
 							?>
 						</div>
