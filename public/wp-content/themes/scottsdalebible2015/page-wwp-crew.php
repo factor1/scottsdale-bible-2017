@@ -34,6 +34,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         <?php } else { ?>
         <div class="small-12 columns">
         <?php } ?>
+        <h2>Production Team</h2>
 
 			
 			<ul class="small-block-grid-1 medium-block-grid-4">
