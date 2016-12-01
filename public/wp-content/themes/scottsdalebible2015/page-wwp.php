@@ -11,7 +11,7 @@ get_template_part("components/sections/featured-image");
 
 
 <div class="row">
-	<h2> Winter Wonder Cast and Crew </h2>
+	<h2>Program, Cast & Crew</h2>
 	
 <div class="medium-9 medium-centered columns">
 	

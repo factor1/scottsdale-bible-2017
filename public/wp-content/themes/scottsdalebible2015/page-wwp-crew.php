@@ -10,7 +10,7 @@ get_template_part("components/sections/featured-image");
  
  
 <div class="row">
-	<h2>Production Crew</h2>
+	<h2>Production Team</h2>
 	
 	<div class="row">
 		<div class="medium-9 medium-centered columns">
