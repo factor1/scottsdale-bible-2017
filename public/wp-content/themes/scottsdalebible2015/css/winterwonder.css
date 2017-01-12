@@ -21,7 +21,7 @@ span.emphasis{
 span.detail{font-style: italic; font-size: .8em; text-transform: uppercase; font-weight: 800;}
 
 
-/*.winterwonder h2{
+.winterwonder h2{
 	margin: 20px 0px 10px 0px !important;
 	padding: 10px 0;
     font-weight: 700;
@@ -41,7 +41,7 @@ span.detail{font-style: italic; font-size: .8em; text-transform: uppercase; font
     line-height: 1;
     text-transform: uppercase !important;
     font-family: 'Oswald', sans-serif !important;
-}*/
+}
 
 .winterwonder p{
 	line-height:1.85em !important;
@@ -104,3 +104,4 @@ p.vip{
 .remodal-close:hover{
 	color: #414042;
 }
+
