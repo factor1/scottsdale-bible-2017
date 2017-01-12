@@ -22,26 +22,19 @@ span.detail{font-style: italic; font-size: .8em; text-transform: uppercase; font
 
 
 .winterwonder h2{
-	margin: 20px 0px 10px 0px !important;
-	padding: 10px 0;
-    font-weight: 700;
-    line-height: 1;
     border-bottom: 2px solid #be955b;
-    text-transform: uppercase !important;
-    font-size: 1.75em !important;
-    font-family: 'Oswald', sans-serif !important;
 }
 
 
 
-.winterwonder h3{
+/*.winterwonder h3{
 	padding: 25px 0px 0px 0px !important;
     color: #414042;
     font-size: 1.25em !important;
     line-height: 1;
     text-transform: uppercase !important;
     font-family: 'Oswald', sans-serif !important;
-}
+}*/
 
 .winterwonder p{
 	line-height:1.85em !important;
@@ -106,7 +99,7 @@ p.vip{
 }
 
 
-.winterwonder .sidebar h3 {
+/*.winterwonder .sidebar h3 {
     margin: 15px 0px;
     padding: 25px 0px 9px 0px !important;
     padding-bottom: 10px;
@@ -114,4 +107,4 @@ p.vip{
     line-height: 1;
     border-bottom: 2px solid #be955b;
     text-transform: uppercase;
-    }
+    }*/
