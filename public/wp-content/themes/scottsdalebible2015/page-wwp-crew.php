@@ -6,8 +6,8 @@ get_template_part("components/sections/featured-image");
 
 <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/winterwonder.css">
 
-<div class="winterwonder"> 
-	
+<section class="page-content winterwonder"> 
+
 <?php if(!isset($wp)) { return; }
 
 $sidebar_menus = sb_get_sidebar_menus();
@@ -15,8 +15,8 @@ $sidebar_content = sb_get_sidebar_content();
 $show_sidebar = $sidebar_menus || $sidebar_content;
 
 ?>
- 
- 
+
+
 <div class="row">
  <?php if($show_sidebar) { ?>
         <div class="large-3 columns sidebar">
@@ -36,23 +36,23 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         <?php } ?>
         <h2>Production Team</h2>
 
-			
+
 			<ul class="small-block-grid-1 medium-block-grid-4">
 				<?php
 				global $post;
-				$args = array( 
-						'numberposts' 				=> -1, 
-						'post_type'              	=> 'f1_staffgrid_cpt',	
+				$args = array(
+						'numberposts' 				=> -1,
+						'post_type'              	=> 'f1_staffgrid_cpt',
 						'f1_staffgrid_tax' 			=> 'production-crew', // Department Taxonomy (per site).
 						'meta_key' 					=> 'last_name',
-						'orderby'					=> 'meta_value', 
+						'orderby'					=> 'meta_value',
 						//'post__in' 				=> array( 2, 5, 12, 14, 20 );,  // Use ID's in an array for specific ordering.
 						'order' 						=> 'ASC'
 						);
-	
+
 				$staffgrid = get_posts( $args );
 				foreach( $staffgrid as $post ) :	setup_postdata($post); ?>
-				
+
 				<li>
 					<a data-remodal-target="modal-<?php the_ID(); ?>" style="text-align:center">
 						<!-- Photo -->
@@ -62,7 +62,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
 								} else {	}
 							?>
 						</div>
-						
+
 						<div class="f1_mentor_summary_name"><strong><?php the_field( "first_name" ); ?>&nbsp;<?php the_field( "last_name" ); ?></strong></div>
 						<div class="f1_mentor_summary_title"><small><?php if(get_field( "title" )) : the_field( "title" ); endif; ?></small></div>
 					</a>
@@ -99,32 +99,32 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
 					</div>
 				</div>
 				</li>
-				
-				
-				
+
+
+
 				<?php endforeach; wp_reset_postdata();?>
 			</ul>
-			
-			
-			
+
+
+
 			<h2>Featured Performers</h2>
-			
+
 			<ul class="small-block-grid-1 medium-block-grid-4">
 				<?php
 				global $post;
-				$args = array( 
-						'numberposts' 				=> -1, 
-						'post_type'              	=> 'f1_staffgrid_cpt',	
+				$args = array(
+						'numberposts' 				=> -1,
+						'post_type'              	=> 'f1_staffgrid_cpt',
 						'f1_staffgrid_tax' 			=> 'featured-performers', // Department Taxonomy (per site).
 						'meta_key' 					=> 'last_name',
-						'orderby'					=> 'meta_value', 
+						'orderby'					=> 'meta_value',
 						//'post__in' 				=> array( 2, 5, 12, 14, 20 );,  // Use ID's in an array for specific ordering.
 						'order' 						=> 'ASC'
 						);
-	
+
 				$staffgrid = get_posts( $args );
 				foreach( $staffgrid as $post ) :	setup_postdata($post); ?>
-				
+
 				<li>
 					<a data-remodal-target="modal-<?php the_ID(); ?>" style="text-align:center">
 						<!-- Photo -->
@@ -134,7 +134,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
 								} else {	}
 							?>
 						</div>
-						
+
 						<div class="f1_mentor_summary_name"><strong><?php the_field( "first_name" ); ?>&nbsp;<?php the_field( "last_name" ); ?></strong></div>
 						<div class="f1_mentor_summary_title"><small><?php if(get_field( "title" )) : the_field( "title" ); endif; ?></small></div>
 					</a>
@@ -171,22 +171,22 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
 					</div>
 				</div>
 				</li>
-				
-				
-				
+
+
+
 				<?php endforeach; wp_reset_postdata();?>
 			</ul>
-			
-			
-			
+
+
+
 		</div>
 	</div>
 
 </div>
- 
- 
 
 
-</div>
+
+
+</section>
 
 <?php get_footer();?>
