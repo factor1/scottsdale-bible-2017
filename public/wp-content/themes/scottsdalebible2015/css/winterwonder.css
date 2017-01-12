@@ -21,16 +21,9 @@ span.emphasis{
 span.detail{font-style: italic; font-size: .8em; text-transform: uppercase; font-weight: 800;}
 
 
-/*.winterwonder h2{
-	margin: 20px 0px 10px 0px !important;
-	padding: 10px 0;
-    font-weight: 700;
-    line-height: 1;
+.winterwonder h2{
     border-bottom: 2px solid #be955b;
-    text-transform: uppercase !important;
-    font-size: 1.75em !important;
-    font-family: 'Oswald', sans-serif !important;
-}*/
+}
 
 
 
