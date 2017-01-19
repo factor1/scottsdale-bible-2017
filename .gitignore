@@ -18,3 +18,5 @@ desktop.ini
 .sass-cache/
 public/dev/
 *_to_local.sh
+node_modules/
+bower_components/

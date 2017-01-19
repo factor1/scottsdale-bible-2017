@@ -7,7 +7,9 @@ if( $post_slug == 'family' ){
   $post_slug = 'family-life';
 } elseif ( $post_slug == 'special' ) {
   $post_slug = 'special-ministries';
-} elseif ( $post_slug == 'worship' ) {
+} elseif ( $post_slug == 'worship-and-creative-arts' ) {
+  $post_slug = 'worship-arts';
+  } elseif ( $post_slug == 'worship' ) {
   $post_slug = 'worship-arts';
 } elseif ( $post_slug == 'marriage' ) {
   $post_slug = 'marriage-ministry';

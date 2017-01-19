@@ -1711,13 +1711,21 @@ section.page-content
                     {
                         > li
                         {
+                          margin-left: 0;
+                          margin-right: 8px;
+
+                          // first social media icon
+                          &:nth-child(1){
+                            margin-left: 1.375rem;
+                          }
+
                             > a
                             {
                                 font-family: "Open Sans", Helvetica, Arial, sans-serif;
                                 font-size: 15px;
                                 font-weight: 700;
                                 color: $darkbrown;
-                                margin-right: 30px;
+                                margin-right: 0;
                                 line-height: 18px;
 
                                 > .fa
