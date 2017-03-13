@@ -6,9 +6,6 @@ define("THEME_TIMEZONE","America/Phoenix");
 define("CAMPUS_COOKIE","sb_campus");
 define("CAMPUS_COOKIE_EXPIRATION",(60*60*24*30)); // Seconds Added to Current Time
 
-if(!defined("THEME_TYPEKIT")) {
-    define("THEME_TYPEKIT",""); // Defined in wp-config
-}
 
 date_default_timezone_set(THEME_TIMEZONE);
 
