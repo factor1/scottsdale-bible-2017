@@ -1749,6 +1749,14 @@ section.page-content
     }
 }
 
+// social media icon fix
+@media screen and (max-width: 1024px){
+  .sb-social-icons li{
+    width: auto !important;
+  }
+}
+
+
 // Related Events on default page
 // Not sure why this was needed, it breaks it on chrome - MA
 /*

@@ -6,7 +6,7 @@
     <?php } ?>
     <div>
         <?php if(!get_field("hide_social_links")) { ?>
-        <ul class="inline-list">
+        <ul class="inline-list sb-social-icons">
             <li>
                 <a href="#" data-trigger-click="st_facebook_large"><i class="fa fa-facebook-square"></i></a>
             </li>
