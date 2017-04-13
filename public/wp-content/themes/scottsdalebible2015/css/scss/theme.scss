@@ -359,6 +359,15 @@ display: block;
 background: none;
 }
 
+p.no-break{
+  span[class^="st_"]{
+    display: none !important;
+  }
+  br{
+    display: none !important;
+  }
+}
+
 /**
  * 2.0 Header Styles
  * -----------------------------------------------------------------------------
