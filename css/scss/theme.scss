@@ -5,7 +5,7 @@
 */
 
 /* Fonts */
-$Domus: "domas", Helvetica, Arial, sans-serif;
+$Domus: "jaf-domus", Helvetica, Arial, sans-serif;
 $Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
 
 $Oswald: Oswald, Helvetica, Arial, sans-serif;
@@ -432,6 +432,7 @@ body
     {
         z-index: 9999;
         position: relative;
+        background: $p-light;
 
         .fa-bars
         {
@@ -494,7 +495,7 @@ body
                         display: inline-block;
                         position: relative;
                         top: -1px;
-                        color: $lightbrown;
+                        color: $primary;
                     }
 
                     i.fa.fa-search
@@ -518,20 +519,25 @@ body
                             background-color: #f1f2f2;
                             box-shadow: none;
                             -web-kit-box-shadow: none;
+                            border-radius: 10px;
                         }
                     }
 
                     a
                     {
                         display: inline;
-                        color: inherit;
+                        font-family: $Proxima;
+                        font-size: 14px;
+                        line-height: 15px;
+                        font-weight: 300;
+                        color: #fff;
                         padding-left: 5px;
                         text-decoration: none;
                     }
 
                     a:hover
                     {
-                        color: $lightbrown;
+                        color: $tertiary;
                     }
 
                     > ul
@@ -571,7 +577,7 @@ body
 
                             > a:hover
                             {
-                                color: $lightbrown;
+                                color: $tertiary;
                             }
                         }
 
