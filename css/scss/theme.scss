@@ -610,9 +610,7 @@ body
 
         > section
         {
-            background-image: url(../images/backgrounds/binding_dark.png);
-            background-repeat: repeat;
-            background-position: 0px 0px;
+            background: $primary;
             height: 50px;
 
             > .row
@@ -697,7 +695,7 @@ body
 
                                         > a:hover
                                         {
-                                            color: $lightbrown;
+                                            color: $tertiary;
                                             text-decoration: underline;
                                         }
                                     }
