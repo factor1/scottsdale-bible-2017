@@ -310,7 +310,7 @@ body
 
     .row
     {
-        max-width: 1100px;
+        max-width: 1200px;
     }
 
     .fluidMedia
@@ -487,7 +487,7 @@ body
                     line-height: 25px;
                     padding: 0px;
                     margin: auto;
-                    margin-right: 50px;
+                    margin-right: 30px;
                     overflow: visible;
 
                     i.fa
@@ -504,13 +504,13 @@ body
                         display: block;
                         position: absolute;
                         top: 1px;
-                        left: 5px;
+                        left: 25px;
 
                         + input
                         {
-                            width: 160px;
+                            width: 175px;
                             margin: auto;
-                            padding-left: 22px;
+                            padding-left: 42px;
                             padding-right: 4px;
                             padding-top: 2px;
                             padding-bottom: 2px;
@@ -520,7 +520,7 @@ body
                             background-color: #f1f2f2;
                             box-shadow: none;
                             -web-kit-box-shadow: none;
-                            border-radius: 10px;
+                            border-radius: 15px;
                         }
                     }
 
@@ -604,6 +604,10 @@ body
                         display: block;
                     }
                 }
+
+                > li:last-child {
+                  margin-right: 0px;
+                }
             }
         }
 
@@ -612,7 +616,7 @@ body
         > section
         {
             background: $primary;
-            height: 125px;
+            height: 112px;
 
             > .row
             {
@@ -622,17 +626,34 @@ body
                 {
                     position: static;
 
+                    &:first-child {
+                      padding-left: 0px;
+                    }
+
+                    &:last-child {
+                      margin-right: 0px;
+                    }
+
                     > a
                     {
+                        position: relative;
                         display: block;
-                        line-height: 50px;
+                        line-height: 110px;
                         text-align: center;
-                        font-size: 18px;
-                        font-weight: 700;
-                        color: #ffffff;
+                        font-size: 17px;
+                        font-weight: 300;
+                        color: #fff;
                         letter-spacing: 2px;
-                        text-transform: uppercase;
                         text-decoration: none;
+                        vertical-align: bottom;
+                        padding-bottom: 2px;
+
+                        > img {
+                          vertical-align: middle;
+                          float: left;
+                          max-height: 112px;
+                          width: 300px;
+                        }
                     }
 
                     > nav
@@ -640,7 +661,7 @@ body
                         display: none;
                         position: absolute;
                         left: 0px;
-                        top: 50px;
+                        top: 112px;
                         width: 100%;
                         height: auto;
                         min-height: 100px;
@@ -733,15 +754,22 @@ body
 
                 > .columns:hover
                 {
+
                     > nav
                     {
                         display: block;
                         z-index: 9999;
                     }
 
-                    > a
+                    > a::after
                     {
-                        background-color: $lightbrown;
+                      content: "";
+                      position: absolute;
+                      bottom: 2px;
+                      left: 0;
+                      height: 1px;
+                      width: 100%;
+                      @include linear-gradient($secondary, $tertiary);
                     }
                 }
 
