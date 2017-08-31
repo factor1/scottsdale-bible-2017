@@ -1,0 +1,130 @@
+/* -----------------------------------------------------------------------------
+	# Buttons
+----------------------------------------------------------------------------- */
+.button {
+  border-radius: 20px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: $tertiary;
+  color: #fff;
+
+	&:hover {
+    background: $secondary;
+    text-decoration: none;
+	}
+}
+
+.button-second {
+  border-radius: 20px;
+  border: 1px solid $quaternary;
+  padding: 15px 25px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: #fff;
+  color: $quaternary;
+
+	&:hover {
+    background: $quaternary;
+    color: #fff;
+    text-decoration: none;
+	}
+}
+
+.button-gradient {
+	@include linear-gradient(90deg, $secondary, $tertiary);
+  border-radius: 20px;
+  padding: 7px 15px;
+
+	&:hover {
+    background: #fff;
+    border: 1px solid $tertiary;
+    color: $secondary;
+	}
+}
+
+
+/* -----------------------------------------------------------------------------
+	# Old Buttons
+-----------------------------------------------------------------------------
+.button
+{
+    font-family: $Oswald;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $lightbrown;
+    border-radius: 20px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.button:hover
+{
+    background-color: $darkbrown;
+    color: $lightbrown;
+    text-decoration: none;
+}
+
+.button.dark-brown
+{
+    background-color: $darkbrown;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 300;
+    color: #ffffff;
+
+    > span
+    {
+        font-weight: 700;
+        color: $lightbrown;
+    }
+}
+
+.button.dark-brown:hover
+{
+    background-color: $lightbrown;
+
+    > span
+    {
+        color: $darkbrown;
+    }
+}
+
+.button.light-brown
+{
+    background-color: $lightbrown;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 300;
+    color: #ffffff;
+
+    > span
+    {
+        font-weight: 700;
+        color: $lightbrown;
+    }
+}
+
+.button.light-brown:hover
+{
+    background-color: $darkbrown;
+
+    > span
+    {
+        color: $darkbrown;
+    }
+}
+
+---------------------------------------------------------------------------- */
