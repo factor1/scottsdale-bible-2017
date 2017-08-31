@@ -24,7 +24,12 @@ $quaternary: #8F9EBD;
 $gray1: #414042;
 $off-white: #E9ECF1;
 
+
+/* -----------------------------------------------------------------------------
+	# Imports
+----------------------------------------------------------------------------- */
 @import "abstracts/mixins";
+@import "components/buttons";
 
 /**
 *
@@ -181,80 +186,7 @@ body
         list-style: disc;
     }
 
-    .button
-    {
-        font-family: $Oswald;
-        font-size: 15px;
-        font-weight: 400;
-        color: #ffffff;
-        text-transform: uppercase;
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        background-color: $lightbrown;
-        border-radius: 20px;
-        line-height: 1;
-        text-decoration: none;
-    }
 
-    .button:hover
-    {
-        background-color: $darkbrown;
-        color: $lightbrown;
-        text-decoration: none;
-    }
-
-    .button.dark-brown
-    {
-        background-color: $darkbrown;
-        padding-left: 50px;
-        padding-right: 50px;
-        font-weight: 300;
-        color: #ffffff;
-
-        > span
-        {
-            font-weight: 700;
-            color: $lightbrown;
-        }
-    }
-
-    .button.dark-brown:hover
-    {
-        background-color: $lightbrown;
-
-        > span
-        {
-            color: $darkbrown;
-        }
-    }
-
-    .button.light-brown
-    {
-        background-color: $lightbrown;
-        padding-left: 50px;
-        padding-right: 50px;
-        font-weight: 300;
-        color: #ffffff;
-
-        > span
-        {
-            font-weight: 700;
-            color: $lightbrown;
-        }
-    }
-
-    .button.light-brown:hover
-    {
-        background-color: $darkbrown;
-
-        > span
-        {
-            color: $darkbrown;
-        }
-    }
 
     .bar
     {
@@ -646,7 +578,7 @@ body
                         font-weight: 300;
                         color: #fff;
                         text-decoration: none;
-                        vertical-align: center;
+                        vertical-align: bottom;
 
 
                         > img {

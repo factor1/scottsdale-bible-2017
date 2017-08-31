@@ -131,7 +131,7 @@ if(!$header_menu) {
                 ?>
             </div>
             <div class="medium-1 columns">
-                <a class="hover-feature" href="#"><span>Give</span></a>
+                <a class="hover-feature" href="#"><span class="button-gradient">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,
