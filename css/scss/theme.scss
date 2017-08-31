@@ -5,12 +5,26 @@
 */
 
 /* Fonts */
+$Domus: "domas", Helvetica, Arial, sans-serif;
+$Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
+
 $Oswald: Oswald, Helvetica, Arial, sans-serif;
 $Kepler: "kepler-std", georgia, "Times New Roman", serif;
 
 /* Colors */
 $lightbrown: #be955b;
 $darkbrown: #414042;
+
+$primary: #1D2B3B;
+$p-medium: #35414E;
+$p-light: #55606A;
+$secondary: #2ABFCC;
+$tertiary: #41A4DF;
+$quaternary: #8F9EBD;
+$gray1: #414042;
+$off-white: #E9ECF1;
+
+@import "abstracts/mixins";
 
 /**
 *
@@ -22,10 +36,11 @@ $darkbrown: #414042;
 html, body
 {
     padding: 0px;
-    margin: 0px;
-    font-family: $Oswald;
+    margin-bottom: 15px;
+    font-family: $Proxima;
     font-size: 16px;
-    color: $darkbrown;
+    font-weight: 300;
+    color: #636466;
     z-index: 0;
 }
 
@@ -66,29 +81,67 @@ body
 
     h1, h2, h3, h4, h5, h6
     {
-        font-family: $Oswald;
-        color: $darkbrown;
+        font-family: $Domus;
+        color: $primary;
     }
 
     h1
     {
-        font-size: 40px;
-        font-weight: 400;
+        font-size: 46px;
+        line-height: 50px;
+        font-weight: 200;
         text-transform: uppercase;
+        letter-spacing: 0.075em;
+        margin-bottom: 25px;
     }
 
     h2
     {
-        font-size: 32px;
-        font-weight: 400;
+        font-size: 41px;
+        line-height: 45px;
+        font-weight: 200;
         text-transform: uppercase;
+        letter-spacing: 0.075em;
+        margin-bottom: 15px;
     }
 
     h3
     {
+        font-size: 37px;
+        line-height: 41px;
+        font-weight: 400;
+        color: $tertiary;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        margin-bottom: 15px;
+    }
+
+    h4
+    {
+        font-size: 33px;
+        line-height: 36px;
+        font-weight: 400;
+        color: $secondary;
+        margin-bottom: 15px;
+    }
+
+    h5
+    {
+        font-size: 30px;
+        line-height: 33px;
+        font-weight: 200;
+        color: $quaternary;
+        margin-bottom: 15px;
+    }
+
+    h6
+    {
         font-size: 20px;
-        font-weight: 700;
-        color: $lightbrown;
+        line-height: 23px;
+        font-weight: 400;
+        color: $tertiary;
+        text-transform: uppercase;
+        margin-bottom: 20px;
     }
 
     a
