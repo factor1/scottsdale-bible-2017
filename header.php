@@ -70,7 +70,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 <header>
     <div class="row">
         <div class="large-4 columns">
-            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo.png" alt="" title="" /></a>
+            
         </div>
         <div class="large-8 columns">
             <ul class="inline-list">

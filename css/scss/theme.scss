@@ -445,7 +445,7 @@ body
 
             > .columns
             {
-                height: 125px;
+                height: 65px;
             }
 
             > .columns:first-child
@@ -474,6 +474,7 @@ body
             ul.inline-list
             {
                 display: inline-block;
+                margin-top: -35px;
                 font-size: 14px;
                 font-weight: 300;
                 vertical-align: middle;
@@ -502,7 +503,7 @@ body
                     {
                         display: block;
                         position: absolute;
-                        top: 0px;
+                        top: 1px;
                         left: 5px;
 
                         + input
@@ -514,7 +515,7 @@ body
                             padding-top: 2px;
                             padding-bottom: 2px;
                             font-size: inherit;
-                            height: auto;
+                            height: 30px;
                             border: 0px;
                             background-color: #f1f2f2;
                             box-shadow: none;
@@ -611,7 +612,7 @@ body
         > section
         {
             background: $primary;
-            height: 50px;
+            height: 125px;
 
             > .row
             {

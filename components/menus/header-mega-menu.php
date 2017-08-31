@@ -75,9 +75,12 @@ if(!$header_menu) {
     ?>
     <section>
         <div class="row">
+            <div class="medium-6 columns">
+              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo.png" alt="" title="" /></a>
+            </div>
             <div class="small-12 columns hide-for-medium-up text-center"><a href="#"><i class="fa fa-bars fa-lg"></i> Menu</a></div>
 
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Visit</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -87,7 +90,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Connect</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -97,7 +100,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Serve</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -107,7 +110,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Watch</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -117,7 +120,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Care</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -127,7 +130,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
+            <div class="medium-1 columns">
                 <a href="#">Give</a>
                 <?php
                 echo sb_get_nav_menu([
@@ -151,5 +154,3 @@ echo sb_get_nav_menu([
     'items_wrap'=>$items_wrap,
     'walker'=> new factor1\MegaMenuWalker()
 ]);
-
-
