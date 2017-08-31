@@ -646,13 +646,12 @@ body
 
                         h5
                         {
-                            font-size: 14px;
-                            font-weight: 400;
+
                             padding-bottom: 5px;
-                            border-bottom: 2px solid $lightbrown;
+                            border-bottom: 2px solid $tertiary;
                             a:hover{
                               text-decoration: none;
-                              color: #414042;
+                              color: $gray1;
                             }
                         }
 
@@ -846,8 +845,6 @@ body
                         > h4
                         {
                             font-size: 18px;
-                            font-weight: 400;
-                            color: #ffffff;
                             border-bottom: 1px solid #6d6e71;
                             padding-bottom: 4px;
 
@@ -922,8 +919,7 @@ section.subscribe-to-news
 
     > h1
     {
-        font-weight: 700;
-        color: #ffffff;
+
         text-align: center;
         padding-bottom: 20px;
 
@@ -1078,9 +1074,6 @@ section.select-campus
                 {
                     margin: 0px;
                     padding: 0px;
-                    font-size: 24px;
-                    font-weight: 300;
-                    color: #ffffff;
                     text-transform: uppercase;
                     cursor: pointer;
 
@@ -1164,7 +1157,7 @@ section.news-and-stories
 
     > h1
     {
-        font-weight: 700;
+
         text-align: center;
 
         > .fa
@@ -1258,7 +1251,7 @@ section.news-and-stories
                     {
                         > h3
                         {
-                            color: $darkbrown;
+
                         }
                     }
                 }
@@ -1295,8 +1288,7 @@ section.upcoming-events
 
     > h1
     {
-        text-align: center;
-        font-weight: 700;
+
         margin: auto;
         padding: auto;
 
@@ -1360,7 +1352,7 @@ section.upcoming-events
 
                             > a
                             {
-                                color: $lightbrown;
+                                color: $tertiary;
                             }
                         }
 
@@ -1458,8 +1450,7 @@ section.last-and-upcoming-message
 
                     > h3
                     {
-                        text-transform: uppercase;
-                        font-weight: 300;
+                        padding-left: 15px;
                         position: relative;
                         margin-bottom: 3px;
 
@@ -1513,7 +1504,7 @@ section.last-and-upcoming-message
 
                     > h3
                     {
-                        color: #ffffff;
+
                     }
 
                     > h5
@@ -1557,12 +1548,12 @@ section.last-and-upcoming-message
                 {
                     > h3
                     {
-                        color: $darkbrown;
+
                     }
 
                     > h5
                     {
-                        color: $darkbrown;
+                        color: $gray1;
                     }
                 }
 
@@ -1659,7 +1650,6 @@ section.page-content
                 margin: 15px 0px;
                 padding: 0px;
                 padding-bottom: 10px;
-                color: $darkbrown;
                 line-height: 1;
                 border-bottom: 2px solid $lightbrown;
                 text-transform: uppercase;
@@ -1728,7 +1718,7 @@ section.page-content
                     font-size: initial;
                     font-weight: bold;
                     text-transform: initial;
-                    color: $darkbrown;
+
                 }
 
                 ul, li
@@ -1974,12 +1964,7 @@ section.welcome-to-campus
                 > h2
                 {
                     display: inline-block;
-                    font-size: 24px;
-                    font-weight: 300;
-                    text-transform: uppercase;
                     text-align: center;
-                    color: #ffffff;
-                    line-height: 1.2;
                     vertical-align: middle;
                     padding: 10px;
 
@@ -2120,9 +2105,8 @@ section.page-content
 
         h3.enmse-archive-title
         {
-            font-family: $Oswald !important;
-            font-weight: 500;
-            color: $lightbrown !important;
+            font-family: $Proxima !important;
+
         }
 
         table.enmse-archive-table
