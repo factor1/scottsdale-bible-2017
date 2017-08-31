@@ -75,10 +75,13 @@ if(!$header_menu) {
     ?>
     <section>
         <div class="row">
+            <div class="medium-6 columns">
+              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/SBC-BlueWhite-logo.svg" alt="" title="" /></a>
+            </div>
             <div class="small-12 columns hide-for-medium-up text-center"><a href="#"><i class="fa fa-bars fa-lg"></i> Menu</a></div>
 
-            <div class="medium-2 columns">
-                <a href="#">Visit</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Visit</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_visit,
@@ -87,8 +90,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
-                <a href="#">Connect</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Connect</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_connect,
@@ -97,8 +100,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
-                <a href="#">Serve</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Serve</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_serve,
@@ -107,8 +110,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
-                <a href="#">Watch</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Watch</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_watch,
@@ -117,8 +120,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
-                <a href="#">Care</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Care</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_care,
@@ -127,8 +130,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-2 columns">
-                <a href="#">Give</a>
+            <div class="medium-1 columns">
+                <a href="#"><span class="hover-feature">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,
@@ -151,5 +154,3 @@ echo sb_get_nav_menu([
     'items_wrap'=>$items_wrap,
     'walker'=> new factor1\MegaMenuWalker()
 ]);
-
-
