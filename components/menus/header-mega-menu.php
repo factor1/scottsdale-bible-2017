@@ -27,10 +27,21 @@ if(!$header_menu) {
     */
 
     $sub_items_wrap = "\n<nav>".
-                                            "\n\t<ul class=\"inline-list\">".
-                                                "\n%3\$s".
-                                            "\n\t</ul>".
-                                        "\n</nav>";
+                          "\n<div class=\"box\">".
+                              "\n<div class=\"row\">".
+                                  "\n<div class=\"medium-3 columns\">".
+                                      "\n<img src=\"" . get_template_directory_uri() . "/images/holders/sbc.jpeg\" alt=\"Placeholder\" />".
+                                  "\n</div>".
+                                  "\n<div class=\"medium-9 columns\">".
+                                      "\n<h3>" . get_field() . "</h3>".
+                                      "\n<p>" . get_field() . "</p>".
+                                  "\n</div>".
+                              "\n</div>".
+                          "\n</div>".
+                          "\n\t<ul class=\"inline-list\">".
+                              "\n%3\$s".
+                          "\n\t</ul>".
+                      "\n</nav>";
 
     // Load campus specific menus
     $campus_id = sb_get_campus_cookie();
@@ -131,7 +142,7 @@ if(!$header_menu) {
                 ?>
             </div>
             <div class="medium-1 columns">
-                <a class="hover-feature" href="#"><span class="button-gradient">Give</span></a>
+                <a href="#"><span class="button-gradient">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,

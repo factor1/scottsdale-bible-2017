@@ -22,6 +22,7 @@ $secondary: #2ABFCC;
 $tertiary: #41A4DF;
 $quaternary: #8F9EBD;
 $gray1: #414042;
+$gray2: #414042;
 $off-white: #E9ECF1;
 
 
@@ -152,12 +153,10 @@ body
     a
     {
         text-decoration: none;
-        color: $darkbrown;
     }
 
     a:hover
     {
-        color: $lightbrown;
         text-decoration: underline;
     }
 
@@ -377,7 +376,7 @@ body
 
             > .columns
             {
-                height: 65px;
+                height: 56px;
             }
 
             > .columns:first-child
@@ -406,7 +405,7 @@ body
             ul.inline-list
             {
                 display: inline-block;
-                margin-top: -35px;
+                margin-top: -50px;
                 font-size: 14px;
                 font-weight: 300;
                 vertical-align: middle;
@@ -461,7 +460,7 @@ body
                         display: inline;
                         font-family: $Proxima;
                         font-size: 14px;
-                        line-height: 15px;
+                        line-height: 20px;
                         font-weight: 300;
                         color: #fff;
                         padding-left: 5px;
@@ -477,7 +476,7 @@ body
                     {
                         display: none;
                         position: absolute;
-                        top: 22px;
+                        top: 29px;
                         left: 50%;
                         width: 340px;
                         margin-left: -170px;
@@ -486,7 +485,7 @@ body
                         > li
                         {
                             display: block;
-                            background-color: $darkbrown;
+                            background-color: $p-medium;
                             padding-top: 6px;
                             padding-bottom: 6px;
                             padding-right: 0px;
@@ -498,7 +497,7 @@ body
                                 font-size: 24px;
                                 font-weight: 300;
                                 color: #ffffff;
-                                text-decoration: underline;
+                                text-decoration: none;
                                 text-transform: uppercase;
                                 white-space: nowrap;
 
@@ -548,7 +547,7 @@ body
         > section
         {
             background: $primary;
-            height: 112px;
+            height: 100px;
 
             > .row
             {
@@ -557,8 +556,7 @@ body
                 > .columns
                 {
                     position: static;
-                    line-height: 110px;
-                    padding-bottom: 2px;
+                    line-height: 100px;
 
                     &:first-child {
                       padding-left: 0px;
@@ -572,7 +570,8 @@ body
                     {
                         position: relative;
                         display: block;
-                        height: 80px;
+                        height: 70px;
+                        margin-bottom: 30px;
                         text-align: center;
                         font-size: 17px;
                         font-weight: 300;
@@ -582,10 +581,10 @@ body
 
 
                         > img {
-                          vertical-align: middle;
+                          margin: 12.578000000000003px 0px;
                           float: left;
-                          max-height: 112px;
-                          width: 300px;
+                          max-height: 90px;
+                          max-width: 200px;
                         }
                     }
 
@@ -593,32 +592,58 @@ body
                     {
                         display: none;
                         position: absolute;
-                        left: 0px;
-                        top: 112px;
-                        width: 100%;
+                        left: calc(-50vw + 50%);
+                        top: 100px;
+                        width: 100vw;
                         height: auto;
                         min-height: 100px;
-                        padding: 30px;
                         padding-bottom: 10px;
                         margin: auto;
-                        background-color: #ffffff;
+                        background-color: $off-white;
+
+                        .box {
+                          background-color: #fff;
+                          max-height: 250px;
+                          margin-bottom: 15px;
+                        }
+
+                        .row {
+                          max-width: 1200px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          margin-top: 0;
+                          margin-bottom: 0;
+                        }
+
+                        h3 {
+                          padding-top: 40px;
+                        }
 
                         h5
                         {
-
                             padding-bottom: 5px;
                             border-bottom: 2px solid $tertiary;
+                            color: $tertiary;
                             a:hover{
                               text-decoration: none;
-                              color: $gray1;
+                              color: $tertiary;
                             }
                         }
 
                         > ul.inline-list
                         {
+                          display: flex;
+                          justify-content: space-between;
+                          max-width: 1200px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          margin-top: 0;
+                          margin-bottom: 0;
+
                             > li
                             {
                                 min-height: 200px;
+
 
                                 > p
                                 {
