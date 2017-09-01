@@ -27,10 +27,21 @@ if(!$header_menu) {
     */
 
     $sub_items_wrap = "\n<nav>".
-                                            "\n\t<ul class=\"inline-list\">".
-                                                "\n%3\$s".
-                                            "\n\t</ul>".
-                                        "\n</nav>";
+                              "\n<div class=\"box\">".
+                                  "\n<div class=\"row\">".
+                                      "\n<div class=\"medium-3 columns\">".
+                                          "\n<img src=\"../../images/holders/sbc.jpeg\" alt=\"Placeholder\" />".
+                                      "\n</div>".
+                                      "\n<div class=\"medium-9 columns\">".
+                                          "\n<h3>Visit</h3>".
+                                          "\n<p>Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>".
+                                      "\n</div>".
+                                  "\n</div>".
+                              "\n</div>".
+                                  "\n\t<ul class=\"inline-list\">".
+                                      "\n%3\$s".
+                                  "\n\t</ul>".
+                      "\n</nav>";
 
     // Load campus specific menus
     $campus_id = sb_get_campus_cookie();
@@ -131,7 +142,7 @@ if(!$header_menu) {
                 ?>
             </div>
             <div class="medium-1 columns">
-                <a class="hover-feature" href="#"><span class="button-gradient">Give</span></a>
+                <a href="#"><span class="button-gradient">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,
