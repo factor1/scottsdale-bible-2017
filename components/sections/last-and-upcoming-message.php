@@ -17,7 +17,7 @@ if(!$last_weekend||!$upcoming_message) {
 <section class="last-and-upcoming-message">
     <div class="row">
         <?php if($last_weekend) { ?>
-        <div class="large-7 columns">
+        <div class="large-6 columns">
             <div>
                 <div>
                     <?php if($last_weekend->image) { ?>
@@ -32,31 +32,23 @@ if(!$last_weekend||!$upcoming_message) {
                     <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
                 </div>
-            </div>
-        </div>
-        <?php } ?>
-        <?php if($upcoming_message) { ?>
-        <div class="large-5 columns">
-            <div>
-                <div>
-                    <?php if($upcoming_message->image) { ?>
-                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
-                    <?php } ?>
-                </div>
                 <div>
                     <h3><i class="fa fa-calendar"></i><span>UPCOMING MESSAGE:</span> <?php echo esc_html($upcoming_message->title); ?></h3>
                     <?php if($upcoming_message->subtitle) { ?>
                     <h5><?php echo esc_html($upcoming_message->subtitle); ?></h5>
                     <?php } ?>
                 </div>
+
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($upcoming_message) { ?>
+        <div class="large-6 columns">
+            <div>
                 <div>
-                    <a href="#" data-trigger-click="st_email_large"><i class="fa fa-envelope"></i></a>
-                    <a href="#" data-trigger-click="st_twitter_large"><i class="fa fa-twitter"></i></a>
-                    <a href="#" data-trigger-click="st_facebook_large"><i class="fa fa-facebook"></i></a>
-                    <?php /* ?>
-                    <a href="<?php echo (($f=get_field("instagram_url","option"))?esc_attr($f):"#"); ?>"><i class="fa fa-instagram"></i></a>
-                    <a href="<?php echo (($f=get_field("flickr_url","option"))?esc_attr($f):"#"); ?>"><i class="fa fa-flickr"></i></a>
-                    <?php */ ?>
+                    <?php if($upcoming_message->image) { ?>
+                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
+                    <?php } ?>
                 </div>
             </div>
         </div>

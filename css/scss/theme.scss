@@ -2029,29 +2029,29 @@ section.get-involved
 
 section.upcoming-story
 {
-  height: 500px;
+  height: 600px;
   background-image: url(../images/backgrounds/PhoenixB&W.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 
   .columns {
-    text-align: center;
-    font: 0/0 a;
 
     div {
       display: inline-block;
-    vertical-align: middle;
+      position: relative;
+      vertical-align: middle;
+      top: 90px;
+      width: 100%;
+
+      img {
+        width: 60%;
+      }
+      a {
+        margin-top: 40px;
+      }
     }
   }
-
-  .columns:before {
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle; /* vertical alignment of the inline element */
-    height: 100%;
-  }
-
-
 }
 
 /**
