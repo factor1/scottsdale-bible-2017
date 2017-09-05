@@ -33,7 +33,7 @@ if(!$header_menu) {
                                       "\n<img src=\"" . get_template_directory_uri() . "/images/holders/sbc.jpeg\" alt=\"Placeholder\" />".
                                   "\n</div>".
                                   "\n<div class=\"medium-9 columns\">".
-                                      "\n<h3>" . get_field() . "</h3>".
+                                      "\n<h3>" . the_field( 'the_title' ) . "</h3>".
                                       "\n<p>" . get_field() . "</p>".
                                   "\n</div>".
                               "\n</div>".
