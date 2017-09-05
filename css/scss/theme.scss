@@ -2034,6 +2034,24 @@ section.upcoming-story
   background-size: cover;
   background-repeat: no-repeat;
 
+  .columns {
+    text-align: center;
+    font: 0/0 a;
+
+    div {
+      display: inline-block;
+    vertical-align: middle;
+    }
+  }
+
+  .columns:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+  }
+
+
 }
 
 /**
