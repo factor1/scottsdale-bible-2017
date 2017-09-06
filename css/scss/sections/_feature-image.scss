@@ -1,0 +1,42 @@
+/**
+*
+* 10.0 Component - Featured Images and Videos
+* -----------------------------------------------------------------------------
+*/
+
+section.featured-image
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+
+    > .row
+    {
+        > .columns
+        {
+            padding: 0px;
+
+            img
+            {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+section.featured-video
+{
+    > .row
+    {
+        > .columns
+        {
+            iframe
+            {
+                width: 100%;
+            }
+        }
+    }
+}

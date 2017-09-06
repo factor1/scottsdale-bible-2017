@@ -1,0 +1,88 @@
+/**
+*
+* 7.0 Component - News and Stories
+* -----------------------------------------------------------------------------
+*/
+
+section.news-and-stories
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    > h1
+    {
+        text-align: center;
+    }
+
+    > .row:first-of-type
+    {
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+
+                > div
+                {
+                    max-width: 340px;
+                    margin: auto;
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        max-height: 230px;
+                        overflow: hidden;
+
+                        img
+                        {
+                            width: 100%;
+                            min-width: 100%;
+                        }
+                    }
+
+                    > div:last-child
+                    {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        > h3
+                        {
+                            > a
+                            {
+                               color: inherit;
+                               text-decoration: none;
+                            }
+                        }
+
+                        > a
+                        {
+                            display: block;
+                            position: relative;
+                            margin-top: 20px;
+                            float: left;
+                        }
+
+                        > p:last-of-type
+                        {
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+
+        > .navigation
+        {
+            text-align: left;
+        }
+    }
+
+}

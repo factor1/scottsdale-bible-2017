@@ -1,0 +1,32 @@
+/**
+*
+*  Upcoming-story
+* -----------------------------------------------------------------------------
+*/
+
+section.upcoming-story
+{
+  height: 600px;
+  background-image: url(../images/backgrounds/PhoenixB&W.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .columns {
+
+    div {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      top: 90px;
+      width: 100%;
+
+      img {
+        width: 60%;
+      }
+      a {
+        margin-top: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/**
+*
+* 8.0 Component - Plan Your Visit
+* -----------------------------------------------------------------------------
+*/
+
+section.plan-your-visit
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    hr {
+      border: 1px solid $gray1;
+      width: 60%;
+      text-align:center;
+      margin: 0px auto 50px auto;
+    }
+
+    h1
+    {
+        text-align: center;
+        padding: auto;
+    }
+
+    > .row
+    {
+        margin-top: 30px;
+        text-align: center;
+
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+
+                > .row
+                {
+                    margin: 0px;
+                    padding: 10px;
+                    border-top: 3px solid $darkbrown;
+                    background-color: #ffffff;
+
+                    > div
+                    {
+                        padding: 10px;
+                    }
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        overflow: hidden;
+
+                        > a
+                        {
+                            height: 150px;
+                        }
+                    }
+
+                    > div:last-child
+                    {
+                        text-align: left;
+
+                        > h3
+                        {
+                            margin: 0px;
+                            padding: 0px;
+                            line-height: 1;
+
+                            > a
+                            {
+                                color: $tertiary;
+                            }
+                        }
+
+                        > h5
+                        {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1;
+                        }
+
+                        > div
+                        {
+                            font-family: $Oswald;
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 19px;
+                            padding-top: 5px;
+
+                            p
+                            {
+                                 font-family: $Oswald;
+                                font-size: inherit;
+                                font-weight: inherit;
+                                line-height: inherit;
+                            }
+
+                            p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+
+                            a
+                            {
+                                font-weight: 700;
+                                font-style: italic;
+                                color: $lightbrown;
+                                text-decoration: underline;
+                            }
+
+                            a:hover
+                            {
+                                color: $darkbrown;
+                            }
+                        }
+                    }
+                }
+
+                > .row:hover
+                {
+                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
+                }
+            }
+        }
+    }
+
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,385 @@
+/**
+ * 2.0 Header Styles
+ * -----------------------------------------------------------------------------
+ */
+
+body
+{
+    > header
+    {
+        z-index: 9999;
+        position: relative;
+        background: $p-light;
+
+        .fa-bars
+        {
+            vertical-align: -5%;
+        }
+
+        /* Header - Top Row */
+        > .row:first-child
+        {
+
+            > .columns
+            {
+                height: 56px;
+            }
+
+            > .columns:first-child
+            {
+                text-align: center;
+
+                > a
+                {
+                    display: block;
+                    line-height: 100px;
+                }
+
+                img
+                {
+                    vertical-align: middle;
+                    max-height: 109px;
+                }
+            }
+
+            > .columns:last-child
+            {
+                line-height: 125px;
+                text-align: right;
+            }
+
+            ul.inline-list
+            {
+                display: inline-block;
+                margin-top: -50px;
+                font-size: 14px;
+                font-weight: 300;
+                vertical-align: middle;
+                overflow: visible;
+
+                > li
+                {
+                    position: relative;
+                    height: 25px;
+                    line-height: 25px;
+                    padding: 0px;
+                    margin: auto;
+                    margin-right: 30px;
+                    overflow: visible;
+
+                    i.fa
+                    {
+                        line-height: inherit;
+                        display: inline-block;
+                        position: relative;
+                        top: -1px;
+                        color: $primary;
+                    }
+
+                    i.fa.fa-search
+                    {
+                        display: block;
+                        position: absolute;
+                        top: 1px;
+                        left: 25px;
+
+                        + input
+                        {
+                            width: 175px;
+                            margin: auto;
+                            padding-left: 42px;
+                            padding-right: 4px;
+                            padding-top: 2px;
+                            padding-bottom: 2px;
+                            font-size: inherit;
+                            height: 30px;
+                            border: 0px;
+                            background-color: #f1f2f2;
+                            box-shadow: none;
+                            -web-kit-box-shadow: none;
+                            border-radius: 15px;
+                        }
+                    }
+
+                    a
+                    {
+                        display: inline;
+                        font-family: $Proxima;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 300;
+                        color: #fff;
+                        padding-left: 5px;
+                        text-decoration: none;
+                    }
+
+                    a:hover
+                    {
+                        color: $tertiary;
+                    }
+
+                    > ul
+                    {
+                        display: none;
+                        position: absolute;
+                        top: 29px;
+                        left: 50%;
+                        width: 340px;
+                        margin-left: -170px;
+                        z-index: 9999;
+
+                        > li
+                        {
+                            display: block;
+                            background-color: $p-medium;
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            padding-right: 0px;
+                            padding-left: 0px;
+                            text-align: center;
+
+                            > a
+                            {
+                                font-size: 24px;
+                                font-weight: 300;
+                                color: #ffffff;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                white-space: nowrap;
+
+                                > span
+                                {
+                                    font-weight: 700;
+                                }
+                            }
+
+                            > a:hover
+                            {
+                                color: $tertiary;
+                            }
+                        }
+
+                        > li:first-child
+                        {
+                            margin-top: 10px;
+                            padding-top: 26px;
+                        }
+
+                        > li:last-child
+                        {
+                            padding-bottom: 26px;
+                        }
+
+                    }
+
+                }
+
+                > li:hover
+                {
+                    > ul
+                    {
+                        display: block;
+                    }
+                }
+
+                > li:last-child {
+                  margin-right: 0px;
+                }
+            }
+        }
+
+        /* Header - Navigation */
+
+        > section
+        {
+            background: $primary;
+            height: 100px;
+
+            > .row
+            {
+                position: relative;
+
+                > .columns
+                {
+                    position: static;
+                    line-height: 100px;
+
+                    &:first-child {
+                      padding-left: 0px;
+                    }
+
+                    &:last-child {
+                      margin-right: 0px;
+                    }
+
+                    > a
+                    {
+                        position: relative;
+                        display: block;
+                        height: 70px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        font-size: 17px;
+                        font-weight: 300;
+                        color: #fff;
+                        text-decoration: none;
+                        vertical-align: bottom;
+
+
+                        > img {
+                          margin: 12.578000000000003px 0px;
+                          float: left;
+                          max-height: 90px;
+                          max-width: 200px;
+                        }
+                    }
+
+                    > nav
+                    {
+                        display: none;
+                        position: absolute;
+                        left: calc(-50vw + 50%);
+                        top: 100px;
+                        width: 100vw;
+                        height: auto;
+                        min-height: 100px;
+                        padding-bottom: 10px;
+                        margin: auto;
+                        background-color: $off-white;
+
+                        .box {
+                          background-color: #fff;
+                          max-height: 250px;
+                          margin-bottom: 15px;
+                        }
+
+                        .row {
+                          max-width: 1200px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          margin-top: 0;
+                          margin-bottom: 0;
+                        }
+
+                        h3 {
+                          padding-top: 40px;
+                        }
+
+                        h5
+                        {
+                            padding-bottom: 5px;
+                            border-bottom: 2px solid $tertiary;
+                            color: $tertiary;
+                            a:hover{
+                              text-decoration: none;
+                              color: $tertiary;
+                            }
+                        }
+
+                        > ul.inline-list
+                        {
+                          display: flex;
+                          justify-content: space-between;
+                          max-width: 1200px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          margin-top: 0;
+                          margin-bottom: 0;
+
+                            > li
+                            {
+                                min-height: 200px;
+
+
+                                > p
+                                {
+                                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    max-width: 250px;
+                                }
+
+                                ul
+                                {
+                                    margin-top: 5px;
+
+                                    > li
+                                    {
+                                        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        padding: auto;
+                                        padding-bottom: 10px;
+                                        line-height: 16px;
+
+                                        > a
+                                        {
+                                            color: inherit;
+                                            text-decoration: none;
+                                        }
+
+                                        > a:hover
+                                        {
+                                            color: $tertiary;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+
+                                ul[class*="block-grid-"]
+                                {
+                                    width: 300px;
+
+                                    > li
+                                    {
+                                        padding-left: 0px;
+                                    }
+                                }
+                            }
+                        }
+
+                        > div:last-child
+                        {
+                            text-align: center;
+
+                            > .fa
+                            {
+                                color: $lightbrown;
+                                font-size: 32px;
+                                font-weight: 400;
+                                cursor: pointer;
+                            }
+                        }
+
+                    }
+
+                }
+
+                > .columns:hover
+                {
+
+                    > nav
+                    {
+                        display: block;
+                        z-index: 9999;
+                    }
+
+                    > .hover-feature::after
+                    {
+                      content: "";
+                      position: absolute;
+                      bottom: 2px;
+                      left: 0;
+                      height: 2px;
+                      width: 100%;
+                      @include linear-gradient($secondary, $tertiary);
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}
