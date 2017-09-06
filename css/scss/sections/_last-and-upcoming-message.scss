@@ -5,7 +5,7 @@
 */
 
 section.last-and-upcoming-message {
-  max-height: 500px;
+  max-height: 550px;
   overflow: hidden;
 
   .columns div {
@@ -13,7 +13,7 @@ section.last-and-upcoming-message {
   }
 
     p {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     a {
       margin: 40px 0px;
@@ -25,7 +25,7 @@ section.last-and-upcoming-message {
 
   .img-holder {
     width: 50vw;
-    height: 500px;
+    height: 550px;
     margin-top: 0px !important;
     position: relative;
     overflow: hidden;
@@ -37,7 +37,7 @@ section.last-and-upcoming-message {
       display: block;
       top: 0;
       left: 0;
-      min-height: 500px;
+      min-height: 600px;
     }
   }
 }

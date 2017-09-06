@@ -34,9 +34,9 @@ if(!$last_weekend||!$upcoming_message) {
                 </div>
                 <?php if($upcoming_message) { ?>
                 <div>
-                    <h6><span>This Coming Weekend:</span> <?php echo esc_html($upcoming_message->title); ?></h6>
+                    <h1><span>This Coming Weekend:</span> <?php // echo esc_html($upcoming_message->title); ?></h1>
                     <?php if($upcoming_message->subtitle) { ?>
-                    <p><?php // echo esc_html($upcoming_message->subtitle); ?></p>
+                      <?php // echo "<p>" . esc_html($upcoming_message->subtitle) . "</p>"; ?>
                     <?php } ?>
                     <?php // if($upcoming_message->description) { ?>
                     <p><?php echo esc_html($upcoming_message->description); ?>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
