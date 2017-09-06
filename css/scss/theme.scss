@@ -60,6 +60,8 @@ $off-white: #E9ECF1;
 @import "sections/get-involved";
 @import "sections/upcoming-story";
 @import "sections/upcoming-message";
+@import "sections/location-map";
+
 
 // Template Specific Styles
 @import "templates/page-content";
@@ -268,30 +270,4 @@ body.single-event
     width: 100% !important;
     height: 450px !important;
   }
-}
-
-/**
-*
-* 21.0 Section - Map Locations
-* -----------------------------------------------------------------------------
-*/
-
-section.location-map
-{
-    height: 500px;
-    padding: 0px;
-    margin: 0px;
-
-    div.map-location
-    {
-        display: none;
-    }
-
-    div.map-container
-    {
-        div.map-location
-        {
-            display: block;
-        }
-    }
 }
