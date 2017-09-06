@@ -10,6 +10,7 @@ get_template_part("components/sections/upcoming-story");
 get_template_part("components/sections/last-and-upcoming-message");
 get_template_part("components/sections/upcoming-message");
 get_template_part("components/sections/news-and-stories");
+get_template_part("components/sections/plan-your-visit");
 get_template_part("components/sections/upcoming-events");
 get_template_part("components/sections/subscribe-to-news");
 get_template_part("components/sections/location-map");
