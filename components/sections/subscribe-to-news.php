@@ -5,20 +5,20 @@
     <h1><span>Subscribe to our</span> e-news</h1>
     <form action="http://scottsdalebible.us1.list-manage.com/subscribe/post?u=621f3dcab3b5d368b54832b84&amp;id=0de80d194a" method="post" target="_blank">
         <div class="row">
-            <div class="small-6 large-6 columns">
-                <p>Name:</p>
+            <div class="medium-6 columns">
+                Name:
                 <input type="text" name="FNAME" value="" placeholder="" required />
-                <p>First</p>
+                First
             </div>
-            <div class="small-6 large-6 columns">
-                <p>&nbsp</p>
+            <div class="medium-6 columns">
+                &nbsp
                 <input type="text" name="LNAME" value="" placeholder="" required />
-                <p>Last</p>
+                Last
             </div>
         </div>
         <div class="row">
             <div class="large-12 columns">
-                <p>Address</p>
+                Address:
                 <input type="text" name="EMAIL" value="" placeholder="" required />
             </div>
         </div>
