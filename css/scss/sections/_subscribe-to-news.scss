@@ -1,0 +1,57 @@
+/**
+*
+* Component - Subscribe to News
+* -----------------------------------------------------------------------------
+*/
+
+section.subscribe-to-news
+{
+    background-color: $darkbrown;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    > h1
+    {
+
+        text-align: center;
+        padding-bottom: 20px;
+
+        > .fa
+        {
+            margin-right: 20px;
+            color: $lightbrown;
+        }
+
+        > span
+        {
+            font-weight: 300;
+        }
+    }
+
+    > form
+    {
+        input
+        {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 10px;
+            color: $darkbrown;
+        }
+
+        input.button
+        {
+            font-family: $Oswald;
+            color: #ffffff;
+            font-size: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .button:hover
+        {
+            color: $lightbrown;
+            background-color: #ffffff;
+        }
+    }
+}
