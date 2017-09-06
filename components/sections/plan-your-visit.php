@@ -60,6 +60,6 @@ if(!$events) {
         </ul>
     </div>
     <div class="row">
-        <a href="<?php echo esc_attr($events_link); ?>" class="button dark-brown">See <span>all</span> events</a>
+        <a href="<?php echo esc_attr($events_link); ?>" class="button">View <span>all</span> Campuses</a>
     </div>
 </section>
