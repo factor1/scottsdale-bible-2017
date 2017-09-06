@@ -1148,18 +1148,7 @@ section.news-and-stories
 
     > h1
     {
-
         text-align: center;
-
-        > .fa
-        {
-            margin-right: 20px;
-        }
-
-        > span
-        {
-            font-weight: 300;
-        }
     }
 
     > .row:first-of-type
@@ -1190,7 +1179,6 @@ section.news-and-stories
 
                     > div:last-child
                     {
-                        border-top: 5px solid $lightbrown;
                         padding-top: 15px;
                         padding-bottom: 15px;
                         padding-left: 10px;
@@ -1208,41 +1196,14 @@ section.news-and-stories
                         > a
                         {
                             display: block;
-                            float: right;
                             position: relative;
-                            top: -20px;
-
-                            >.fa
-                            {
-                                margin-left: 10px;
-                                font-size: 32px;
-                                font-weight: 300;
-                                color: $lightbrown;
-                            }
-                        }
-
-                        > p
-                        {
-                            font-size: 13px;
-                            line-height: 1.3;
+                            margin-top: 20px;
+                            float: left;
                         }
 
                         > p:last-of-type
                         {
                             margin-bottom: 4px;
-                        }
-                    }
-                }
-
-                > div:hover
-                {
-                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
-
-                    > div:last-child
-                    {
-                        > h3
-                        {
-
                         }
                     }
                 }
@@ -1406,6 +1367,139 @@ section.upcoming-events
     }
 }
 
+/**
+*
+* 8.0 Component - Plan Your Visit
+* -----------------------------------------------------------------------------
+*/
+
+section.plan-your-visit
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    hr {
+      border: 1px solid $gray1;
+      width: 60%;
+      text-align:center;
+      margin: 0px auto 50px auto;
+    }
+
+    h1
+    {
+        text-align: center;
+        padding: auto;
+    }
+
+    > .row
+    {
+        margin-top: 30px;
+        text-align: center;
+
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+
+                > .row
+                {
+                    margin: 0px;
+                    padding: 10px;
+                    border-top: 3px solid $darkbrown;
+                    background-color: #ffffff;
+
+                    > div
+                    {
+                        padding: 10px;
+                    }
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        overflow: hidden;
+
+                        > a
+                        {
+                            height: 150px;
+                        }
+                    }
+
+                    > div:last-child
+                    {
+                        text-align: left;
+
+                        > h3
+                        {
+                            margin: 0px;
+                            padding: 0px;
+                            line-height: 1;
+
+                            > a
+                            {
+                                color: $tertiary;
+                            }
+                        }
+
+                        > h5
+                        {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1;
+                        }
+
+                        > div
+                        {
+                            font-family: $Oswald;
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 19px;
+                            padding-top: 5px;
+
+                            p
+                            {
+                                 font-family: $Oswald;
+                                font-size: inherit;
+                                font-weight: inherit;
+                                line-height: inherit;
+                            }
+
+                            p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+
+                            a
+                            {
+                                font-weight: 700;
+                                font-style: italic;
+                                color: $lightbrown;
+                                text-decoration: underline;
+                            }
+
+                            a:hover
+                            {
+                                color: $darkbrown;
+                            }
+                        }
+                    }
+                }
+
+                > .row:hover
+                {
+                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
+                }
+            }
+        }
+    }
+
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
 
 /**
 *
@@ -1413,162 +1507,42 @@ section.upcoming-events
 * -----------------------------------------------------------------------------
 */
 
-section.last-and-upcoming-message
-{
-    padding-top: 70px;
-    padding-bottom: 70px;
+section.last-and-upcoming-message {
+  max-height: 500px;
 
-    > .row
-    {
+  .columns div {
+    margin-top: 50px;
+  }
 
-        > div
-        {
-            > div
-            {
-                display: inline-block;
-                text-align: left;
-
-                > div:nth-child(2)
-                {
-                    border-top: 5px solid $lightbrown;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                    padding-left: 50px;
-                    padding-right: 25px;
-
-                    > h3
-                    {
-                        padding-left: 15px;
-                        position: relative;
-                        margin-bottom: 3px;
-
-                        > span
-                        {
-                            font-weight: 700;
-                        }
-
-                        > .fa
-                        {
-                            position: absolute;
-                            left: -25px;
-                            top: 3px;
-                        }
-                    }
-
-                    > h5
-                    {
-                        font-size: 14px;
-                        font-weight: 300;
-                    }
-                }
-            }
-        }
-
-        > div:first-child
-        {
-            text-align: right;
-
-            > div
-            {
-                max-width: 608px;
-                padding: 0px;
-                margin: 0px;
-
-                > div:first-child
-                {
-                    text-align: center;
-                    max-height: 340px;
-                    overflow: hidden;
-
-                    img
-                    {
-                        min-width: 100%;
-                    }
-                }
-
-                > div:last-child
-                {
-                    background-color: $darkbrown;
-
-                    > h3
-                    {
-
-                    }
-
-                    > h5
-                    {
-                        color: #ffffff;
-                    }
-
-                    .fa
-                    {
-                        color: $lightbrown;
-                    }
-                }
-            }
-        }
-
-        > div:last-child
-        {
-            text-align: left;
-
-            > div
-            {
-                background-color: #ffffff;
-                max-width: 410px;
-                padding: 0px;
-                margin: 0px;
-
-                > div:first-child
-                {
-                    text-align: center;
-                    max-height: 250px;
-                    overflow: hidden;
-
-                    img
-                    {
-                        min-height: 250px;
-                        min-width: 100%;
-                    }
-                }
-
-                > div:nth-child(2)
-                {
-                    > h3
-                    {
-
-                    }
-
-                    > h5
-                    {
-                        color: $gray1;
-                    }
-                }
-
-                > div:last-child
-                {
-                    padding-left: 50px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-
-                    a
-                    {
-                        font-size: 30px;
-                        color: $lightbrown;
-                        padding-right: 30px;
-                    }
-
-                    a:hover
-                    {
-                        color: $darkbrown;
-                    }
-                }
-            }
-
-        }
+    p {
+      margin-bottom: 40px;
     }
-}
+    a {
+      margin: 40px 0px;
 
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+
+  .img-holder {
+    width: 48.9vw;
+    height: 500px;
+    margin-top: 0px !important;
+    position: relative;
+    overflow: hidden;
+    right: 0px;
+
+
+    img {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+    }
+  }
+}
 
 /**
 *
@@ -2020,7 +1994,7 @@ section.get-involved
 
 /**
 *
-* 13.0 Component - Upcoming-story
+* 14.0 Component - Upcoming-story
 * -----------------------------------------------------------------------------
 */
 
@@ -2053,7 +2027,45 @@ section.upcoming-story
 
 /**
 *
-* 15.0 Component - Not Found
+* 15.0 Component - Upcoming-story
+* -----------------------------------------------------------------------------
+*/
+
+section.upcoming-message
+{
+  height: 600px;
+  background-image: url(../images/backgrounds/PhoenixB&W.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+
+  .columns {
+
+    div {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      top: 90px;
+      width: 100%;
+
+      img {
+        max-height: 300px;
+      }
+      a {
+        margin-top: 10px;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/**
+*
+* 16.0 Component - Not Found
 * -----------------------------------------------------------------------------
 */
 
@@ -2078,7 +2090,7 @@ section.not-found
 
 /**
 *
-* 13.0 Section - Archive Posts
+* 17.0 Section - Archive Posts
 * -----------------------------------------------------------------------------
 */
 
@@ -2129,7 +2141,7 @@ section.posts-archive
 
 /**
 *
-* 14.0 Section - Archive Posts
+* 18.0 Section - Archive Posts
 * -----------------------------------------------------------------------------
 */
 
@@ -2150,7 +2162,7 @@ section.search-results
 
 /**
 *
-* 15.0 Page - Messages - Series Archives
+* 19.0 Page - Messages - Series Archives
 * -----------------------------------------------------------------------------
 */
 
@@ -2218,7 +2230,7 @@ section.page-content
 
 /**
 *
-* 16.0 Events - Details Page
+* 20.0 Events - Details Page
 * -----------------------------------------------------------------------------
 */
 
@@ -2257,7 +2269,7 @@ body.single-event
 
 /**
 *
-* 17.0 Section - Map Locations
+* 21.0 Section - Map Locations
 * -----------------------------------------------------------------------------
 */
 
