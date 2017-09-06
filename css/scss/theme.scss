@@ -964,7 +964,7 @@ section.subscribe-to-news
 section.image-slider
 {
     position: relative;
-    max-height: 800px;
+    max-height: 500px;
     overflow: hidden;
 
     > ul
@@ -972,7 +972,6 @@ section.image-slider
         list-style-type: none;
         margin: 0px;
         padding: 0px;
-        height: 800px;
 
         > li
         {
@@ -981,7 +980,7 @@ section.image-slider
             padding: 0px;
             overflow: hidden;
             text-align: center;
-            height: 800px !important;
+            height: 500px !important;
 
             > a
             {
@@ -1522,7 +1521,7 @@ section.last-and-upcoming-message {
     }
 
   .img-holder {
-    width: 48.8vw;
+    width: 48.9vw;
     height: 500px;
     margin-top: 0px !important;
     position: relative;
