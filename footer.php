@@ -9,17 +9,18 @@ if($location) {
 ?>
     <footer>
         <div class="row">
-            <div class="small-12 large-4 columns small-text-center large-text-left">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sbclogo-white.png" alt="" title="" />
+            <div class="small-1 columns">&nbsp</div>
+            <div class="small-10 large-3 columns small-text-center large-text-left">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/SBC-BlueWhite-logo.svg" alt="" title="" />
             </div>
-            <div class="medium-6 large-4 columns">
+            <div class="medium-5 large-4 columns small-text-center large-text-center">
                 <div>For general information or our pastor-on-call:</div>
                 <div><a href="#" class="button">(480) 824-7200</a></div>
                 <?php if(isset($address)) { ?>
                 <div><?php echo esc_html($address); ?></div>
                 <?php } ?>
             </div>
-            <div class="medium-6 large-4 columns small-text-center large-text-right">
+            <div class="medium-5 large-3 columns small-text-center large-text-right">
                 <div>
                     <a href="mailto:info@scottsdalebible.com"><i class="fa fa-envelope"></i><span>info@scottsdalebible.com</span></a>
                 </div>
@@ -38,6 +39,14 @@ if($location) {
                     </div>
                 </div>
             </div>
+            <div class="small-1 columns">&nbsp</div>
+        </div>
+        <div class="row">
+          <div class="small-1 columns">&nbsp</div>
+          <div class="small-10 columns">
+            <hr class="gradient">
+          </div>
+          <div class="small-1 columns">&nbsp</div>
         </div>
         <div class="row">
             <div class="small-12 columns">

@@ -8,3 +8,10 @@ hr {
   text-align:center;
   margin: 0px auto 50px auto;
 }
+
+hr.gradient {
+  @include linear-gradient(90deg, $secondary, $tertiary);
+  width: 100%;
+  border: none;
+  height: 3px;
+}
