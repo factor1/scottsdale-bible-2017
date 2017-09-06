@@ -8,17 +8,18 @@
             <div class="medium-6 columns">
                 Name:
                 <input type="text" name="FNAME" value="" placeholder="" required />
-                First
+                First Name
             </div>
             <div class="medium-6 columns">
                 &nbsp
                 <input type="text" name="LNAME" value="" placeholder="" required />
-                Last
+                Last Name
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="large-12 columns">
-                Address:
+                Email Address:
                 <input type="text" name="EMAIL" value="" placeholder="" required />
             </div>
         </div>

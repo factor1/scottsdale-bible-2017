@@ -16,10 +16,12 @@ section.subscribe-to-news
 
     .button {
       border-radius: 20px;
+      margin-top: 1em;
     }
 
     input[type=text] {
       background-color: $off-white;
+      margin-bottom: 0px;
     }
 
 }
