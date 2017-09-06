@@ -8,6 +8,7 @@ get_template_part("components/sections/image-slider");
 get_template_part("components/sections/get-involved");
 get_template_part("components/sections/upcoming-story");
 get_template_part("components/sections/last-and-upcoming-message");
+get_template_part("components/sections/upcoming-message");
 get_template_part("components/sections/news-and-stories");
 get_template_part("components/sections/upcoming-events");
 get_template_part("components/sections/subscribe-to-news");
