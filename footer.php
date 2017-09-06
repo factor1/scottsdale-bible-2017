@@ -42,6 +42,13 @@ if($location) {
             <div class="small-1 columns">&nbsp</div>
         </div>
         <div class="row">
+          <div class="small-1 columns">&nbsp</div>
+          <div class="small-10 columns">
+            <hr class="gradient">
+          </div>
+          <div class="small-1 columns">&nbsp</div>
+        </div>
+        <div class="row">
             <div class="small-12 columns">
 
                 <?php get_template_part("components/menus/footer-menu"); ?>
