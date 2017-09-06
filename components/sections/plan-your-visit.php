@@ -29,13 +29,8 @@ if(!$events) {
 
 ?>
 <section class="plan-your-visit">
-    <div class="row">
-      <div class="medium-2 columns"> &nbsp</div>
-      <div class="medium-8 columns">
-        <h1>Plan Your Visit</h1>
-      </div>
-      <div class="medium-2 columns"> &nbsp</div>
-    </div>
+    <hr>
+    <h1>Plan Your Visit</h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-2">
             <?php foreach($events as $event) { ?>
