@@ -1413,162 +1413,42 @@ section.upcoming-events
 * -----------------------------------------------------------------------------
 */
 
-section.last-and-upcoming-message
-{
-    padding-top: 70px;
-    padding-bottom: 70px;
+section.last-and-upcoming-message {
+  max-height: 500px;
 
-    > .row
-    {
+  .columns div {
+    margin-top: 50px;
+  }
 
-        > div
-        {
-            > div
-            {
-                display: inline-block;
-                text-align: left;
-
-                > div:nth-child(2)
-                {
-                    border-top: 5px solid $lightbrown;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                    padding-left: 50px;
-                    padding-right: 25px;
-
-                    > h3
-                    {
-                        padding-left: 15px;
-                        position: relative;
-                        margin-bottom: 3px;
-
-                        > span
-                        {
-                            font-weight: 700;
-                        }
-
-                        > .fa
-                        {
-                            position: absolute;
-                            left: -25px;
-                            top: 3px;
-                        }
-                    }
-
-                    > h5
-                    {
-                        font-size: 14px;
-                        font-weight: 300;
-                    }
-                }
-            }
-        }
-
-        > div:first-child
-        {
-            text-align: right;
-
-            > div
-            {
-                max-width: 608px;
-                padding: 0px;
-                margin: 0px;
-
-                > div:first-child
-                {
-                    text-align: center;
-                    max-height: 340px;
-                    overflow: hidden;
-
-                    img
-                    {
-                        min-width: 100%;
-                    }
-                }
-
-                > div:last-child
-                {
-                    background-color: $darkbrown;
-
-                    > h3
-                    {
-
-                    }
-
-                    > h5
-                    {
-                        color: #ffffff;
-                    }
-
-                    .fa
-                    {
-                        color: $lightbrown;
-                    }
-                }
-            }
-        }
-
-        > div:last-child
-        {
-            text-align: left;
-
-            > div
-            {
-                background-color: #ffffff;
-                max-width: 410px;
-                padding: 0px;
-                margin: 0px;
-
-                > div:first-child
-                {
-                    text-align: center;
-                    max-height: 250px;
-                    overflow: hidden;
-
-                    img
-                    {
-                        min-height: 250px;
-                        min-width: 100%;
-                    }
-                }
-
-                > div:nth-child(2)
-                {
-                    > h3
-                    {
-
-                    }
-
-                    > h5
-                    {
-                        color: $gray1;
-                    }
-                }
-
-                > div:last-child
-                {
-                    padding-left: 50px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-
-                    a
-                    {
-                        font-size: 30px;
-                        color: $lightbrown;
-                        padding-right: 30px;
-                    }
-
-                    a:hover
-                    {
-                        color: $darkbrown;
-                    }
-                }
-            }
-
-        }
+    p {
+      margin-bottom: 40px;
     }
-}
+    a {
+      margin: 40px 0px;
 
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+
+  .img-holder {
+    width: 50vw;
+    height: 500px;
+    margin-top: 0px !important;
+    position: relative;
+    overflow: hidden;
+    right: 0px;
+
+
+    img {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+    }
+  }
+}
 
 /**
 *
@@ -2020,7 +1900,7 @@ section.get-involved
 
 /**
 *
-* 13.0 Component - Upcoming-story
+* 14.0 Component - Upcoming-story
 * -----------------------------------------------------------------------------
 */
 

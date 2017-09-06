@@ -20,41 +20,41 @@ if(!$last_weekend||!$upcoming_message) {
         <div class="large-6 columns">
             <div>
                 <div>
-                    <?php if($last_weekend->image) { ?>
-                    <a href="<?php echo esc_attr($last_weekend->url); ?>">
-                    <img src="<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>" alt="" title="" />
-                    </a>
-                    <?php } ?>
-                </div>
-                <div>
                     <h1><span>Current Message:</span> <?php echo esc_html($last_weekend->title); ?></h3>
                     <?php // Subtitle Option ?>
                     <?php if($last_weekend->subtitle) { ?>
                     <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
-                    <?php if($last_weekend->description) { ?>
-                    <p><?php echo esc_html($last_weekend->description); ?></p>
-                    <?php } ?>
+                    <?php // if($last_weekend->description) { ?>
+                    <p><?php echo esc_html($last_weekend->description); ?>Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
+                    <?php // } ?>
+                    <br />
+                    <a href="#" class="button-second" data-target="new-window">Messages</a>
+                    <a href="#" class="button-second" data-target="new-window">Watch</a>
                 </div>
+                <?php if($upcoming_message) { ?>
                 <div>
-                    <h3><i class="fa fa-calendar"></i><span>UPCOMING MESSAGE:</span> <?php echo esc_html($upcoming_message->title); ?></h3>
+                    <h6><span>This Coming Weekend:</span> <?php echo esc_html($upcoming_message->title); ?></h6>
                     <?php if($upcoming_message->subtitle) { ?>
-                    <h5><?php echo esc_html($upcoming_message->subtitle); ?></h5>
+                    <p><?php // echo esc_html($upcoming_message->subtitle); ?></p>
                     <?php } ?>
+                    <?php // if($upcoming_message->description) { ?>
+                    <p><?php echo esc_html($upcoming_message->description); ?>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                    <?php // } ?>
                 </div>
-
+                <?php } ?>
             </div>
         </div>
         <?php } ?>
-        <?php if($upcoming_message) { ?>
+        <?php if($last_weekend) { ?>
         <div class="large-6 columns">
-            <div>
-                <div>
-                    <?php if($upcoming_message->image) { ?>
-                    <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
-                    <?php } ?>
-                </div>
+            <?php if($last_weekend->image) { ?>
+            <div class="img-holder">
+              <a href="<?php echo esc_attr($last_weekend->url); ?>">
+                <img src="<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>" alt="" title="" />
+              </a>
             </div>
+            <?php } ?>
         </div>
         <?php } ?>
     </div>
