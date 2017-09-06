@@ -30,13 +30,14 @@ $off-white: #E9ECF1;
 	# Imports
 ----------------------------------------------------------------------------- */
 
-// Global Syles
-@import "globals/global";
-@import "globals/buttons";
-
 // Abstract Styles
 
 @import "abstracts/mixins";
+
+// Global Syles
+@import "globals/global";
+@import "globals/buttons";
+@import "globals/hr";
 
 // Component Styles
 
@@ -61,7 +62,7 @@ $off-white: #E9ECF1;
 @import "sections/upcoming-message";
 
 // Template Specific Styles
-@import "templates/page";
+@import "templates/page-content";
 
 
 
