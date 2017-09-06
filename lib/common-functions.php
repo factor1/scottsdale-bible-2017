@@ -126,6 +126,21 @@ if(!function_exists("f1_get_image_field"))
     }
 }
 
+if(!function_exists("f1_get_theme_background_image_style"))
+{
+    /**
+    *   Returns to background image style declaration from image array
+    *
+    *   @param array|string $image
+    *
+    *   @return string
+    */
+    function f1_get_theme_background_image_style($image,$size = 'large') {
+        $url = (is_array($image)) ? get_theme_image_url_from_array($image,$size) : $image;
+        return ($url) ? ' style="background-image:url('.esc_attr($url).')"' : '';
+    }
+}
+
 if(!function_exists("f1_get_date_field"))
 {
     function f1_get_date_field($field_name,$post_id,$format = "F d, Y")
@@ -309,6 +324,7 @@ $theme_functions = [
     'f1_get_repeater_subfields',
     'f1_get_image',
     'f1_get_image_field',
+    'f1_get_theme_background_image_style',
     'f1_get_date_field',
     'f1_get_the_content',
     'f1_get_menu_field',
