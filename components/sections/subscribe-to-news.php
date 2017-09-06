@@ -1,7 +1,8 @@
 <?php if(!isset($wp)) { return; } ?>
 
 <section class="subscribe-to-news">
-    <h1><i class="fa fa-newspaper-o"></i><span>Subscribe to our</span> weekly e-news</h1>
+    <hr>
+    <h1><span>Subscribe to our</span> e-news</h1>
     <form action="http://scottsdalebible.us1.list-manage.com/subscribe/post?u=621f3dcab3b5d368b54832b84&amp;id=0de80d194a" method="post" target="_blank">
         <div class="row">
             <div class="small-12 large-3 columns">
