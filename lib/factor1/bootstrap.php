@@ -12,8 +12,7 @@ require_once($f1."/FooterMenuWalker.php");
 require_once($f1."/shortcodes/lib/ShortcodeMaker.php");
 
 require_once($lib."/register-post-types.php");
-require_once($lib."/register-field-groups.php");
+// require_once($lib."/register-field-groups.php");
 require_once($lib."/register-acf-filters.php");
 require_once($lib."/register-nav-menus.php");
 require_once($lib."/common-functions.php");
-
