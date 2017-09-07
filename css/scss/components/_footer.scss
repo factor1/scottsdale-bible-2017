@@ -16,7 +16,9 @@ body
           margin-bottom: 0px;
         }
 
-
+        img {
+          max-width: 80%;
+        }
 
         > .row:first-child
         {
@@ -44,20 +46,8 @@ body
 
             a
             {
-                font-family: "Open Sans", Helvetica, Arial, sans-serif;
                 font-size: 15px;
-                font-weight: 800;
                 color: #ffffff;
-
-
-                > .fa
-                {
-                    line-height: inherit;
-                    vertical-align: middle;
-                    position: relative;
-                    top: -1px;
-                    margin-right: 5px;
-                }
             }
 
             a:hover
