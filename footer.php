@@ -17,13 +17,14 @@ if($location) {
                 <div>For general information or our pastor-on-call:</div>
                 <div><a href="#" class="button">(480) 824-7200</a></div>
                 <?php if(isset($address)) { ?>
-                <div><?php echo esc_html($address); ?></div>
+                <div><? echo esc_html($address); ?></div>
                 <?php } ?>
             </div>
             <div class="small-10 small-centered large-3 large-uncentered columns small-text-center large-text-right">
                 <div>
-                    <a href="mailto:info@scottsdalebible.com"><i class="fa fa-envelope"></i><span>info@scottsdalebible.com</span></a>
+                    <a href="mailto:info@scottsdalebible.com"><span>feedback@scottsdalebible.com</span></a>
                 </div>
+                <br>
                 <div>
                     <a href="https://twitter.com/scottsdalebible"><i class="fa fa-twitter"></i></a>
                     <a href="https://www.facebook.com/scottsdalebible"><i class="fa fa-facebook"></i></a>
