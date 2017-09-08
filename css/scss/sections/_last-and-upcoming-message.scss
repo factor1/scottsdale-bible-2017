@@ -34,13 +34,6 @@ section.last-and-upcoming-message {
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (small down) {
-      min-width: 100% !important;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: initial;
-    }
-
 
     img {
       position: absolute;
