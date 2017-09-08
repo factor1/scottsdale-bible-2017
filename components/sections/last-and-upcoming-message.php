@@ -17,7 +17,7 @@ if(!$last_weekend||!$upcoming_message) {
 <section class="last-and-upcoming-message">
     <div class="row">
         <?php if($last_weekend) { ?>
-        <div class="medium-6 columns">
+        <div class="small-12 medium-6 columns">
             <div>
                 <div>
                     <h1><span>Current Message:</span> <?php echo esc_html($last_weekend->title); ?></h3>
@@ -26,11 +26,11 @@ if(!$last_weekend||!$upcoming_message) {
                     <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
                     <?php // if($last_weekend->description) { ?>
-                    <p><?php echo esc_html($last_weekend->description); ?>Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada.</p>
+                    <p><?php echo esc_html($last_weekend->description); ?></p>
                     <?php // } ?>
                     <br />
-                    <a href="#" class="button-second" data-target="new-window">Messages</a>
-                    <a href="#" class="button-second" data-target="new-window">Watch</a>
+                    <a href="/message" class="button-second" data-target="new-window">Messages</a>
+                    <a href="/live" class="button-second" data-target="new-window">Watch</a>
                 </div>
                 <?php if($upcoming_message) { ?>
                 <div>
@@ -39,7 +39,7 @@ if(!$last_weekend||!$upcoming_message) {
                       <?php // echo "<p>" . esc_html($upcoming_message->subtitle) . "</p>"; ?>
                     <?php } ?>
                     <?php // if($upcoming_message->description) { ?>
-                    <p><?php echo esc_html($upcoming_message->description); ?>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                    <p><?php echo esc_html($upcoming_message->description); ?></p>
                     <?php // } ?>
                 </div>
                 <?php } ?>
@@ -47,11 +47,11 @@ if(!$last_weekend||!$upcoming_message) {
         </div>
         <?php } ?>
         <?php if($last_weekend) { ?>
-        <div class="medium-6 columns">
+        <div class="small-12 medium-6 columns" >
             <?php if($last_weekend->image) { ?>
-            <div class="img-holder">
+            <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
               <a href="<?php echo esc_attr($last_weekend->url); ?>">
-                <img src="<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>" alt="" title="" />
+
               </a>
             </div>
             <?php } ?>
