@@ -23,8 +23,8 @@ if(!$last_weekend||!$upcoming_message) {
                   <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
                 </a>
                 <?php } ?>
-                <?php if($upcoming_message->subtitle) { ?>
-                <p><?php echo esc_html($upcoming_message->subtitle); ?></p>
+                <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
+                <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
                 <?php } ?>
                 <a href="#" class="button" data-target="new-window">Learn More</a>
             </div>

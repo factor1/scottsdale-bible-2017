@@ -34,7 +34,7 @@ if(!$last_weekend||!$upcoming_message) {
                 </div>
                 <?php if($upcoming_message) { ?>
                 <div>
-                    <h1><span>This Coming Weekend:</span> <?php // echo esc_html($upcoming_message->title); ?></h1>
+                    <h6><span>This Coming Weekend:</span> <?php // echo esc_html($upcoming_message->title); ?></h6>
                     <?php if($upcoming_message->subtitle) { ?>
                       <?php // echo "<p>" . esc_html($upcoming_message->subtitle) . "</p>"; ?>
                     <?php } ?>
