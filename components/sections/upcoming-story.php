@@ -5,23 +5,24 @@ if(!isset($post)) {
 }
 $story_post_id = (get_field("use_homepage_story")) ? sb_get_homepage_post_id() : $post->ID;
 
-$upcoming_story = get_field("upcoming_story",$story_post_id);
+$upcoming_story = ($f=get_field("upcoming_story",$story_post_id)) ? (object) $f[0] : null;
 
 if(!$upcoming_story) {
     return;
 }
 
 ?>
-<section class="upcoming-story">
-    <div class="row">
-        <?php if($upcoming_story) { ?>
+
+<?php if($upcoming_story) { ?>
+<section class="upcoming-story" style="background-image: url(<?php echo esc_attr($upcoming_story->image['sizes']['large']); ?>);">
+    <div class="row fullWidth">
         <div class="small-12 columns">
             <div>
-                <img src="<?php echo get_template_directory_uri() ?>/images/holders/LifeisbetterConnectedlogo.png" />
-                <br style="clear:both" />
-                <a href="#" class="button" data-target="new-window">Learn More</a>
+                <?php if($upcoming_story->show_button_option === true) { ?>
+                <a href="<?php echo esc_attr($upcoming_story->button_internal_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_story->button_text); ?></a>
+                <?php } ?>
             </div>
         </div>
-        <?php } ?>
     </div>
 </section>
+<?php } ?>
