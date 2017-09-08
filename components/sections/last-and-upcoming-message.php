@@ -17,7 +17,7 @@ if(!$last_weekend||!$upcoming_message) {
 <section class="last-and-upcoming-message">
     <div class="row">
         <?php if($last_weekend) { ?>
-        <div class="small-12 medium-6 columns">
+        <div class="small-12 medium-12 large-6 columns">
             <div>
                 <div>
                     <h1><span>Current Message:</span> <?php echo esc_html($last_weekend->title); ?></h3>
@@ -47,7 +47,7 @@ if(!$last_weekend||!$upcoming_message) {
         </div>
         <?php } ?>
         <?php if($last_weekend) { ?>
-        <div class="small-12 medium-6 columns" >
+        <div class="small-12 medium-12 large-6 columns" >
             <?php if($last_weekend->image) { ?>
             <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
               <a href="<?php echo esc_attr($last_weekend->url); ?>">
