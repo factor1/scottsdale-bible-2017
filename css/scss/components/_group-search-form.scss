@@ -28,7 +28,6 @@ section.group-search-form
                     padding-top: 6px;
                     padding-bottom: 6px;
                     text-transform: uppercase;
-                    border: 2px solid $lightbrown;
 
                     > option
                     {
@@ -44,7 +43,7 @@ section.group-search-form
 
                     > .fa
                     {
-                        color: $lightbrown;
+                        color: $gray1;
                         position: relative;
                         top: -1px;
                     }
