@@ -60,7 +60,13 @@ section.last-and-upcoming-message {
             > div:last-child
             {
                 text-align: center;
+                padding: 0px !important;
             }
+        }
+
+        .img-holder {
+          height: 300px;
+          width: auto;
         }
     }
 }
