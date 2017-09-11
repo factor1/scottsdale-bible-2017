@@ -23,7 +23,7 @@ if(!$last_weekend||!$upcoming_message) {
                     <h1><span>Current Message:</span> <?php echo esc_html($last_weekend->title); ?></h3>
                     <?php // Subtitle Option ?>
                     <?php if($last_weekend->subtitle) { ?>
-                    <h5><?php echo esc_html($last_weekend->subtitle); ?></h5>
+                    <h5><?php // echo esc_html($last_weekend->subtitle); ?></h5>
                     <?php } ?>
                     <?php // if($last_weekend->description) { ?>
                     <p><?php echo esc_html($last_weekend->description); ?></p>

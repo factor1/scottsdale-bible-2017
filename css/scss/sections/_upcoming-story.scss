@@ -23,3 +23,9 @@ section.upcoming-story
     }
   }
 }
+
+// Media Queries
+
+@media only screen and (max-width: 650px) {
+  height: 300px;
+}
