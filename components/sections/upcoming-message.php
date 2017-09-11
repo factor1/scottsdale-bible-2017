@@ -26,7 +26,9 @@ if(!$last_weekend||!$upcoming_message) {
                 <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
                 <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
                 <?php } ?>
-                <a href="#" class="button" data-target="new-window">Learn More</a>
+                <?php if($upcoming_message->button_option === true) { ?>
+                <a href="<?php echo esc_attr($upcoming_message->button_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_message->button_text); ?></a>
+                <?php } ?>
             </div>
         </div>
     </div>
