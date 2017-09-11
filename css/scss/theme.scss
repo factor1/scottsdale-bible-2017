@@ -73,11 +73,6 @@ section.not-found
     {
         background-color: #ffffff;
         padding: 40px;
-
-        > h2
-        {
-            border-bottom: 2px solid #bf965c;
-        }
     }
 }
 
@@ -107,12 +102,11 @@ section.posts-archive
 
         > h2
         {
-            border-bottom: 2px solid $lightbrown;
             margin-bottom: 4px;
 
             > a
             {
-                color: $lightbrown;
+                color: $tertiary;
             }
         }
 
@@ -201,7 +195,7 @@ section.page-content
 
                     > a:hover
                     {
-                        color: $lightbrown;
+                        color: $tertiary;
                     }
                 }
 

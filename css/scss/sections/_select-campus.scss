@@ -39,7 +39,6 @@ section.select-campus
 
                     > span
                     {
-                        color: $lightbrown;
                         font-weight: 700;
                     }
 
@@ -56,7 +55,7 @@ section.select-campus
 
             > li + li
             {
-                background-color: $darkbrown;
+                background-color: $primary;
                 padding-top: 6px;
                 padding-bottom: 6px;
                 padding-right: 80px;
@@ -79,7 +78,7 @@ section.select-campus
 
                 > a:hover
                 {
-                    color: $lightbrown;
+                    color: $tertiary;
                 }
             }
 
