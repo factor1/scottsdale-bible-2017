@@ -4,39 +4,16 @@
 * -----------------------------------------------------------------------------
 */
 
-section.upcoming-story
-{
-  height: 600px;
+.upcoming-story {
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  height: 40vw;
   text-align: center;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  .columns {
-
-    div {
-      top: 400px;
-      position: inherit;
-    }
-  }
-}
-
-// Media Queries
-
-@media only screen and (max-width: 650px) {
-  section.upcoming-story {
-    height: 300px;
-    display: block;
-
-    .columns {
-
-      div {
-        top: 100px;
-        position: inherit;
-      }
-    }
+  div {
+    margin-top: 15vw;
   }
 }
