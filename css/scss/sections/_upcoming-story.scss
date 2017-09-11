@@ -11,14 +11,14 @@ section.upcoming-story
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
 
   .columns {
 
     div {
-      top: 150px;
+      top: 400px;
       position: inherit;
     }
   }
@@ -30,12 +30,13 @@ section.upcoming-story
   section.upcoming-story {
     height: 300px;
     display: block;
-  }
-  .columns {
 
-    div {
-      top: 100px;
-      position: inherit;
+    .columns {
+
+      div {
+        top: 100px;
+        position: inherit;
+      }
     }
   }
 }

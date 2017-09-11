@@ -11,20 +11,6 @@ $Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
 $Oswald: Oswald, Helvetica, Arial, sans-serif;
 $Kepler: "kepler-std", georgia, "Times New Roman", serif;
 
-/* Colors */
-$lightbrown: #be955b;
-$darkbrown: #414042;
-
-$primary: #1D2B3B;
-$p-medium: #35414E;
-$p-light: #55606A;
-$secondary: #2ABFCC;
-$tertiary: #41A4DF;
-$quaternary: #8F9EBD;
-$gray1: #414042;
-$gray2: #414042;
-$off-white: #E9ECF1;
-
 
 /* -----------------------------------------------------------------------------
 	# Imports
@@ -35,6 +21,7 @@ $off-white: #E9ECF1;
 @import "abstracts/mixins";
 
 // Global Syles
+@import "globals/colors";
 @import "globals/global";
 @import "globals/buttons";
 @import "globals/hr";

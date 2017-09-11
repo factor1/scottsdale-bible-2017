@@ -6,17 +6,15 @@
         <div class="small-12 columns">
             <div>
                 <h1>Get Involved</h1>
-                <p>
-                  <?php while ( have_rows('get_involved') ) : the_row();
+                <?php while ( have_rows('get_involved') ) : the_row();
 
-                  // vars
-                  $button = get_sub_field('button_text');
-                  $button_link = get_sub_field('button_link');
+                // vars
+                $button = get_sub_field('button_text');
+                $button_link = get_sub_field('button_link');
 
-                  ?>
-                  <a href="<?php echo $button_link ?>" class="button-second" data-target="new-window"><?php echo $button ?></a>
-                  <?php endwhile; ?>
-                </p>
+                ?>
+                <a href="<?php echo $button_link ?>" class="button-second button-involved" data-target="new-window"><?php echo $button ?></a>
+                <?php endwhile; ?>
             </div>
         </div>
     </div>

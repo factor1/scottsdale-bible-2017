@@ -1,3 +1,10 @@
+/* -----------------------------------------------------------------------------
+	# Imports
+----------------------------------------------------------------------------- */
+// Global Syles
+@import "globals/colors";
+
+
 /**
 *
 * 1.0 Admin Bar Fix
@@ -198,7 +205,7 @@
                             text-align: inherit;
                             padding-left: 30px;
                             padding-right: 30px;
-                            border-top: 2px solid #be955b;
+                            border-top: 2px solid $primary;
                         }
 
                         > nav
