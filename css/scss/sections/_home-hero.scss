@@ -1,0 +1,24 @@
+/**
+*
+*  Home-Hero
+* -----------------------------------------------------------------------------
+*/
+
+.home-hero {
+  background-size: cover !important;
+  background-position: center;
+  height: 50vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  a {
+    margin: 20px;
+  }
+}
