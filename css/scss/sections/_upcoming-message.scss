@@ -4,9 +4,32 @@
 * -----------------------------------------------------------------------------
 */
 
+.upcoming-message {
+  background-image: url(../images/holders/PhoenixB&W.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vw;
+  min-height: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-height: 30vw;
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-family: $Proxima;
+    color: #fff;
+  }
+}
+
+/*
 section.upcoming-message
 {
-  height: 600px;
+  height: 40vw;
   background-image: url(../images/holders/PhoenixB&W.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,3 +60,4 @@ section.upcoming-message
     }
   }
 }
+*/
