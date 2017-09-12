@@ -2,7 +2,7 @@
 
 <?php if($video=get_field("featured_video")) { ?>
 <section class="featured-video">
-    <div class="row">
+    <div class="row fullWidth">
         <div class="large-12 columns">
             <div class="fluidMedia">
                 <?php echo preg_replace("#(width|height)=(\"|\')[0-9]+(\"|\')#ismu"," ",$video); ?>

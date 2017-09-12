@@ -1,7 +1,11 @@
 <?php if(!isset($wp)) { return; } ?>
 
 <section class="subscribe-to-news">
-    <hr>
+    <div class="row">
+      <div class="columns small-centered small-8">
+        <hr>
+      </div>
+    </div>
     <h1><span>Subscribe to our</span> e-news</h1>
     <form action="http://scottsdalebible.us1.list-manage.com/subscribe/post?u=621f3dcab3b5d368b54832b84&amp;id=0de80d194a" method="post" target="_blank">
         <div class="row">

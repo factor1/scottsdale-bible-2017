@@ -4,14 +4,14 @@
 
 hr {
   border: 1px solid $gray1;
-  width: 60%;
+  width: 100%;
   text-align:center;
-  margin: 0px auto 50px auto;
+  margin: 0px auto 40px auto;
 }
 
 hr.gradient {
   @include linear-gradient(90deg, $secondary, $tertiary);
   width: 100%;
   border: none;
-  height: 3px;
+  height: 2px;
 }

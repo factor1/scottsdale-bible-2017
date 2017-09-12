@@ -1,0 +1,95 @@
+/**
+*
+* General Info
+* -----------------------------------------------------------------------------
+*/
+
+section.general-info
+{
+
+    h1
+    {
+        text-align: center;
+        padding: auto;
+    }
+
+    > .row
+    {
+        margin-top: 40px;
+        text-align: center;
+
+        > ul
+        {
+            > li
+            {
+                padding: 0px 10px;
+
+                > .row
+                {
+                    margin: 0px;
+                    padding: 0px 10px;
+
+                    > div
+                    {
+                        padding: 10px;
+                    }
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        overflow: hidden;
+
+                        > a
+                        {
+                            height: 150px;
+                        }
+                    }
+
+                    > div:last-child
+                    {
+
+                        > h5
+                        {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1;
+                        }
+
+                        > div
+                        {
+
+                            p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+  $hero-height: 60vh;
+
+  .box-section {
+    background-size: cover;
+    background-position: center;
+    height: $hero-height;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box-section-text h2 {
+      padding: 5px 10px;
+      margin-bottom: 150px;
+      border: 3px solid #fff;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+
+    }
+  }
+
+
+}

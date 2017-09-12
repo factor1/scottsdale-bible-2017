@@ -16,7 +16,11 @@ foreach($campuses as $campus) {
 
 <?php if($campuses) { ?>
 <section class="location-map">
-  <hr>
+  <div class="row">
+    <div class="columns small-centered small-8">
+      <hr>
+    </div>
+  </div>
   <div class="row">
     <div class="small-12">
       <h1>Locations</h1>

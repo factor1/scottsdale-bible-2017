@@ -1,7 +1,11 @@
 <?php if(!isset($wp)) { return; } ?>
 <?php if( have_rows ('plan_your_visit', 5) ): ?>
 <section class="plan-your-visit">
-    <hr>
+    <div class="row">
+      <div class="columns small-centered small-8">
+        <hr>
+      </div>
+    </div>
     <h1>Plan Your Visit</h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-2">
