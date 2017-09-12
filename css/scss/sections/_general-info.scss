@@ -72,38 +72,13 @@ section.general-info
 
   $hero-height: 40vh;
 
-  .box-section {
-    background-size: cover;
-    background-position: center;
-    height: $hero-height !important;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .card {
+    padding-top: 40px;
 
-    .box-section-text h2 {
-      padding: 5px 10px;
-      color: #fff;
-      text-shadow: 2px 2px #000;
+    p {
+      font-family: $Proxima;
+      padding: 0px 20px;
     }
-
-    .box-section-text {
-      z-index: 2;
-    }
-
-  }
-  .box-section:before {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-    background: rgba(53, 65, 78,.5);
-    z-index: 1;
-  }
-
-  #card {
-    color: #fff;
-    text-shadow: 2px 2px #000;
 
     h2 {
       color: #fff;
@@ -119,6 +94,10 @@ section.general-info
       align-items: center;
       justify-content: center;
     }
+  }
+
+  .back {
+    @include linear-gradient-border();
   }
 
 }
