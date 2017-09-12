@@ -13,13 +13,15 @@
 
               ?>
               <li>
-                  <div class="row">
-                      <div class="medium-12 columns box-section" id="card" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
-                          <div class="box-section-text front">
-                              <h2 class="front"><?php echo $title ?></h2>
-                          </div>
-                          <div class="box-section-text back">
+                  <div id="card">
+                      <div class="front" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
+                          <div class="box-section-text">
                               <h2><?php echo $title ?></h2>
+                          </div>
+                      </div>
+                      <div class="back" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
+                          <div class="box-section-text">
+                              <p><?php echo $text_area ?></p>
                           </div>
                       </div>
                   </div>

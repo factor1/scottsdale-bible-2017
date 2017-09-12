@@ -75,7 +75,7 @@ section.general-info
   .box-section {
     background-size: cover;
     background-position: center;
-    height: $hero-height;
+    height: $hero-height !important;
     text-align: center;
     display: flex;
     align-items: center;
@@ -101,5 +101,24 @@ section.general-info
     z-index: 1;
   }
 
+  #card {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+
+    h2 {
+      color: #fff;
+      text-shadow: 2px 2px #000;
+    }
+
+    > div {
+      background-size: cover;
+      background-position: center;
+      height: $hero-height !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
 }
