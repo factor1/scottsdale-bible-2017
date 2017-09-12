@@ -61,6 +61,7 @@ if($location) {
     </footer>
                 <?php get_template_part("components/sections/footer_tracking"); ?>
 
+
 <?php wp_footer(); ?>
 </body>
 </html>
