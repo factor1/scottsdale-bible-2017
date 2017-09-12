@@ -240,6 +240,9 @@ if(!function_exists("sb_template_init"))
 function wpb_adding_scripts() {
   wp_register_script('flip', get_template_directory_uri() . '/js/jquery.flip.min.js', array('jquery'),'1.1.1', true);
   wp_enqueue_script('flip');
+
+  wp_register_script('global', get_template_directory_uri() . '/js/global.js', array('jquery'),'', true);
+  wp_enqueue_script('global');
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
