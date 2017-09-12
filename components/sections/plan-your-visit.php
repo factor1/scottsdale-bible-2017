@@ -1,65 +1,38 @@
-<?php if(!isset($wp)) { return; }
-
-if(!isset($post)) {
-    $post = get_queried_object();
-}
-$events_post_id = (get_field("use_homepage_events")) ? sb_get_homepage_post_id() : $post->ID;
-
-/* Load Preset Events if Set */
-$events = [];
-if($upcoming_events = get_field("upcoming_events",$events_post_id)) {
-    foreach($upcoming_events as $event) {
-        $event =& $event['event'];
-        $events[] = sb_load_all_event_data($event);
-    }
-}
-
-$events_link = ($f=get_field("events_category",$events_post_id)) ? get_term_link($f) : get_option('siteurl')."/events/";
-
-/* No Preset, Load Most Recent Posts */
-/* Inactive for Now
-if(!$events) {
-    $events = sb_get_upcoming_events();
-}
-*/
-
-if(!$events) {
-    return;
-}
-
-?>
+<?php if(!isset($wp)) { return; } ?>
+<?php if( have_rows ('plan_your_visit', 5) ): ?>
 <section class="plan-your-visit">
-    <hr>
+    <div class="row">
+      <div class="columns small-centered small-8">
+        <hr>
+      </div>
+    </div>
     <h1>Plan Your Visit</h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-2">
-            <?php foreach($events as $event) { ?>
+            <?php while ( have_rows('plan_your_visit', 5) ) : the_row();
+
+            // vars
+            $image = get_sub_field('image');
+            $venue = get_sub_field('name');
+            $button = get_sub_field('button_text');
+            $button_link = get_sub_field('button_link');
+
+            ?>
             <li>
                 <div class="row">
-                    <?php if($image=get_field("featured_image",$event->ID)) { ?>
-                    <div class="medium-6 columns">
-                        <a href="<?php echo get_permalink($event->ID); ?>" class="image-block-center"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
-                    </div>
-                    <?php } ?>
-                    <div class="medium-6 columns">
-                        <h3>
-                            <a href="<?php echo get_permalink($event->ID); ?>"><?php echo esc_html($event->post_title); ?></a>
-                        </h3>
-                        <?php if($field=get_field("event_subtitle",$event->ID)) { ?>
-                        <h5><?php echo esc_html($field); ?></h5>
-                        <?php } ?>
-                        <?php if($field=get_field("event_excerpt",$event->ID)) { ?>
-                        <div>
-                            <?php echo $field; ?>
+                    <div class="medium-12 columns venue-section" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
+                        <div class="venue-section-text">
+                            <h2><?php echo $venue ?></h2>
+                            <a href="<?php echo $button_link ?>" class="button" data-target="new-window"><?php echo $button ?></a>
                         </div>
-                        <?php } ?>
                     </div>
                 </div>
             </li>
-            <?php } ?>
+            <?php endwhile; ?>
         </ul>
     </div>
     <div class="row">
-        <a href="<?php echo esc_attr($events_link); ?>" class="button">View <span>all</span> Campuses</a>
+        <a href="#" class="button-second">View <span>all</span> Campuses</a>
     </div>
 </section>
+<?php endif;  ?>

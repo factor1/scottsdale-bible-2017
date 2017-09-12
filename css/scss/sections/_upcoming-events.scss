@@ -24,7 +24,7 @@ section.upcoming-events
             top: -8px;
             margin-right: 18px;
             font-size: 38px;
-            color: $lightbrown;
+            color: $gray1;
         }
 
         > span
@@ -47,7 +47,6 @@ section.upcoming-events
                 {
                     margin: 0px;
                     padding: 10px;
-                    border-top: 3px solid $darkbrown;
                     background-color: #ffffff;
 
                     > div
@@ -114,13 +113,13 @@ section.upcoming-events
                             {
                                 font-weight: 700;
                                 font-style: italic;
-                                color: $lightbrown;
+                                color: $tertiary;
                                 text-decoration: underline;
                             }
 
                             a:hover
                             {
-                                color: $darkbrown;
+                                color: $primary;
                             }
                         }
                     }

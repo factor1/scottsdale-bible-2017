@@ -44,3 +44,76 @@ section.last-and-upcoming-message {
     }
   }
 }
+
+@media only screen and (max-width: 1024px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:first-child
+            {
+                text-align: center;
+                padding-bottom: 40px;
+            }
+
+            > div:last-child
+            {
+                text-align: center;
+                padding: 0px !important;
+            }
+        }
+
+        .img-holder {
+          height: 300px;
+          width: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > .columns
+            {
+                > div:first-child
+                {
+                    > div:first-child
+                    {
+                        img
+                        {
+                            min-height: initial;
+                            min-width: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    section.last-and-upcoming-message
+    {
+        > .row
+        {
+            > div:last-child
+            {
+                > div
+                {
+                    > div:last-child
+                    {
+                        a
+                        {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

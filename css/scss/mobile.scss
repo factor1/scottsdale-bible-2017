@@ -1,3 +1,10 @@
+/* -----------------------------------------------------------------------------
+	# Imports
+----------------------------------------------------------------------------- */
+// Global Syles
+@import "globals/colors";
+
+
 /**
 *
 * 1.0 Admin Bar Fix
@@ -10,7 +17,7 @@
     {
         margin-top: 0px !important;
     }
-    
+
     body.admin-bar
     {
         padding-top: 46px !important;
@@ -33,13 +40,13 @@
             {
                 width: 33.33%;
             }
-            
+
             .large-8
             {
                 width: 66.66%;
             }
         }
-    }    
+    }
 }
 
 @media only screen and (max-width: 900px)
@@ -54,24 +61,24 @@
                 {
                     height: auto;
                 }
-                
+
                 > .columns:first-child
                 {
                     line-height: 1;
-                    
+
                     > a
                     {
                         line-height: 1;
                         padding: 30px;
                     }
                 }
-                
+
                 > .columns:last-child
                 {
                     text-align: center;
                     line-height: 1;
                     padding-bottom: 20px;
-                    
+
                     > ul.inline-list
                     {
                         > li
@@ -108,13 +115,13 @@
                             padding-left: 25px;
                             padding-right: 25px;
                         }
-                        
+
                         > li:last-child
                         {
                             width: 100%;
                             text-align: center;
                             margin-top: 20px;
-                            
+
                             > form
                             {
                                 display: inline-block;
@@ -156,24 +163,24 @@
                                     width: 100%;
                                     min-height: initial;
                                     padding-bottom: 20px;
-                                    
+
                                     ul[class*="block-grid-"]
                                     {
                                         width: 100%;
-                                        
+
                                         > li
                                         {
                                             width: 100%;
                                         }
-                                    }                                    
+                                    }
                                 }
                             }
                         }
                     }
-                }    
+                }
             }
         }
-    }    
+    }
 }
 
 @media only screen and (max-width: 640px)
@@ -185,26 +192,26 @@
             > section
             {
                 height: auto;
-                
+
                 > .row
                 {
-                
+
                     > .columns
                     {
                         text-align: left;
-                        
+
                         > a
                         {
                             text-align: inherit;
                             padding-left: 30px;
                             padding-right: 30px;
-                            border-top: 2px solid #be955b;
+                            border-top: 2px solid $primary;
                         }
-                        
+
                         > nav
                         {
                             position: static;
-                            
+
                             > ul.inline-list
                             {
                                 > li
@@ -215,7 +222,7 @@
                             }
                         }
                     }
-                    
+
                     > .columns:first-child
                     {
                         > a
@@ -223,7 +230,7 @@
                             border-top: 0px;
                         }
                     }
-                    
+
                     > .columns:hover
                     {
                         > nav
@@ -231,15 +238,15 @@
                             display: none;
                         }
                     }
-                    
+
                     > .columns + .columns
                     {
                         display: none;
                     }
-                }    
+                }
             }
         }
-    }    
+    }
 }
 
 
@@ -260,7 +267,7 @@
                 height: 450px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 1280px)
@@ -274,7 +281,7 @@
                 height: 400px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 1120px)
@@ -288,7 +295,7 @@
                 height: 350px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 960px)
@@ -301,19 +308,19 @@
             {
                 height: 300px !important;
             }
-        }    
-    
+        }
+
         > .controls-move
         {
             margin-top: -69px;
             line-height: 22px;
-            
+
             > .fa
             {
                 font-size: 14px;
-            }    
+            }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 800px)
@@ -327,7 +334,7 @@
                 height: 250px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 640px)
@@ -341,18 +348,18 @@
                 height: 200px !important;
             }
         }
-        
+
         > .controls-move
         {
             margin-top: -57px;
             line-height: 16px;
-            
+
             > .fa
             {
                 font-size: 12px;
-            }    
-        }        
-    }   
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 576px)
@@ -366,7 +373,7 @@
                 height: 180px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 512px)
@@ -380,7 +387,7 @@
                 height: 160px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 480px)
@@ -394,92 +401,21 @@
                 height: 150px !important;
             }
         }
-    }   
+    }
 }
 
 @media only screen and (max-width: 350px)
 {
     section.image-slider
-    {  
+    {
         > .controls-move
         {
-            display: none;   
-        }
-    }   
-}
-
-/**
-*
-* 5.0 - Component - Last and Upcoming Message
-* -----------------------------------------------------------------------------
-*/
-
-@media only screen and (max-width: 1024px)
-{
-    section.last-and-upcoming-message
-    {
-        > .row
-        {
-            > div:first-child
-            {
-                text-align: center;
-                padding-bottom: 40px;
-            }
-            
-            > div:last-child
-            {
-                text-align: center;
-            }
+            display: none;
         }
     }
 }
 
-@media only screen and (max-width: 650px)
-{
-    section.last-and-upcoming-message
-    {
-        > .row
-        {
-            > .columns
-            {
-                > div:first-child
-                {
-                    > div:first-child
-                    {
-                        img
-                        {
-                            min-height: initial;
-                            min-width: initial;
-                        }                      
-                    }
-                }
-            }
-        }
-    }    
-}
 
-@media only screen and (max-width: 400px)
-{
-    section.last-and-upcoming-message
-    {
-        > .row
-        {
-            > div:last-child
-            {
-                > div
-                {
-                    > div:last-child
-                    {
-                        a
-                        {
-                            padding-right: 20px;
-                        }
-                    }
-                }
-            }
-        }
-    }    
-}
 
 /**
 *
@@ -503,12 +439,12 @@
                         {
                             max-width: 300px;
                         }
-                        
+
                         > div:last-child
                         {
                             float: left;
                         }
-                    }    
+                    }
                 }
             }
         }
@@ -531,7 +467,7 @@
                         {
                             width: 100%;
                         }
-                    }    
+                    }
                 }
             }
         }
@@ -559,7 +495,7 @@
                 }
             }
         }
-    }    
+    }
 }
 
 
@@ -582,7 +518,7 @@
                     width: 100%;
                     padding-bottom: 10px;
                 }
-            }            
+            }
         }
     }
 }
@@ -610,7 +546,7 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
-} 
+}
 
 
 /**
@@ -624,11 +560,11 @@
     body.single-event
     {
         section.article
-        {  
+        {
             div.em-location-map-container
             {
                 height: 500px !important;
-                
+
                 div.gm-style-iw
                 {
                     max-width: 150px;
@@ -636,4 +572,4 @@
             }
         }
     }
-}    
+}

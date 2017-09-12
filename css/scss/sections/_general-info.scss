@@ -1,13 +1,12 @@
 /**
 *
-* Plan Your Visit
+* General Info
 * -----------------------------------------------------------------------------
 */
 
-section.plan-your-visit
+section.general-info
 {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 
     h1
     {
@@ -17,19 +16,18 @@ section.plan-your-visit
 
     > .row
     {
-        margin-top: 30px;
         text-align: center;
 
         > ul
         {
             > li
             {
-                padding: 15px;
+                padding: 0px 10px;
 
                 > .row
                 {
-                    margin: 0px;
-                    padding: 10px;
+                    margin-top: 40px;
+                    padding: 0px 10px;
 
                     > div
                     {
@@ -72,15 +70,9 @@ section.plan-your-visit
         }
     }
 
-    > .row:last-child
-    {
-        text-align: center;
-        margin-top: 30px;
-    }
+  $hero-height: 40vh;
 
-  $hero-height: 60vh;
-
-  .venue-section {
+  .box-section {
     background-size: cover;
     background-position: center;
     height: $hero-height;
@@ -89,10 +81,8 @@ section.plan-your-visit
     align-items: center;
     justify-content: center;
 
-    .venue-section-text h2 {
+    .box-section-text h2 {
       padding: 5px 10px;
-      margin-bottom: 150px;
-      border: 3px solid #fff;
       color: #fff;
       text-shadow: 2px 2px #000;
 

@@ -11,20 +11,6 @@ $Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
 $Oswald: Oswald, Helvetica, Arial, sans-serif;
 $Kepler: "kepler-std", georgia, "Times New Roman", serif;
 
-/* Colors */
-$lightbrown: #be955b;
-$darkbrown: #414042;
-
-$primary: #1D2B3B;
-$p-medium: #35414E;
-$p-light: #55606A;
-$secondary: #2ABFCC;
-$tertiary: #41A4DF;
-$quaternary: #8F9EBD;
-$gray1: #414042;
-$gray2: #414042;
-$off-white: #E9ECF1;
-
 
 /* -----------------------------------------------------------------------------
 	# Imports
@@ -35,6 +21,7 @@ $off-white: #E9ECF1;
 @import "abstracts/mixins";
 
 // Global Syles
+@import "globals/colors";
 @import "globals/global";
 @import "globals/buttons";
 @import "globals/hr";
@@ -50,6 +37,7 @@ $off-white: #E9ECF1;
 
 @import "sections/subscribe-to-news";
 @import "sections/image-slider";
+@import "sections/home-hero";
 @import "sections/select-campus";
 @import "sections/news-and-stories";
 @import "sections/upcoming-events";
@@ -61,6 +49,9 @@ $off-white: #E9ECF1;
 @import "sections/upcoming-story";
 @import "sections/upcoming-message";
 @import "sections/location-map";
+@import "sections/welcome";
+@import "sections/first-visit";
+@import "sections/general-info";
 
 
 // Template Specific Styles
@@ -85,11 +76,6 @@ section.not-found
     {
         background-color: #ffffff;
         padding: 40px;
-
-        > h2
-        {
-            border-bottom: 2px solid #bf965c;
-        }
     }
 }
 
@@ -119,12 +105,11 @@ section.posts-archive
 
         > h2
         {
-            border-bottom: 2px solid $lightbrown;
             margin-bottom: 4px;
 
             > a
             {
-                color: $lightbrown;
+                color: $tertiary;
             }
         }
 
@@ -213,7 +198,7 @@ section.page-content
 
                     > a:hover
                     {
-                        color: $lightbrown;
+                        color: $tertiary;
                     }
                 }
 

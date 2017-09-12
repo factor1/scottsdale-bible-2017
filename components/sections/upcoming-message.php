@@ -15,19 +15,17 @@ if(!$last_weekend||!$upcoming_message) {
 ?>
 
 <section class="upcoming-message">
-    <div class="row">
-        <div class="small-12 columns">
-            <div>
-                <?php if($upcoming_message->image) { ?>
-                <a href="<?php echo esc_attr($upcoming_message->url); ?>">
-                  <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
-                </a>
-                <?php } ?>
-                <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
-                <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
-                <?php } ?>
-                <a href="#" class="button" data-target="new-window">Learn More</a>
-            </div>
-        </div>
+    <div>
+        <?php if($upcoming_message->image) { ?>
+        <a href="<?php echo esc_attr($upcoming_message->url); ?>">
+          <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
+        </a>
+        <?php } ?>
+        <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
+        <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
+        <?php } ?>
+        <?php if($upcoming_message->button_option === true) { ?>
+        <a href="<?php echo esc_attr($upcoming_message->button_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_message->button_text); ?></a>
+        <?php } ?>
     </div>
 </section>

@@ -14,15 +14,11 @@ if(!$upcoming_story) {
 ?>
 
 <?php if($upcoming_story) { ?>
-<section class="upcoming-story" style="background-image: url(<?php echo esc_attr($upcoming_story->image['sizes']['large']); ?>);">
-    <div class="row fullWidth">
-        <div class="small-12 columns">
-            <div>
-                <?php if($upcoming_story->show_button_option === true) { ?>
-                <a href="<?php echo esc_attr($upcoming_story->button_internal_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_story->button_text); ?></a>
-                <?php } ?>
-            </div>
-        </div>
+<section class="upcoming-story fullWidth" style="background-image: url(<?php echo esc_attr($upcoming_story->image['sizes']['large']); ?>);">
+    <div>
+        <?php if($upcoming_story->show_button_option === true) { ?>
+        <a href="<?php echo esc_attr($upcoming_story->button_internal_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_story->button_text); ?></a>
+        <?php } ?>
     </div>
 </section>
 <?php } ?>

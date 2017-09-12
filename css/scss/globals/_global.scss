@@ -141,7 +141,7 @@ body
 
         a
         {
-            color: $lightbrown;
+            color: $tertiary;
             text-decoration: underline;
         }
     }
@@ -160,7 +160,7 @@ body
         font-size: 22px;
         font-weight: 700;
         line-height: 35px;
-        background-color: $darkbrown;
+        background-color: $primary;
         color: #ffffff;
         padding-left: 40px;
         text-decoration: none;
@@ -169,7 +169,7 @@ body
         {
             margin-left: 10px;
             line-height: inherit;
-            color: $lightbrown;
+            color: $gray1;
         }
     }
 
@@ -181,7 +181,6 @@ body
             padding-bottom: 20px;
             padding-left: 40px;
             padding-right: 40px;
-            border: 2px solid $darkbrown;
         }
     }
 
@@ -290,7 +289,6 @@ body
             position: relative;
             min-width: 100%;
             max-width: initial;
-            height: 100%;
             margin-left: 0;
         }
     }

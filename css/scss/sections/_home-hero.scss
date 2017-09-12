@@ -1,19 +1,24 @@
 /**
 *
-*  Upcoming-story
+*  Home-Hero
 * -----------------------------------------------------------------------------
 */
 
-.upcoming-story {
-  background-size: cover;
+.home-hero {
+  background-size: cover !important;
   background-position: center;
-  height: 40vw;
+  height: 50vw;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  div {
-    margin-top: 15vw;
+  h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  a {
+    margin: 20px;
   }
 }
