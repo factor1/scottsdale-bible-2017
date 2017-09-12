@@ -6,6 +6,7 @@
 
 section.general-info
 {
+    margin-bottom: 40px;
 
     h1
     {
@@ -15,7 +16,6 @@ section.general-info
 
     > .row
     {
-        margin-top: 40px;
         text-align: center;
 
         > ul
@@ -26,7 +26,7 @@ section.general-info
 
                 > .row
                 {
-                    margin: 0px;
+                    margin-top: 40px;
                     padding: 0px 10px;
 
                     > div
@@ -70,7 +70,7 @@ section.general-info
         }
     }
 
-  $hero-height: 60vh;
+  $hero-height: 40vh;
 
   .box-section {
     background-size: cover;
@@ -83,8 +83,6 @@ section.general-info
 
     .box-section-text h2 {
       padding: 5px 10px;
-      margin-bottom: 150px;
-      border: 3px solid #fff;
       color: #fff;
       text-shadow: 2px 2px #000;
 
