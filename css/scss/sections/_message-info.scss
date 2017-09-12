@@ -3,7 +3,42 @@
 * Last Weekend and Upcoming Message
 * -----------------------------------------------------------------------------
 */
+$block-height-large: 12vw;
+$block-height-medium: 20vw;
 
 section.message-info {
-  
+  padding: 40px 0px;
+
+  .side-blocks {
+    /* background: rgba(53, 65, 78, 0.5); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: $block-height-large;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+/*
+    &:hover {
+      background-color: (53, 65, 78, 0);
+    }
+    &:before {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-color: inherit;
+      content: ' ';
+    }
+*/
+
+    h2 {
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @media screen and (max-width: 1024px) {
+      height: $block-height-medium;
+    }
+  }
 }
