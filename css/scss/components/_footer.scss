@@ -113,7 +113,6 @@ body
 
                                 > a
                                 {
-                                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
                                     font-size: 14px;
                                     font-weight: 400;
                                     color: $p-light;
@@ -121,7 +120,8 @@ body
 
                                 > a:hover
                                 {
-                                    color: $tertiary;
+                                    color: #fff;
+                                    text-decoration: none;
                                 }
                             }
                         }
