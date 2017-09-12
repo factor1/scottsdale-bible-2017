@@ -14,7 +14,7 @@
   background: linear-gradient($direction, $color-stops);
 };
 
-// Linear Gradient Border
+// Linear Gradient
 @mixin linear-gradient($direction, $color-stops...) {
   // Direction has been omitted and happens to be a color-stop
   @if is-direction($direction) == false {
@@ -27,3 +27,21 @@
   background: -o-linear-gradient($direction, $color-stops);
   background: linear-gradient($direction, $color-stops);
 };
+
+// Linear Gradient Border
+@mixin linear-gradient-border() {
+  border-left: 2px solid $secondary;
+  border-right: 2px solid $tertiary;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100% !important;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 2px !important;
+  -moz-background-size: 100% 2px !important;
+  background-size: 100% 2px !important;
+  background-image: -webkit-linear-gradient(left, $secondary 0%, $tertiary 100%), -webkit-linear-gradient(left, $secondary 0%, $tertiary 100%);
+  background-image: -moz-linear-gradient(left, $secondary 0%, $tertiary 100%), -moz-linear-gradient(left, $secondary 0%, $tertiary 100%);
+  background-image: -o-linear-gradient(left, $secondary 0%, $tertiary 100%), -o-linear-gradient(left, $secondary 0%, $tertiary 100%);
+  background-image: linear-gradient(to right, $secondary 0%, $tertiary 100%), linear-gradient(to right, $secondary 0%, $tertiary 100%);
+}

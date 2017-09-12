@@ -9,12 +9,9 @@ $text = get_sub_field('text');
 $button_option = get_sub_field('show_button_option');
 
 ?>
-<section class="first-visit">
+<section class="first-visit alternate">
     <div class="row">
-      <div class="small-12 medium-5 large-3 columns">
-          <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
-      </div>
-        <div class="small-12 medium-7 large-9 columns">
+        <div class="small-8 small-centered text-center columns">
             <h1><?php echo $title ?></h1>
             <p><?php echo $text ?></p>
             <?php if($button_option === true) { ?>
@@ -33,9 +30,6 @@ $button_option = get_sub_field('show_button_option');
         </div>
     </div>
     <div class="row">
-      <div class="columns small-8 small-centered">
-        <hr>
-      </div>
     </div>
 </section>
 <?php endif;  ?>

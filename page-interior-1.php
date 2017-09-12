@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Welcome Full
+ * Template Name: Interior 1
  * Description: Page template with media rich content
  */
 
