@@ -1,0 +1,43 @@
+/**
+*
+* Dive Deeper Menu
+* -----------------------------------------------------------------------------
+*/
+
+section.dive-deeper {
+
+  .menu-bar{
+    height: 56px;
+    background-color: $primary;
+    box-shadow: 0px 2px 2px #000;
+  }
+
+  .menu-icon a {
+    color: #fff;
+    font-size: 35px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .menu {
+    background-color: $off-white;
+    display: none;
+  }
+
+  .sidebar-image {
+    background-size: cover;
+    background-position: center;
+    height: 20vw;
+  }
+
+  .menu > .columns:first-of-type {
+    background-color: #fff;
+    padding: 0px;
+
+    p {
+      padding: 0px 0.9375rem;
+    }
+  }
+}

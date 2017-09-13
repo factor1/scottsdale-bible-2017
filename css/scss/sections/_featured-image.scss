@@ -6,9 +6,13 @@
 
 section.featured-image
 {
-    background-image: url(../images/backgrounds/grid.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
+  background-size: cover !important;
+  background-position: center;
+  height: 30vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
     > .row
     {

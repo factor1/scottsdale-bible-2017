@@ -12,5 +12,13 @@ $(document).ready(function(){
 	$('body>header>section>.row>.columns').mouseleave( function(){
 		$('.mask').remove();
 	});
+
+// Dive Deeper Menu
+	$('.menu-icon').click(function(){
+		$('.menu').toggleClass('hide');
+	});
+	$('.menu-icon').click(function(){
+		console.log('Success!');
+	});
 });
 });
