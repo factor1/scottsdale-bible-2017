@@ -8,11 +8,9 @@ section.featured-image
 {
   background-size: cover !important;
   background-position: center;
-  height: 30vw;
+  height: 40vw;
   text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
 
     > .row
     {
@@ -28,6 +26,12 @@ section.featured-image
                 height: auto;
             }
         }
+    }
+
+    h1 {
+      font-size: 4em;
+      color: $primary;
+      padding-top: 4rem;
     }
 }
 

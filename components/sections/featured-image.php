@@ -18,6 +18,11 @@
         <div class="large-12 columns" >
 
             <meta property="og:image" content="<?php echo esc_attr($image['url']); ?>">
+            <div class="row">
+              <div class="small-12 columns">
+                <h1><?php the_title(); ?></h1>
+              </div>
+            </div>
         </div>
     </div>
 </section>
