@@ -6,7 +6,7 @@ var cssFiles     = ['./css/*.css', '!./css/*.min.css'],
     sassFiles    = ['./css/scss/**/*.scss'],
     styleFiles   = [cssFiles, sassFiles],
     jsFiles      = ['./js/theme.js'],
-    concatFiles  = ['./js/*.js', '!./js/theme.min.js', '!./js/all.js'];
+    concatFiles  = ['./js/*.js', '!./js/*.min.js', '!./js/theme.min.js', '!./js/all.js'];
 
 // Include gulp
 var gulp         = require('gulp');

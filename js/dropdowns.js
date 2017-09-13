@@ -13,12 +13,20 @@ $(document).ready(function(){
 		$('.mask').remove();
 	});
 
-// Dive Deeper Menu
+	// Flip Function
+	$('#card1,#card2,#card3,#card4,#card5,#card6').flip();
+
+	// Dive Deeper Menu
 	$('.menu-icon').click(function(){
-		$('.menu').toggleClass('hide');
+		$('.menu').slideToggle('slow');
+		$('.bars').toggleClass('hide');
+		$('.times').toggleClass('hide');
+		console.log("success!");
 	});
-	$('.menu-icon').click(function(){
-		console.log('Success!');
+
+	// Mobile Menu Toggles
+	$(".main-header").click(function(e) {
+			$(this).nextAll(".columns").slideToggle();
 	});
 });
 });

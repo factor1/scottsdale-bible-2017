@@ -11,7 +11,7 @@ $sidebar_image = get_field("sidebar_image");
 <?php if($show_sidebar) { ?>
 <section class="dive-deeper">
     <div class="row text-center menu-bar fullWidth">
-      <div class="large-12 columns text-center menu-icon"><a><i class="fa fa-bars fa-lg"></i><i class="fa fa-times fa-lg hide"></i> Menu</a></div>
+      <div class="large-12 columns text-center menu-icon"><a><i class="fa fa-bars fa-lg bars"></i><i class="fa fa-times times fa-lg hide"></i> Menu</a></div>
     </div>
     <div class="row menu">
         <div class="large-4 columns sidebar text-center">

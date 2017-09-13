@@ -78,8 +78,9 @@ var preloadImages = function() {
         // Dive Deeper Menu
       	$('.menu-icon').click(function(){
           $('.menu').slideToggle('slow');
-          $('.fa-bars').toggleClass('hide');
-          $('.fa-times').toggleClass('hide');
+          $('.bars').toggleClass('hide');
+          $('.times').toggleClass('hide');
+          console.log("success!");
       	});
 
 
