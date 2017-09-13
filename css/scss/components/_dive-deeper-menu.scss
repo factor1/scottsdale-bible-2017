@@ -12,12 +12,17 @@ section.dive-deeper {
     box-shadow: 0px 2px 2px #000;
   }
 
-  .menu-icon a {
-    color: #fff;
-    font-size: 35px;
 
-    &:hover {
-      text-decoration: none;
+  .menu-icon {
+    padding-top: 14px;
+
+    a {
+      color: #fff;
+      font-size: 20px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
