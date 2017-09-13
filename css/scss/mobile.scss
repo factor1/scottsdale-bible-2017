@@ -57,9 +57,12 @@
         {
             > .row:first-child
             {
+
                 > .columns
                 {
                     height: auto;
+                    top: 20px;
+                    padding-bottom: 0px;
                 }
 
                 > .columns:first-child
@@ -81,12 +84,18 @@
 
                     > ul.inline-list
                     {
+                        margin-top: 0px;
+
                         > li
                         {
                             margin-left: 40px;
                             margin-right: 10px;
                             line-height: 1.2;
                             height: auto;
+
+                            i.fa-search {
+                              top: 5px;
+                            }
                         }
                     }
                 }
@@ -183,7 +192,7 @@
     }
 }
 
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 1025px)
 {
     body
     {
@@ -192,6 +201,11 @@
             > section
             {
                 height: auto;
+
+                .last {
+                  border: none !important;
+                  margin-bottom: 30px !important;
+                }
 
                 > .row
                 {
@@ -203,10 +217,10 @@
                         > a
                         {
                             text-align: inherit;
-                            padding-left: 30px;
-                            padding-right: 30px;
-                            border-top: 2px solid $primary;
+                            margin-bottom: 0px;
+                            border-bottom: 2px solid $secondary;
                         }
+
 
                         > nav
                         {
@@ -223,6 +237,10 @@
                         }
                     }
 
+                    .small-6 a {
+                      border: none;
+                    }
+
                     > .columns:first-child
                     {
                         > a
@@ -236,6 +254,10 @@
                         > nav
                         {
                             display: none;
+                        }
+
+                        > .hover-feature::after {
+                          height: 0px;
                         }
                     }
 

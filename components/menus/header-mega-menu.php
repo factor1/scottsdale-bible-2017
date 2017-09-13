@@ -86,12 +86,15 @@ if(!$header_menu) {
     ?>
     <section>
         <div class="row">
-            <div class="medium-6 columns">
+
+            <div class="small-6 columns">
               <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/SBC-BlueWhite-logo.svg" alt="" title="" /></a>
             </div>
-            <div class="small-12 columns hide-for-medium-up text-center"><a href="#"><i class="fa fa-bars fa-lg"></i><i class="fa fa-times fa-lg hide"></i> Menu</a></div>
 
-            <div class="medium-1 columns">
+
+            <div class="small-6 columns hide-for-large-up text-center main-header"><a href="#"><i class="fa fa-bars fa-lg"></i><i class="fa fa-times fa-lg hide"></i> Menu</a></div>
+
+            <div class="large-1 columns">
                 <a href="#" class="hover-feature"><span>Visit</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -101,7 +104,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-1 columns">
+            <div class="large-1 columns">
                 <a class="hover-feature" href="#"><span>Connect</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -111,7 +114,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-1 columns">
+            <div class="large-1 columns">
                 <a class="hover-feature" href="#"><span>Serve</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -121,7 +124,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-1 columns">
+            <div class="large-1 columns">
                 <a class="hover-feature" href="#"><span>Watch</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -131,7 +134,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-1 columns">
+            <div class="large-1 columns">
                 <a class="hover-feature" href="#"><span>Care</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -141,8 +144,8 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="medium-1 columns">
-                <a href="#"><span class="button-gradient">Give</span></a>
+            <div class="large-1 columns">
+                <a class="last" href="#"><span class="button-gradient">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,
