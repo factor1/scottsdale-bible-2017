@@ -26,3 +26,17 @@ $video = get_sub_field('video');
     </div>
 </section>
 <?php endif;  ?>
+
+<?php if(!isset($wp)) { return; } ?>
+
+<?php if($video=get_field("featured_video")) { ?>
+<section class="featured-video">
+    <div class="row fullWidth">
+        <div class="large-12 columns">
+            <div class="fluidMedia">
+                <?php echo preg_replace("#(width|height)=(\"|\')[0-9]+(\"|\')#ismu"," ",$video); ?>
+            </div>
+        </div>
+    </div>
+</section>
+<?php return; } ?>
