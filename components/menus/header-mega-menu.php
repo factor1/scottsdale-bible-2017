@@ -29,12 +29,13 @@ if(!$header_menu) {
     $sub_items_wrap = "\n<nav>".
                           "\n<div class=\"box\">".
                               "\n<div class=\"row\">".
-                                  "\n<div class=\"medium-3 columns\">".
+                                  "\n<div class=\"large-3 columns\">".
                                       "\n<img src=\"" . get_template_directory_uri() . "/images/holders/sbc.jpeg\" alt=\"Placeholder\" />".
                                   "\n</div>".
-                                  "\n<div class=\"medium-9 columns\">".
-                                      "\n<h3>" . the_field( 'the_title' ) . "</h3>".
-                                      "\n<p>" . get_field() . "</p>".
+                                  "\n<div class=\"large-9 columns\">".
+                                      "\n\t<ul class=\"inline-list\">".
+                                          "\n%3\$s".
+                                      "\n\t</ul>".
                                   "\n</div>".
                               "\n</div>".
                           "\n</div>".
