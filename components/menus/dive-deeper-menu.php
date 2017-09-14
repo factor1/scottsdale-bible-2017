@@ -24,7 +24,7 @@ $sidebar_image = get_field("sidebar_image");
                 <p><?php echo $sidebar_description; ?></p>
                 <?php } ?>
         </div>
-        <div class="medium-2 columns">
+        <div class="medium-3 columns">
                 <?php echo $menu; ?>
             <?php } ?>
             <?php if($sidebar_content) { ?>
@@ -33,7 +33,7 @@ $sidebar_image = get_field("sidebar_image");
             </div>
             <?php } ?>
         </div>
-        <div class="medium-6 columns"> Test</div>
+        <div class="medium-5 columns"> Test</div>
     </div>
     <br style="clear:both" />
 </section>
