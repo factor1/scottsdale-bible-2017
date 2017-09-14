@@ -67,17 +67,14 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 
 <header>
     <div class="row">
-        <div class="large-4 columns">
-
-        </div>
-        <div class="large-8 columns">
+        <div class="large-12 columns">
             <ul class="inline-list">
 
-                <!-- Uncomment for Live Streaming link
+                <!-- Uncomment for Live Streaming link -->
                 <li>
                     <i class="fa fa-video-camera"></i><a href="http://scottsdalebible.com/live/">Live Streaming</a>
                 </li>
-                --->
+                <!---->
 
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
@@ -98,5 +95,4 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         </div>
     </div>
     <?php get_template_part("components/menus/header-mega-menu"); ?>
-    </div>
 </header>

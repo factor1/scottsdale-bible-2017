@@ -1,5 +1,4 @@
 <?php if(!isset($wp)) { return; } ?>
-<?php if( have_rows ('general_info') ) : the_row() ?>
 <section class="general-info">
     <div class="row">
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
@@ -31,4 +30,3 @@
         </ul>
     </div>
 </section>
-<?php endif;  ?>

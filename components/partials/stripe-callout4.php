@@ -1,6 +1,4 @@
-<?php if(!isset($wp)) { return; } ?>
-
-<?php if( have_rows ('first_visit_message') ): the_row();
+<?php if(!isset($wp)) { return; }
 
 //vars
 $title = get_sub_field('title');
@@ -32,4 +30,3 @@ $button_option = get_sub_field('show_button_option');
     <div class="row">
     </div>
 </section>
-<?php endif;  ?>

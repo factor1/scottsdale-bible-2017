@@ -13,11 +13,16 @@
 <?php return; } ?>
 
 <?php if($image=get_field("featured_image")) { ?>
-<section class="featured-image">
-    <div class="row">
-        <div class="large-12 columns">
-            <img src="<?php echo esc_attr($image['url']); ?>" alt="" title="" />
+<section class="featured-image" style="background: url(<?php echo esc_attr($image['sizes']['large']); ?>)">
+    <div class="row fullWidth">
+        <div class="large-12 columns" >
+
             <meta property="og:image" content="<?php echo esc_attr($image['url']); ?>">
+            <div class="row">
+              <div class="small-12 columns">
+                <h1><?php the_title(); ?></h1>
+              </div>
+            </div>
         </div>
     </div>
 </section>

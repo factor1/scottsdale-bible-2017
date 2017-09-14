@@ -6,9 +6,12 @@
 
 section.featured-image
 {
-    background-image: url(../images/backgrounds/grid.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
+  background-size: cover !important;
+  background-position: center;
+  height: 35vw;
+  max-height: 470px;
+  text-align: center;
+  display: flex;
 
     > .row
     {
@@ -24,6 +27,16 @@ section.featured-image
                 height: auto;
             }
         }
+
+        .row {
+          margin: 0px;
+        }
+    }
+
+    h1 {
+      font-size: 4em;
+      color: $primary;
+      padding-top: 4rem;
     }
 }
 

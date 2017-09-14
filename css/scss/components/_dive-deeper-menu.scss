@@ -1,0 +1,127 @@
+/**
+*
+* Dive Deeper Menu
+* -----------------------------------------------------------------------------
+*/
+
+section.dive-deeper {
+
+  .menu-bar{
+    height: 56px;
+    background-color: $primary;
+    box-shadow: 0px 2px 2px #000;
+  }
+
+
+  .menu-icon {
+    padding-top: 14px;
+
+    a {
+      color: #fff;
+      font-size: 20px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .menu {
+    background-color: $off-white;
+    display: none;
+  }
+
+  .sidebar-image {
+    background-size: cover;
+    background-position: center;
+    height: 20vw;
+  }
+
+  .menu > .columns:first-of-type {
+    background-color: #fff;
+    padding: 0px;
+
+    p {
+      padding: 0px 0.9375rem;
+    }
+  }
+
+  .medium-3 {
+    padding-top: 30px;
+
+    > ul {
+      > li {
+        > a {
+          display: none;
+        }
+        > ul {
+          > li:first-of-type {
+            display: list-item;
+
+            > a {
+              border-bottom: 2px solid $tertiary;
+              margin-bottom: 8px;
+              font-size: 1.2em;
+              text-transform: uppercase;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            > ul {
+              margin-left: 0px !important;
+              margin-top: 10px !important;
+
+              a {
+                color: #000;
+                text-transform: capitalize;
+              }
+            }
+          }
+          > li {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .medium-5 {
+    padding-top: 30px;
+
+    > ul {
+      > li {
+        > a {
+          display: none;
+        }
+        > ul {
+          > li {
+            display: list-item;
+
+            > a {
+              border-bottom: 2px solid $tertiary;
+              font-size: 1.2em;
+              text-transform: uppercase;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            > ul {
+              margin-left: 0px !important;
+              margin-top: 10px !important;
+
+              a {
+                color: #000;
+                text-transform: capitalize;
+              }
+            }
+          }
+          > li:first-of-type {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
