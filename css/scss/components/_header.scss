@@ -251,6 +251,18 @@ body
                           background-color: #fff;
                           max-height: 250px;
                           margin-bottom: 15px;
+
+                          > div > div > ul > li:first-of-type {
+                            display: block;
+
+                            > h5 {
+                              border: none;
+                              padding-top: 40px;
+                            }
+                          }
+                          > div > div > ul > li {
+                            display: none;
+                          }
                         }
 
                         .row {
@@ -270,6 +282,7 @@ body
                             padding-bottom: 5px;
                             border-bottom: 2px solid $tertiary;
                             color: $tertiary;
+                            text-transform: uppercase;
                             a:hover{
                               text-decoration: none;
                               color: $tertiary;
@@ -286,10 +299,16 @@ body
                           margin-top: 0;
                           margin-bottom: 0;
 
+                            > li:first-of-type {
+                              display: none;
+                            }
+                            > li:last-of-type {
+                              margin-right: 20px;
+                            }
+
                             > li
                             {
                                 min-height: 200px;
-
 
                                 > p
                                 {

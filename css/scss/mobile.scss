@@ -228,10 +228,16 @@
 
                             > ul.inline-list
                             {
+                              display: block;
+
                                 > li
                                 {
                                     width: 100%;
                                     min-height: initial;
+                                }
+
+                                h5 {
+                                  width: 93%;
                                 }
                             }
                         }
