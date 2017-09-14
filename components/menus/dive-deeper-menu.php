@@ -3,7 +3,7 @@
 $sidebar_menus = sb_get_sidebar_menus();
 $sidebar_content = sb_get_sidebar_content();
 $show_sidebar = $sidebar_menus || $sidebar_content;
-$sidebar_description = ($c=sb_get_content_field("page_content")) ? $c : sb_get_the_content();
+$sidebar_description = get_field("sidebar_description");
 $sidebar_image = get_field("sidebar_image");
 
 ?>
@@ -20,7 +20,9 @@ $sidebar_image = get_field("sidebar_image");
                 <div class="fullWidth sidebar-image" style="background-image: url(<?php echo esc_attr($sidebar_image['sizes']['large']); ?>);"></div>
                 <?php } ?>
                 <h3><?php echo esc_html($menu_title); ?></h3>
+                <?php if($sidebar_description) { ?>
                 <p><?php echo $sidebar_description; ?></p>
+                <?php } ?>
         </div>
         <div class="medium-2 columns">
                 <?php echo $menu; ?>
