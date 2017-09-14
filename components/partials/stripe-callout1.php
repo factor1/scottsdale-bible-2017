@@ -1,6 +1,4 @@
-<?php if(!isset($wp)) { return; } ?>
-
-<?php
+<?php if(!isset($wp)) { return; } 
 
 //vars
 $title = get_sub_field('title');

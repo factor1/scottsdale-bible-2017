@@ -1,6 +1,4 @@
-<?php if(!isset($wp)) { return; } ?>
-
-<?php if( have_rows ('welcome_message') ): the_row();
+<?php if(!isset($wp)) { return; }
 
 //vars
 $title = get_sub_field('title');
