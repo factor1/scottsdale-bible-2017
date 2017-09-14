@@ -169,7 +169,7 @@
                             {
                                 > li
                                 {
-                                    width: 100%;
+                                    width: 97%;
                                     min-height: initial;
                                     padding-bottom: 20px;
 
@@ -229,16 +229,21 @@
                             > ul.inline-list
                             {
                               display: block;
+                              width: 100%;
 
                                 > li
                                 {
-                                    width: 100%;
+                                    width: 97%;
                                     min-height: initial;
                                 }
 
                                 h5 {
                                   width: 93%;
                                 }
+                            }
+
+                            .box {
+                              display: none;
                             }
                         }
                     }
