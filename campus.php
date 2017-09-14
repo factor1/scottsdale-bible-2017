@@ -6,6 +6,7 @@ sb_set_campus_cookie($campus->ID);
 get_header();
 
 get_template_part("components/sections/home-hero");
+get_template_part("components/sections/image-slider");
 get_template_part("components/sections/get-involved");
 get_template_part("components/sections/upcoming-story");
 get_template_part("components/sections/last-and-upcoming-message");
