@@ -27,13 +27,10 @@ $sidebar_image = get_field("sidebar_image");
         <div class="medium-3 columns">
                 <?php echo $menu; ?>
             <?php } ?>
-            <?php if($sidebar_content) { ?>
-            <div>
-                <?php echo $sidebar_content; ?>
-            </div>
-            <?php } ?>
         </div>
-        <div class="medium-5 columns"> Test</div>
+        <div class="medium-5 columns">
+          <?php echo $menu; ?>
+        </div>
     </div>
     <br style="clear:both" />
 </section>
