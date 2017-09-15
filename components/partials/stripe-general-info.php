@@ -13,12 +13,12 @@
               ?>
               <li>
                   <div class="card" id="card<?php echo $i;?>">
-                      <div class="front" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
+                      <div class="front overlay" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
                           <div class="box-section-text">
                               <h2><?php echo $title ?></h2>
                           </div>
                       </div>
-                      <div class="back">
+                      <div class="back no-overlay">
                           <div class="box-section-text">
                               <p><?php echo $text_area ?></p>
                           </div>
