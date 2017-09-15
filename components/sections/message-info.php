@@ -29,7 +29,7 @@ $text = get_sub_field('message_text');
             <li>
               <div class="row">
                 <a href="<?php echo $link ?>" data-target="new-window">
-                  <div class="medium-12 columns side-blocks" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
+                  <div class="medium-12 columns side-blocks overlay" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
                       <div class="">
                           <h2><?php echo $title ?></h2>
                       </div>
