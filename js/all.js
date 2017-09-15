@@ -21,20 +21,17 @@ $(document).ready(function(){
 		$('.menu').slideToggle('slow');
 		$('.bars').toggleClass('hide');
 		$('.times').toggleClass('hide');
-		console.log("success!");
 	});
 
 	// Mobile Menu Toggles
 	$(".main-header").click(function(e) {
 			$(this).nextAll(".columns").slideToggle();
-			console.log("Success!!!");
 	});
 	$("header > section > .row > .columns + .columns > a").click(function(e) {
 			var n$ = $(this).next("nav");
 			if(n$.length<1||$(window).width()>1025) { return true; }
 			e.preventDefault();
 			n$.slideToggle();
-			console.log("Success!");
 	});
 
 	/* Image Sliders */
