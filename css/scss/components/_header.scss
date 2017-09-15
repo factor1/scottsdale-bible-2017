@@ -252,6 +252,11 @@ body
                           max-height: 250px;
                           margin-bottom: 15px;
 
+                          > div > div {
+                            height: 15vw;
+                            background-size: cover;
+                            
+                          }
                           > div > div > ul > li:first-of-type {
                             display: block;
 
