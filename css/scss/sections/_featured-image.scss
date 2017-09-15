@@ -33,10 +33,12 @@ section.featured-image
         }
     }
 
-    h1 {
-      font-size: 4em;
-      color: $primary;
+    .feature-text {
       padding-top: 4rem;
+
+      h1 {
+        font-size: 4em;
+      }
     }
 }
 
@@ -53,5 +55,25 @@ section.featured-video
                 width: 100%;
             }
         }
+    }
+    video {
+      position:relative;
+      z-index:0;
+    }
+
+    .text-center {
+      position:absolute;
+      top:15vw;
+      left:0;
+      right: 0;
+      margin: 0px auto;
+      z-index:1;
+    }
+    h1 {
+      font-size: 4.5em;
+      color: #fff;
+    }
+    .button {
+      margin: 10px 10px;
     }
 }

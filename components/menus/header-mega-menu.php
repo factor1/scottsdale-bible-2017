@@ -25,16 +25,28 @@ if(!$header_menu) {
         'walker'=> new factor1\MegaMenuWalker()
     ]);
     */
+    // Menu Images
+
+    while ( have_rows('header_images', 5) ) : the_row();
+    // MegaMenu Images
+    $visit = get_sub_field('visit_image');
+    $connect = get_sub_field('connect_image');
+    $serve = get_sub_field('serve_image');
+    $watch = get_sub_field('watch_image');
+    $care = get_sub_field('care_image');
+    $give = get_sub_field('give_image');
+
+    endwhile;
 
     $sub_items_wrap = "\n<nav>".
                           "\n<div class=\"box\">".
                               "\n<div class=\"row\">".
-                                  "\n<div class=\"medium-3 columns\">".
-                                      "\n<img src=\"" . get_template_directory_uri() . "/images/holders/sbc.jpeg\" alt=\"Placeholder\" />".
+                                  "\n<div class=\"large-3 columns\" style=\"background-image: url(" . esc_attr($visit['sizes']['large']) . ");\">".
                                   "\n</div>".
-                                  "\n<div class=\"medium-9 columns\">".
-                                      "\n<h3>" . the_field( 'the_title' ) . "</h3>".
-                                      "\n<p>" . get_field() . "</p>".
+                                  "\n<div class=\"large-9 columns\">".
+                                      "\n\t<ul class=\"inline-list\">".
+                                          "\n%3\$s".
+                                      "\n\t</ul>".
                                   "\n</div>".
                               "\n</div>".
                           "\n</div>".

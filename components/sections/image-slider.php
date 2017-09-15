@@ -1,4 +1,6 @@
-<?php if(!isset($wp)) { return; }
+<?php if(!isset($wp)) { return; } ?>
+
+<?php if( get_field('hero_type', 5) == 'slider' ):
 
 if(!isset($post)) {
     $post = get_queried_object();
@@ -42,3 +44,4 @@ preloadImages('<?php echo implode("','",$image_sources); ?>');
     </div>
     <?php } ?>
 </section>
+<?php endif;  ?>
