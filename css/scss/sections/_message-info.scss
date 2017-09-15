@@ -41,4 +41,22 @@ section.message-info {
       height: $block-height-medium;
     }
   }
+  .overlay {
+    position: relative;
+  }
+
+  .overlay:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.4;
+    background-color: $primary;
+  }
+
+  .overlay:hover:after  {
+    opacity: 0;
+  }
 }

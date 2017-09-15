@@ -1,10 +1,10 @@
 <?php if(!isset($wp)) { return; } ?>
 
-<?php if($video=get_field("featured_video")) { ?>
 <section class="featured-video live-message">
     <div class="text-center">
       <h1><?php the_title(); ?></h1>
-    </div>
+    </div><br><br><br><br><br><br><br><br>
+    <?php if($video=get_field("featured_video")) { ?>
     <div class="row">
         <div class="large-12 columns">
             <div class="fluidMedia">
@@ -12,5 +12,6 @@
             </div>
         </div>
     </div>
+
 </section>
 <?php return; } ?>
