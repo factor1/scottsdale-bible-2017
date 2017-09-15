@@ -32,17 +32,15 @@ if(!$last_weekend||!$upcoming_message) {
                     <a href="/message" class="button-second" data-target="new-window">Messages</a>
                     <a href="/live" class="button-second" data-target="new-window">Watch</a>
                 </div>
-                <?php if($upcoming_message) { ?>
                 <div>
                     <h6><span>This Coming Weekend:</span> <?php // echo esc_html($upcoming_message->title); ?></h6>
                     <?php if($upcoming_message->subtitle) { ?>
                       <?php // echo "<p>" . esc_html($upcoming_message->subtitle) . "</p>"; ?>
                     <?php } ?>
                     <?php // if($upcoming_message->description) { ?>
-                    <p><?php echo esc_html($upcoming_message->description); ?></p>
+                    <p><?php echo esc_html($last_weekend->upcoming_info); ?></p>
                     <?php // } ?>
                 </div>
-                <?php } ?>
             </div>
         </div>
         <?php } ?>
