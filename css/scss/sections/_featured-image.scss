@@ -33,10 +33,12 @@ section.featured-image
         }
     }
 
-    h1 {
-      font-size: 4em;
-      color: $primary;
+    .feature-text {
       padding-top: 4rem;
+
+      h1 {
+        font-size: 4em;
+      }
     }
 }
 

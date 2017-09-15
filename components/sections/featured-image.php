@@ -19,8 +19,10 @@
 
             <meta property="og:image" content="<?php echo esc_attr($image['url']); ?>">
             <div class="row">
-              <div class="small-12 columns">
-                <h1><?php the_title(); ?></h1>
+              <div class="small-12 columns feature-text">
+                <?php if($text=get_field("featured_image_text")) { ?>
+                <?php echo $text ; ?>
+                <?php } ?>
               </div>
             </div>
         </div>
