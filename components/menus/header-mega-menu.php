@@ -41,8 +41,12 @@ if(!$header_menu) {
     $sub_items_wrap = "\n<nav>".
                           "\n<div class=\"box\">".
                               "\n<div class=\"row\">".
-                                  "\n<div class=\"large-3 columns\" style=\"background-image: url(" . esc_attr($visit['sizes']['large']) . ");\">".
-                                  "\n</div>".
+                                  "\n<div class=\"large-3 columns visit-image\" style=\"display:none; background-image: url(" . esc_attr($visit['sizes']['large']) . ");\">"."</div>".
+                                  "\n<div class=\"large-3 columns connect-image\" style=\"display:none; background-image: url(" . esc_attr($connect['sizes']['large']) . ");\">"."</div>".
+                                  "\n<div class=\"large-3 columns serve-image\" style=\"display:none; background-image: url(" . esc_attr($serve['sizes']['large']) . ");\">"."</div>".
+                                  "\n<div class=\"large-3 columns watch-image\" style=\"display:none; background-image: url(" . esc_attr($watch['sizes']['large']) . ");\">"."</div>".
+                                  "\n<div class=\"large-3 columns care-image\" style=\"display:none; background-image: url(" . esc_attr($care['sizes']['large']) . ");\">"."</div>".
+                                  "\n<div class=\"large-3 columns give-image\" style=\"display:none; background-image: url(" . esc_attr($give['sizes']['large']) . ");\">"."</div>".
                                   "\n<div class=\"large-9 columns\">".
                                       "\n\t<ul class=\"inline-list\">".
                                           "\n%3\$s".
@@ -106,7 +110,7 @@ if(!$header_menu) {
 
             <div class="small-6 columns hide-for-large-up text-center main-header"><a href="#"><i class="fa fa-bars fa-lg"></i><i class="fa fa-times fa-lg hide"></i> Menu</a></div>
 
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="visit">
                 <a href="#" class="hover-feature"><span>Visit</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -116,7 +120,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="connect">
                 <a class="hover-feature" href="#"><span>Connect</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -126,7 +130,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="serve">
                 <a class="hover-feature" href="#"><span>Serve</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -136,7 +140,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="watch">
                 <a class="hover-feature" href="#"><span>Watch</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -146,7 +150,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="care">
                 <a class="hover-feature" href="#"><span>Care</span></a>
                 <?php
                 echo sb_get_nav_menu([
@@ -156,7 +160,7 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns">
+            <div class="large-1 columns" id="give">
                 <a class="last" href="#"><span class="button-gradient">Give</span></a>
                 <?php
                 echo sb_get_nav_menu([

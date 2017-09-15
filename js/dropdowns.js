@@ -56,5 +56,25 @@ $(document).ready(function(){
 			});
 	}
 
+	// MegaMenu Images
+	$('#visit').hover(function(){
+		$('.visit-image').toggle();
+	});
+	$('#connect').hover(function(){
+		$('.connect-image').toggle();
+	});
+	$('#serve').hover(function(){
+		$('.serve-image').toggle();
+	});
+	$('#watch').hover(function(){
+		$('.watch-image').toggle();
+	});
+	$('#care').hover(function(){
+		$('.care-image').toggle();
+	});
+	$('#give').hover(function(){
+		$('.give-image').toggle();
+	});
+
 });
 });
