@@ -192,6 +192,27 @@
     }
 }
 
+@media only screen and (min-width: 1025px) {
+  body > header > section > .row > .columns:nth-of-type(2) + .columns {
+    display: block !important;
+  }
+  body > header > section > .row > .columns:nth-of-type(3) + .columns {
+    display: block !important;
+  }
+  body > header > section > .row > .columns:nth-of-type(4) + .columns {
+    display: block !important;
+  }
+  body > header > section > .row > .columns:nth-of-type(5) + .columns {
+    display: block !important;
+  }
+  body > header > section > .row > .columns:nth-of-type(6) + .columns {
+    display: block !important;
+  }
+  body > header > section > .row > .columns:nth-of-type(7) + .columns {
+    display: block !important;
+  }
+}
+
 @media only screen and (max-width: 1025px)
 {
     body
