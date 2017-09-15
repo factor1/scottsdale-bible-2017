@@ -1,9 +1,13 @@
 <?php if(!isset($wp)) { return; } ?>
 
-<section class="featured-video live-message">
-    <div class="text-center">
-      <h1><?php the_title(); ?></h1>
-    </div><br><br><br><br><br><br><br><br>
+<section class="live-message">
+    <div class="row">
+        <div class="large-12 columns text-center">
+          <h1><?php the_title(); ?></h1>
+        </div>
+    </div>
+</section>
+<section class="featured-video">
     <?php if($video=get_field("featured_video")) { ?>
     <div class="row">
         <div class="large-12 columns">
