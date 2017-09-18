@@ -257,6 +257,16 @@
                                 {
                                     width: 100%;
                                     min-height: initial;
+
+                                    ul[class*="block-grid-"]
+                                    {
+                                        width: 100%;
+
+                                        > li
+                                        {
+                                            width: 100%;
+                                        }
+                                    }
                                 }
 
                                 h5 {
