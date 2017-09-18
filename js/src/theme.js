@@ -75,30 +75,6 @@ var preloadImages = function() {
         // Flip Function
         $('#card1,#card2,#card3,#card4,#card5,#card6').flip();
 
-        // Dive Deeper Menu
-      	$('.menu-icon').click(function(){
-          $('.menu').slideToggle('slow');
-          $('.bars').toggleClass('hide');
-          $('.times').toggleClass('hide');
-          console.log("success!");
-      	});
-
-
-        /* Mobile Menu Toggles */
-        /*
-        $(window).resize(function() {
-            $("header > section nav").add($("header > section .columns")).attr("style","");
-        });
-        */
-        $(".main-header").click(function(e) {
-            $(this).nextAll(".columns").slideToggle();
-        });
-        $("header > section > .row > .columns + .columns > a").click(function(e) {
-            var n$ = $(this).next("nav");
-            if(n$.length<1||$(window).width()>640) { return true; }
-            e.preventDefault();
-            n$.slideToggle();
-        });
 
         /* Social Icons - ShareThis Triggers */
         $("a[data-trigger-click]").click(function(e) {
@@ -128,4 +104,5 @@ var preloadImages = function() {
         });
 
     });
+    console.log("theme.js is working");
 })(jQuery);
