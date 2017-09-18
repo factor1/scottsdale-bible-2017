@@ -9,7 +9,7 @@ $button_option = get_sub_field('show_button_option');
 ?>
 <section class="first-visit alternate">
     <div class="row">
-        <div class="small-8 small-centered text-center columns">
+        <div class="small-12 medium-8 medium-centered text-center columns">
             <h1><?php echo $title ?></h1>
             <p><?php echo $text ?></p>
             <?php if($button_option === true) { ?>
