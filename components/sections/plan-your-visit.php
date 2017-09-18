@@ -8,7 +8,7 @@
     </div>
     <h1>Plan Your Visit</h1>
     <div class="row">
-        <ul class="small-block-grid-1 large-block-grid-2">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
             <?php while ( have_rows('plan_your_visit', 5) ) : the_row();
 
             // vars
