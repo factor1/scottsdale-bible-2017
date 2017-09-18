@@ -254,8 +254,9 @@ body
 
                           > div > div {
                             height: 15vw;
+                            max-height: 250px;
                             background-size: cover;
-                            
+
                           }
                           > div > div > ul > li:first-of-type {
                             display: block;
@@ -290,7 +291,6 @@ body
                             text-transform: uppercase;
                             a:hover{
                               text-decoration: none;
-                              color: $tertiary;
                             }
                         }
 

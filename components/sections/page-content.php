@@ -8,7 +8,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
 
 <section class="page-content">
     <div class="row">
-        <div class="small-12 columns">
+        <div class="large-12 columns">
             <?php
             // Get Post Articles
             get_template_part("components/posts/article");
