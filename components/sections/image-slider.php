@@ -24,7 +24,7 @@ $image_sources = array_map(function($e) {
 
 ?>
 <script type="text/javascript">
-preloadImages('<?php echo implode("','",$image_sources); ?>');
+// preloadImages('<?php echo implode("','",$image_sources); ?>');
 </script>
 <section class="image-slider">
     <ul>

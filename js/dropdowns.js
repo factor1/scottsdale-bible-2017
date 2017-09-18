@@ -13,9 +13,6 @@ $(document).ready(function(){
 		$('.mask').remove();
 	});
 
-	// Flip Function
-	$('#card1,#card2,#card3,#card4,#card5,#card6').flip();
-
 	// Dive Deeper Menu
 	$('.menu-icon').click(function(){
 		$('.menu').slideToggle('slow');
@@ -33,25 +30,6 @@ $(document).ready(function(){
 			e.preventDefault();
 			n$.slideToggle();
 	});
-
-	/* Image Sliders */
-	sliders$ = $("section.image-slider");
-	if(sliders$.length) {
-			sliders$.UpDownSlider({
-					direction: 'down',
-					speed: 1000,
-					interval: 6000,
-					mousePause: false,
-					controls: {
-							circles: sliders$.find(".controls-move .fa")
-					},
-					change: function(li$) {
-						 li$.find('img').each(function() {
-								 $(this).css("margin-left",($(this).outerWidth()/-2)+"px");
-						 });
-					}
-			});
-	}
 
 	// MegaMenu Images
 	$('#visit').hover(function(){
@@ -72,6 +50,7 @@ $(document).ready(function(){
 	$('#give').hover(function(){
 		$('.give-image').toggle();
 	});
+
 
 });
 });
