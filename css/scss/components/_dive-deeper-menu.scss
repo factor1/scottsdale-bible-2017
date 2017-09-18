@@ -34,6 +34,10 @@ section.dive-deeper {
     background-size: cover;
     background-position: center;
     height: 20vw;
+
+    @media screen and (max-width: 641px) {
+      display: none;
+    }
   }
 
   .menu > .columns:first-of-type {
