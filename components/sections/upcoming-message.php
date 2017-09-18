@@ -14,7 +14,7 @@ if(!$last_weekend||!$upcoming_message) {
 
 ?>
 
-<section class="upcoming-message">
+<section class="upcoming-message" style="background-image: url(<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>);">
     <div>
         <?php if($upcoming_message->image) { ?>
         <a href="<?php echo esc_attr($upcoming_message->url); ?>">
