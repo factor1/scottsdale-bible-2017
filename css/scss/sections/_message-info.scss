@@ -20,17 +20,9 @@ section.message-info {
     align-items: center;
     justify-content: center;
 
-/*
-    &:hover {
-      background-color: (53, 65, 78, 0);
+    div {
+      z-index: 2;
     }
-    &:before {
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background-color: inherit;
-      content: ' ';
-    }
-*/
 
     h2 {
       color: #fff;
@@ -52,7 +44,7 @@ section.message-info {
     left:0;
     width:100%;
     height:100%;
-    opacity:0.4;
+    opacity:0.6;
     background-color: $primary;
   }
 
