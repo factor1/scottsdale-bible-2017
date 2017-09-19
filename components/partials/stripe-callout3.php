@@ -1,13 +1,13 @@
-<?php if(!isset($wp)) { return; } 
+<?php if(!isset($wp)) { return; }
 
 //vars
 $title = get_sub_field('title');
-$image = get_sub_field('visitor_image');
+$image = get_sub_field('featured_image');
 $text = get_sub_field('text');
 $button_option = get_sub_field('show_button_option');
 
 ?>
-<section class="first-visit">
+<section class="callout3">
     <div class="row">
       <div class="small-12 medium-5 large-3 columns">
           <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
@@ -36,4 +36,3 @@ $button_option = get_sub_field('show_button_option');
       </div>
     </div>
 </section>
-<?php endif;  ?>

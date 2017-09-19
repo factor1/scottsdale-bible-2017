@@ -1,4 +1,4 @@
-<?php if(!isset($wp)) { return; } 
+<?php if(!isset($wp)) { return; }
 
 //vars
 $title = get_sub_field('title');
@@ -9,7 +9,7 @@ $button = get_sub_field('button_text');
 $button_link = get_sub_field('button_link');
 
 ?>
-<section class="welcome">
+<section class="callout1">
     <div class="row">
         <div class="medium-12 large-6 columns">
             <h1><?php echo $title; ?></h1>

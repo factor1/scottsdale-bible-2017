@@ -7,7 +7,7 @@ $text = get_sub_field('text');
 $button_option = get_sub_field('show_button_option');
 
 ?>
-<section class="first-visit alternate">
+<section class="callout4 alternate">
     <div class="row">
         <?php if ($image) { ?>
           <div class="small-12 medium-4 columns">
