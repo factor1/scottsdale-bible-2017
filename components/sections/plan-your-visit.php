@@ -22,7 +22,9 @@
                 <div class="row">
                     <div class="medium-12 columns venue-section" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
                         <div class="venue-section-text">
+                            <?php if ($venue) {?>
                             <h2><?php echo $venue ?></h2>
+                            <?php } ?>
                             <a href="<?php echo $button_link ?>" class="button" data-target="new-window"><?php echo $button ?></a>
                         </div>
                     </div>

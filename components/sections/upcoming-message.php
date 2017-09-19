@@ -16,11 +16,6 @@ if(!$last_weekend||!$upcoming_message) {
 
 <section class="upcoming-message" style="background-image: url(<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>);">
     <div>
-        <?php if($upcoming_message->image) { ?>
-        <a href="<?php echo esc_attr($upcoming_message->url); ?>">
-          <img src="<?php echo esc_attr($upcoming_message->image['sizes']['large']); ?>" alt="" title="" />
-        </a>
-        <?php } ?>
         <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
         <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
         <?php } ?>
