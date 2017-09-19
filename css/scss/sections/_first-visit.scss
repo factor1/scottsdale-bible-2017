@@ -6,7 +6,6 @@
 
 section.first-visit {
   div.row {
-    padding-bottom: 50px;
 
     &:last-child {
       padding-bottom: 0px;
@@ -41,5 +40,6 @@ section.alternate {
 
   a {
     margin-top: 40px !important;
+    margin-bottom: 40px !important;
   }
 }
