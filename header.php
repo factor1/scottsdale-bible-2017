@@ -70,12 +70,15 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
         <div class="large-12 columns">
             <ul class="inline-list">
 
-                <!-- Uncomment for Live Streaming link -->
+                <!-- Uncomment for Live Streaming link
                 <li>
                     <i class="fa fa-video-camera"></i><a href="http://scottsdalebible.com/live/">Live Streaming</a>
                 </li>
                 <!---->
 
+                <li>
+                    <i class="fa fa-lock"></i><a href="http://scottsdalebible.com/wp-admin/">Sign In</a>
+                </li>
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
                     <ul class="no-bullet">
