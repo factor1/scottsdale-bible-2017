@@ -13,7 +13,7 @@ if(!$upcoming_message) {
 
 ?>
 
-<?php if($upcoming_message) { ?>
+<?php if($upcoming_message->hide_section === false) { ?>
 <section class="upcoming-message" style="background-image: url(<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>);">
     <div>
         <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
