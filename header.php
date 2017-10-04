@@ -76,9 +76,12 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                 </li>
                 <!---->
 
+                <!-- Uncomment for Sign in link
                 <li>
                     <i class="fa fa-lock"></i><a href="http://scottsdalebible.com/wp-admin/">Sign In</a>
                 </li>
+                <!---->
+                
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
                     <ul class="no-bullet">
