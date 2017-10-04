@@ -25,7 +25,7 @@
                     $button_link = get_sub_field('button_link');
 
                     ?>
-                    <a href="<?php echo $button_link ?>" class="button" data-target="new-window"><?php echo $button ?></a>
+                    <a href="<?php echo $button_link ?>" class="button"><?php echo $button ?></a>
                     <?php endwhile; ?>
 
                   </div>
