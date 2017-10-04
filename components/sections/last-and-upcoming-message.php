@@ -6,17 +6,16 @@ if(!isset($post)) {
 $msg_post_id = (get_field("use_homepage_messages")) ? sb_get_homepage_post_id() : $post->ID;
 
 $last_weekend = ($f=get_field("last_weekend_message",$msg_post_id)) ? (object) $f[0] : null;
-$upcoming_message = ($f=get_field("upcoming_message",$msg_post_id)) ? (object) $f[0] : null;
 
-if(!$last_weekend||!$upcoming_message) {
+
+if(!$last_weekend) {
     return;
 }
 
 ?>
-
+<?php if($last_weekend) { ?>
 <section class="last-and-upcoming-message">
     <div class="row">
-        <?php if($last_weekend) { ?>
         <div class="small-12 medium-12 large-6 columns">
             <div>
                 <div>
@@ -33,18 +32,13 @@ if(!$last_weekend||!$upcoming_message) {
                     <a href="/live" class="button-second" data-target="new-window">Watch</a>
                 </div>
                 <div>
-                    <h6><span>This Coming Weekend:</span> <?php // echo esc_html($upcoming_message->title); ?></h6>
-                    <?php if($upcoming_message->subtitle) { ?>
-                      <?php // echo "<p>" . esc_html($upcoming_message->subtitle) . "</p>"; ?>
-                    <?php } ?>
+                    <h6><span>This Coming Weekend:</span>
                     <?php // if($upcoming_message->description) { ?>
                     <p><?php echo esc_html($last_weekend->upcoming_info); ?></p>
                     <?php // } ?>
                 </div>
             </div>
         </div>
-        <?php } ?>
-        <?php if($last_weekend) { ?>
         <div class="small-12 medium-12 large-6 columns" >
             <?php if($last_weekend->image) { ?>
             <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
@@ -54,6 +48,6 @@ if(!$last_weekend||!$upcoming_message) {
             </div>
             <?php } ?>
         </div>
-        <?php } ?>
     </div>
 </section>
+<?php } ?>

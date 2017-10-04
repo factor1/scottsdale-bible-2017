@@ -17,23 +17,24 @@ if(!$news_posts) {
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-3">
             <?php foreach($news_posts as $story) { $story =& $story['news_story']; $image = get_field("featured_image",$story->ID); ?>
-            <li>
+              <li>
+                <a href="<?php echo get_permalink($story->ID); ?>">
                 <div>
                     <div>
                         <?php if($image) { ?>
-                        <a href="<?php echo get_permalink($story->ID); ?>"><img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" /></a>
+                        <img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
                         <?php } ?>
                     </div>
                     <div>
-                        <h5><a href="<?php echo get_permalink($story->ID); ?>"><?php echo esc_html($story->post_title); ?></a></h5>
-                        <a href="<?php echo get_permalink($story->ID); ?>"></a>
+                        <h3><?php echo esc_html($story->post_title); ?></h3>
+
                         <p>
                             <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
                         </p>
-                        <a href="<?php echo get_option('siteurl'); ?>/news/" class="button">Learn More</a>
                     </div>
                 </div>
-            </li>
+                </a>
+              </li>
             <?php } ?>
         </ul>
     </div>

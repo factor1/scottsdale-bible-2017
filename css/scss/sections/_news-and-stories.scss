@@ -14,6 +14,24 @@ section.news-and-stories
         text-align: center;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      color: #000;
+    }
+
+    .row {
+      li {
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+        &:hover {
+          @include linear-gradient-border();
+        }
+      }
+    }
+
     > .row:first-of-type
     {
         > ul
@@ -21,55 +39,48 @@ section.news-and-stories
             > li
             {
                 padding: 15px;
-
-                > div
-                {
-                    max-width: 340px;
-                    margin: auto;
-
-                    > div:first-child
+                > a {
+                    > div
                     {
-                        text-align: center;
-                        max-height: 230px;
-                        overflow: hidden;
+                        max-width: 340px;
+                        margin: auto;
 
-                        img
+                        > div:first-child
                         {
-                            width: 100%;
-                            min-width: 100%;
-                        }
-                    }
+                            text-align: center;
+                            max-height: 230px;
+                            overflow: hidden;
 
-                    > div:last-child
-                    {
-                        padding-top: 15px;
-                        padding-bottom: 15px;
-                        padding-left: 10px;
-                        padding-right: 10px;
-
-                        > h3
-                        {
-                            > a
+                            img
                             {
-                               color: inherit;
-                               text-decoration: none;
+                                width: 100%;
+                                min-width: 100%;
                             }
                         }
 
-                        > a
+                        > div:last-child
                         {
-                            display: block;
-                            position: relative;
-                            margin-top: 20px;
-                            float: left;
-                        }
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            padding-left: 10px;
+                            padding-right: 10px;
 
-                        > p:last-of-type
-                        {
-                            margin-bottom: 4px;
+                            > h3
+                            {
+                              font-size: 18px;
+                              line-height: 22px;
+
+                            }
+
+
+
+                            > p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
                         }
                     }
-                }
+              }
             }
         }
     }

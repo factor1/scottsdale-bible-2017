@@ -3,24 +3,23 @@
     <div class="row">
         <ul class="small-block-grid-1 medium-block-grid-3">
             <?php while(have_posts()) { the_post(); $story = get_post(); $image = get_field("featured_image",$story->ID); ?>
-            <li>
-                <div>
-                    <div>
-                        <?php if($image) { ?>
-                        <a href="<?php echo get_permalink($story->ID); ?>">
-                        	<img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
-                        </a>
-                        <?php } ?>
-                    </div>
-                    <div>
-                        <h3><a href="<?php echo get_permalink($story->ID); ?>"><?php echo esc_html($story->post_title); ?></a></h3>
-                        <a href="<?php echo get_permalink($story->ID); ?>"></a>
-                        <p>
-                            <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
-                        </p>
-                    </div>
-                </div>
-            </li>
+              <li>
+                <a href="<?php echo get_permalink($story->ID); ?>">
+                  <div>
+                      <div>
+                          <?php if($image) { ?>
+                          	<img src="<?php echo esc_attr($image['sizes']['medium']); ?>" alt="" title="" />
+                          <?php } ?>
+                      </div>
+                      <div>
+                          <h3><?php echo esc_html($story->post_title); ?></h3>
+                          <p>
+                              <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
+                          </p>
+                      </div>
+                  </div>
+                </a>
+              </li>
             <?php } ?>
         </ul>
     </div>
