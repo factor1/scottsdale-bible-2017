@@ -30,7 +30,6 @@ if(!$news_posts) {
                         <p>
                             <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
                         </p>
-                        <a href="<?php echo get_option('siteurl'); ?>/news/" class="button">Learn More</a>
                     </div>
                 </div>
             </li>
