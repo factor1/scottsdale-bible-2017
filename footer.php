@@ -29,9 +29,6 @@ if($location) {
                     <a href="https://twitter.com/scottsdalebible"><i class="fa fa-twitter"></i></a>
                     <a href="https://www.facebook.com/scottsdalebible"><i class="fa fa-facebook"></i></a>
                     <a href="http://instagram.com/scottsdalebible"><i class="fa fa-instagram"></i></a>
-                    <a href="http://www.flickr.com/photos/scottsdalebible"><i class="fa fa-flickr"></i></a>
-                    <a href="<?php echo get_option('siteurl'); ?>/message"><i class="fa fa-microphone"></i></a>
-                    <a href="<?php echo get_option('siteurl'); ?>/feed"><i class="fa fa-rss"></i></a>
                     <div class="hide">
                         <span class='st_facebook_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
                         <span class='st_twitter_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
