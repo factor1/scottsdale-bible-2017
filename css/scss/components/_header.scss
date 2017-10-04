@@ -376,12 +376,16 @@ body
 
                 > .columns:hover
                 {
-
                     > nav
                     {
                         display: block;
                         z-index: 9999;
                     }
+                }
+                > .columns:hover .hover-feature {
+                  @include linear-gradient(90deg, $secondary, $tertiary);
+                  border-radius: 25px;
+                  padding: 7px 15px;
                 }
 
             }
@@ -393,11 +397,6 @@ body
 
 .hover-feature {
   padding: 7px 15px !important;
-  &:hover {
-    @include linear-gradient(90deg, $secondary, $tertiary);
-    border-radius: 25px;
-    padding: 7px 15px;
-  }
 }
 
 .col-shrink {
