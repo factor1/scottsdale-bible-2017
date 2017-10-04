@@ -25,7 +25,7 @@ if(!$news_posts) {
                         <?php } ?>
                     </div>
                     <div>
-                        <h5><a href="<?php echo get_permalink($story->ID); ?>"><?php echo esc_html($story->post_title); ?></a></h5>
+                        <h3><a href="<?php echo get_permalink($story->ID); ?>"><?php echo esc_html($story->post_title); ?></a></h3>
                         <a href="<?php echo get_permalink($story->ID); ?>"></a>
                         <p>
                             <?php echo esc_html(get_field("story_subtitle",$story->ID)); ?>
