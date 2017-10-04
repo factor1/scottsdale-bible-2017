@@ -18,6 +18,9 @@ section.dive-deeper {
     a {
       color: #fff;
       font-size: 20px;
+      span {
+        font-family: $Proxima;
+      }
 
       &:hover {
         text-decoration: none;
@@ -27,7 +30,7 @@ section.dive-deeper {
 
   .menu {
     background-color: $off-white;
-    display: none;
+    display: block;
   }
 
   .sidebar-image {

@@ -34,6 +34,10 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'general_info' ) {
 			get_template_part('components/partials/stripe', 'general-info');
     };
+		// Full Width Video
+		if( get_row_layout() == 'full_width_video' ) {
+			get_template_part('components/partials/stripe', 'video');
+    };
 		endwhile; // close the loop of flexible content
 
 else : // no layouts found
