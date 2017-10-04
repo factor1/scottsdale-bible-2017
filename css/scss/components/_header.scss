@@ -209,6 +209,7 @@ body
 
                     &:last-child {
                       margin-right: 0px;
+                      float: left;
                     }
 
                     > a
@@ -218,7 +219,7 @@ body
                         height: 70px;
                         margin-bottom: 30px;
                         text-align: center;
-                        font-size: 17px;
+                        font-size: 16px;
                         font-weight: 300;
                         color: #fff;
                         text-decoration: none;
@@ -387,17 +388,6 @@ body
                         display: block;
                         z-index: 9999;
                     }
-
-                    > .hover-feature::after
-                    {
-                      content: "";
-                      position: absolute;
-                      bottom: 2px;
-                      left: 0;
-                      height: 2px;
-                      width: 100%;
-                      @include linear-gradient($secondary, $tertiary);
-                    }
                 }
 
             }
@@ -405,4 +395,21 @@ body
 
 
     }
+}
+
+.hover-feature {
+  padding: 7px 15px !important;
+  &:hover {
+    @include linear-gradient(90deg, $secondary, $tertiary);
+    border-radius: 25px;
+    padding: 7px 15px;
+  }
+}
+
+.col-shrink {
+  width: 44% !important;
+}
+
+.col-grow {
+  width: 9.3333% !important;
 }
