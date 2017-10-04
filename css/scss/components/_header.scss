@@ -243,22 +243,19 @@ body
                         width: 100vw;
                         height: auto;
                         min-height: 100px;
-                        padding-bottom: 10px;
                         margin: auto;
-                        background-color: $off-white;
+                        background-color: #fff;
 
                         .box {
                           background-color: #fff;
-                          max-height: 250px;
-                          margin-bottom: 15px;
 
                           > div > div {
-                            height: 15vw;
-                            max-height: 250px;
                             background-size: cover;
-
+                            background-position: 50%;
+                            height: 250px;
                           }
-                          > div > div > ul > li:first-of-type {
+/*
+                          > div > div > ul > li{
                             display: block;
 
                             > h5 {
@@ -269,6 +266,7 @@ body
                           > div > div > ul > li {
                             display: none;
                           }
+*/
                         }
 
                         .row {
@@ -294,7 +292,7 @@ body
                             }
                         }
 
-                        > ul.inline-list
+                        ul.inline-list
                         {
                           display: flex;
                           justify-content: space-between;
@@ -304,9 +302,6 @@ body
                           margin-top: 0;
                           margin-bottom: 0;
 
-                            > li:first-of-type {
-                              display: none;
-                            }
                             > li:last-of-type {
                               margin-right: 20px;
                             }
@@ -365,7 +360,6 @@ body
 
                         > div:last-child
                         {
-                            text-align: center;
 
                             > .fa
                             {
@@ -412,4 +406,8 @@ body
 
 .col-grow {
   width: 9.3333% !important;
+}
+
+.mobile {
+  display: none !important;
 }

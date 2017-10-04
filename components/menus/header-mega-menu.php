@@ -54,7 +54,7 @@ if(!$header_menu) {
                                   "\n</div>".
                               "\n</div>".
                           "\n</div>".
-                          "\n\t<ul class=\"inline-list\">".
+                          "\n\t<ul class=\"inline-list mobile\">".
                               "\n%3\$s".
                           "\n\t</ul>".
                       "\n</nav>";
@@ -110,7 +110,7 @@ if(!$header_menu) {
 
             <div class="small-6 columns hide-for-large-up text-center main-header"><a href="#"><i class="fa fa-bars fa-lg"></i><i class="fa fa-times fa-lg hide"></i> Menu</a></div>
 
-            <div class="large-1 columns" id="visit">
+            <div class="large-1 columns col-grow" id="visit">
                 <a href="#"><span class="hover-feature">Visit</span></a>
                 <?php
                 echo sb_get_nav_menu([
