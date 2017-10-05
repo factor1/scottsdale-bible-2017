@@ -8,8 +8,6 @@
 $Domus: "jaf-domus", Helvetica, Arial, sans-serif;
 $Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
 
-$Oswald: Oswald, Helvetica, Arial, sans-serif;
-$Kepler: "kepler-std", georgia, "Times New Roman", serif;
 
 
 /* -----------------------------------------------------------------------------
@@ -123,7 +121,7 @@ section.posts-archive
 
         .meta
         {
-            font-family: $Kepler;
+
             font-size: 17px;
             font-weight: 400;
             line-height: 22px;
@@ -189,7 +187,6 @@ section.page-content
 
                 td
                 {
-                    font-family: $Oswald !important;
                     color: #000000;
                     line-height: 1.2;
 
