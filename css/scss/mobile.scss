@@ -211,6 +211,10 @@
   body > header > section > .row > .columns:nth-of-type(7) + .columns {
     display: block !important;
   }
+
+  .featured-video {
+    background: none !important;
+  }
 }
 
 @media only screen and (max-width: 1025px)
@@ -318,6 +322,18 @@
 
     .mobile {
       display: block !important;
+    }
+    .col-shrink {
+      width: 50% !important;
+    }
+    #bgvid {
+      display: none;
+    }
+    .featured-video {
+      min-height: 400px;
+      h1 {
+        font-size: 3em !important;
+      }
     }
 }
 
@@ -431,6 +447,9 @@
                 font-size: 12px;
             }
         }
+    }
+    .fluidMedia {
+      padding-top: 10px !important;
     }
 }
 
