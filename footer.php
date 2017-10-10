@@ -29,11 +29,12 @@ if($location) {
                     <a href="https://twitter.com/scottsdalebible"><i class="fa fa-twitter"></i></a>
                     <a href="https://www.facebook.com/scottsdalebible"><i class="fa fa-facebook"></i></a>
                     <a href="http://instagram.com/scottsdalebible"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/user/scottsdalebible"><i class="fa fa-youtube"></i></a>
                     <div class="hide">
                         <span class='st_facebook_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
                         <span class='st_twitter_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
                         <span class='st_email_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-                        <span class='st_pinterest_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+                        <span class='st_youtube_large' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
                     </div>
                 </div>
             </div>
