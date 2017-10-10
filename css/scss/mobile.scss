@@ -116,20 +116,18 @@
                 {
                     > ul.inline-list
                     {
+                      display: inline-flex;
                         > li
                         {
-                            width: 100%;
+                            width: 50%;
                             margin-left: 0px;
                             margin-right: 0px;
-                            padding-left: 25px;
-                            padding-right: 25px;
                         }
 
                         > li:last-child
                         {
-                            width: 100%;
+                            width: 50%;
                             text-align: center;
-                            margin-top: 20px;
 
                             > form
                             {

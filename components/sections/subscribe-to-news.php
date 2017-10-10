@@ -10,12 +10,10 @@
     <form action="http://scottsdalebible.us1.list-manage.com/subscribe/post?u=621f3dcab3b5d368b54832b84&amp;id=0de80d194a" method="post" target="_blank">
         <div class="row">
             <div class="medium-6 columns">
-                Name:
                 <input type="text" name="FNAME" value="" placeholder="" required />
                 First Name
             </div>
             <div class="medium-6 columns">
-                &nbsp
                 <input type="text" name="LNAME" value="" placeholder="" required />
                 Last Name
             </div>
@@ -23,8 +21,8 @@
         <br>
         <div class="row">
             <div class="large-12 columns">
-                Email Address:
                 <input type="text" name="EMAIL" value="" placeholder="" required />
+                Email Address
             </div>
         </div>
         <div class="row">
