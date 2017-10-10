@@ -14,7 +14,6 @@
                 First Name
             </div>
             <div class="medium-6 columns">
-                &nbsp
                 <input type="text" name="LNAME" value="" placeholder="" required />
                 Last Name
             </div>
@@ -23,7 +22,7 @@
         <div class="row">
             <div class="large-12 columns">
                 <input type="text" name="EMAIL" value="" placeholder="" required />
-                Email Address:
+                Email Address
             </div>
         </div>
         <div class="row">
