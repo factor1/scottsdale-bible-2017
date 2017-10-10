@@ -22,8 +22,8 @@
         <br>
         <div class="row">
             <div class="large-12 columns">
-                Email Address:
                 <input type="text" name="EMAIL" value="" placeholder="" required />
+                Email Address:
             </div>
         </div>
         <div class="row">
