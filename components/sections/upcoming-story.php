@@ -14,7 +14,8 @@ if(!$upcoming_story) {
 ?>
 
 <?php if($upcoming_story) { ?>
-<section class="upcoming-story fullWidth" style="background-image: url(<?php echo esc_attr($upcoming_story->image['sizes']['large']); ?>);">
+<section class="upcoming-message fullWidth" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_story->background_image['sizes']['large']); ?>">
+
     <div>
         <?php if($upcoming_story->show_button_option === true) { ?>
         <a href="<?php echo esc_attr($upcoming_story->button_internal_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_story->button_text); ?></a>

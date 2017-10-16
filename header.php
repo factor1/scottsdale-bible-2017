@@ -57,6 +57,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.map-loader.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/theme.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/dropdowns.min.js"; ?>" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri()."/js/parallax.min.js"; ?>" type="text/javascript"></script>
     <script src="https://use.typekit.net/ajb3ebk.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -81,7 +82,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                     <i class="fa fa-lock"></i><a href="http://scottsdalebible.com/wp-admin/">Sign In</a>
                 </li>
                 <!---->
-                
+
                 <li>
                     <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
                     <ul class="no-bullet">
