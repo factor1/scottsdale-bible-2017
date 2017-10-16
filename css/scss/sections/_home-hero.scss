@@ -25,10 +25,13 @@
 
 .hero-text-box {
   position:absolute;
-  top:20vw;
+  top:20vh;
   left:0;
   right: 0;
   margin: 0px auto;
   z-index:1;
   background-color: rgba(0,0,0,0.6);
+  @media screen and (min-width: 1024px) {
+    top: 45vh;
+  }
 }
