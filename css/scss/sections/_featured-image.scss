@@ -61,20 +61,13 @@ section.featured-video
       z-index:0;
     }
 
-    .text-center {
-      position:absolute;
-      top:15vw;
-      left:0;
-      right: 0;
-      margin: 0px auto;
-      z-index:1;
-    }
     h1 {
-      font-size: 4.5em;
+      margin-bottom: 10px;
+      font-size: 1.8em;
       color: #fff;
       text-shadow: 0 0 0.5px #000;
     }
     .button {
-      margin: 10px 10px;
+      margin: 10px 10px 20px;
     }
 }

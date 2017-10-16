@@ -19,19 +19,21 @@
                   <video class="fullWidth" id="bgvid" autoplay poster="" loop muted>
                     <source src="<?php echo $video ?>" type="video/mp4">
                   </video>
-                  <div class="text-center">
-                    <h1><?php echo $title ?></h1>
+                  <div class="row">
+                    <div class="large-6 columns text-center hero-text-box">
+                      <h1><?php echo $title ?></h1>
 
-                    <?php while ( have_rows('button') ) : the_row();
+                      <?php while ( have_rows('button') ) : the_row();
 
-                    // vars
-                    $button = get_sub_field('button_text');
-                    $button_link = get_sub_field('button_link');
+                      // vars
+                      $button = get_sub_field('button_text');
+                      $button_link = get_sub_field('button_link');
 
-                    ?>
-                    <a href="<?php echo $button_link ?>" class="button"><?php echo $button ?></a>
-                    <?php endwhile; ?>
+                      ?>
+                      <a href="<?php echo $button_link ?>" class="button"><?php echo $button ?></a>
+                      <?php endwhile; ?>
 
+                    </div>
                   </div>
                   <?php endif;  ?>
           </div>

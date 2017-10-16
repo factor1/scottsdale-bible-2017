@@ -14,7 +14,7 @@ if(!$upcoming_message) {
 ?>
 
 <?php if($upcoming_message->hide_section === false) { ?>
-<section class="upcoming-message" style="background-image: url(<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>);">
+<section class="upcoming-message" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>">
     <div>
         <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
         <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
