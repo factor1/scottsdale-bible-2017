@@ -109,7 +109,7 @@ section.page-content
 
                 > div
                 {
-                  
+
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
@@ -175,6 +175,8 @@ section.page-content
 */
 
 .related-events {
+  max-width: 100%;
+  margin: 0;
 
   img{
     max-width: 100%;
