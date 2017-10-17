@@ -1,7 +1,7 @@
 <?php if(!isset($wp)) { return; } ?>
 <section class="general-info">
     <div class="row">
-        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 visit-block">
             <?php if( have_rows ('info_blocks') ): $i = 0 ?>
               <?php while ( have_rows('info_blocks') ) : the_row(); $i++;
 
