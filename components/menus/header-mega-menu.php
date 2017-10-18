@@ -104,7 +104,7 @@ if(!$header_menu) {
         <div class="row">
 
             <div class="small-6 columns col-shrink">
-              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/SBC-BlueWhite-logo.svg" alt="" title="" /></a>
+              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/2017SBClogo.png" alt="" title="" /></a>
             </div>
 
 

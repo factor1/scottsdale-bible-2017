@@ -11,7 +11,7 @@ if($location) {
         <div class="row">
 
             <div class="small-6 small-centered medium-4 medium-centered large-3 large-offset-1 large-uncentered columns small-text-center large-text-left">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/SBC-BlueWhite-logo.svg" alt="" title="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/2017SBClogo.png" alt="" title="" />
             </div>
             <div class="small-12 medium-6 large-4 large-uncentered columns small-text-center large-text-center">
                 <div>For general information or our pastor-on-call:</div>
