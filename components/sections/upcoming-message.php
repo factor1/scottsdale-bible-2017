@@ -16,12 +16,15 @@ if(!$upcoming_message) {
 <?php if($upcoming_message->hide_section === false) { ?>
 <section class="upcoming-message" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>">
     <div>
-        <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
+      <?php if($upcoming_message->foreground_image) { ?>
+        <img src="<?php echo esc_attr($upcoming_message->foreground_image['sizes']['large']); ?>" /><br>
+      <?php } ?>
+      <?php if($upcoming_message->subtitle && $upcoming_message->subline_option === true) { ?>
         <h3><?php echo esc_html($upcoming_message->subtitle); ?></h3>
-        <?php } ?>
-        <?php if($upcoming_message->button_option === true) { ?>
-        <a href="<?php echo esc_attr($upcoming_message->button_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_message->button_text); ?></a>
-        <?php } ?>
+      <?php } ?>
+      <?php if($upcoming_message->button_option === true) { ?>
+      <a href="<?php echo esc_attr($upcoming_message->button_link); ?>" class="button" data-target="new-window"><?php echo esc_attr($upcoming_message->button_text); ?></a>
+      <?php } ?>
     </div>
 </section>
 <?php } ?>
