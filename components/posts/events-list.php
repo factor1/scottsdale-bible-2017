@@ -1,5 +1,5 @@
-<section class="upcoming-events">
-    <h1><i class="fa fa-calendar"></i>Upcoming <span>Events</span></h1>
+<section class="upcoming-events row">
+    <h1>Upcoming <span>Events</span></h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-2">
             <?php while(have_posts()) { the_post(); $event = get_post(); ?>

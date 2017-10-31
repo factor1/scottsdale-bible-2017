@@ -282,7 +282,6 @@ body
         display: block;
         position: relative;
         height: 100%;
-        left: 50%;
         overflow: visible;
         text-align: left;
 
@@ -290,8 +289,7 @@ body
         {
             position: relative;
             min-width: 100%;
-            max-width: initial;
-            margin-left: 0;
+            margin-left: 0 !important;
         }
     }
 
