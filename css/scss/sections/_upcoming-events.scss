@@ -8,9 +8,6 @@ section.upcoming-events
 {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url(../images/backgrounds/grid.png);
-    background-repeat: repeat;
-    background-position: 0px 0px;
 
     > h1
     {
@@ -31,6 +28,11 @@ section.upcoming-events
         {
             font-weight: 300;
         }
+    }
+
+    h3 {
+      font-size: 25px;
+      line-height: 28px;
     }
 
     > .row:first-of-type
