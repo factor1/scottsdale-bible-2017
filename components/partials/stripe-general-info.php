@@ -20,7 +20,9 @@
                   <div class="card" id="card<?php echo $i;?>">
                       <div class="front overlay" style="background-image: url(<?php echo esc_attr($image['sizes']['large']); ?>);">
                           <div class="box-section-text">
+                            <?php if($title) : ?>
                               <h2><?php echo $title ?></h2>
+                            <?php endif; ?>
                           </div>
                       </div>
                       <div class="back no-overlay">

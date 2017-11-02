@@ -14,7 +14,9 @@ $button_option = get_sub_field('show_button_option');
               <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
           </div>
           <div class="small-12 medium-8 columns">
+            <?php if($title) : ?>
               <h1><?php echo $title ?></h1>
+            <?php endif; ?>
               <p><?php echo $text ?></p>
               <?php if($button_option === true) { ?>
                 <?php if( have_rows ('buttons') ) { ?>
@@ -32,7 +34,9 @@ $button_option = get_sub_field('show_button_option');
           </div>
         <?php } else { ?>
           <div class="small-12 medium-8 medium-centered text-center columns">
+            <?php if($title) : ?>
               <h1><?php echo $title ?></h1>
+            <?php endif; ?>
               <p><?php echo $text ?></p>
               <?php if($button_option === true) { ?>
                 <?php if( have_rows ('buttons') ) { ?>
