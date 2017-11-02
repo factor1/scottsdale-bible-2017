@@ -14,7 +14,7 @@ if(!$upcoming_story) {
 ?>
 
 <?php if($upcoming_story) { ?>
-<section class="upcoming-message fullWidth" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_story->background_image['sizes']['full']); ?>">
+<section class="upcoming-message fullWidth" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_story->background_image['sizes']['parallax']); ?>">
 
     <div>
         <?php if($upcoming_story->foreground_image) { ?>
