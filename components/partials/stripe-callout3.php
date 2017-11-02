@@ -23,7 +23,7 @@ $button_option = get_sub_field('show_button_option');
           $medium = 'medium-12';
         endif;
       ?>
-      <div class="small-12 <?php echo $medium; echo $large; ?> columns">
+      <div class="small-12 <?php echo $medium;?> <?php echo $large; ?> columns">
           <h1><?php echo $title ?></h1>
           <p><?php echo $text ?></p>
           <?php if($button_option === true) { ?>
