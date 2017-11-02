@@ -6,11 +6,8 @@
 
 section.callout4 {
   div.row {
+    padding: 20px 0;
 
-    &:last-child {
-      padding-bottom: 0px;
-      height: 2px;
-    }
   }
 
   img {

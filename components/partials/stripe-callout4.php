@@ -54,6 +54,4 @@ $button_option = get_sub_field('show_button_option');
           </div>
         <?php } ?>
     </div>
-    <div class="row">
-    </div>
 </section>
