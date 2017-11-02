@@ -10,7 +10,7 @@ $button_option = get_sub_field('show_button_option');
 <section class="callout3">
     <div class="row">
       <div class="small-12 medium-5 large-3 columns">
-          <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
+          <img class="callout3-image" src="<?php echo esc_attr($image['sizes']['large']); ?>" />
       </div>
         <div class="small-12 medium-7 large-9 columns">
             <h1><?php echo $title ?></h1>

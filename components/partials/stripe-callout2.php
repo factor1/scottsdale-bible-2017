@@ -12,7 +12,7 @@ $button_link = get_sub_field('button_link');
 <section class="callout2">
     <div class="row">
         <div class="medium-12 large-6 columns">
-            <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
+            <img class="callout2-image" src="<?php echo esc_attr($image['sizes']['large']); ?>" />
         </div>
         <div class="medium-12 large-6 columns">
             <h1><?php echo $title ?></h1>
