@@ -38,6 +38,10 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'full_width_video' ) {
 			get_template_part('components/partials/stripe', 'video');
     };
+		// Upcoming Events
+		if( get_row_layout() == 'related_events' ) {
+			get_template_part("components/sections/related-events");
+    };
 		endwhile; // close the loop of flexible content
 
 else : // no layouts found

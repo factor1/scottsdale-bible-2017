@@ -14,7 +14,7 @@ if(!$upcoming_message) {
 ?>
 
 <?php if($upcoming_message->hide_section === false) { ?>
-<section class="upcoming-message" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_message->background_image['sizes']['large']); ?>">
+<section class="upcoming-message" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_message->background_image['sizes']['parallax']); ?>">
     <div>
       <?php if($upcoming_message->foreground_image) { ?>
         <img src="<?php echo esc_attr($upcoming_message->foreground_image['sizes']['large']); ?>" /><br>

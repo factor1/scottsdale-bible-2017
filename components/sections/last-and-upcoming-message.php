@@ -28,8 +28,8 @@ if(!$last_weekend) {
                     <p><?php echo esc_html($last_weekend->description); ?></p>
                     <?php // } ?>
                     <br />
-                    <a href="/message" class="button-second" data-target="new-window">Messages</a>
-                    <a href="/live" class="button-second" data-target="new-window">Watch</a>
+                    <a href="/message" class="button-second">Messages</a>
+                    <a href="/live" class="button-second">Watch</a>
                 </div>
                 <div>
                     <h6><span>This Coming Weekend:</span>
@@ -41,9 +41,8 @@ if(!$last_weekend) {
         </div>
         <div class="small-12 medium-12 large-6 columns" >
             <?php if($last_weekend->image) { ?>
-            <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
-              <a href="<?php echo esc_attr($last_weekend->url); ?>">
-
+              <a href="<?php echo esc_attr($last_weekend->url); ?>" style="display:block; height:100%; margin:0">
+                <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
               </a>
             </div>
             <?php } ?>

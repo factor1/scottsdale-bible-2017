@@ -36,38 +36,40 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ):
 ?>
-<div class="row">
-  <div class="small-12 columns">
-    <h2>Upcoming Events</h2>
+<section class="upcoming-events-flexible">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>Upcoming Events</h2>
+    </div>
   </div>
-</div>
-<div class="row">
-    <ul class="small-block-grid-1 large-block-grid-2 related-events">
-        <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
-        <li>
-            <div class="row">
-                <?php if($image=get_field("featured_image",$event->ID)) { ?>
-                <div class="medium-6 columns related-events-img">
-                    <a href="<?php echo get_permalink($event->ID); ?>"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
-                </div>
-                <?php } ?>
-                <div class="medium-6 columns">
-                    <h3>
-                        <a href="<?php echo get_permalink($event->ID); ?>"><?php echo esc_html($event->post_title); ?></a>
-                    </h3>
-                    <?php if($field=get_field("event_subtitle",$event->ID)) { ?>
-                    <h5><?php echo esc_html($field); ?></h5>
-                    <?php } ?>
-                    <?php if($field=get_field("event_excerpt",$event->ID)) { ?>
-                    <div class="event-excerpt">
-                        <?php echo $field; ?>
-                    </div>
-                    <?php } ?>
-                </div>
-            </div>
-        </li>
-        <?php } ?>
-    </ul>
-</div>
+  <div class="row">
+      <ul class="small-block-grid-1 large-block-grid-2 related-events">
+          <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
+          <li>
+              <div class="row">
+                  <?php if($image=get_field("featured_image",$event->ID)) { ?>
+                  <div class="medium-6 columns related-events-img">
+                      <a href="<?php echo get_permalink($event->ID); ?>"><img src="<?php echo esc_attr($image['sizes']['event_home']); ?>" alt="" title="" /></a>
+                  </div>
+                  <?php } ?>
+                  <div class="medium-6 columns">
+                      <h3>
+                          <a href="<?php echo get_permalink($event->ID); ?>"><?php echo esc_html($event->post_title); ?></a>
+                      </h3>
+                      <?php if($field=get_field("event_subtitle",$event->ID)) { ?>
+                      <h5><?php echo esc_html($field); ?></h5>
+                      <?php } ?>
+                      <?php if($field=get_field("event_excerpt",$event->ID)) { ?>
+                      <div class="event-excerpt">
+                          <?php echo $field; ?>
+                      </div>
+                      <?php } ?>
+                  </div>
+              </div>
+          </li>
+          <?php } ?>
+      </ul>
+  </div>
+</section>
 
 <?php endif;?>

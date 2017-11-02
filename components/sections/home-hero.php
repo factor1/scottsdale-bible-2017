@@ -11,7 +11,7 @@
 
 <?php if( get_field('hero_type', 5) == 'video' ): ?>
 
-  <section class="featured-video" style="background: url(<?php echo $url;?>) center center/cover no-repeat;">
+  <section class="featured-video featured-video--home" style="background: url(<?php echo $url;?>) center center/cover no-repeat;">
       <div class="row fullWidth">
           <div class="large-12 columns">
 

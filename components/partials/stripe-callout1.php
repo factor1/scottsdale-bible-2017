@@ -19,7 +19,7 @@ $button_link = get_sub_field('button_link');
             <?php } ?>
         </div>
         <div class="medium-12 large-6 columns">
-            <img src="<?php echo esc_attr($image['sizes']['large']); ?>" />
+            <img class="callout1-image" src="<?php echo esc_attr($image['sizes']['large']); ?>" />
         </div>
     </div>
     <div class="row">
