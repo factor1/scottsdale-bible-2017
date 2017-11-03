@@ -29,7 +29,7 @@ if(!$last_weekend) {
                     <?php // } ?>
                     <br />
                     <a href="/message" class="button-second">Messages</a>
-                    <a href="/live" class="button-second">Watch</a>
+                    <a href="<?php echo esc_attr($last_weekend->url); ?>" class="button-second">Watch</a>
                 </div>
                 <div>
                     <h6><span>This Coming Weekend:</span>
