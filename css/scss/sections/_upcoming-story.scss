@@ -1,0 +1,19 @@
+/**
+*
+*  Upcoming-story
+* -----------------------------------------------------------------------------
+*/
+
+.upcoming-story {
+  background-size: cover;
+  background-position: center;
+  height: 40vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,54 @@
+/**
+*
+* Last Weekend and Upcoming Message
+* -----------------------------------------------------------------------------
+*/
+$block-height-large: 12vw;
+$block-height-medium: 20vw;
+
+section.message-info {
+  padding: 40px 0px;
+
+  .side-blocks {
+    /* background: rgba(53, 65, 78, 0.5); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: $block-height-large;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      z-index: 2;
+    }
+
+    h2 {
+      color: #fff;
+      text-shadow: 3px 4px 5px rgba(29, 43, 59, 0.25);;
+    }
+
+    @media screen and (max-width: 1024px) {
+      height: $block-height-medium;
+    }
+  }
+  .overlay {
+    position: relative;
+  }
+
+  .overlay:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.6;
+    background-color: $primary;
+  }
+
+  .overlay:hover:after  {
+    opacity: 0;
+  }
+}

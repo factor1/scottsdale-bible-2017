@@ -1,0 +1,62 @@
+/**
+*
+*  Upcoming-story
+* -----------------------------------------------------------------------------
+*/
+
+.upcoming-message {
+  background-size: cover;
+  background-position: center;
+  height: 40vw;
+  min-height: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-family: $Proxima;
+    color: #fff;
+  }
+}
+
+/*
+section.upcoming-message
+{
+  height: 40vw;
+  background-image: url(../images/holders/PhoenixB&W.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+
+  .columns {
+
+    div {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      top: 90px;
+      width: 100%;
+
+      img {
+        max-height: 300px;
+      }
+      a {
+        margin-top: 10px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-family: $Proxima;
+        color: #fff;
+      }
+    }
+  }
+}
+*/

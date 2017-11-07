@@ -1,0 +1,42 @@
+/**
+*
+* Callout4
+* -----------------------------------------------------------------------------
+*/
+
+section.callout4 {
+  div.row {
+    padding: 20px 0;
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    margin-top: 20px;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+section.alternate {
+  background-image: url(../images/backgrounds/Pattern.png);
+  background-repeat: repeat;
+  background-position: 0px 0px;
+  color: #fff;
+
+  h1 {
+    padding-top: 40px;
+    color: #fff;
+  }
+
+  a {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+}

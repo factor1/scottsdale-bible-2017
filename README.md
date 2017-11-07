@@ -1,8 +1,8 @@
-# Scottsdale Bible 2015 theme
+# Scottsdale Bible 2017
 Notes about this custom theme coming soon
 
 ## About This Repository
-Here you will find the custom WordPress theme behind the 2015 version of http://scottsdalebible.com.
+Here you will find the custom WordPress theme behind the 2017 version of http://scottsdalebible.com.
 
 ### Tools / Packages Used
 - [Node/npm](http://npmjs.com)
@@ -21,11 +21,9 @@ To view the gulp tasks available from Prelude type `gulp -T` or view the [Prelud
 Both staging and production environments for Scottsdale Bible have on server
 repos to easily push code changes.
 
-The **staging** repository is auto mapped to the develop brand:
-```
-ssh://scottsda@scottsdalebible.com/home/scottsda/repos/scottsdalebible2015.git
-```
-The **production** repository is the same URL but mapped to the master branch:
+The **staging** repository is auto on the release/2.0.0 branch:
+
+The **production** repo is coming soon on the master branch:
 
 
 ## Contact

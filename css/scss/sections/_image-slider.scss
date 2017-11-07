@@ -1,0 +1,73 @@
+/**
+*
+* 5.0 Component - Image Slider
+* -----------------------------------------------------------------------------
+*/
+
+section.image-slider
+{
+    position: relative;
+    max-height: 500px;
+    overflow: hidden;
+
+    > ul
+    {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+
+        > li
+        {
+            display: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            text-align: center;
+            height: 500px !important;
+
+            > a
+            {
+                max-width: 1600px;
+
+                > img
+                {
+                    margin-left: -800px;
+                    width: 100%;
+                }
+            }
+        }
+
+        > li:first-child
+        {
+            display: block;
+        }
+    }
+
+    > .controls-move
+    {
+        position: absolute;
+        width: 18px;
+        left: auto;
+        right: 16%;
+        top: 50%;
+        bottom: auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 32px;
+        margin-top: -80px;
+
+        > .fa
+        {
+            font-size: 18px;
+            line-height: 1;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 0px 0px 0px #777777;
+        }
+
+        > .fa.active:before, > .fa:hover:before
+        {
+            content: "\f111";
+        }
+    }
+}

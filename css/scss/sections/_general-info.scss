@@ -1,0 +1,138 @@
+/**
+*
+* General Info
+* -----------------------------------------------------------------------------
+*/
+
+section.general-info
+{
+    margin-bottom: 40px;
+
+    h1
+    {
+        text-align: center;
+        padding: auto;
+    }
+
+    > .row
+    {
+        text-align: center;
+
+        > ul
+        {
+            > li
+            {
+                padding: 0px 10px;
+
+                > .row
+                {
+                    margin-top: 40px;
+                    padding: 0px 10px;
+
+                    > div
+                    {
+                        padding: 10px;
+                    }
+
+                    > div:first-child
+                    {
+                        text-align: center;
+                        overflow: hidden;
+
+                        > a
+                        {
+                            height: 150px;
+                        }
+                    }
+
+                    > div:last-child
+                    {
+
+                        > h5
+                        {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1;
+                        }
+
+                        > div
+                        {
+
+                            p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+  $hero-height: 48vh;
+
+  .card {
+    padding-top: 40px;
+    cursor: pointer;
+
+    .overlay {
+      position: relative;
+    }
+
+    .overlay:after {
+      position: absolute;
+      content:"";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      opacity:0.6;
+      background-color: $primary;
+    }
+
+    .overlay:hover:after  {
+      opacity: 0;
+    }
+
+    .no-overlay {
+      position: absolute;
+      content:"";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      opacity:1;
+      background-color: #fff;
+    }
+
+    p {
+      font-family: $Proxima;
+      padding: 0px 20px;
+    }
+
+    h2 {
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    > div {
+      background-size: cover;
+      background-position: center;
+      height: $hero-height !important;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .back {
+    @include linear-gradient-border();
+  }
+
+  .box-section-text {
+    z-index: 2;
+  }
+
+}

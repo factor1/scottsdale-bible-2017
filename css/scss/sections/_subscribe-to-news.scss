@@ -1,0 +1,27 @@
+/**
+*
+* Component - Subscribe to News
+* -----------------------------------------------------------------------------
+*/
+
+section.subscribe-to-news
+{
+    padding-bottom: 70px;
+
+    > h1
+    {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .button {
+      border-radius: 25px;
+      margin-top: 1em;
+    }
+
+    input[type=text] {
+      background-color: $off-white;
+      margin-bottom: 0px;
+    }
+
+}
