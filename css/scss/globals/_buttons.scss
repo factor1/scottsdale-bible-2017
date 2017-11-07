@@ -1,0 +1,56 @@
+/* -----------------------------------------------------------------------------
+	# Buttons
+----------------------------------------------------------------------------- */
+.button {
+  border-radius: 25px;
+  padding: 15px 25px;
+  font-family: $Proxima;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: $tertiary;
+  color: #fff;
+
+	&:hover {
+    background: $secondary;
+    text-decoration: none;
+	}
+}
+
+.button-second {
+  border-radius: 30px;
+  border: 1px solid $quaternary;
+  padding: 15px 25px;
+  font-family: $Proxima;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  background: #fff;
+  color: $quaternary;
+
+	&:hover {
+    background: $quaternary;
+    color: #fff;
+    text-decoration: none;
+	}
+}
+
+.button-gradient {
+	@include linear-gradient(90deg, $secondary, $tertiary);
+  border-radius: 25px;
+  padding: 7px 15px;
+
+	&:hover {
+    background: #fff;
+    border: 1pt solid $tertiary;
+    color: $secondary;
+	}
+}
+
+.button-involved {
+  display: inline-block;
+}

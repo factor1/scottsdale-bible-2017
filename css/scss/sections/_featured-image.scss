@@ -1,0 +1,74 @@
+/**
+*
+* 10.0 Component - Featured Images and Videos
+* -----------------------------------------------------------------------------
+*/
+
+section.featured-image
+{
+  background-size: cover !important;
+  background-position: center;
+  height: 35vw;
+  max-height: 470px;
+  text-align: center;
+  display: flex;
+
+    > .row
+    {
+        > .columns
+        {
+            padding: 0px;
+
+            img
+            {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .row {
+          margin: 0px;
+        }
+    }
+
+    .feature-text {
+      padding-top: 4rem;
+
+      h1 {
+        font-size: 4em;
+      }
+    }
+}
+
+section.featured-video
+{
+    > .row
+    {
+        > .columns
+        {
+            padding: 0px;
+
+            iframe
+            {
+                width: 100%;
+            }
+        }
+    }
+    video {
+      position:relative;
+      z-index:0;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 1.8em;
+      line-height: 34px;
+      color: #fff;
+      text-shadow: 0 0 0.5px #000;
+    }
+    .button {
+      margin: 10px 10px 20px;
+    }
+}

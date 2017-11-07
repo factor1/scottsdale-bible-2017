@@ -1,0 +1,258 @@
+/**
+*
+* Stylesheet Variables
+* -----------------------------------------------------------------------------
+*/
+
+/* Fonts */
+$Domus: "jaf-domus", Helvetica, Arial, sans-serif;
+$Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
+
+
+
+/* -----------------------------------------------------------------------------
+	# Imports
+----------------------------------------------------------------------------- */
+
+// Abstract Styles
+
+@import "abstracts/mixins";
+
+// Global Syles
+@import "globals/colors";
+@import "globals/global";
+@import "globals/buttons";
+@import "globals/hr";
+
+// Component Styles
+
+@import "components/header";
+@import "components/footer";
+@import "components/group-search-form";
+@import "components/dive-deeper-menu";
+
+
+// Section Specific Syles
+
+@import "sections/callout1";
+@import "sections/callout2";
+@import "sections/callout3";
+@import "sections/callout4";
+@import "sections/stripe-video";
+@import "sections/subscribe-to-news";
+@import "sections/image-slider";
+@import "sections/home-hero";
+@import "sections/select-campus";
+@import "sections/news-and-stories";
+@import "sections/upcoming-events";
+@import "sections/plan-your-visit";
+@import "sections/last-and-upcoming-message";
+@import "sections/featured-image";
+@import "sections/welcome-to-campus";
+@import "sections/get-involved";
+@import "sections/upcoming-story";
+@import "sections/upcoming-message";
+@import "sections/location-map";
+@import "sections/general-info";
+@import "sections/live-message";
+@import "sections/message-info";
+
+
+// Template Specific Styles
+@import "templates/page-content";
+
+
+
+/**
+*
+* 16.0 Component - Not Found
+* -----------------------------------------------------------------------------
+*/
+
+section.not-found
+{
+    background-image: url(../images/backgrounds/grid.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    padding: 100px;
+
+    > .row
+    {
+        background-color: #ffffff;
+        padding: 40px;
+    }
+}
+
+/**
+*
+* 17.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.posts-archive
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    > .row
+    {
+        background-color: #ffffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        > h2
+        {
+            margin-bottom: 4px;
+
+            > a
+            {
+                color: $tertiary;
+            }
+        }
+
+        h3
+        {
+            margin-bottom: 3px;
+        }
+
+        .meta
+        {
+
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+}
+
+
+/**
+*
+* 18.0 Section - Archive Posts
+* -----------------------------------------------------------------------------
+*/
+
+section.search-results
+{
+    > .row
+    {
+        > .columns
+        {
+            > p.no-break
+            {
+                display: none; /* Hide Social Media Links */
+            }
+        }
+    }
+}
+
+
+/**
+*
+* 19.0 Page - Messages - Series Archives
+* -----------------------------------------------------------------------------
+*/
+
+section.page-content
+{
+    div#seriesengine
+    {
+        width: 100%;
+
+        .enmse-selector{
+            display: none;
+        }
+
+        h3.enmse-poweredby {
+            display: none;
+        }
+
+        .enmse-media-container {width:100% !important;}
+
+        h3.enmse-archive-title
+        {
+            font-family: $Proxima !important;
+
+        }
+
+        table.enmse-archive-table
+        {
+            tr
+            {
+                background-color: transparent;
+
+                td
+                {
+                    color: #000000;
+                    line-height: 1.2;
+
+                    > a
+                    {
+                        font-family: inherit !important;
+                        color: inherit;
+                    }
+
+                    > a:hover
+                    {
+                        color: $tertiary;
+                    }
+                }
+
+                td.enmse-archive-title-cell
+                {
+                    font-weight: 700;
+                    padding-left: 0px;
+                }
+
+                td.enmse-archive-explore-cell
+                {
+                    text-align: right;
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+/**
+*
+* 20.0 Events - Details Page
+* -----------------------------------------------------------------------------
+*/
+
+body.single-event
+{
+    section.article
+    {
+        > div
+        {
+            max-width: 100%;
+
+            > div[style^='float:right']
+            {
+                max-width: 100%;
+
+                > div
+                {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        div.em-location-map-container
+        {
+
+        }
+    }
+}
+
+.event-single-map{
+  .em-location-map-container{
+    width: 100% !important;
+    height: 450px !important;
+  }
+}

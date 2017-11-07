@@ -1,0 +1,98 @@
+/**
+*
+* 7.0 Component - News and Stories
+* -----------------------------------------------------------------------------
+*/
+
+section.news-and-stories
+{
+    padding: 40px 10px;
+
+    > h1
+    {
+        text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      color: #000;
+    }
+
+    .row {
+      li {
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+        &:hover {
+          @include linear-gradient-border();
+        }
+      }
+    }
+
+    > .row:first-of-type
+    {
+        > ul
+        {
+            > li
+            {
+                padding: 15px;
+                > a {
+                    > div
+                    {
+                        max-width: 340px;
+                        margin: auto;
+
+                        > div:first-child
+                        {
+                            text-align: center;
+                            max-height: 230px;
+                            overflow: hidden;
+
+                            img
+                            {
+                                width: 100%;
+                                min-width: 100%;
+                            }
+                        }
+
+                        > div:last-child
+                        {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            padding-left: 10px;
+                            padding-right: 10px;
+
+                            > h3
+                            {
+                              font-size: 18px;
+                              line-height: 22px;
+
+                            }
+
+
+
+                            > p:last-of-type
+                            {
+                                margin-bottom: 4px;
+                            }
+                        }
+                    }
+              }
+            }
+        }
+    }
+
+    > .row:last-child
+    {
+        text-align: center;
+        margin-top: 30px;
+
+        > .navigation
+        {
+            text-align: left;
+        }
+    }
+
+}

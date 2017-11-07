@@ -1,0 +1,46 @@
+/**
+*
+* 12.0 Component - Welcome to Campus
+* -----------------------------------------------------------------------------
+*/
+
+section.welcome-to-campus
+{
+    background-image: url(../images/backgrounds/dark_wood.png);
+    background-repeat: repeat;
+    background-position: 0px 0px;
+
+    > .row
+    {
+        > .columns
+        {
+            text-align: center;
+
+            > div
+            {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                padding: 20px;
+
+                > h2
+                {
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 10px;
+
+                    > span
+                    {
+                        font-weight: 700;
+                    }
+                }
+
+                > p
+                {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
