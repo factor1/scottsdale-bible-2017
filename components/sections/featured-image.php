@@ -13,7 +13,7 @@
 <?php return; } ?>
 
 <?php if($image=get_field("featured_image")) { ?>
-<section class="featured-image" style="background: url(<?php echo esc_attr($image['sizes']['large']); ?>) center center">
+<section class="featured-image" style="background: url(<?php echo esc_attr($image['sizes']['featured-image']); ?>) center center">
     <div class="row fullWidth">
         <div class="large-12 columns" >
 
