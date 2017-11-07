@@ -130,6 +130,7 @@ if(!function_exists("sb_template_init"))
         /* Set up custom thumbnail sizes */
         add_image_size( 'event_home', '500', '300', 'true' );
         add_image_size( 'staff_grid', '200', '240', 'true' );
+        add_image_size( 'featured-image', '1920', '470', 'true' );
         add_image_size( 'parallax', '1920', '1000', 'true' );
         add_image_size( 'parallax-foreground', '1024', '370', 'true' );
 
