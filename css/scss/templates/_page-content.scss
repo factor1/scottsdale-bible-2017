@@ -9,6 +9,9 @@ section.page-content
     > .row
     {
         padding-top: 20px;
+        &:first-of-type {
+          padding-top: 0;
+        }
 
         > div.sidebar
         {
@@ -228,4 +231,12 @@ section.page-content
 
 .upcoming-events-flexible {
   padding: 30px 0;
+}
+
+.flexible-content {
+  > section:first-of-type {
+    > .row:first-of-type {
+      padding-top: 0;
+    }
+  }
 }

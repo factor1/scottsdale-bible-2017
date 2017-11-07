@@ -19,9 +19,9 @@
         </ul>
         <?php } ?>
     </div>
-    <?php if($c=sb_get_content_field("page_content")) : ?>
+
       <div>
           <?php echo ($c=sb_get_content_field("page_content")) ? $c : sb_get_the_content(); ?>
       </div>
-    <?php endif; ?>
+      
 </section>

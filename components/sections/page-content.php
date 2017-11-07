@@ -13,7 +13,7 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
             // Get Post Articles
             get_template_part("components/posts/article");
 
-          
+
             ?>
         </div>
     </div>
