@@ -131,6 +131,7 @@ if(!function_exists("sb_template_init"))
         add_image_size( 'event_home', '500', '300', 'true' );
         add_image_size( 'staff_grid', '200', '240', 'true' );
         add_image_size( 'parallax', '1920', '1000', 'true' );
+        add_image_size( 'parallax-foreground', '1024', '370', 'true' );
 
         add_filter('excerpt_more',function() {
             return ' &hellip; <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'f1' ) . '</a>';
