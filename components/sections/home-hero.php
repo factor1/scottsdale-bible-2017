@@ -1,15 +1,15 @@
 <?php if(!isset($wp)) { return; } ?>
 
-<?php if( have_rows ('video_hero', 5) ): the_row();
+<?php if( have_rows ('video_hero') ): the_row();
   // vars
   $title = get_sub_field('welcome_text');
-  $video = get_sub_field('video');
+  $video = get_sub_field('hero_video');
   $image = get_sub_field('poster_image');
   $url = $image['url'];
 
 ?>
 
-<?php if( get_field('hero_type', 5) == 'video' ): ?>
+<?php if( get_field('hero_type') == 'video' ): ?>
 
   <section class="featured-video featured-video--home" style="background: url(<?php echo $url;?>) center center/cover no-repeat;">
       <div class="row fullWidth">
