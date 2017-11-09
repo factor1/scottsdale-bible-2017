@@ -27,9 +27,10 @@ if(!$last_weekend) {
                     <?php // if($last_weekend->description) { ?>
                     <p><?php echo esc_html($last_weekend->description); ?></p>
                     <?php // } ?>
-                    <br />
-                    <a href="/message" class="button-second">Messages</a>
-                    <a href="<?php echo esc_attr($last_weekend->url); ?>" class="button-second">Watch</a>
+                    <div class="last-and-upcoming-message__buttons">
+                      <a href="/message" class="button-second">Messages</a>
+                      <a href="<?php echo esc_attr($last_weekend->url); ?>" class="button-second">Watch</a>
+                    </div>
                 </div>
                 <div>
                     <h6><span>This Coming Weekend:</span>

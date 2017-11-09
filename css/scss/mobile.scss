@@ -341,6 +341,18 @@
         top: 15vh;
       }
     }
+    .last-and-upcoming-message__buttons {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      a {
+        margin: 15px 0 !important;
+        justify-content: center;
+        &:last-child {
+          margin-left: 0 !important;
+        }
+      }
+    }
 }
 
 
