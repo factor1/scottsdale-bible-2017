@@ -12,6 +12,10 @@ section.last-and-upcoming-message {
     margin-top: 50px;
   }
 
+  &__buttons {
+    margin-top: 0px;
+  }
+
   h1 {
     font-size: 36px;
     line-height: 40px;
@@ -21,6 +25,7 @@ section.last-and-upcoming-message {
     margin-bottom: 20px;
   }
   a {
+    display: inline-flex;
     margin: 40px 0px;
 
     &:last-child {
