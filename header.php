@@ -55,7 +55,6 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <script src="<?php echo get_template_directory_uri()."/js/jquery.remodal.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.up-down-slider.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/jquery.f1.map-loader.min.js"; ?>" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri()."/js/theme.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/dropdowns.min.js"; ?>" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri()."/js/parallax.min.js"; ?>" type="text/javascript"></script>
     <script src="https://use.typekit.net/ajb3ebk.js"></script>
@@ -88,7 +87,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
                     <ul class="no-bullet">
                         <?php foreach(sb_get_campuses() as $campus) { $campus_name = explode(" ",trim($campus->post_title)); ?>
                         <li>
-                            <a href="<?php echo get_permalink($campus->ID); ?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
+                            <a href="<?php echo get_home_url();?>/set-campus/?campus=<?php echo $campus->ID;?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
                         </li>
                         <?php } ?>
                     </ul>

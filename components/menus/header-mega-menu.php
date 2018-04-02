@@ -16,17 +16,7 @@ $header_menu = ($header_menu) ? wp_get_nav_menu_object($header_menu) : false;
 
 if(!$header_menu) {
 
-    // Load Default Theme Mega Menu
-
-    /* old mega menu not used anymore
-    echo sb_get_nav_menu([
-        'theme_location'=>'header_mega_menu',
-        'items_wrap'=>$items_wrap,
-        'walker'=> new factor1\MegaMenuWalker()
-    ]);
-    */
     // Menu Images
-
     while ( have_rows('header_images', 5) ) : the_row();
     // MegaMenu Images
     $visit = get_sub_field('visit_image');
@@ -60,7 +50,7 @@ if(!$header_menu) {
                       "\n</nav>";
 
     // Load campus specific menus
-    $campus_id = sb_get_campus_cookie();
+    $campus_id = $_COOKIE['sb_campus'];
     $campus = ($campus_id) ? get_post($campus_id) : null;
     $campus_name = ($campus) ? $campus->post_title : null;
 
