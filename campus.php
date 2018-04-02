@@ -1,7 +1,7 @@
 <?php
 
-$campus = get_queried_object();
-sb_set_campus_cookie($campus->ID);
+// $campus = get_queried_object();
+// sb_set_campus_cookie($campus->ID);
 
 get_header();
 get_template_part("components/sections/image-slider");
