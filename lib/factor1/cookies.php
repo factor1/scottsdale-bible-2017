@@ -28,7 +28,7 @@ if (!function_exists("sb_clear_campus_cookie")) {
  * Check for cookie and localize variable for JS usage
 **/
 function cookie_check() {
-  $cookieData = array('has_location_cookie' => $_COOKIE['sb_campus'] ? true : false);
+  $cookieData = array('has_location_cookie' => isset($_COOKIE['sb_campus']) ? true : false);
 
   wp_localize_script('prelude-js', 'cookieData', $cookieData);
 }
@@ -49,9 +49,11 @@ function update_cookie() {
 add_action( 'wp', 'update_cookie', 999);
 
 function sb_campus_cookie_check() {
-  if( $_COOKIE['sb_campus'] ) {
+  if( isset($_COOKIE['sb_campus']) ){
     header("Location: ".get_permalink($_COOKIE['sb_campus']));
     header("Status: 302");
     exit;
+  } else {
+    return;
   }
 }
