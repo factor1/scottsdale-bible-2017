@@ -1021,12 +1021,6 @@ var preloadImages = function() {
             $(this).next('ul').toggle(true);
         });
 
-        if( !cookieData.has_location_cookie ) {
-          $('body').addClass('modal-body-locked');
-      		$('.campus-modal').addClass('campus-modal--visible');
-          $('.campus-modal').removeClass('campus-modal--hidden');
-      	}
-
     });
 
 })(jQuery);
