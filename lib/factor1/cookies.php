@@ -27,13 +27,13 @@ if (!function_exists("sb_clear_campus_cookie")) {
 /**
  * Check for cookie and localize variable for JS usage
 **/
-function cookie_check() {
-  $cookieData = array('has_location_cookie' => isset($_COOKIE['sb_campus']) ? true : false);
-
-  wp_localize_script('prelude-js', 'cookieData', $cookieData);
-}
-
-add_action('wp_enqueue_scripts', 'cookie_check', 9999);
+// function cookie_check() {
+//   $cookieData = array('has_location_cookie' => isset($_COOKIE['sb_campus']) ? true : false);
+//
+//   wp_localize_script('prelude-js', 'cookieData', $cookieData);
+// }
+//
+// add_action('wp_enqueue_scripts', 'cookie_check', 9999);
 
 /**
  * Update / Add Cookies
@@ -55,6 +55,9 @@ function sb_campus_cookie_check() {
     header("Status: 302");
     exit;
   } else {
-    return;
+    setcookie('sb_campus', 72, time()+(60*60*24*30), '/');
+    header("Location: ".get_permalink(72)); // push to shea
+    header("Status: 302");
+    exit;
   }
 }

@@ -80,12 +80,12 @@ if(!$header_menu) {
             $header_mega_menu_give = 'shea_header_mega_menu_give';
         break;
         default:
-            $header_mega_menu_visit = 'header_mega_menu_visit';
-            $header_mega_menu_connect = 'header_mega_menu_connect';
-            $header_mega_menu_serve = 'header_mega_menu_serve';
-            $header_mega_menu_watch = 'header_mega_menu_watch';
-            $header_mega_menu_care = 'header_mega_menu_care';
-            $header_mega_menu_give = 'header_mega_menu_give';
+            $header_mega_menu_visit = 'shea_header_mega_menu_visit';
+            $header_mega_menu_connect = 'shea_header_mega_menu_connect';
+            $header_mega_menu_serve = 'shea_header_mega_menu_serve';
+            $header_mega_menu_watch = 'shea_header_mega_menu_watch';
+            $header_mega_menu_care = 'shea_header_mega_menu_care';
+            $header_mega_menu_give = 'shea_header_mega_menu_give';
         break;
     }
 
