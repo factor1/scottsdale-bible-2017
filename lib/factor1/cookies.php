@@ -42,7 +42,8 @@ function update_cookie() {
   if( is_page_template('set-campus.php') ) {
     if( isset($_GET['campus']) ) {
       setcookie('sb_campus', $_GET['campus'], time()+(60*60*24*30), '/');
-      header('Location: '.get_home_url().'/');
+      $campus_url = get_permalink($_GET['campus']);
+      header('Location: '.$campus_url);
     }
   }
 }

@@ -50,7 +50,7 @@ if(!$header_menu) {
                       "\n</nav>";
 
     // Load campus specific menus
-    $campus_id = $_COOKIE['sb_campus'];
+    $campus_id = isset($_COOKIE['sb_campus']) ? $_COOKIE['sb_campus'] : '' ;
     $campus = ($campus_id) ? get_post($campus_id) : null;
     $campus_name = ($campus) ? $campus->post_title : null;
 
