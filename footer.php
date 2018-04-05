@@ -57,7 +57,23 @@ if($location) {
             <span>All Rights Reserved</span>
         </section>
     </footer>
-                <?php get_template_part("components/sections/footer_tracking"); ?>
+
+    <div id="campus-modal" class="campus-modal campus-modal--hidden">
+      <div class="modal-box">
+        <div class="text-center">
+          <img src="<?php bloginfo('template_url');?>/images/SBCCOLOR@2x.png" alt="Scottsdale Bible">
+        </div>
+        <h5 class="text-center">
+          Please select a campus:
+        </h5>
+        <div class="text-center" style="margin-top: 40px;">
+          <a href="<?php echo get_home_url();?>/set-campus?campus=72" class="button" style="margin-right: 15px;"><i class="fa fa-map-marker" aria-hidden="true"></i> Shea Campus</a>
+          <a href="<?php echo get_home_url();?>/set-campus?campus=74" class="button"> <i class="fa fa-map-marker" aria-hidden="true"></i> Cactus Campus</a>
+        </div>
+      </div>
+    </div>
+
+    <?php get_template_part("components/sections/footer_tracking"); ?>
 
 
 <?php wp_footer(); ?>

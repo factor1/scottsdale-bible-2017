@@ -30,6 +30,10 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'callout_4' ) {
 			get_template_part('components/partials/stripe', 'callout4');
     };
+		// Horizontal Line
+		if( get_row_layout() == 'horizontal_line' ) {
+			get_template_part('components/partials/stripe', 'horizontalline');
+    };
 		// General Info
 		if( get_row_layout() == 'general_info' ) {
 			get_template_part('components/partials/stripe', 'general-info');

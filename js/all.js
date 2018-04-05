@@ -1022,5 +1022,5 @@ var preloadImages = function() {
         });
 
     });
-    console.log("theme.js is working");
+
 })(jQuery);

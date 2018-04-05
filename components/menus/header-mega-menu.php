@@ -16,17 +16,7 @@ $header_menu = ($header_menu) ? wp_get_nav_menu_object($header_menu) : false;
 
 if(!$header_menu) {
 
-    // Load Default Theme Mega Menu
-
-    /* old mega menu not used anymore
-    echo sb_get_nav_menu([
-        'theme_location'=>'header_mega_menu',
-        'items_wrap'=>$items_wrap,
-        'walker'=> new factor1\MegaMenuWalker()
-    ]);
-    */
     // Menu Images
-
     while ( have_rows('header_images', 5) ) : the_row();
     // MegaMenu Images
     $visit = get_sub_field('visit_image');
@@ -60,7 +50,7 @@ if(!$header_menu) {
                       "\n</nav>";
 
     // Load campus specific menus
-    $campus_id = sb_get_campus_cookie();
+    $campus_id = isset($_COOKIE['sb_campus']) ? $_COOKIE['sb_campus'] : '' ;
     $campus = ($campus_id) ? get_post($campus_id) : null;
     $campus_name = ($campus) ? $campus->post_title : null;
 
@@ -90,12 +80,12 @@ if(!$header_menu) {
             $header_mega_menu_give = 'shea_header_mega_menu_give';
         break;
         default:
-            $header_mega_menu_visit = 'header_mega_menu_visit';
-            $header_mega_menu_connect = 'header_mega_menu_connect';
-            $header_mega_menu_serve = 'header_mega_menu_serve';
-            $header_mega_menu_watch = 'header_mega_menu_watch';
-            $header_mega_menu_care = 'header_mega_menu_care';
-            $header_mega_menu_give = 'header_mega_menu_give';
+            $header_mega_menu_visit = 'shea_header_mega_menu_visit';
+            $header_mega_menu_connect = 'shea_header_mega_menu_connect';
+            $header_mega_menu_serve = 'shea_header_mega_menu_serve';
+            $header_mega_menu_watch = 'shea_header_mega_menu_watch';
+            $header_mega_menu_care = 'shea_header_mega_menu_care';
+            $header_mega_menu_give = 'shea_header_mega_menu_give';
         break;
     }
 
