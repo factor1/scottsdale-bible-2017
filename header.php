@@ -63,42 +63,46 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 </head>
 <body <?php body_class(); ?>>
 
-<?php echo $translator; ?>
+<?php echo $translator;
 
-<header>
-    <div class="row">
-        <div class="large-12 columns">
-            <ul class="inline-list">
+if( !is_page(53239) ) : ?>
 
-                <!-- Uncomment for Live Streaming link
-                <li>
-                    <i class="fa fa-video-camera"></i><a href="http://scottsdalebible.com/live/">Live Streaming</a>
-                </li>
-                <!---->
+  <header>
+      <div class="row">
+          <div class="large-12 columns">
+              <ul class="inline-list">
 
-                <!-- Uncomment for Sign in link
-                <li>
-                    <i class="fa fa-lock"></i><a href="http://scottsdalebible.com/wp-admin/">Sign In</a>
-                </li>
-                <!---->
+                  <!-- Uncomment for Live Streaming link
+                  <li>
+                      <i class="fa fa-video-camera"></i><a href="http://scottsdalebible.com/live/">Live Streaming</a>
+                  </li>
+                  <!---->
 
-                <li>
-                    <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
-                    <ul class="no-bullet">
-                        <?php foreach(sb_get_campuses() as $campus) { $campus_name = explode(" ",trim($campus->post_title)); ?>
-                        <li>
-                            <a href="<?php echo get_home_url();?>/set-campus/?campus=<?php echo $campus->ID;?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </li>
-                <li>
-                    <form data-action="<?php echo get_option('siteurl'); ?>">
-                        <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
-                    </form>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <?php get_template_part("components/menus/header-mega-menu"); ?>
-</header>
+                  <!-- Uncomment for Sign in link
+                  <li>
+                      <i class="fa fa-lock"></i><a href="http://scottsdalebible.com/wp-admin/">Sign In</a>
+                  </li>
+                  <!---->
+
+                  <li>
+                      <i class="fa fa-map-marker"></i><a href="#">Select Your Campus</a>
+                      <ul class="no-bullet">
+                          <?php foreach(sb_get_campuses() as $campus) { $campus_name = explode(" ",trim($campus->post_title)); ?>
+                          <li>
+                              <a href="<?php echo get_home_url();?>/set-campus/?campus=<?php echo $campus->ID;?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
+                          </li>
+                          <?php } ?>
+                      </ul>
+                  </li>
+                  <li>
+                      <form data-action="<?php echo get_option('siteurl'); ?>">
+                          <i class="fa fa-search"></i><input type="text" name="search" value="" placeholder="Search" />
+                      </form>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <?php get_template_part("components/menus/header-mega-menu"); ?>
+  </header>
+
+<?php endif; ?>
