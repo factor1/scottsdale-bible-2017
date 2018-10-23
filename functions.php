@@ -131,6 +131,9 @@ if(!function_exists("sb_template_init"))
         add_image_size( 'featured-image', '1920', '470', 'true' );
         add_image_size( 'parallax', '1920', '1000', 'true' );
         add_image_size( 'parallax-foreground', '1024', '370', 'true' );
+        add_image_size( 'large_hero', '2900', '1600', 'true' );
+        add_image_size( 'small_hero', '2900', '800', 'true' );
+        add_image_size( 'landing_ev_img', '2900', '1090', 'true' );
 
         add_filter('excerpt_more',function() {
             return ' &hellip; <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'f1' ) . '</a>';
@@ -461,3 +464,30 @@ if(!function_exists("sb_get_eventspage_post_id"))
 
 $init = THEME_PREFIX."template_init";
 $init();
+
+  /*-----------------------------------------------------------------------------
+    Register Custom Menus
+  -----------------------------------------------------------------------------*/
+  function prelude_custom_menus() {
+    register_nav_menus(
+      array(
+        'landing' => 'Landing Menu',
+      )
+    );
+  }
+  add_action( 'init', 'prelude_custom_menus' );
+  // Social media icon menu as per http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
+  function prelude_social_menu() {
+    if ( has_nav_menu( 'social' ) ) {
+      wp_nav_menu(
+        array(
+          'theme_location' => 'social', 'container' => 'nav',
+          'container_id'   => 'menu-social', 'container_class' => 'menu-social',
+          'menu_id'        => 'menu-social-items', 'menu_class' => 'menu-items',
+          'depth'          => 1,
+          'link_before'    => '<span class="screen-reader-text">',
+          'link_after'     => '</span>', 'fallback_cb' => '',
+        )
+      );
+    }
+  }
