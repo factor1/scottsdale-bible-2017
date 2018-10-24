@@ -5,7 +5,7 @@ $landing_event_header = get_sub_field('landing_event_header');
 $landing_event_image = wp_get_attachment_image_src(get_sub_field('landing_event_image'), 'landing_ev_img');
 ?>
 
-<section class="g-container landing--event_img" style="background:url('<?php echo $landing_event_image[0]; ?>') center/cover no-repeat">
+<section class="g-container landing--event_img" style="background:url('<?php echo $landing_event_image[0]; ?>') center/cover no-repeat" data-parallax="scroll">
 
   <div class="g-row">
     <div class="g-col-10 g-col-centered text-center">
