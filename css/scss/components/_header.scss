@@ -412,3 +412,16 @@ body
 .mobile {
   display: none !important;
 }
+
+// Winter Wonder pages color inversions
+.page-id-13803, // /winterwonder
+.page-id-44066, // /winterwonder/volunteer
+.page-id-39061, // /winterwonder/wwprogram
+.page-id-44441 // /winterwonder/production-team
+{
+  background-color: #000;
+
+  h1, h2, h3, h4, h5, h6, p, li, strong {
+    color: #fff !important;
+  }
+}
