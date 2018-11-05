@@ -46,6 +46,10 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'related_events' ) {
 			get_template_part("components/sections/related-events");
     };
+		// Large Hero Image
+		if( get_row_layout() == 'large_hero' ) {
+			get_template_part("components/sections/large-hero.php");
+    };
 		endwhile; // close the loop of flexible content
 
 else : // no layouts found
