@@ -1,5 +1,7 @@
+<?php $headline = is_tax('event-categories', 'on-campus-classes') ? 'Classes' : 'Upcoming <span>Events</span>'; ?>
+
 <section class="upcoming-events row">
-    <h1>Upcoming <span>Events</span></h1>
+    <h1><?php echo $headline; ?></h1>
     <div class="row">
         <ul class="small-block-grid-1 large-block-grid-2">
             <?php while(have_posts()) { the_post(); $event = get_post(); ?>
