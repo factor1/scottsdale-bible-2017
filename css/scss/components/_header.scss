@@ -423,6 +423,14 @@ body
 {
   background-color: #000;
 
+  > header > section > .row > .columns > nav ul.inline-list > li ul > li > a {
+    color: #182a3c;
+  }
+
+  > header > section > .row > .columns > nav ul.inline-list > li > p {
+    color: #182a3c !important;
+  }
+
   h1, h2, h3, h4, h5, h6, p, li, strong {
     color: #fff !important;
   }
