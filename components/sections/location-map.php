@@ -32,7 +32,7 @@ foreach($campuses as $campus) {
       data-lng="<?php echo round($campus->location['lng'],3); ?>"
       data-icon="<?php echo get_template_directory_uri()."/images/icons/map-pin.png"; ?>"
       >
-          <h3><?php echo esc_html($campus->post_title); ?></h3>
+        <a href="<?php echo get_field('map_link', $campus->ID); ?>"><h3><?php echo esc_html($campus->post_title); ?></h3></a>
       </div>
       <?php } ?>
     </div>
