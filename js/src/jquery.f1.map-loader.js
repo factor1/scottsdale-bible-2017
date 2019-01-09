@@ -17,7 +17,7 @@ f1.MapLoader = f1.MapLoader || {};
     var name = "mapLoader";
 
     var defaults = {
-        api_key: '',
+        api_key: 'AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY',
         center: {lat: 38.28333333, lng: -77.48333333},
         zoomControl: true,
         zoom: 8,
@@ -33,7 +33,7 @@ f1.MapLoader = f1.MapLoader || {};
         hideDefaultMapType: false
     };
 
-    var endpoint = "//maps.googleapis.com/maps/api/js?key=";
+    var endpoint = "//maps.googleapis.com/maps/api/js?key=AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY";
 
     var mapLoader = function(container,options) {
 
@@ -272,5 +272,3 @@ f1.MapLoader = f1.MapLoader || {};
     };
 
 })(jQuery,window,document);
-
-
