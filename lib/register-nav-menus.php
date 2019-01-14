@@ -21,12 +21,12 @@ if(function_exists("register_nav_menus"))
         'shea_header_mega_menu_care' => 'Header Mega Menu - Care (Shea)',
         'shea_header_mega_menu_give' => 'Header Mega Menu - Give (Shea)',
 
-        'mv_header_mega_menu_visit' => 'Header Mega Menu - Visit (Mountain Valley)',
-        'mv_header_mega_menu_connect' => 'Header Mega Menu - Connect (Mountain Valley)',
-        'mv_header_mega_menu_serve' => 'Header Mega Menu - Serve (Mountain Valley)',
-        'mv_header_mega_menu_watch' => 'Header Mega Menu - Watch (Mountain Valley)',
-        'mv_header_mega_menu_care' => 'Header Mega Menu - Care (Mountain Valley)',
-        'mv_header_mega_menu_give' => 'Header Mega Menu - Give (Mountain Valley)',
+        'mv_header_mega_menu_visit' => 'Header Mega Menu - Visit (North Ridge)',
+        'mv_header_mega_menu_connect' => 'Header Mega Menu - Connect (North Ridge)',
+        'mv_header_mega_menu_serve' => 'Header Mega Menu - Serve (North Ridge)',
+        'mv_header_mega_menu_watch' => 'Header Mega Menu - Watch (North Ridge)',
+        'mv_header_mega_menu_care' => 'Header Mega Menu - Care (North Ridge)',
+        'mv_header_mega_menu_give' => 'Header Mega Menu - Give (North Ridge)',
 
         'cactus_header_mega_menu_visit' => 'Header Mega Menu - Visit (Cactus)',
         'cactus_header_mega_menu_connect' => 'Header Mega Menu - Connect (Cactus)',
