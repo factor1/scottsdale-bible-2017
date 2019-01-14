@@ -63,7 +63,7 @@ if(!$header_menu) {
             $header_mega_menu_care = 'cactus_header_mega_menu_care';
             $header_mega_menu_give = 'cactus_header_mega_menu_give';
         break;
-        case 'Mountain Valley':
+        case 'North Ridge':
             $header_mega_menu_visit = 'mv_header_mega_menu_visit';
             $header_mega_menu_connect = 'mv_header_mega_menu_connect';
             $header_mega_menu_serve = 'mv_header_mega_menu_serve';
