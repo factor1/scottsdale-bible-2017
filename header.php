@@ -80,6 +80,16 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     </noscript>
     <!-- End Facebook Pixel Code -->
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2243545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2243545-1');
+    </script>
+
 </head>
 <body <?php body_class(); ?>>
 
