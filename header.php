@@ -60,6 +60,26 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     <script src="https://use.typekit.net/ajb3ebk.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+    <?php // Schema code - North Ridge Campus
+    if( is_single(87) ) : ?>
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "https://scottsdalebible.com/campuses/northridge/",
+          "name": "Scottsdale Bible Church: North Ridge Campus",
+          "telephone": "480-515-4673",
+          "location": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cave Creek",
+            "addressRegion": "Arizona",
+            "postalCode":"85331",
+            "streetAddress": "6363 E Dynamite Blvd"
+          }
+        }
+      </script>
+    <?php endif; ?>
+
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
