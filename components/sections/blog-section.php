@@ -1,11 +1,21 @@
 <?php
 
-$stories = get_sub_field('posts');
+if(!isset($wp)) { return; }
+
+if(!isset($post)) {
+    $post = get_queried_object();
+}
+$news_post_id = (get_field("use_homepage_news")) ? sb_get_homepage_post_id() : $post->ID;
+
+$isDefault = is_page() && !is_page_template();
+
+$headline = $isDefault ? get_sub_field('headline') : get_field('home_stories_headline', $news_post_id);
+$stories = $isDefault ? get_sub_field('posts') : get_field('home_stories', $news_post_id);
 
 if( $stories ) : ?>
 
   <section class="news-and-stories">
-    <h1><?php the_sub_field('headline'); ?></h1>
+    <h1><?php echo $headline; ?></h1>
     <div class="row">
       <ul class="small-block-grid-1 large-block-grid-3">
 
@@ -33,6 +43,13 @@ if( $stories ) : ?>
 
       </ul>
     </div>
+
+    <?php if( !$isDefault ) : ?>
+      <div class="row" style="margin: 50px 0;">
+          <a href="<?php echo get_option('siteurl'); ?>/news/" class="button-second">View <span>all</span> stories</a>
+          <a href="<?php echo get_option('siteurl'); ?>/blog/" class="button-second">View <span>the</span> blog</a>
+      </div>
+    <?php endif; ?>
   </section>
 
 <?php endif; ?>
