@@ -50,6 +50,9 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'large_hero' ) {
 			get_template_part("components/sections/large-hero.php");
     };
+		if( get_row_layout() == 'blog_section' ) {
+			get_template_part("components/sections/blog-section");
+		};
 		endwhile; // close the loop of flexible content
 
 else : // no layouts found
