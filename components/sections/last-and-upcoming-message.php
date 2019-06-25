@@ -40,7 +40,7 @@ if(!$last_weekend) {
                 </div>
             </div>
         </div>
-        <div class="small-12 medium-12 large-6 columns" >
+        <div class="small-12 medium-12 large-6 columns" style="padding-left: 2px;">
             <?php if($last_weekend->image) { ?>
               <a href="<?php echo esc_attr($last_weekend->url); ?>" style="display:block; height:100%; margin:0">
                 <div class="img-holder" style="background-image: url(<?php echo esc_attr($last_weekend->image['sizes']['large']); ?>);">
