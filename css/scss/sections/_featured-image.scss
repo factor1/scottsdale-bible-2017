@@ -4,6 +4,14 @@
 * -----------------------------------------------------------------------------
 */
 
+.post-type-archive-event,
+.page-template-events {
+  section.featured-image {
+    padding: 140px 0 35px;
+    height: auto;
+  }
+}
+
 section.featured-image
 {
   background-size: cover !important;

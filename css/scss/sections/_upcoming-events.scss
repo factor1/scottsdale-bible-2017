@@ -4,139 +4,89 @@
 * -----------------------------------------------------------------------------
 */
 
-section.upcoming-events
-{
+.upcoming-events {
     padding-top: 40px;
     padding-bottom: 40px;
 
-    > h1
-    {
-
-        margin: auto;
-        padding: auto;
-
-        > .fa
-        {
-            position: relative;
-            top: -8px;
-            margin-right: 18px;
-            font-size: 38px;
-            color: $gray1;
-        }
-
-        > span
-        {
-            font-weight: 300;
-        }
+    ul {
+      padding: 0 20px;
     }
 
-    h3 {
-      font-size: 25px;
-      line-height: 28px;
+    li {
+      padding: 12px;
     }
 
-    > .row:first-of-type
-    {
-        margin-top: 30px;
+    &__tile {
+      position: relative;
+      display: block;
+      padding-bottom: 60%;
+      text-decoration: none !important;
+      overflow: hidden;
 
-        > ul
-        {
-            > li
-            {
-                padding: 15px;
+      > div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .7) 80%, rgba(0, 0, 0, .9));
+        transform: translateY(100%);
+        transition: all .4s ease;
+      }
 
-                > .row
-                {
-                    margin: 0px;
-                    padding: 10px;
-                    background-color: #ffffff;
+      h3 {
+        margin: 0;
+        font-size: 28px;
+        color: #fff;
+        text-transform: none;
+      }
 
-                    > div
-                    {
-                        padding: 10px;
-                    }
+      h5 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+      }
 
-                    > div:first-child
-                    {
-                        text-align: center;
-                        overflow: hidden;
+      p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 5px 15px 5px 30px;
+        background-color: $tertiary;
+        color: #fff;
+        clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%);
+      }
 
-                        > a
-                        {
-                            height: 150px;
-                        }
-                    }
+      &:hover > div{
+        transform: translateY(0);
+      }
+    }
+}
 
-                    > div:last-child
-                    {
-                        text-align: left;
+.touch .upcoming-events__tile > div {
+  transform: translateY(0);
+}
 
-                        > h3
-                        {
-                            margin: 0px;
-                            padding: 0px;
-                            line-height: 1;
-
-                            > a
-                            {
-                                color: $tertiary;
-                            }
-                        }
-
-                        > h5
-                        {
-                            font-size: 15px;
-                            font-weight: 300;
-                            line-height: 1;
-                        }
-
-                        > div
-                        {
-
-                            font-size: 15px;
-                            font-weight: 300;
-                            line-height: 19px;
-                            padding-top: 5px;
-
-                            p
-                            {
-                                font-size: inherit;
-                                font-weight: inherit;
-                                line-height: inherit;
-                            }
-
-                            p:last-of-type
-                            {
-                                margin-bottom: 4px;
-                            }
-
-                            a
-                            {
-                                font-weight: 700;
-                                font-style: italic;
-                                color: $tertiary;
-                                text-decoration: underline;
-                            }
-
-                            a:hover
-                            {
-                                color: $primary;
-                            }
-                        }
-                    }
-                }
-
-                > .row:hover
-                {
-                    box-shadow: 0px 0px 20px rgba(50,50,50,0.5);
-                }
-            }
-        }
+@media screen and (max-width: 767px) {
+  .upcoming-events {
+    .small-block-grid-2 > li {
+      display: block;
+      width: 90% !important;
+      margin: 0 auto;
+      float: none;
     }
 
-    > .row:last-child
-    {
-        text-align: center;
-        margin-top: 30px;
+    &__tile h3 {
+      font-size: 24px;
     }
+  }
 }
