@@ -13,7 +13,7 @@
     }
 
     li {
-      padding: 12px;
+      padding: 8px;
     }
 
     &__tile {
@@ -39,8 +39,9 @@
       }
 
       h3 {
-        margin: 0;
-        font-size: 28px;
+        margin: 0 0 5px;
+        font-size: 24px;
+        line-height: 1;
         color: #fff;
         text-transform: none;
       }
@@ -58,10 +59,13 @@
         right: 0;
         bottom: 0;
         width: auto;
+        max-width: 120px;
         height: auto;
         margin: 0;
-        padding: 5px 15px 5px 30px;
+        padding: 5px 8px 5px 16px;
         background-color: $tertiary;
+        font-size: 14px;
+        text-align: right;
         color: #fff;
         clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%);
       }
@@ -83,10 +87,6 @@
       width: 90% !important;
       margin: 0 auto;
       float: none;
-    }
-
-    &__tile h3 {
-      font-size: 24px;
     }
   }
 }

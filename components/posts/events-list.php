@@ -1,6 +1,6 @@
 <section class="upcoming-events">
   <div class="row">
-      <ul class="small-block-grid-2">
+      <ul class="small-block-grid-2 large-block-grid-3">
           <?php while(have_posts()) { the_post(); $event = get_post();
             $img = get_field("featured_image", $event->ID); ?>
             <li>
