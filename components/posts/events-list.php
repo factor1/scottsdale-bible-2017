@@ -7,7 +7,6 @@
               <a href="<?php echo get_permalink($event->ID); ?>" class="upcoming-events__tile" style="background: url('<?php echo esc_attr($img['sizes']['event_home']); ?>') center/cover no-repeat">
                 <div>
                   <div>
-                    <h3><?php echo esc_html($event->post_title); ?></h3>
                     <?php if($field=get_field("event_subtitle",$event->ID)) { ?>
                       <h5><?php echo esc_html($field); ?></h5>
                     <?php } ?>
