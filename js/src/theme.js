@@ -23,6 +23,12 @@ var preloadImages = function() {
 
         $(document).foundation();
 
+        // Touch Device Detection
+      	var isTouchDevice = 'ontouchstart' in document.documentElement;
+      	if( isTouchDevice ) {
+      		$('body').addClass('touch');
+      	}
+
         /* Open New Window/Tab in place of deprecated target="_blank" */
         $("a[href][data-target='new-window']").click(function(e) {
             e.preventDefault();
@@ -103,6 +109,29 @@ var preloadImages = function() {
             $(this).next('ul').toggle(true);
         });
 
+    });
+
+    // Event filtering dropdown
+    function closeDropdown() {
+  		$(document).on('click', function(event) {
+  			if(!$(event.target).closest('.dropdown').length) {
+  				if($('.dropdown__menu').css('display') === 'block') {
+  					$('.dropdown__menu').slideUp();
+  				}
+  			}
+  		});
+  	}
+
+    $('.dropdown__parent').on('click', function() {
+      $(this).siblings('.dropdown__menu').slideToggle();
+
+  		// Close dropdown on selection
+  		$('.dropdown__menu p').on('click', function() {
+  			$(this).parents('.dropdown__menu').slideUp();
+  		});
+
+      // Close dropdown if outside click
+  		closeDropdown();
     });
 
 })(jQuery);
