@@ -11,7 +11,7 @@ $cats = get_terms( array('taxonomy' => 'event-categories', 'exclude' => array(18
 $campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => array(188, 190, 270) ) );
 $current = get_queried_object()->slug; ?>
 
-<section class="featured-image" style="background: #E9ECF1 url('<?php echo esc_attr($image['url']); ?>') center/cover no-repeat">
+<section class="featured-image" style="background: #E9ECF1 url('<?php echo esc_attr($img['url']); ?>') center/cover no-repeat">
   <div class="row">
     <h1 class="text-center"><?php echo $headline; ?></h1>
 
