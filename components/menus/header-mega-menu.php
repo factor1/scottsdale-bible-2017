@@ -55,7 +55,7 @@ if(!$header_menu) {
     $campus_name = ($campus) ? $campus->post_title : null;
 
     switch($campus_name) {
-        case 'Cactus Campus':
+        case 'Cactus':
             $header_mega_menu_visit = 'cactus_header_mega_menu_visit';
             $header_mega_menu_connect = 'cactus_header_mega_menu_connect';
             $header_mega_menu_serve = 'cactus_header_mega_menu_serve';
@@ -71,7 +71,7 @@ if(!$header_menu) {
             $header_mega_menu_care = 'mv_header_mega_menu_care';
             $header_mega_menu_give = 'mv_header_mega_menu_give';
         break;
-        case 'Shea Campus':
+        case 'Shea':
             $header_mega_menu_visit = 'shea_header_mega_menu_visit';
             $header_mega_menu_connect = 'shea_header_mega_menu_connect';
             $header_mega_menu_serve = 'shea_header_mega_menu_serve';
