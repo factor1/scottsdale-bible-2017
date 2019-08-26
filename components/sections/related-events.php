@@ -74,4 +74,4 @@ if( $query->have_posts() ):
   </div>
 </section>
 
-<?php endif;?>
+<?php endif; wp_reset_postdata(); ?>
