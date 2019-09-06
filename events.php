@@ -48,7 +48,7 @@ $current = get_queried_object()->slug; ?>
 
 <?php $wp_query = new WP_Query([
     'post_type'=>'event',
-    'post_per_page'=>30,
+    'post_per_page'=> -1,
     'orderby' => 'meta_value',
     'meta_key' => '_event_start_date',
     'order' => 'ASC',
