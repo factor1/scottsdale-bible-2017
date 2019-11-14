@@ -18,6 +18,10 @@
                       <div>
                           <h3><?php the_title(); ?></h3>
 
+                          <?php if( is_post_type_archive('devotion') ) : ?>
+                            <p><?php echo esc_html(get_field("subtitle")); ?></p>
+                          <?php endif; ?>
+
                       </div>
                   </div>
                 </a>
