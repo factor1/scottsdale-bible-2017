@@ -50,8 +50,13 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'large_hero' ) {
 			get_template_part("components/sections/large-hero.php");
     };
+		// Blog section
 		if( get_row_layout() == 'blog_section' ) {
 			get_template_part("components/sections/blog-section");
+		};
+		// Parallax Section
+		if( get_row_layout() == 'parallax_section' ) {
+			get_template_part("components/sections/parallax-section");
 		};
 		endwhile; // close the loop of flexible content
 
