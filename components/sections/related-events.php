@@ -38,14 +38,14 @@ $query = new WP_Query( $args );
 
 if( $query->have_posts() ):
 ?>
-<section class="upcoming-events-flexible">
+<section class="upcoming-events upcoming-events-flexible">
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-12 columns sm-text-center">
       <h2>Upcoming Events</h2>
     </div>
   </div>
   <div class="row">
-      <ul class="small-block-grid-1 large-block-grid-2 related-events">
+      <?php /* <ul class="small-block-grid-1 large-block-grid-2 related-events">
           <?php while( $query->have_posts()) {  $query->the_post(); $event = get_post(); ?>
           <li>
               <div class="row">
@@ -69,6 +69,27 @@ if( $query->have_posts() ):
                   </div>
               </div>
           </li>
+          <?php } ?>
+      </ul> */ ?>
+
+      <ul class="small-block-grid-2 large-block-grid-3">
+          <?php while($query->have_posts()) {  $query->the_post(); $event = get_post();
+            $img = get_field("featured_image", $event->ID); ?>
+            <li>
+              <a href="<?php echo get_permalink($event->ID); ?>" class="upcoming-events__tile" style="background: url('<?php echo esc_attr($img['sizes']['event_home']); ?>') center/cover no-repeat">
+                <div>
+                  <div>
+                    <?php if($field=get_field("event_subtitle",$event->ID)) { ?>
+                      <h5><?php echo esc_html($field); ?></h5>
+                    <?php } ?>
+                  </div>
+
+                  <?php if($field=get_field("event_excerpt",$event->ID)) {
+                    echo $field;
+                  } ?>
+                </div>
+              </a>
+            </li>
           <?php } ?>
       </ul>
   </div>
