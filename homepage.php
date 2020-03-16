@@ -12,5 +12,5 @@ get_template_part("components/sections/last-and-upcoming-message");
 get_template_part("components/sections/news-and-stories");
 get_template_part("components/sections/upcoming-events");
 get_template_part("components/sections/subscribe-to-news");
-get_template_part("components/sections/banner");
+// get_template_part("components/sections/banner");
 get_footer();
