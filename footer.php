@@ -74,7 +74,9 @@ if($location) {
       </div>
     </div>
 
-    <?php get_template_part("components/sections/footer_tracking"); ?>
+    <?php get_template_part("components/sections/banner");
+
+    get_template_part("components/sections/footer_tracking"); ?>
 
 
 <?php wp_footer(); ?>
