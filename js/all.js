@@ -1052,4 +1052,9 @@ var preloadImages = function() {
   		closeDropdown();
     });
 
+    // Banner close
+    $('.banner-section button').on('click', function() {
+      $(this).parents('.banner-section').addClass('hidden');
+    });
+
 })(jQuery);
