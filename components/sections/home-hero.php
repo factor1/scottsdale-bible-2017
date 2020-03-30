@@ -20,7 +20,7 @@
                     <source src="<?php echo $video ?>" type="video/mp4">
                   </video>
                   <div class="row">
-                    <div class="large-6 columns large-centered text-center hero-text-box">
+                    <div class="large-8 columns large-centered text-center hero-text-box">
                       <h1><?php echo $title ?></h1><br>
 
                       <?php while ( have_rows('button') ) : the_row();
