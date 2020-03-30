@@ -5,8 +5,15 @@
 */
 
 /* Fonts */
+@fontface {
+  font-family: 'avalanche';
+  src: url('../fonts/AVALANCHE-.otf');
+}
+
 $Domus: "jaf-domus", Helvetica, Arial, sans-serif;
 $Proxima: "proxima-nova", Helvetica, Arial, sans-serif;
+$Montserrat: montserrat, sans-serif;
+$Avalanche: 'avalanche', serif;
 
 
 

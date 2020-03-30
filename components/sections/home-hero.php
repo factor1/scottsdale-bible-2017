@@ -20,8 +20,8 @@
                     <source src="<?php echo $video ?>" type="video/mp4">
                   </video>
                   <div class="row">
-                    <div class="large-6 columns text-center hero-text-box">
-                      <h1><?php echo $title ?></h1>
+                    <div class="large-8 columns large-centered text-center hero-text-box">
+                      <h1><?php echo $title ?></h1><br>
 
                       <?php while ( have_rows('button') ) : the_row();
 
@@ -30,7 +30,7 @@
                       $button_link = get_sub_field('button_link');
 
                       ?>
-                      <a href="<?php echo $button_link ?>" class="button"><?php echo $button ?></a>
+                      <a href="<?php echo $button_link ?>" class="button-white"><?php echo $button ?></a>
                       <?php endwhile; ?>
 
                     </div>

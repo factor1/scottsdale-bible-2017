@@ -2,13 +2,13 @@
 	# Buttons
 ----------------------------------------------------------------------------- */
 .button {
-  border-radius: 25px;
+  // border-radius: 25px;
   padding: 15px 25px;
-  font-family: $Proxima;
+  font-family: $Montserrat;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  // letter-spacing: 0.07em;
   background: $tertiary;
   color: #fff;
 
@@ -21,16 +21,16 @@
 .button-second {
   display: inline-block;
   margin: 5px 0;
-  border-radius: 30px;
+  // border-radius: 30px;
   border: 1px solid $quaternary;
   padding: 15px 25px;
-  font-family: $Proxima;
+  font-family: $Montserrat;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.07em;
+  // letter-spacing: 0.07em;
   background: #fff;
   color: $quaternary;
 
@@ -41,9 +41,26 @@
 	}
 }
 
+.button-white {
+  display: inline-block;
+  padding: 15px 25px;
+  font-family: $Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  // letter-spacing: 0.07em;
+  background: $white;
+  color: $primary !important;
+
+	&:hover {
+    background: $quaternary;
+    text-decoration: none;
+	}
+}
+
 .button-gradient {
 	@include linear-gradient(90deg, $secondary, $tertiary);
-  border-radius: 25px;
+  // border-radius: 25px;
   padding: 7px 15px;
 
 	&:hover {
