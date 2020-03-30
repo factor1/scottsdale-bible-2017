@@ -118,7 +118,7 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
 if( !is_page(53239) ) : ?>
 
   <header>
-      <div class="row">
+      <?php /*<div class="row">
           <div class="large-12 columns">
               <ul class="inline-list">
 
@@ -151,7 +151,7 @@ if( !is_page(53239) ) : ?>
                   </li>
               </ul>
           </div>
-      </div>
+      </div> */ ?>
       <?php get_template_part("components/menus/header-mega-menu"); ?>
   </header>
 

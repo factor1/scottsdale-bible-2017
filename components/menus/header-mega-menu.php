@@ -93,8 +93,8 @@ if(!$header_menu) {
     <section>
         <div class="row">
 
-            <div class="small-6 columns col-shrink">
-              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/2017SBClogo.png" alt="" title="" /></a>
+            <div class="small-6 large-3 columns">
+              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-black.png" alt="" title="" /></a>
             </div>
 
 
@@ -150,8 +150,21 @@ if(!$header_menu) {
                 ]);
                 ?>
             </div>
-            <div class="large-1 columns col-grow" id="give">
-                <a class="last" href="#"><span class="hover-feature">Give</span></a>
+            <div class="large-1 columns col-grow" id="campus">
+              <a href="#"><span class="hover-feature">Select<br>Your<br>Campus</span></a>
+              <nav>
+                <ul class="no-bullet">
+                    <?php foreach(sb_get_campuses() as $campus) { $campus_name = explode(" ",trim($campus->post_title)); ?>
+                    <li>
+                        <a href="<?php echo get_home_url();?>/set-campus/?campus=<?php echo $campus->ID;?>"><span><?php echo esc_html(array_shift($campus_name)); ?></span> <?php echo esc_html(implode(" ",$campus_name)); ?></a>
+                    </li>
+                    <?php } ?>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="large-1 columns" id="give">
+                <a href="#"><span class="hover-feature">Give<br>Now</span></a>
                 <?php
                 echo sb_get_nav_menu([
                     'theme_location'=>$header_mega_menu_give,
@@ -159,6 +172,15 @@ if(!$header_menu) {
                     'walker'=> new factor1\SubMenuWalker()
                 ]);
                 ?>
+            </div>
+
+            <div class="large-1 columns col-grow" id="search">
+              <a class="last" href="#"><span class="hover-feature"><i class="fa fa-search"></i></span></a>
+              <nav>
+                <form data-action="<?php echo get_option('siteurl'); ?>">
+                  <input type="text" name="search" value="" placeholder="| Search" />
+                </form>
+              </nav>
             </div>
 
         </div>
