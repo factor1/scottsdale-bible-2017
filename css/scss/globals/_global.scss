@@ -49,7 +49,8 @@ body
 
     h1, h2, h3, h4, h5, h6
     {
-        font-family: $Domus;
+        // font-family: $Domus;
+        font-family: $Montserrat;
         color: $primary;
     }
 
@@ -57,7 +58,7 @@ body
     {
         font-size: 46px;
         line-height: 50px;
-        font-weight: 200;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.075em;
         margin-bottom: 25px;
@@ -67,7 +68,7 @@ body
     {
         font-size: 41px;
         line-height: 45px;
-        font-weight: 200;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.075em;
         margin-bottom: 15px;
