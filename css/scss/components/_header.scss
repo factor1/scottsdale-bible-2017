@@ -473,15 +473,17 @@ body
                   }
 
                   > nav {
-                    display: none;
                     position: absolute;
                     top: 100px;
                     right: -12px;
+                    left: unset;
                     width: calc(29% + 3px);
+                    min-height: unset;
                   }
 
                   form {
                     input[type="text"] {
+                      margin-bottom: 0;
                       color: rgba($footer, 0.7);
                     }
                   }
