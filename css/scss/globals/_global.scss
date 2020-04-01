@@ -141,6 +141,10 @@ body
             color: $tertiary;
             text-decoration: underline;
         }
+
+        em, i {
+          font-weight: inherit;
+        }
     }
 
     ul
