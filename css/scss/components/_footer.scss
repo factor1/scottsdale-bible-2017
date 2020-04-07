@@ -7,9 +7,10 @@ body
 {
     > footer
     {
-        background-image: url(../images/backgrounds/Pattern.png);
-        background-repeat: repeat;
-        background-position: 0px 0px;
+        // background-image: url(../images/backgrounds/Pattern.png);
+        // background-repeat: repeat;
+        // background-position: 0px 0px;
+        background-color: $primary;
         color: #ffffff;
 
         hr {
