@@ -59,7 +59,7 @@ body
         font-size: 46px;
         line-height: 50px;
         font-weight: 700;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: 0.075em;
         margin-bottom: 25px;
     }
@@ -69,7 +69,7 @@ body
         font-size: 41px;
         line-height: 45px;
         font-weight: 700;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: 0.075em;
         margin-bottom: 15px;
     }
@@ -140,6 +140,10 @@ body
         {
             color: $tertiary;
             text-decoration: underline;
+        }
+
+        em, i {
+          font-weight: inherit;
         }
     }
 

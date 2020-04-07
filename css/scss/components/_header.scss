@@ -263,6 +263,10 @@ body
                             background-position: 50%;
                             min-height: 250px;
                           }
+
+                          > div > .large-3 {
+                            display: none !important;
+                          }
 /*
                           > div > div > ul > li{
                             display: block;

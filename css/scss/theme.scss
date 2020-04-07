@@ -5,9 +5,13 @@
 */
 
 /* Fonts */
-@fontface {
+@font-face {
   font-family: 'avalanche';
-  src: url('../fonts/AVALANCHE-.otf');
+  src: url('../fonts/avalanche-webfont.otf') format('opentype'),
+       url('../fonts/avalanche-webfont.woff2') format('woff2'),
+       url('../fonts/avalanche-webfont.woff') format('woff'),
+       url('../fonts/avalanche-webfont.ttf')  format('truetype'),
+       url('../fonts/avalanche-webfont.svg#svgFontName') format('svg');
 }
 
 $Domus: "jaf-domus", Helvetica, Arial, sans-serif;
