@@ -9,11 +9,14 @@
   font-weight: 500;
   text-transform: uppercase;
   // letter-spacing: 0.07em;
-  background: $tertiary;
-  color: #fff;
+  // background: $tertiary;
+  // color: #fff;
+  background: $white;
+  color: $primary !important;
 
 	&:hover {
-    background: $secondary;
+    // background: $secondary;
+    background: $quaternary;
     text-decoration: none;
 	}
 }
@@ -32,11 +35,11 @@
   text-decoration: none;
   // letter-spacing: 0.07em;
   background: #fff;
-  color: $quaternary;
+  color: $quaternary !important;
 
 	&:hover {
     background: $quaternary;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
 	}
 }
