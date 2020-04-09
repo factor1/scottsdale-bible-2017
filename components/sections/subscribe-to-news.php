@@ -28,7 +28,7 @@
         <div class="row">
             <div class="small-12 large-12 columns small-text-center large-text-center">
                 <input name="b_621f3dcab3b5d368b54832b84_0de80d194a" value="" type="hidden" />
-                <input name="subscribe" class="button" type="submit" value="Subscribe" />
+                <input name="subscribe" class="button button-second" type="submit" value="Subscribe" />
             </div>
         </div>
     </form>
