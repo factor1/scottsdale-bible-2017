@@ -24,10 +24,15 @@ $args = array (
 	'post_type'              => array( 'event' ),
 	'event-categories'       => $post_slug,
   'posts_per_page'         => '6',
-  'meta_query' => array( 'key' => '_start_ts', 'value' => current_time('timestamp'), 'compare' => '>=', 'type'=>'numeric' ),
+  'meta_query' => array(
+    'key' => '_end_ts', 
+    'value' => current_time('timestamp'),
+    'compare' => '>=',
+    'type'=>'numeric'
+  ),
 	'orderby' => 'meta_value_num',
 	'order' => 'ASC',
-	'meta_key' => '_start_ts',
+	'meta_key' => '_end_ts',
 	'meta_value' => current_time('timestamp'),
 	'meta_value_num' => current_time('timestamp'),
 	'meta_compare' => '>='
