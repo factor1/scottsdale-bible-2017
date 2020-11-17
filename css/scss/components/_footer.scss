@@ -147,9 +147,9 @@ body
                 padding-right: 4px;
             }
 
-            > span:first-child
+            > span:nth-child(n+2)
             {
-                border-right: 1px solid #939598;
+                border-left: 1px solid #939598;
             }
         }
 
