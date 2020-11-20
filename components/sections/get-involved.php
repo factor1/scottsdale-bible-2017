@@ -13,7 +13,7 @@
                 $button_link = get_sub_field('button_link');
 
                 ?>
-                <a href="<?php echo $button_link ?>" class="button-second button-involved" data-target="new-window"><?php echo $button ?></a>
+                <a href="<?php echo $button_link ?>" class="button-white button-involved" data-target="new-window"><?php echo $button ?></a>
                 <?php endwhile; ?>
             </div>
         </div>

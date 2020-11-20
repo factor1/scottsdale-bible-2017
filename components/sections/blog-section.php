@@ -46,8 +46,8 @@ if( $stories ) : ?>
 
     <?php if( !$isDefault ) : ?>
       <div class="row" style="margin: 50px auto;">
-          <a href="<?php echo get_option('siteurl'); ?>/news/" class="button-second">View <span>all</span> stories</a>
-          <a href="<?php echo get_option('siteurl'); ?>/blog/" class="button-second">View <span>the</span> blog</a>
+          <a href="<?php echo get_option('siteurl'); ?>/news/" class="button-white">View <span>all</span> stories</a>
+          <a href="<?php echo get_option('siteurl'); ?>/blog/" class="button-white">View <span>the</span> blog</a>
       </div>
     <?php endif; ?>
   </section>
