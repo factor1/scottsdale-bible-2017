@@ -546,3 +546,28 @@ $init();
 
   }
   add_action( 'init', 'devotions', 0 );
+
+
+/*-----------------------------------------------------------------------------
+Filter posts from main query
+-----------------------------------------------------------------------------*/
+
+function exclude_posts_acf( $query ) {
+    if ( !is_admin() && $query->is_home() && $query->is_main_query()) {
+        $meta_query = $query->get('meta_query')? : [];
+        $meta_query[] = [
+            'relation' => 'OR',
+            [
+                'key' => 'post_skip',
+                'compare' => 'NOT EXISTS'
+            ],
+            [
+                'key' => 'post_skip',
+                'value' => '1',
+                'compare' => '!='
+            ],
+        ];
+        $query->set('meta_query', $meta_query);
+    }
+}
+add_action( 'pre_get_posts', 'exclude_posts_acf' );
