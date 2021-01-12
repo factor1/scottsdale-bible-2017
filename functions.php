@@ -546,3 +546,10 @@ $init();
 
   }
   add_action( 'init', 'devotions', 0 );
+
+  function my_acf_init() {
+	
+    acf_update_setting('google_api_key', 'AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY');
+  }
+  
+  add_action('acf/init', 'my_acf_init');
