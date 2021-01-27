@@ -571,3 +571,10 @@ function exclude_posts_acf( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'exclude_posts_acf' );
+
+function my_acf_init() {
+
+acf_update_setting('google_api_key', 'AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY');
+}
+
+add_action('acf/init', 'my_acf_init');
