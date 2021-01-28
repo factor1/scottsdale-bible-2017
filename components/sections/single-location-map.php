@@ -12,12 +12,12 @@
 <section class="location-map">
   <div class="row">
     <div class="columns small-centered small-8">
-      <?php echo $intro; ?>
       <hr>
     </div>
   </div>
   <div class="row">
     <div class="small-12">
+      <?php echo $intro; ?>
       <div class="map-container" data-key="AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY" data-height="500" data-zoom="10" data-lat="<?php echo round($map['lat'],3); ?>" data-lng="<?php echo round($map['lng'],3); ?>">
       </div>
       <div class="map-location"
