@@ -54,6 +54,10 @@ $page_id = get_queried_object_id();
 		if( get_row_layout() == 'blog_section' ) {
 			get_template_part("components/sections/blog-section");
 		};
+		// Single map section
+		if( get_row_layout() == 'single_campus_video' ) {
+			get_template_part("components/sections/single-location-map");
+		};
 		// Parallax Section
 		if( get_row_layout() == 'parallax_section' ) {
 			get_template_part("components/sections/parallax-section");
