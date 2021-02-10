@@ -578,3 +578,20 @@ acf_update_setting('google_api_key', 'AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY');
 }
 
 add_action('acf/init', 'my_acf_init');
+
+
+// Custom excerpt length 
+function custom_excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+
+  if (count($excerpt) >= $limit) {
+      array_pop($excerpt);
+      $excerpt = implode(" ", $excerpt) . '...';
+  } else {
+      $excerpt = implode(" ", $excerpt);
+  }
+
+  $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+  return $excerpt;
+}
