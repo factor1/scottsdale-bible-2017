@@ -1,6 +1,7 @@
 .posts-list--alternate {
   padding-top: 40px;
   padding-bottom: 40px;
+  text-align: center;
 
   h1 {
     text-align: center;
@@ -8,10 +9,15 @@
 
   ul {
     padding: 0 20px;
+    &.large-block-grid-3 li {
+      width: 33%;
+    }
   }
 
   li {
     padding: 8px;
+    float: none;
+    display: inline-block;
   }
 
   h3 {
@@ -61,9 +67,17 @@
   transform: translateY(0);
 }
 
+@media screen and (max-width: 1024px) {
+  .posts-list--alternate {
+    ul.large-block-grid-3 > li {
+      width: 49% !important;
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .posts-list--alternate {
-    .small-block-grid-2 > li {
+    ul.small-block-grid-2 > li {
       display: block;
       width: 90% !important;
       margin: 0 auto;
