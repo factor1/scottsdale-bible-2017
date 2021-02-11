@@ -10,11 +10,11 @@
                 <a href="<?php the_permalink(); ?>" class="posts-list--alternate__tile">
                   <div style="background: url('<?php echo $image[0]; ?>') center/cover no-repeat">
                     <div>
-                      <p><?php echo custom_excerpt(15); ?></p>
+                      <p><?php echo custom_excerpt(20, get_field('subtitle')); ?></p>
                     </div>
                   </div>
 
-                  <h3><?php the_title(); ?></h3>
+                  <?php /* <h3><?php the_title(); ?></h3> */ ?>
                 </a>
               </li>
             <?php } ?>
