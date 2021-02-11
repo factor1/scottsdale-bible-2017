@@ -581,8 +581,8 @@ add_action('acf/init', 'my_acf_init');
 
 
 // Custom excerpt length 
-function custom_excerpt($limit) {
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
+function custom_excerpt($limit, $text) {
+  $excerpt = explode(' ', $text, $limit);
 
   if (count($excerpt) >= $limit) {
       array_pop($excerpt);
