@@ -52,7 +52,7 @@ $page_id = get_queried_object_id();
     };
 		// Blog section
 		if( get_row_layout() == 'blog_section' ) {
-			get_template_part("components/sections/blog-section");
+			get_template_part("components/sections/blog-section-alternate");
 		};
 		// Single map section
 		if( get_row_layout() == 'single_campus_video' ) {
