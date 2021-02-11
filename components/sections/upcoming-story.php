@@ -5,7 +5,13 @@ if(!isset($post)) {
 }
 $story_post_id = (get_field("use_homepage_story")) ? sb_get_homepage_post_id() : $post->ID;
 
-$upcoming_story = get_field("upcoming_story",$story_post_id); ?>
+$upcoming_story = ($f=get_field("upcoming_story",$story_post_id)) ? (object) $f[0] : null;
+
+if(!$upcoming_story) {
+    return;
+}
+
+?>
 
 <?php if($upcoming_story) { ?>
 <section class="upcoming-message fullWidth" data-parallax="scroll" data-image-src="<?php echo esc_attr($upcoming_story->background_image['sizes']['parallax']); ?>">
