@@ -1,40 +1,31 @@
 <?php if(!isset($wp)) { return; } ?>
 
-<?php if( get_field('hero_type', 5) == 'slider' ):
+<?php if( get_field('hero_type') == 'slider' ):
 
 if(!isset($post)) {
     $post = get_queried_object();
 }
 $slider_post_id = (get_field("use_homepage_slider")) ? sb_get_homepage_post_id() : $post->ID;
 
-$images = sb_get_slider_images("image_slider","slider_image",true,$slider_post_id);
-
-if(!$images) {
-    return;
-}
-
-$first = array_shift($images);
-$images = array_merge([$first],array_reverse($images));
-
+// $images = sb_get_slider_images("image_slider","slider_image",true,$slider_post_id);
+$images = get_field("image_slider", $slider_post_id);
 $slide_count = count($images);
 
-$image_sources = array_map(function($e) {
-    return esc_attr($e->url);
-},$images);
-
-?>
-<script type="text/javascript">
-// preloadImages('<?php echo implode("','",$image_sources); ?>');
-</script>
-<section class="image-slider">
+if( have_rows("image_slider", $slider_post_id) ) : ?>
+  <section class="image-slider">
     <ul>
-        <?php foreach($images as $image) { ?>
+
+      <?php while( have_rows("image_slider", $slider_post_id) ) : the_row(); 
+        $image = get_sub_field('slider_image');
+        $link = get_sub_field('slider_image_link'); ?>
+
         <li>
-            <a<?php echo (($url=$image->slider_image_link)?" href=\"".esc_attr($url)."\"":""); ?> class="image-block-center">
-                <img src="<?php echo esc_attr($image->url); ?>" alt="<?php echo esc_attr($image->title); ?>" title="<?php echo esc_attr($image->title); ?>" />
-            </a>
+          <a href="<?php echo $link; ?>" class="image-block-center">
+            <img src="<?php echo esc_attr($image['sizes']['large_hero']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          </a>
         </li>
-        <?php } ?>
+
+      <?php endwhile; ?>
     </ul>
     <?php if($slide_count>1) { ?>
     <div class="controls-move">
@@ -43,5 +34,7 @@ $image_sources = array_map(function($e) {
         <?php } ?>
     </div>
     <?php } ?>
-</section>
-<?php endif;  ?>
+  </section>
+<?php endif; 
+
+endif; ?>
