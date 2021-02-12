@@ -33,7 +33,11 @@ section.image-slider
                 {
                     margin-left: -800px;
                     width: 100%;
+                    transition: filter .4s ease;
                 }
+              &:hover > img {
+                filter: brightness(80%);
+              }
             }
         }
 
