@@ -6,7 +6,7 @@ get_header();
 
 <?php if(have_posts()) { ?>
 
-    <?php get_template_part("components/posts/posts-list"); ?>
+    <?php get_template_part("components/posts/posts-list-alternate"); ?>
 
 <?php } else { ?>
     <section>
