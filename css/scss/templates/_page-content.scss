@@ -241,23 +241,23 @@ section.page-content
   }
 }
 
-.page-id-53239 .flexible-content {
-  .fluidMedia {
-    float: left;
-    width: calc(50% - 15px);
-    padding-bottom: 27%;
-    margin-right: 15px;
-  }
-}
+// .page-id-53239 .flexible-content {
+//   .fluidMedia {
+//     float: left;
+//     width: calc(50% - 15px);
+//     padding-bottom: 27%;
+//     margin-right: 15px;
+//   }
+// }
 
 // Media Queries
-@media screen and (max-width: 767px) {
-  .page-id-53239 .flexible-content {
-    .fluidMedia {
-      float: none;
-      width: 100%;
-      padding-bottom: 56%;
-      margin-right: 0;
-    }
-  }
-}
+// @media screen and (max-width: 767px) {
+//   .page-id-53239 .flexible-content {
+//     .fluidMedia {
+//       float: none;
+//       width: 100%;
+//       padding-bottom: 56%;
+//       margin-right: 0;
+//     }
+//   }
+// }
