@@ -1,0 +1,20 @@
+.groups-list {
+  padding: 50px 0;
+
+  &__item {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    padding-bottom: 75%;
+  }
+}
+
+.remodal--group {
+  text-align: left;
+}
+
+.post-type-archive-support-group .remodal-close:after {
+  margin-left: 3.4px;
+}

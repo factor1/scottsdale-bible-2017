@@ -64,6 +64,15 @@ if(!function_exists("sb_template_init"))
             /* Add ACF Options Page */
             if(function_exists("acf_add_options_page")) {
                 acf_add_options_page("Theme Options");
+
+                // Support Groups archive ACF Options page
+                acf_add_options_page(
+                  array(
+                    'page_title' => 'Support Groups Archive',
+                    'position' => 21,
+                    'icon_url' => 'dashicons-groups'
+                  )
+                );
             }
 
             /* Remove Head Links */
@@ -134,6 +143,7 @@ if(!function_exists("sb_template_init"))
         add_image_size( 'large_hero', '2900', '1600', 'true' );
         add_image_size( 'small_hero', '2900', '800', 'true' );
         add_image_size( 'landing_ev_img', '2900', '1090', 'true' );
+        add_image_size( 'support_group', 600, 600, false );
 
         add_filter('excerpt_more',function() {
             return ' &hellip; <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'f1' ) . '</a>';
@@ -569,8 +579,26 @@ function exclude_posts_acf( $query ) {
         ];
         $query->set('meta_query', $meta_query);
     }
+
+    if( !is_admin() && is_post_type_archive('support-group') && $query->is_main_query() ) {
+      $query->set('posts_per_page', -1);
+      $query->set('orderby', 'menu_order');
+      $query->set('order', 'ASC');
+    }
 }
 add_action( 'pre_get_posts', 'exclude_posts_acf' );
+
+// Redirects
+function redirects() {
+  if( is_singular('support-group') ) {
+    $new_url = esc_url(get_post_type_archive_link('support-group'));
+
+    wp_redirect($new_url, 301);
+
+    exit;
+  } 
+}
+add_action('template_redirect', 'redirects');
 
 function my_acf_init() {
 
