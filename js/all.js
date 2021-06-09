@@ -948,7 +948,7 @@ var preloadImages = function() {
       	}
 
         /* Open New Window/Tab in place of deprecated target="_blank" */
-        $("a[href][data-target='new-window']").click(function(e) {
+        $("a[href][data-target='new-window']:not(.groups-list__item)").click(function(e) {
             e.preventDefault();
             window.open($(this).attr("href"));
         });
@@ -1055,6 +1055,11 @@ var preloadImages = function() {
     // Banner close
     $('.banner-section button').on('click', function() {
       $(this).parents('.banner-section').addClass('hidden');
+    });
+
+    // Support groups modals 
+    $('.groups-list__item').on('click', function(e) {
+      e.preventDefault();
     });
 
 })(jQuery);
