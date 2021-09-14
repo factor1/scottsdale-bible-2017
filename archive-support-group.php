@@ -27,9 +27,14 @@ get_template_part("components/sections/featured-image"); ?>
 
       <?php while( have_posts() ) : the_post();
         $id = get_the_ID();
-        $img = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'support_group'); ?>
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'support_group');
+        $endClass = '';
+        if (!get_next_post_link()) { 
+          $endClass = ' end'; 
+        }
+        ?>
 
-        <div class="small-12 medium-6 large-4 columns">
+        <div class="small-12 medium-6 large-4 columns <?php echo $endClass; ?>">
           <a data-remodal-target="group-<?php echo $id; ?>" class="groups-list__item" data-remodal-options="hashTracking: false">
             <div class="groups-list__img" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
           </a>
