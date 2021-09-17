@@ -12,3 +12,12 @@ Version: 2.9.0
 /*
 @import url("./css/print.min.css") print;
 */
+
+/* Page colors */
+body.page-id-72568 {
+  background-color: #527b7d;
+}
+
+body.page-id-72568 section.page-content * {
+  color: #fff !important;
+}
