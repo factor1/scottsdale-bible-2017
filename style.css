@@ -21,3 +21,30 @@ body.page-id-72568 {
 body.page-id-72568 section.page-content * {
   color: #fff !important;
 }
+
+/* Winter Wonder pages color inversions */
+body.page-id-13803,
+body.postid-31231 {
+  background-color: #d0cccd !important;
+}
+
+body.page-id-13803 h1, 
+body.postid-31231 h1, 
+body.page-id-13803 h2, 
+body.postid-31231 h2, 
+body.page-id-13803 h3, 
+body.postid-31231 h3, 
+body.page-id-13803 h4, 
+body.postid-31231 h4, 
+body.page-id-13803 h5, 
+body.postid-31231 h5, 
+body.page-id-13803 h6, 
+body.postid-31231 h6, 
+body.page-id-13803 p, 
+body.postid-31231 p, 
+body.page-id-13803 li, 
+body.postid-31231 li, 
+body.page-id-13803 strong, 
+body.postid-31231 strong {
+  color: inherit !important;
+}
