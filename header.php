@@ -100,15 +100,30 @@ $translator = (shortcode_exists("google-translator")) ? do_shortcode('[google-tr
     </noscript>
     <!-- End Facebook Pixel Code -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2243545-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <?php if( is_page(13803) ) : ?>
 
-      gtag('config', 'UA-2243545-1');
-    </script>
+      <!-- Global site tag (gtag.js) - Google Analytics - Winter Wonder Page -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2243545-6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-2243545-6');
+      </script>
+
+    <?php else : ?>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2243545-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-2243545-1');
+      </script>
+
+    <?php endif; ?>
 
 </head>
 <body <?php body_class(); ?>>
