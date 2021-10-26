@@ -73,3 +73,12 @@ body.page-id-44066 strong {
 .single-event .page-content {
   margin-top: 50px;
 }
+
+/* Image hero */
+.image-hero {
+  padding: 10% 0;
+}
+
+.image-hero *:not(.button-white) {
+  color: #fff;
+}
