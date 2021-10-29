@@ -623,3 +623,12 @@ function custom_excerpt($limit, $text) {
 
   return $excerpt;
 }
+
+// Remove additional css option from customizer
+function prefix_remove_css_section( $wp_customize ) {
+  $wp_customize->remove_section( 'custom_css' );
+}
+add_action( 'customize_register', 'prefix_remove_css_section', 15 );
+
+// Remove theme/plugin editors from admin
+define( 'DISALLOW_FILE_EDIT', true );
