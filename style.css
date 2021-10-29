@@ -27,7 +27,7 @@ body.page-id-13803,
 body.postid-31231,
 body.page-id-39061,
 body.page-id-44066 {
-  background-color: #d0cccd !important;
+  background-color: transparent !important;
 }
 
 body.page-id-13803 h1,
@@ -69,8 +69,8 @@ body.page-id-44066 strong {
   color: inherit !important;
 }
 
-/* Events single */
-.single .page-content {
+.single .page-content,
+.page-template-page-wwp .page-content {
   margin-top: 50px;
 }
 
