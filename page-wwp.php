@@ -38,7 +38,6 @@ $show_sidebar = $sidebar_menus || $sidebar_content;
         <?php } else { ?>
         <div class="small-12 columns">
         <?php } ?>
-        	<h2>Program, Cast & Crew</h2>
             <?php
             // Get Post Articles
             get_template_part("components/posts/article");
