@@ -1,3 +1,7 @@
+<?php
+  $footer_code = get_field('page_footer_code'); 
+?>
+
 <!-- Start Chartbeat -->
 <script type='text/javascript'>
     var _sf_async_config={};
@@ -72,3 +76,7 @@ else {window.attachEvent('onload', _onload)}
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
   })();
 </script>
+
+<?php if($footer_code) {
+  echo $footer_code;
+} ?>
