@@ -79,6 +79,22 @@ if(!$header_menu) {
             $header_mega_menu_care = 'shea_header_mega_menu_care';
             $header_mega_menu_give = 'shea_header_mega_menu_give';
         break;
+        case 'Fountain Hills':
+          $header_mega_menu_visit = 'fh_header_mega_menu_visit';
+          $header_mega_menu_connect = 'fh_header_mega_menu_connect';
+          $header_mega_menu_serve = 'fh_header_mega_menu_serve';
+          $header_mega_menu_watch = 'fh_header_mega_menu_watch';
+          $header_mega_menu_care = 'fh_header_mega_menu_care';
+          $header_mega_menu_give = 'fh_header_mega_menu_give';
+        break;
+        case 'Online':
+          $header_mega_menu_visit = 'online_header_mega_menu_visit';
+          $header_mega_menu_connect = 'online_header_mega_menu_connect';
+          $header_mega_menu_serve = 'online_header_mega_menu_serve';
+          $header_mega_menu_watch = 'online_header_mega_menu_watch';
+          $header_mega_menu_care = 'online_header_mega_menu_care';
+          $header_mega_menu_give = 'online_header_mega_menu_give';
+        break;
         default:
             $header_mega_menu_visit = 'shea_header_mega_menu_visit';
             $header_mega_menu_connect = 'shea_header_mega_menu_connect';

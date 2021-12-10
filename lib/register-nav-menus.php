@@ -35,6 +35,20 @@ if(function_exists("register_nav_menus"))
         'cactus_header_mega_menu_care' => 'Header Mega Menu - Care (Cactus)',
         'cactus_header_mega_menu_give' => 'Header Mega Menu - Give (Cactus)',
 
+        'fh_header_mega_menu_visit' => 'Header Mega Menu - Visit (Fountain Hills)',
+        'fh_header_mega_menu_connect' => 'Header Mega Menu - Connect (Fountain Hills)',
+        'fh_header_mega_menu_serve' => 'Header Mega Menu - Serve (Fountain Hills)',
+        'fh_header_mega_menu_watch' => 'Header Mega Menu - Watch (Fountain Hills)',
+        'fh_header_mega_menu_care' => 'Header Mega Menu - Care (Fountain Hills)',
+        'fh_header_mega_menu_give' => 'Header Mega Menu - Give (Fountain Hills)',
+
+        'online_header_mega_menu_visit' => 'Header Mega Menu - Visit (Online)',
+        'online_header_mega_menu_connect' => 'Header Mega Menu - Connect (Online)',
+        'online_header_mega_menu_serve' => 'Header Mega Menu - Serve (Online)',
+        'online_header_mega_menu_watch' => 'Header Mega Menu - Watch (Online)',
+        'online_header_mega_menu_care' => 'Header Mega Menu - Care (Online)',
+        'online_header_mega_menu_give' => 'Header Mega Menu - Give (Online)',
+
         'footer_menu' => 'Footer Menu'
     ]);
 
