@@ -82,3 +82,8 @@ body.page-id-44066 strong {
 .image-hero *:not(.button-white) {
   color: #fff;
 }
+
+body p {
+  width: 100%;
+  overflow: auto;
+}
