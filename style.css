@@ -4,7 +4,7 @@ Theme URI: http://www.scottsdalebible.com/
 Author: factor1
 Author URI: http://factor1studios.com/
 Description: Custom theme design for Scottsdale Bible
-Version: 2.9.0
+Version: 2.9.1
 */
 
 @import url("./css/theme.min.css");
@@ -83,7 +83,7 @@ body.page-id-44066 strong {
   color: #fff;
 }
 
-body p {
+/* body p {
   width: 100%;
   overflow: auto;
-}
+} */
