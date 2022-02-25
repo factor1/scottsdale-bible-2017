@@ -2,10 +2,11 @@
 
 get_header();
 
+$campuses_ids = array(188,297,270,190,294,289);
 $img = get_field("featured_image",sb_get_eventspage_post_id());
 $headline = is_tax('event-categories', 'on-campus-classes') || is_tax('event-categories', 'on-campus-classes-at-cactus') || is_tax('event-categories', 'on-campus-classes-at-north-ridge') ? 'Classes' : 'Events';
-$cats = get_terms( array('taxonomy' => 'event-categories', 'exclude' => array(188, 190, 270) ) );
-$campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => array(188, 190, 270) ) );
+$cats = get_terms( array('taxonomy' => 'event-categories',     'exclude' => $campuses_ids ) );
+$campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => $campuses_ids ) );
 $current = get_queried_object()->slug; ?>
 
 <section class="featured-image" style="background: #E9ECF1 url('<?php echo esc_attr($img['url']); ?>') center/cover no-repeat">
@@ -19,8 +20,10 @@ $current = get_queried_object()->slug; ?>
 
       <div class="dropdown__menu text-left">
         <p><strong>Campuses</strong></p>
-
-        <?php foreach($campuses as $campus) :
+        <?php foreach($campuses_ids as $campus_id) :
+          // order the items based in the campuses_ids array
+          $key_in_campuses = array_search($campus_id, array_column($campuses, 'term_id'));
+          $campus = $campuses[$key_in_campuses];
           $activeClass = $current === $campus->slug ? ' class="active"' : ''; ?>
 
           <p<?php echo $activeClass; ?>><a href="<?php echo get_term_link($campus); ?>"><?php echo $campus->name; ?></a></p>
