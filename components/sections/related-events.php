@@ -11,8 +11,6 @@ if( $post_slug == 'family' ){
   $post_slug = 'worship-arts';
   } elseif ( $post_slug == 'worship' ) {
   $post_slug = 'worship-arts';
-} elseif ( $post_slug == 'marriage' ) {
-  $post_slug = 'marriage-ministry';
 } elseif ( $post_slug == 'college' ) {
   $post_slug = 'college-group';
 } elseif ( $post_slug == 'cactuswomen' ) {
