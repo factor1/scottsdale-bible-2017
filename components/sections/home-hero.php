@@ -28,9 +28,17 @@
                       // vars
                       $button = get_sub_field('button_text');
                       $button_link = get_sub_field('button_link');
+                      $custom_link_toggle = get_sub_field('custom_link_toggle');
+                      $custom_link = get_sub_field('custom_link');
 
                       ?>
-                      <a href="<?php echo $button_link ?>" class="button-white"><?php echo $button ?></a>
+
+                        <?php if ($custom_link_toggle): ?>
+                          <a href="<?php echo $custom_link['url']; ?>" target="<?php echo $custom_link['target']; ?>" class="button-white"><?php echo $custom_link['title']; ?></a>
+                        <?php else: ?>
+                          <a href="<?php echo $button_link ?>" class="button-white"><?php echo $button ?></a>
+                        <?php endif; ?>
+                      
                       <?php endwhile; ?>
 
                     </div>
