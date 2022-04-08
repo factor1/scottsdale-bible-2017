@@ -109,7 +109,7 @@ if(!$header_menu) {
     <section>
         <div class="row">
 
-            <div class="small-6 large-3 columns">
+            <div class="small-6 large-2 columns">
               <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-black.png" alt="" title="" /></a>
             </div>
 
@@ -188,6 +188,10 @@ if(!$header_menu) {
                     'walker'=> new factor1\SubMenuWalker()
                 ]);
                 ?>
+            </div>
+
+            <div class="large-1 columns" id="valley">
+              <a href="https://scottsdalebible.com/forthevalley/"><span class="hover-feature">For the<br>Valley</span></a>
             </div>
 
             <div class="large-1 columns col-grow" id="search">
