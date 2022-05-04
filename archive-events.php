@@ -3,7 +3,7 @@
 get_header();
 
 $img = get_field("featured_image",sb_get_eventspage_post_id());
-$headline = is_tax('event-categories', 'on-campus-classes') || is_tax('event-categories', 'on-campus-classes-at-cactus') || is_tax('event-categories', 'on-campus-classes-at-north-ridge') ? 'Classes' : 'Events';
+$headline = is_tax('event-categories', 'on-campus-classes') || is_tax('event-categories', 'on-campus-classes-at-cactus') || is_tax('event-categories', 'on-campus-classes-at-north-ridge') || is_tax('event-categories', 'Not available	on-campus-classes-at-fountain-hills') ? 'Classes' : 'Events';
 $cats = get_terms( array('taxonomy' => 'event-categories', 'exclude' => array(188, 190, 270) ) );
 $campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => array(188, 190, 270) ) );
 $current = get_queried_object()->slug; ?>

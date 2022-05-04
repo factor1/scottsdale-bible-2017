@@ -87,3 +87,7 @@ body.page-id-44066 strong {
   width: 100%;
   overflow: auto;
 } */
+
+.callout3 + .location-map hr {
+  display: none;
+}
