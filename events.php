@@ -7,8 +7,8 @@ get_header();
 
 $img = get_field("featured_image",sb_get_eventspage_post_id());
 $headline = is_tax('event-categories', 'on-campus-classes') ? 'Classes' : 'Events';
-$cats = get_terms( array('taxonomy' => 'event-categories', 'exclude' => array(188, 190, 270) ) );
-$campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => array(188, 190, 270) ) );
+$cats = get_terms( array('taxonomy' => 'event-categories', 'exclude' => array(188, 297, 190, 270, 294, 289) ) );
+$campuses = get_terms( array('taxonomy' => 'event-categories', 'include' => array(188, 297, 190, 270, 294, 289) ) );
 $current = get_queried_object()->slug; ?>
 
 <section class="featured-image" style="background: #E9ECF1 url('<?php echo esc_attr($img['url']); ?>') center/cover no-repeat">
