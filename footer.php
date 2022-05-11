@@ -15,7 +15,9 @@ if($location) {
               </div>
               <div class="small-12 medium-6 large-4 large-uncentered columns small-text-center large-text-center">
                   <div>For general information or our pastor-on-call:</div>
-                  <div><a href="#" class="button">(480) 824-7200</a></div>
+                  <div><a href="tel:4808247200" class="button">480.824.7200</a></div>
+                  <div style="padding-bottom: 10px">For Immediate Pastoral Care, our pastor-on-call:</div>
+                  <div><a href="tel:4803344102" class="button">480.334.4102</a></div>
                   <?php if(isset($address)) { ?>
                   <div><? echo esc_html($address); ?></div>
                   <?php } ?>
