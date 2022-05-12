@@ -14,7 +14,7 @@ if($location) {
                   <img src="<?php echo get_template_directory_uri(); ?>/images/2017SBClogo.png" alt="" title="" />
               </div>
               <div class="small-12 medium-6 large-4 large-uncentered columns small-text-center large-text-center">
-                  <div>For general information or our pastor-on-call:</div>
+                  <div>For general information:</div>
                   <div><a href="tel:4808247200" class="button">480.824.7200</a></div>
                   <div style="padding-bottom: 10px">For Immediate Pastoral Care, our pastor-on-call:</div>
                   <div><a href="tel:4803344102" class="button">480.334.4102</a></div>
