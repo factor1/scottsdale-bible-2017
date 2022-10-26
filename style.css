@@ -91,3 +91,7 @@ body.page-id-44066 strong {
 .callout3 + .location-map hr {
   display: none;
 }
+
+.groups-list .row .columns:last-child {
+  float: left;
+}
