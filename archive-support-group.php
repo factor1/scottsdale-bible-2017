@@ -13,11 +13,6 @@ get_template_part("components/sections/featured-image"); ?>
       <?php the_field('support_groups_intro_copy', 'option'); ?>
     </div>
   </div>
-  <div class="row">
-    <div class="columns small-8 small-centered">
-      <hr>
-    </div>
-  </div>
 </section>
 
 <?php if( have_posts() ) : ?>

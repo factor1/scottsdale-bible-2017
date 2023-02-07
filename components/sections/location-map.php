@@ -17,11 +17,6 @@ foreach($campuses as $campus) {
 <?php if($campuses) { ?>
 <section class="location-map">
   <div class="row">
-    <div class="columns small-centered small-8">
-      <hr>
-    </div>
-  </div>
-  <div class="row">
     <div class="small-12">
       <h1>Locations</h1>
       <div class="map-container" data-key="AIzaSyD3juZh1Id66Q5rRRy68LlwBkr_FyDcQMY" data-height="500" data-zoom="10" data-lat="<?php echo round($campuses[0]->location['lat'],3); ?>" data-lng="<?php echo round($campuses[0]->location['lng'],3); ?>">

@@ -22,9 +22,4 @@ $button_link = get_sub_field('button_link');
             <img class="callout1-image" src="<?php echo esc_attr($image['sizes']['large']); ?>" />
         </div>
     </div>
-    <div class="row">
-      <div class="columns small-centered small-8">
-        <hr>
-      </div>
-    </div>
 </section>

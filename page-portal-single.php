@@ -8,8 +8,6 @@
 	<p>Campus: <span id="groupCampus"></span></p>
 	</section>
 	
-	<hr>
-	
 	<div class="row lineitem">
 	<div class="medium-3 columns itemlabel">Description</div>
 	<div class="medium-9 columns" id="groupDescription">
