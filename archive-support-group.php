@@ -14,9 +14,6 @@ get_template_part("components/sections/featured-image"); ?>
     </div>
   </div>
   <div class="row">
-    <div class="columns small-8 small-centered">
-      <hr>
-    </div>
   </div>
 </section>
 

@@ -347,3 +347,9 @@ p.no-break{
   margin: auto;
   display: flex;
 }
+
+@media screen and (max-width: 767px) {
+    .g-sm-none {
+        display: none;
+    }
+}

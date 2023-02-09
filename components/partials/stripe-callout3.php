@@ -42,8 +42,5 @@ $button_option = get_sub_field('show_button_option');
       </div>
     </div>
     <div class="row">
-      <div class="columns small-8 small-centered">
-        <hr>
-      </div>
     </div>
 </section>

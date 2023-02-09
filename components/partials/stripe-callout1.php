@@ -23,8 +23,5 @@ $button_link = get_sub_field('button_link');
         </div>
     </div>
     <div class="row">
-      <div class="columns small-centered small-8">
-        <hr>
-      </div>
     </div>
 </section>

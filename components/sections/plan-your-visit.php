@@ -2,9 +2,6 @@
 <?php if( have_rows ('plan_your_visit', 5) ): ?>
 <section class="plan-your-visit">
     <div class="row">
-      <div class="columns small-centered small-8">
-        <hr>
-      </div>
     </div>
     <h1>Plan Your Visit</h1>
     <div class="row">
