@@ -581,9 +581,11 @@ function exclude_posts_acf( $query ) {
     }
 
     if( !is_admin() && is_post_type_archive('support-group') && $query->is_main_query() ) {
-      $query->set('posts_per_page', -1);
-      $query->set('orderby', 'menu_order');
-      $query->set('order', 'ASC');
+        $query->set('posts_per_page', -1);
+        $query->set( 'order' , 'asc' );
+        $query->set( 'orderby', 'title');
+    //   $query->set('orderby', 'menu_order');
+    //   $query->set('order', 'ASC');
     }
 }
 add_action( 'pre_get_posts', 'exclude_posts_acf' );
