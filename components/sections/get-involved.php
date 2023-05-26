@@ -1,11 +1,13 @@
-<?php if(!isset($wp)) { return; } ?>
+<?php if(!isset($wp)) { return; }
+
+$intro = get_field('get_involved_intro'); ?>
 
 <?php if( have_rows ('get_involved') ): ?>
 <section class="get-involved">
     <div class="row">
         <div class="small-12 columns">
             <div>
-                <h1>Get Involved</h1>
+                <?php echo $intro; ?>
                 <?php while ( have_rows('get_involved') ) : the_row();
 
                 // vars
