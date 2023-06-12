@@ -17,6 +17,8 @@ if( $post_slug == 'family' ){
   $post_slug = 'college-group';
 } elseif ( $post_slug == 'cactuswomen' ) {
   $post_slug = 'cactus-women';
+} elseif ( $post_slug == 'mens' ) {
+  $post_slug = 'mens-ministry';
 }
 
 // WP_Query arguments
