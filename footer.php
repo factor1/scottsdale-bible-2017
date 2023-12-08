@@ -58,7 +58,7 @@ if($location) {
               <span>&copy; Scottsdale Bible Church</span>
               <span>All Rights Reserved</span>
               <?php if( is_front_page() || is_page(62694) || is_singular('sb_campus') ) : ?>
-                <span>Chat provider: <a href="https://www.livechat.com/success/" target="_blank">LiveChat</a></span>
+                <span>Chat provider: <a href="https://www.livechat.com" target="_blank">LiveChat</a></span>
               <?php endif; ?>
           </section>
       </footer>
